@@ -1,0 +1,441 @@
+{
+  "schema_version": "2.0",
+  "book": "luke",
+  "act": "act_06_passion",
+  "act_label": "The Passion",
+  "chapters": "22-23",
+  "total_runtime_min": 55,
+  "scenes": [
+    {
+      "scene_id": "last_supper_001",
+      "title": "The Last Supper",
+      "episode_label": "The Passion",
+      "act": "act_06_passion",
+      "book": "luke",
+      "luke_reference": "Luke 22:7-38",
+      "chapter_start": 22,
+      "verse_start": 7,
+      "chapter_end": 22,
+      "verse_end": 38,
+      "characters": ["jesus_001", "peter_001", "judas_001"],
+      "location": "Upper room Jerusalem — Passover evening",
+      "time_of_day": "evening",
+      "estimated_runtime_min": 16,
+      "format": "feature_sequence",
+      "emotional_beat": "intimacy, foreshadowing, betrayal named, love persisting through it all",
+      "key_moment": "He knows who will betray him. He serves them all anyway. He breaks the bread and says 'This is my body given for you. Do this in remembrance of me.'",
+      "visual_direction": "Oil lamp close quarters. Thirteen men and the weight of history in one room. Intercut between Judas's internal world and Jesus's tenderness. The bread: extreme close, his hands, the breaking. The cup. The dispute about greatness that happens at the same table — they are still arguing about who is greatest while he is about to die.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "Jerusalem at dusk — the Passover preparations. The upper room, above the city.",
+          "camera_movement": "slow establishing from city to upper room window",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The room — low table, disciples reclining, oil lamps, the Passover meal set",
+          "camera_movement": "slow 360 at table height — find each face",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Jesus: 'I have eagerly desired to eat this Passover with you before I suffer.' His face.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The bread — his hands taking it. The breaking. Extreme close.",
+          "camera_movement": "static",
+          "lens_note": "macro/135mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "'This is my body given for you. Do this in remembrance of me.'",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The cup — his hands. 'This cup is the new covenant in my blood, which is poured out for you.'",
+          "camera_movement": "static",
+          "lens_note": "macro"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Judas's face during the announcement that a betrayer is present — the controlled response",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Peter — 'Lord, I am ready to go with you to prison and to death.'",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Jesus to Peter: 'I tell you, Peter, before the rooster crows today, you will deny three times that you know me.'",
+          "camera_movement": "very slow push",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "They depart — the oil lamps blow out one by one as they leave. The room emptied.",
+          "camera_movement": "static wide — watch them leave",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "The Breaking",
+          "duration_seconds": 20,
+          "hook": "His hands. The bread. 'Do this in remembrance of me.'",
+          "caption_template": "'This is my body given for you.' Luke 22:19",
+          "platform_targets": ["youtube", "tiktok", "reels"]
+        },
+        {
+          "label": "He Eagerly Desired",
+          "duration_seconds": 15,
+          "hook": "He knew what was coming. And he said: 'I have eagerly desired to eat this with you.'",
+          "caption_template": "'I have eagerly desired to eat this Passover with you.' Luke 22:15",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "catholic", "men", "secular_curious"],
+      "ai_prompts": {
+        "midjourney": "1st century Jerusalem upper room, thirteen Jewish men reclining around low Passover table, oil lamps dramatic warm chiaroscuro light, unleavened bread and wine cup center frame, faces half in shadow and light, intimate close quarters, cinematic photoreal chiaroscuro 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century upper room Passover seder, thirteen men around a low table, oil lamp candlelight creating dramatic shadows, bread and wine cup in foreground, faces in warm amber light and shadow, intimate sacred atmosphere",
+        "runway_video": "Begin wide at table height — slow 360 to find each face. Linger on Judas. Return to Jesus. The bread-breaking: extreme close, his hands, no cutting away. The cup. Then the announcement of betrayal — watch the faces. Then Peter's declaration. Then Jesus's response. Then: the lamps going out as they leave.",
+        "audio_notes": "No music during the bread and cup — near silence, the sound of the room's ambient, his voice. The dispute about greatness: voices slightly raised, then quieted by his words. Departure: quiet, footsteps, the city sounds returning."
+      },
+      "production_notes": "Luke 22:24: 'A dispute also arose among them as to which of them was considered to be greatest.' This happens AT the Last Supper. Play it — it makes the supper more human and more heartbreaking."
+    },
+    {
+      "scene_id": "gethsemane_001",
+      "title": "Gethsemane",
+      "episode_label": "The Passion",
+      "act": "act_06_passion",
+      "book": "luke",
+      "luke_reference": "Luke 22:39-46",
+      "chapter_start": 22,
+      "verse_start": 39,
+      "chapter_end": 22,
+      "verse_end": 46,
+      "characters": ["jesus_001", "peter_001"],
+      "location": "Mount of Olives — Gethsemane olive grove",
+      "time_of_day": "late night",
+      "estimated_runtime_min": 8,
+      "format": "feature_sequence",
+      "emotional_beat": "isolation, agony, surrender, the sleeping disciples, the angel, the arrest approaching",
+      "key_moment": "'Father, if you are willing, take this cup from me. Yet not my will, but yours be done.' Luke uniquely adds: 'his sweat was like drops of blood falling to the ground.'",
+      "visual_direction": "Luke's Gethsemane is distinct — he adds the angel who strengthens Jesus, and the sweat like blood. Both must be rendered. The sleeping disciples must be shown without contempt — Luke says they slept 'from sorrow'. The aloneness of Jesus in the garden must be total.",
+      "shot_list": [
+        {
+          "shot_type": "EWS",
+          "description": "The Mount of Olives at night — olive trees, moonlight, the city lights below",
+          "camera_movement": "slow establishing",
+          "lens_note": "wide 24mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Jesus separates from the disciples — 'a stone's throw away'",
+          "camera_movement": "static as the distance opens",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Jesus on his knees — the prayer beginning",
+          "camera_movement": "very slow push",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "'Father, if you are willing, take this cup from me.' His face in agony.",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "'Yet not my will, but yours be done.' The surrender — what it costs to say this is visible.",
+          "camera_movement": "absolutely static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Luke 22:43: An angel appears from heaven and strengthens him — understated, present, real",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Luke 22:44: 'his sweat was like drops of blood' — the physical cost of the prayer",
+          "camera_movement": "extreme close — the drops on the ground",
+          "lens_note": "macro"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The disciples — sleeping 'from sorrow'. Luke's detail.",
+          "camera_movement": "static",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Jesus standing — the prayer is finished. He has crossed something. Different bearing now.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "Not My Will",
+          "duration_seconds": 25,
+          "hook": "He asked for another way. Then he said yes anyway. That is the whole gospel.",
+          "caption_template": "'Not my will, but yours be done.' Luke 22:42",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Sweat Like Blood",
+          "duration_seconds": 15,
+          "hook": "Luke's detail. A doctor writing what he observed: 'his sweat was like drops of blood.'",
+          "caption_template": "Luke 22:44 — a physician's account of what prayer cost him.",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "catholic", "men", "secular_curious", "women"],
+      "ai_prompts": {
+        "midjourney": "1st century Gethsemane olive grove late night, Jewish man on his knees alone between ancient olive trees, moonlight filtering through leaves, face of profound agony and surrender, sweat on face, small drops visible on the ground, distant figure standing calm nearby, cinematic photoreal moonlight 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic garden at night, ancient olive trees, man alone on his knees in prayer, moonlight and shadow, face showing profound inner agony, sweat visible, expression of complete surrender, another figure standing quietly nearby, cinematic drama in near darkness",
+        "runway_video": "Begin wide — the garden at night, the disciples in the distance. Follow Jesus alone. He kneels. Stay with him through both parts of the prayer — the ask and the surrender. The angel: present, still, not theatrical. The sweat: macro close on the ground. Then: he rises. Different.",
+        "audio_notes": "Near silence — night sounds, the city below, wind in the olive leaves. His prayer is barely above a whisper. The angel's arrival: no sound. The sweat drops: if audible at all, the quietest sound in the film. His rising: footsteps — then distant torchlight and voices approaching."
+      },
+      "production_notes": "Luke is the only gospel that adds the angel (v.43) and the sweating like blood (v.44). These are theologically significant and visually powerful. The angel is NOT spectacular — just present, strengthening."
+    },
+    {
+      "scene_id": "peter_denial_001",
+      "title": "Peter's Denial",
+      "episode_label": "The Passion",
+      "act": "act_06_passion",
+      "book": "luke",
+      "luke_reference": "Luke 22:54-62",
+      "chapter_start": 22,
+      "verse_start": 54,
+      "chapter_end": 22,
+      "verse_end": 62,
+      "characters": ["peter_001", "jesus_001"],
+      "location": "High priest's courtyard — Jerusalem",
+      "time_of_day": "pre-dawn, cold",
+      "estimated_runtime_min": 6,
+      "format": "feature_sequence",
+      "emotional_beat": "fear, denial, the rooster, the look, weeping",
+      "key_moment": "Luke 22:61: 'The Lord turned and looked straight at Peter.' The look. No words. Just the look. That's the scene.",
+      "visual_direction": "Peter warming himself at the fire in the cold courtyard. Three accusers. Three denials, each faster than the last. The rooster. And then: Luke's unique detail — Jesus is close enough that when he turns and looks at Peter, Peter sees him. That look is the most important shot in Peter's entire arc.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "The high priest's courtyard — torches, night, guards, a fire. Peter following at a distance.",
+          "camera_movement": "slow establishing — the cold and the firelight",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Peter at the fire — warming his hands, trying to look ordinary",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "First accusation — a servant girl: 'This man was with him.' Peter: 'Woman, I don't know him.'",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Second accusation — another person. Peter: 'Man, I am not!' The denial faster.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Third accusation — 'Certainly this fellow was with him, for he is a Galilean.' Peter: 'Man, I don't know what you're talking about!'",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The rooster. The sound cuts through the courtyard noise.",
+          "camera_movement": "static wide — the courtyard frozen",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Jesus — being led across the courtyard, he turns and looks directly at Peter",
+          "camera_movement": "track with the look — from Jesus's direction to Peter",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The look — Jesus's eyes finding Peter across the courtyard",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Peter's face receiving the look — the recognition, the remembrance, the collapse",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Peter going outside — and weeping bitterly. Alone.",
+          "camera_movement": "slow pull back as he leaves",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "The Look",
+          "duration_seconds": 20,
+          "hook": "The rooster crowed. Jesus turned. And looked straight at him. No words needed.",
+          "caption_template": "'The Lord turned and looked straight at Peter.' Luke 22:61",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "He Went Outside and Wept",
+          "duration_seconds": 15,
+          "hook": "He went outside. Alone. And wept bitterly. That's the whole verse.",
+          "caption_template": "'He went outside and wept bitterly.' Luke 22:62",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["men", "evangelical_baptist", "catholic", "secular_curious"],
+      "ai_prompts": {
+        "midjourney": "1st century Jerusalem high priest's courtyard pre-dawn, man warming himself at torch fire, cold night, other figures around the fire, his face caught mid-denial — fear and shame, cinematic photoreal cold blue courtyard fire orange 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic pre-dawn courtyard scene, a stocky broad man warming himself at a fire pit, cold night, torch-lit stone courtyard, his face showing fear and shame as he is confronted, cold blue night contrasting with orange fire light",
+        "runway_video": "Begin at the fire — Peter's hands warming, his eyes scanning for danger. Each denial: a little faster, a little more desperate. The third denial: he's barely finished when the rooster. Hold on Peter as the sound lands. Then: across the courtyard, the look. The camera must carry that look from Jesus to Peter without breaking the connection. Then Peter — alone outside in the dark.",
+        "audio_notes": "Cold courtyard sounds — fire crackling, distant interrogation sounds. The denials escalate in pace. Then: the rooster. Absolute silence for one beat. Then the courtyard resumes. Peter's weeping is heard from outside the gate — alone, in the dark."
+      },
+      "production_notes": "The look (Luke 22:61) is the most important moment in Peter's entire arc and one of the most powerful images in the passion. It requires that Jesus be visible in the same shot as Peter during the denials — he must be close enough to turn and find him. This is blocking that must be designed from the beginning."
+    },
+    {
+      "scene_id": "crucifixion_001",
+      "title": "The Crucifixion",
+      "episode_label": "The Passion",
+      "act": "act_06_passion",
+      "book": "luke",
+      "luke_reference": "Luke 23:26-49",
+      "chapter_start": 23,
+      "verse_start": 26,
+      "chapter_end": 23,
+      "verse_end": 49,
+      "characters": ["jesus_001", "mary_magdalene_001"],
+      "location": "Golgotha — outside Jerusalem",
+      "time_of_day": "9am to 3pm — the darkness at noon",
+      "estimated_runtime_min": 18,
+      "format": "feature_sequence",
+      "emotional_beat": "the weight of the road, the unique Lukan words from the cross, the criminal's conversion, the darkness, death, the centurion's verdict",
+      "key_moment": "Luke's unique crucifixion words — 'Father, forgive them, for they do not know what they are doing.' And the criminal on the other cross: 'Today you will be with me in paradise.'",
+      "visual_direction": "Luke's crucifixion contains unique material no other gospel has. The weeping women on the road — he speaks to them. The two criminals — one mocking, one asking. 'Today you will be with me in paradise' — spoken to a dying man, from a dying man. The darkness at noon. The torn curtain. The centurion: 'Surely this was a righteous man.'",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "The road to Golgotha — the crowd, the weight, the women weeping",
+          "camera_movement": "tracking alongside, ground level",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Jesus turning to the weeping women: 'Daughters of Jerusalem, do not weep for me...'",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Golgotha — the three crosses. The crowd. The soldiers.",
+          "camera_movement": "wide establishing then very slow push",
+          "lens_note": "24mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "'Father, forgive them, for they do not know what they are doing.' Luke's first cross-word.",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The two criminals — one mocking, one defending",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The repentant criminal: 'Jesus, remember me when you come into your kingdom.'",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Jesus to him: 'Today you will be with me in paradise.' — spoken from death to a dying man",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "EWS",
+          "description": "The darkness — 'darkness came over all the land until three in the afternoon.' Visual: the sky changes.",
+          "camera_movement": "wide — watch the sky change",
+          "lens_note": "ultra wide"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "'Father, into your hands I commit my spirit.' The final word.",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The women watching from a distance — Mary Magdalene, named, present",
+          "camera_movement": "static",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "The centurion's face: 'Surely this was a righteous man.' — a Roman soldier's verdict",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "Father Forgive Them",
+          "duration_seconds": 15,
+          "hook": "His first words from the cross. Not a curse. Not a cry for rescue.",
+          "caption_template": "'Father, forgive them, for they do not know what they are doing.' Luke 23:34",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        },
+        {
+          "label": "Today Paradise",
+          "duration_seconds": 25,
+          "hook": "A dying man asked a dying man for mercy. 'Today you will be with me in paradise.'",
+          "caption_template": "'Today you will be with me in paradise.' Luke 23:43",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "The Women Watched",
+          "duration_seconds": 20,
+          "hook": "The men who promised everything had run. The women watched from a distance.",
+          "caption_template": "Luke 23:49 — the women who followed from Galilee. They stayed.",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "catholic", "men", "women", "secular_curious", "black_church", "hispanic_christian"],
+      "ai_prompts": {
+        "midjourney": "1st century Golgotha crucifixion, three crosses on rocky hill outside Jerusalem, middle figure clearly central, dramatic sky darkening at midday unnatural darkness, women watching from distance, Roman soldiers, Jerusalem visible beyond, cinematic photoreal somber 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century crucifixion scene on rocky hill, three crosses against a darkening midday sky, crowd and soldiers below, women visible at distance watching, Jerusalem walls in background, dramatic unnatural darkness mid-day, solemn cinematic atmosphere",
+        "runway_video": "Begin on the road — ground level, with him. The women on the road. Arrive at Golgotha. The wide shot of what is happening. Find each cross. The criminals. His face for each of his words. The sky changing. The women watching in the distance. The centurion's face. Silence.",
+        "audio_notes": "The crowd noise gradually changes from hostile to quieting. 'Father forgive them': silence follows. 'Today paradise': the criminal's face. The darkness: ambient sounds drop as the sky changes — something wrong with the world. The death: silence. Then the crowd beginning to move away, beating their chests."
+      },
+      "production_notes": "Luke's crucifixion is theologically richest of the four — three unique sayings from the cross. Pace it: don't rush past any of them. The criminal's conversation is its own complete story inside the larger one."
+    }
+  ]
+}

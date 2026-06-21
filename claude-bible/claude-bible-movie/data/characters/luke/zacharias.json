@@ -1,0 +1,116 @@
+{
+  "schema_version": "2.0",
+  "character_id": "zacharias_001",
+  "canonical_name": "Zacharias",
+  "hebrew_name": "Zekharyah",
+  "aliases": ["Zechariah", "Father of John the Baptist", "The Silent Priest"],
+  "role": "supporting_minor",
+  "testament": "New",
+  "books_appearing_in": ["Luke"],
+  "book": "luke",
+  "chapters_active": "1",
+  "era": "1st Century AD, Temple in Jerusalem / Hill country of Judea",
+  "visual_dna": {
+    "age_range": "~65-75 — an elderly priest, well past the age of fathering children",
+    "ethnicity": "1st Century Jewish, priestly Levite lineage",
+    "skin_tone": "olive, aged and deeply lined, indoor priestly life",
+    "hair_color": "silver-white, thinning",
+    "hair_texture": "short, clean — priestly",
+    "beard_style": "full elder's beard, silver, priestly dignity",
+    "eye_color": "warm brown — used to seeing things with faith, unprepared for seeing an angel",
+    "height_build": "medium, slightly stooped from age — priestly robes carry him with dignity",
+    "distinguishing_marks": [
+      "priestly robes — he is on duty in the Temple when Gabriel appears",
+      "incense burner in hand at the moment of encounter",
+      "unable to speak for nine months — the silence is visible in how others treat him"
+    ],
+    "wardrobe_by_arc": {
+      "temple_duty": "priestly white linen robe, head covering, carrying incense — formal Temple service attire",
+      "mute_period": "ordinary elder's robes, communicates by tablet/writing in scenes at home",
+      "benedictus": "priestly or elder's robes — the moment his tongue is loosed, he prophesies"
+    }
+  },
+  "voice_profile": {
+    "register": "Absent for nine months — when it returns, it erupts in the Benedictus (Luke 1:67-79)",
+    "pace": "Deliberate — a man who has been silent learns the weight of words",
+    "accent_note": "Judean Aramaic, priestly educated speech",
+    "speech_mannerisms": [
+      "before: asks for signs — 'How can I be sure of this?'",
+      "nine months of silence — communicates by gesture and written tablet",
+      "the Benedictus at John's naming is his first recorded speech after silence — and it is pure prophecy"
+    ],
+    "notes": "The contrast between his doubt (and its consequence) and Mary's faith (and its fruit) is the structural heart of Luke 1."
+  },
+  "emotional_arc": {
+    "opening": "Faithful but worn — he and Elizabeth have prayed about this their entire marriage. He is in the Temple doing his duty. Then Gabriel.",
+    "midpoint": "Struck mute for his doubt. Nine months of silence in which to think about what he did not believe.",
+    "climax": "John is born. They are asked what to name him. He writes 'His name is John.' His mouth opens. The Benedictus pours out.",
+    "resolution": "A father who doubted, was silenced, and came out singing. His first word after nine months is prophecy."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The faithful servant who doubted at the crucial moment — relatable, restored",
+        "marketing_angle": "He had prayed his whole life for this. Then it arrived — and he didn't believe it."
+      },
+      "catholic": {
+        "score": 4,
+        "notes": "The priest at prayer — the Benedictus is used in the Liturgy of the Hours",
+        "marketing_angle": "The priest at the altar when heaven broke through. His prayer was finally answered."
+      },
+      "black_church": {
+        "score": 3,
+        "notes": "The elder who waited and received — delayed but not denied",
+        "marketing_angle": "He waited decades. The answer came in the Temple on a Tuesday. Then his mouth opened."
+      },
+      "hispanic_christian": {
+        "score": 4,
+        "notes": "The abuela y abuelo receiving the miracle late in life — deeply resonant",
+        "marketing_angle": "El sacerdote que no creyó — y luego cantó"
+      },
+      "secular_curious": {
+        "score": 3,
+        "notes": "A man confronted with something impossible — his response is deeply human",
+        "marketing_angle": "He was a priest. He'd believed this his whole life. And when it happened — he doubted."
+      },
+      "youth_gen_z": {
+        "score": 2,
+        "notes": "Supporting character — primarily relevant as father of John",
+        "marketing_angle": "The man who doubted God — and got nine months to think about it"
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "Temple priest, Levite lineage — the priestly world of 1st century Judaism, accurately rendered",
+        "marketing_angle": "A priest of the Second Temple period — the world of Herod's Temple brought to life"
+      },
+      "women": {
+        "score": 3,
+        "notes": "Husband of Elizabeth — his doubt contrasts with her faith",
+        "marketing_angle": "His wife believed before he did. He paid the price. She sang."
+      },
+      "men": {
+        "score": 4,
+        "notes": "A man silenced by his own doubt — and freed by his son's arrival",
+        "marketing_angle": "He doubted at the moment of his miracle. Nine months of silence. Then prophecy."
+      }
+    },
+    "modern_parallel": "The man of faith who, when it finally happened, didn't believe it",
+    "modern_parallel_detail": "Not a villain. Not weak. Just human — and the silence was mercy, not punishment."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century Jewish elderly priest age 65-75, silver-white thinning hair, full silver beard, deeply lined olive face, priestly white linen robe and head covering, incense burner in hand, inside Jerusalem Temple stone chamber, expression of sudden terror transforming to awe, cinematic photoreal, dramatic torch and lamp light, 8k",
+    "negative_prompt": "young man, cartoonish, European features, modern clothing, cardinal's robes, medieval costume",
+    "midjourney_style_params": "cinematic photoreal, warm torchlight, stone Temple interior, dramatic chiaroscuro",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of an elderly 1st century Jewish priest, age 65-75, silver hair and beard, deeply lined olive face, white priestly linen robes, standing in a Jerusalem Temple stone chamber with incense, expression of terror at something unseen, warm dramatic lamplight, cinematic shadow and light",
+    "reference_films": [
+      "The Passion of the Christ (2004) — Temple and priestly world rendered accurately",
+      "Ben-Hur (1959 / 2016) — Second Temple period production design"
+    ],
+    "color_grading_notes": "Temple interior: warm amber torch-gold against cool stone. The angel's appearance shifts the color temperature slightly cooler."
+  },
+  "production_notes": "Zacharias's nine months of silence must be played — not just explained. Show him at home, writing on a tablet, watching Elizabeth's belly grow. The silence is dramatic gold."
+}

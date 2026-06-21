@@ -1,0 +1,116 @@
+{
+  "schema_version": "2.0",
+  "character_id": "pilate_001",
+  "canonical_name": "Pontius Pilate",
+  "hebrew_name": "N/A — Roman",
+  "aliases": ["The Governor", "Prefect of Judea", "Pilate"],
+  "role": "antagonist_secondary",
+  "testament": "New",
+  "books_appearing_in": ["Luke", "Matthew", "Mark", "John"],
+  "book": "luke",
+  "chapters_active": "3, 13, 23",
+  "era": "1st Century AD, Jerusalem / Caesarea Maritima — Roman Prefect of Judea 26-36 AD",
+  "visual_dna": {
+    "age_range": "~40-50 — mid-career Roman bureaucrat",
+    "ethnicity": "Roman — Italian origin, Mediterranean features but distinctly Roman",
+    "skin_tone": "lighter Mediterranean — Roman, indoor administrative life with Judean sun",
+    "hair_color": "dark brown, short military cut",
+    "hair_texture": "close-cropped, Roman military fashion",
+    "beard_style": "clean-shaven or very short — Roman military tradition contrasts with Jewish beards",
+    "eye_color": "grey-brown, cold when calculating",
+    "height_build": "medium-tall, military posture — the body of a soldier now doing a desk job, beginning to soften",
+    "distinguishing_marks": [
+      "signet ring of Roman office",
+      "toga praetexta in formal settings — white with purple stripe of magistrate rank",
+      "the magistrate's chair — he sits in formal judgment",
+      "hand-washing as act of public theater — he knows what he's doing"
+    ],
+    "wardrobe_by_arc": {
+      "trial_scene": "Roman magistrate formal white toga with purple stripe, official judgment setting — the Praetorium"
+    }
+  },
+  "voice_profile": {
+    "register": "clipped, precise baritone — Roman bureaucratic authority",
+    "pace": "controlled, political — every word measured for effect",
+    "accent_note": "Latin-influenced Aramaic or Greek — he would speak to Jewish crowds through a translator",
+    "speech_mannerisms": [
+      "'What is truth?' — possibly the most famous question ever asked and immediately abandoned",
+      "three times declares Jesus innocent, three times capitulates to crowd pressure",
+      "the hand-washing is theater — he knows it accomplishes nothing legally, which is the point",
+      "increasingly unsettled as the trial progresses — his wife's warning adds to the unease"
+    ],
+    "notes": "Pilate's tragedy is not ignorance. He knows Jesus is innocent. He says so three times. His failure is not not-knowing — it is choosing career over conscience."
+  },
+  "emotional_arc": {
+    "opening": "Dismissive — another Jewish religious dispute. Not his problem if he can manage it politically.",
+    "midpoint": "Troubled — Jesus doesn't behave like any prisoner he has encountered. His wife sends a message. Something is wrong.",
+    "climax": "Three declarations of innocence. Three capitulations. The hand-washing. He made his choice.",
+    "resolution": "He and Herod become friends that day. Two men who failed the same test share a political bond."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 3,
+        "notes": "The human face of the unjust system that killed Jesus — his role in the passion",
+        "marketing_angle": "He declared Jesus innocent three times. Then signed the death warrant. He chose his career."
+      },
+      "catholic": {
+        "score": 3,
+        "notes": "Present in the Creed: 'suffered under Pontius Pilate' — his name is spoken in churches every week",
+        "marketing_angle": "His name is in the Creed. Spoken every Sunday. 'Suffered under Pontius Pilate.' This is who that was."
+      },
+      "black_church": {
+        "score": 3,
+        "notes": "The unjust judge — a recurring archetype in the tradition of prophetic justice",
+        "marketing_angle": "He knew it was wrong. He had the power to stop it. He chose to keep his position instead."
+      },
+      "hispanic_christian": {
+        "score": 2,
+        "notes": "Secondary passion antagonist",
+        "marketing_angle": "El gobernador que lavó sus manos — como si eso cambiara algo"
+      },
+      "secular_curious": {
+        "score": 5,
+        "notes": "Historically documented figure — his existence confirmed by the Pilate Stone (discovered 1961). The intersection of Roman politics and the trial.",
+        "marketing_angle": "Pontius Pilate is a documented historical figure. His ring was found in 2018. He asked 'What is truth?' and then looked away."
+      },
+      "youth_gen_z": {
+        "score": 4,
+        "notes": "The person in power who knew the right thing and chose the safe thing — deeply recognizable",
+        "marketing_angle": "He knew. He had the power. He chose his career. We've seen this before."
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "His role in history has been weaponized to shift blame onto Jewish people — accurate portrayal of Roman responsibility is essential",
+        "marketing_angle": "The Roman prefect who held the actual power of life and death. That responsibility belongs to him."
+      },
+      "women": {
+        "score": 3,
+        "notes": "His wife's message — 'Have nothing to do with that innocent man' — is a notable female voice in the passion",
+        "marketing_angle": "His wife told him not to do it. He didn't listen."
+      },
+      "men": {
+        "score": 4,
+        "notes": "The man who asked 'What is truth?' and then immediately chose pragmatism — a convicting portrait",
+        "marketing_angle": "He asked the most important question in the room. Then washed his hands of the answer."
+      }
+    },
+    "modern_parallel": "The executive who knew what was right, chose his career instead, and called it pragmatism",
+    "modern_parallel_detail": "He is not a monster. He is worse — a reasonable man who made a reasonable calculation and executed an innocent person."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "Roman governor prefect 1st century AD age 40-50, lighter Mediterranean Roman features, short dark hair military cut, clean-shaven, wearing white Roman toga praetexta with purple magistrate stripe, gold signet ring, formal praetorium stone courtyard setting, Jerusalem morning harsh light, expression of political calculation over troubled conscience, cinematic photoreal, 8k",
+    "negative_prompt": "cartoonish obviously evil expression, anachronistic uniform, medieval European costume, legionnaire armor in formal court scene",
+    "midjourney_style_params": "cinematic photoreal, harsh morning Roman administrative light, cool stone architecture, political tension",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of a 1st century Roman magistrate prefect, age 40-50, lighter Mediterranean complexion, short dark hair, clean-shaven Roman military style, wearing white toga with purple stripe, seated in formal stone praetorium setting, expression of troubled political calculation, harsh morning light, cinematic authority",
+    "reference_films": [
+      "The Passion of the Christ (2004) — Hristo Shopov's Pilate — conflicted and troubled",
+      "Ben-Hur (2016) — Roman administrative world"
+    ],
+    "color_grading_notes": "Praetorium scenes: cool stone grey, harsh morning light. Contrasts with the warm Jewish world around it. His palette is Roman — cooler, more formal."
+  },
+  "production_notes": "Pilate must be played as a man who knows exactly what he is doing — not confused. He declares Jesus innocent three times. His capitulation is a choice, not a mistake."
+}

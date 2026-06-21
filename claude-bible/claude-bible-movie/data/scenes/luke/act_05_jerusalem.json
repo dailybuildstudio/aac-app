@@ -1,0 +1,266 @@
+{
+  "schema_version": "2.0",
+  "book": "luke",
+  "act": "act_05_jerusalem",
+  "act_label": "The Road to Jerusalem",
+  "chapters": "19-21",
+  "total_runtime_min": 22,
+  "scenes": [
+    {
+      "scene_id": "zacchaeus_001",
+      "title": "Zacchaeus in the Sycamore Tree",
+      "episode_label": "The Road to Jerusalem",
+      "act": "act_05_jerusalem",
+      "book": "luke",
+      "luke_reference": "Luke 19:1-10",
+      "chapter_start": 19,
+      "verse_start": 1,
+      "chapter_end": 19,
+      "verse_end": 10,
+      "characters": ["zacchaeus_001", "jesus_001"],
+      "location": "Jericho street — sycamore fig tree",
+      "time_of_day": "midday",
+      "estimated_runtime_min": 7,
+      "format": "short_film",
+      "emotional_beat": "desperation to see, physical comedy that becomes sacred, unexpected invitation, crowd contempt, transformation",
+      "key_moment": "Jesus stops. In a crowd of hundreds. Looks directly up into the tree. 'Zacchaeus, come down immediately. I must stay at your house today.'",
+      "visual_direction": "The scene opens with comedic energy — the most powerful man in Jericho is in a tree. Play that honestly. Then Jesus stops beneath him and the entire register shifts. The crowd's contempt when Jesus announces he's going to Zacchaeus's house must be audible. Then the transformation — same man, completely different posture.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "Jericho street — busy, commercial, the crowd pressing to see Jesus",
+          "camera_movement": "slow establishing",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Zacchaeus — trying to see, too short. The crowd ignores him or elbows him aside.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Zacchaeus spots the sycamore tree — runs ahead, climbs it. A wealthy man in fine robes in a tree.",
+          "camera_movement": "track with him to the tree then pull back for the wide comedy",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Zacchaeus in the tree — looking down, waiting, expression of nervous hope",
+          "camera_movement": "low angle looking up at him",
+          "lens_note": "85mm low"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The crowd passing below the tree. Then Jesus stops. Directly underneath. The crowd stops with him.",
+          "camera_movement": "static — the stopping is the key",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Jesus looking up into the tree — directly at Zacchaeus. 'Zacchaeus, come down immediately.'",
+          "camera_movement": "static — low angle from above",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Zacchaeus's face in the tree — shock, then joy",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The crowd reaction — 'He has gone to be the guest of a sinner.' Contempt visible.",
+          "camera_movement": "slow pan across the disapproving faces",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Zacchaeus standing at Jesus — 'Look, Lord! Here and now I give half of my possessions to the poor...'",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Jesus: 'Today salvation has come to this house, because this man, too, is a son of Abraham.'",
+          "camera_movement": "very slow push",
+          "lens_note": "135mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "Jesus Stops",
+          "duration_seconds": 30,
+          "hook": "He walked past thousands of people. He stopped under one tree. Called one name.",
+          "caption_template": "'Zacchaeus, come down immediately.' He knew his name. Luke 19:5",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Son of Abraham",
+          "duration_seconds": 20,
+          "hook": "The most hated man in Jericho. Jesus called him 'a son of Abraham.'",
+          "caption_template": "'Today salvation has come to this house.' Luke 19:9",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["men", "secular_curious", "evangelical_baptist", "youth_gen_z"],
+      "ai_prompts": {
+        "midjourney": "1st century Jericho street, wealthy short stocky Jewish man in fine robes perched awkwardly in sycamore fig tree above crowd, gold accessories, expression of surprised joy as he looks down, large crowd below, Jesus figure visible from above looking up, bright midday Mediterranean sun, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century Jericho scene, a short wealthy man in expensive robes sitting in a large tree above a street crowd, looking down at someone calling his name with expression of shock and joy, bright midday light, crowd of people below, viewed from below looking up at him in the tree",
+        "runway_video": "Begin wide on the busy Jericho street. Track Zacchaeus trying to see through the crowd — too short. Find him running to the tree, climbing. Wide shot: wealthy man in fine robes, in a tree. Comedic. Then Jesus stops directly under him and looks up — the whole register changes. CU: 'Zacchaeus.'",
+        "audio_notes": "Busy city sounds throughout. When Jesus stops and speaks Zacchaeus's name, the crowd noise drops for a moment — just the name in the sudden silence. Then the crowd's murmuring returns as the controversy begins."
+      },
+      "production_notes": "The comedic and the sacred must coexist in this scene without resolution. The man in the tree IS funny. And that moment IS holy. Both things at once."
+    },
+    {
+      "scene_id": "triumphal_entry_001",
+      "title": "The Triumphal Entry",
+      "episode_label": "The Road to Jerusalem",
+      "act": "act_05_jerusalem",
+      "book": "luke",
+      "luke_reference": "Luke 19:28-44",
+      "chapter_start": 19,
+      "verse_start": 28,
+      "chapter_end": 19,
+      "verse_end": 44,
+      "characters": ["jesus_001"],
+      "location": "Road from Bethphage/Bethany to Jerusalem — the descent of the Mount of Olives",
+      "time_of_day": "morning",
+      "estimated_runtime_min": 8,
+      "format": "short_episode",
+      "emotional_beat": "triumph and hidden grief, the crowd's misunderstanding, Jesus weeping over Jerusalem",
+      "key_moment": "The crowd shouts Hosanna. Jesus crests the hill — sees Jerusalem. And weeps. The crowd is celebrating. He is grieving.",
+      "visual_direction": "The triumphal entry is visually spectacular but the drama is in the contrast between the crowd's joy and Jesus's grief. The pivot from 'Hosanna' to his tears over Jerusalem is the scene's heart. The Pharisees tell him to quiet the crowd — he refuses. Then: Jerusalem in view. He weeps.",
+      "shot_list": [
+        {
+          "shot_type": "EWS",
+          "description": "The Mount of Olives — the descent toward Jerusalem visible in the distance",
+          "camera_movement": "crane establishing",
+          "lens_note": "wide 24mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The crowd — cloaks thrown on the road, palm branches, the sound building",
+          "camera_movement": "slow push into the crowd energy",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Jesus on the colt — surrounded by the celebration, his face thoughtful",
+          "camera_movement": "tracking alongside",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "EWS",
+          "description": "The crest of the hill — Jerusalem appears in full for the first time. The crowd sees it and shouts louder.",
+          "camera_movement": "crane to reveal Jerusalem — hold on the city",
+          "lens_note": "wide 24mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Jesus's face seeing Jerusalem — and the tears beginning",
+          "camera_movement": "very slow push",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Jesus weeping over the city: 'If you, even you, had only known on this day what would bring you peace...'",
+          "camera_movement": "static — the crowd still celebrating around a weeping man",
+          "lens_note": "50mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "He Wept Over Jerusalem",
+          "duration_seconds": 35,
+          "hook": "The crowd was celebrating. He crested the hill, saw Jerusalem, and wept.",
+          "caption_template": "He wept over the city. Luke 19:41. Not because he was sad. Because he knew what was coming.",
+          "platform_targets": ["youtube", "tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "catholic", "secular_curious", "men", "jewish_american"],
+      "ai_prompts": {
+        "midjourney": "1st century Jerusalem from Mount of Olives descent, man on donkey surrounded by celebrating crowd throwing cloaks on road, Jerusalem city visible on the hill, man on donkey with expression of grief and tears while crowd rejoices, golden morning light, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century scene, man on a young donkey descending the Mount of Olives toward Jerusalem, large celebrating crowd, palm branches and cloaks on the road, man's face showing tears while crowd rejoices around him, Jerusalem visible in the distance, warm morning light",
+        "runway_video": "Wide on the descent — the crowd energy is real and loud. Track with Jesus through the crowd. Then: the crest of the hill. Jerusalem appears. The crowd gets louder. Slow push to Jesus's face. He has stopped. He is weeping. The crowd continues around him, unaware.",
+        "audio_notes": "Build the crowd sound through the approach. The Hosannas reach their peak as Jerusalem appears. Then — under the crowd noise — Jesus's voice, breaking: 'If you had only known...' The contrast between the shouting and the grief is the scene's sound design challenge."
+      },
+      "production_notes": "The image of a man weeping while a crowd celebrates around him is one of the most powerful images in the gospels. Do not cut away from it too quickly."
+    },
+    {
+      "scene_id": "temple_cleansing_001",
+      "title": "Cleansing the Temple",
+      "episode_label": "The Road to Jerusalem",
+      "act": "act_05_jerusalem",
+      "book": "luke",
+      "luke_reference": "Luke 19:45-48",
+      "chapter_start": 19,
+      "verse_start": 45,
+      "chapter_end": 19,
+      "verse_end": 48,
+      "characters": ["jesus_001"],
+      "location": "Jerusalem Temple — outer courts, the Court of the Gentiles",
+      "time_of_day": "midday",
+      "estimated_runtime_min": 4,
+      "format": "short_film",
+      "emotional_beat": "righteous fury, disruption, the one moment he raises his voice",
+      "key_moment": "This is the one time in the gospels he raises his voice in anger. The tables overturn. The animals scatter. He quotes two prophets simultaneously.",
+      "visual_direction": "Luke's account is briefer than the other gospels — three verses. Lean into the brevity. It is shocking precisely because it comes fast. His authority in the Temple teaches the people daily afterward — the chief priests want to kill him but cannot because of the crowd.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "The Temple courts — commerce, money changers, animal vendors. Noise and transaction.",
+          "camera_movement": "slow establishing — let the audience see the commerce before the disruption",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Jesus entering the courts — his face reading what he sees",
+          "camera_movement": "tracking with him",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "His face — the decision",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The overturning — fast, decisive. Tables. Coins scattering. Doves released.",
+          "camera_movement": "kinetic — handheld, the chaos",
+          "lens_note": "35mm handheld"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Jesus: 'It is written: My house will be a house of prayer, but you have made it a den of robbers.'",
+          "camera_movement": "static — the voice that has never raised itself, raised",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The aftermath — silence in the court. Then people start coming to him to be healed.",
+          "camera_movement": "slow wide pull back to show the changed space",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "Den of Robbers",
+          "duration_seconds": 25,
+          "hook": "He only raised his voice once. This was it.",
+          "caption_template": "'My house will be a house of prayer.' Luke 19:46",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        }
+      ],
+      "target_audiences": ["men", "evangelical_baptist", "youth_gen_z", "secular_curious", "black_church"],
+      "ai_prompts": {
+        "midjourney": "1st century Jerusalem Temple outer courts, market tables overturning, coins scattering, doves flying upward, Jewish man in linen robes at center of the disruption, authority and righteous fury in posture, shocked vendors and onlookers, stone Temple columns, dramatic midday light, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century Temple court scene, tables overturning, coins flying, doves released into the air, a man standing amid the chaos with absolute authority in his bearing, shocked merchants and bystanders, Temple stone architecture, dramatic available light",
+        "runway_video": "Slow establishing on the commerce. Track Jesus in. Hold on his face reading the scene. Then: fast — the overturning happens in seconds. Then: the voice. Then: silence. Then: people beginning to come toward him to be healed. Commerce to church in sixty seconds.",
+        "audio_notes": "Build the market noise. The disruption is loud and sudden — tables, coins, birds. Then: his voice over the chaos, clear and authoritative. Then silence. Then, quiet: people approaching."
+      },
+      "production_notes": "Luke's account of the cleansing is notably brief — don't over-extend it. The brevity is part of the power. What follows immediately: he teaches there daily and people hang on his words."
+    }
+  ]
+}

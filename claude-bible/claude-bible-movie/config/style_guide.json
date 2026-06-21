@@ -1,0 +1,104 @@
+{
+  "style_guide": {
+    "visual_era": "1st Century AD Roman-occupied Judea and Galilee",
+    "overall_aesthetic": "cinematic photoreal — think prestige HBO drama meets National Geographic documentary",
+    "color_palette": {
+      "primary": "warm earth tones — ochre, sandstone, burnt sienna",
+      "accent": "deep lapis blue (Mary), Roman red/purple (authority figures)",
+      "light": "golden hour natural light as default, oil lamp warmth for interiors",
+      "shadow": "deep chiaroscuro for dramatic/passion sequences"
+    },
+    "camera_style": "shallow depth of field, intimate close-ups on faces, wide establishing shots for landscape",
+    "film_grain": "slight grain for cinematic texture — not digital-clean",
+    "what_to_avoid": [
+      "Halo effects",
+      "Glowing ethereal light around Jesus in everyday scenes",
+      "Anachronistic European features on Jewish characters",
+      "Medieval European costume design (wrong era/region)",
+      "Overly theatrical expressions",
+      "CGI-looking backgrounds",
+      "Blue-eyed blonde Jesus"
+    ],
+    "reference_films": [
+      "The Passion of the Christ (2004) — texture, physicality, suffering",
+      "Risen (2016) — naturalistic daylight, investigative tone",
+      "Ben-Hur (2016) — Roman production design",
+      "Young Woman and the Sea (2024) — period authenticity, emotional realism"
+    ]
+  },
+
+  "audience_segments": {
+    "evangelical_baptist": {
+      "label": "Evangelical / Baptist",
+      "us_population_estimate": "70M",
+      "core_values": ["Biblical accuracy", "Salvation message clarity", "Reverence", "The Great Commission"],
+      "content_sensitivities": ["Avoid anything that downplays the divinity of Christ", "No added dialogue contradicting Scripture"],
+      "preferred_format": ["Full-length film", "Bible study companion content"],
+      "distribution_channels": ["Church screenings", "Pure Flix", "RightNow Media", "YouTube"]
+    },
+    "catholic": {
+      "label": "Catholic",
+      "us_population_estimate": "70M",
+      "core_values": ["Sacramental theology", "Marian devotion", "Liturgical calendar alignment", "Saints"],
+      "content_sensitivities": ["Mary must be portrayed with deep reverence", "Avoid Protestant reinterpretations"],
+      "preferred_format": ["Feature film", "Advent/Lent seasonal content"],
+      "distribution_channels": ["FORMED", "CatholicTV", "Parish screenings", "YouTube"]
+    },
+    "black_church": {
+      "label": "Black Church / HBCU Community",
+      "us_population_estimate": "20M+",
+      "core_values": ["Liberation theology", "Justice for the marginalized", "Community", "Prophetic tradition"],
+      "content_sensitivities": ["Accurate portrayal of Jesus as Middle Eastern — not white", "Centering of the poor and oppressed"],
+      "preferred_format": ["Short powerful episodes", "Social media clips", "Church events"],
+      "distribution_channels": ["YouTube", "Instagram/TikTok clips", "Church screenings", "BET+"]
+    },
+    "hispanic_christian": {
+      "label": "Hispanic Catholic / Pentecostal",
+      "us_population_estimate": "30M+",
+      "core_values": ["Familia", "Miracles", "Passionate faith", "La Virgen", "Community celebration"],
+      "content_sensitivities": ["Family scenes must feel authentic", "Miracles portrayed seriously — not minimized"],
+      "preferred_format": ["Spanish-dubbed version priority", "Short emotional episodes", "Telenovela-style episode structure"],
+      "distribution_channels": ["Telemundo digital", "YouTube en Español", "Church screenings", "Netflix Latino"]
+    },
+    "secular_curious": {
+      "label": "Secular / Spiritually Curious",
+      "us_population_estimate": "100M+",
+      "core_values": ["Historical authenticity", "Human drama", "No preachiness", "Good storytelling"],
+      "content_sensitivities": ["Avoid theological jargon without context", "Let the story do the work — no narrated sermons"],
+      "preferred_format": ["Netflix-style series", "Documentary hybrid", "Short standalone stories"],
+      "distribution_channels": ["Netflix", "Amazon Prime", "YouTube", "Apple TV+"]
+    },
+    "youth_gen_z": {
+      "label": "Youth / Gen Z (13-27)",
+      "us_population_estimate": "70M",
+      "core_values": ["Authenticity", "Justice", "Identity", "Outsider vs system", "Radical love"],
+      "content_sensitivities": ["Cannot feel preachy or churchy", "Must be visually stunning", "Short-form first"],
+      "preferred_format": ["60-90 second TikTok/Reels clips", "YouTube shorts", "Series episodes under 20 min"],
+      "distribution_channels": ["TikTok", "Instagram Reels", "YouTube Shorts", "YouTube"]
+    },
+    "jewish_american": {
+      "label": "Jewish American",
+      "us_population_estimate": "7M",
+      "core_values": ["Historical accuracy", "Hebrew names and context", "No supersessionism", "Torah lens"],
+      "content_sensitivities": ["Jesus must be portrayed within his Jewish context", "Avoid anti-Jewish framing of Pharisees"],
+      "preferred_format": ["Documentary-style", "Historical drama"],
+      "distribution_channels": ["PBS", "YouTube", "Documentary festivals"]
+    },
+    "women": {
+      "label": "Women (all backgrounds)",
+      "us_population_estimate": "165M",
+      "core_values": ["Female characters with real agency", "Emotional depth", "Mary Magdalene redeemed from slander"],
+      "content_sensitivities": ["Women must not be background props", "The women at the tomb deserve their moment"],
+      "preferred_format": ["Character-driven episode arcs", "Social media emotional clips"],
+      "distribution_channels": ["Hallmark+", "YouTube", "Instagram", "Church women's events"]
+    },
+    "men": {
+      "label": "Men (all backgrounds)",
+      "us_population_estimate": "160M",
+      "core_values": ["Strength", "Brotherhood", "Courage under pressure", "Redemption from failure"],
+      "content_sensitivities": ["Jesus must not be portrayed as passive or weak", "Peter's failure and restoration is gold for men"],
+      "preferred_format": ["Action sequences", "Brotherhood dynamics", "Short punchy clips"],
+      "distribution_channels": ["YouTube", "Podcast integrations", "Men's ministry events"]
+    }
+  }
+}

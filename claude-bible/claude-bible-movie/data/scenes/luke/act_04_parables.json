@@ -1,0 +1,524 @@
+{
+  "schema_version": "2.0",
+  "book": "luke",
+  "act": "act_04_parables",
+  "act_label": "The Parables",
+  "chapters": "10, 15, 18",
+  "total_runtime_min": 42,
+  "scenes": [
+    {
+      "scene_id": "good_samaritan_001",
+      "title": "The Parable of the Good Samaritan",
+      "episode_label": "The Parables",
+      "act": "act_04_parables",
+      "book": "luke",
+      "luke_reference": "Luke 10:25-37",
+      "chapter_start": 10,
+      "verse_start": 25,
+      "chapter_end": 10,
+      "verse_end": 37,
+      "characters": ["good_samaritan_001"],
+      "location": "Road from Jerusalem to Jericho — rocky, descending, known to be dangerous",
+      "time_of_day": "midday",
+      "estimated_runtime_min": 8,
+      "format": "short_film",
+      "emotional_beat": "trap question, reframing, indifference, suffering, shocking mercy, 'who is my neighbor?'",
+      "key_moment": "The Samaritan stops. A shadow falls over the man in the ditch — and it is not who he expected. Then: kneeling in the dust.",
+      "visual_direction": "The priest and Levite must be played sympathetically — not as cartoonish villains, but as people making a calculated decision (ritual impurity, danger, hurry). Their cowardice is understandable. That makes the Samaritan's mercy more radical. Cast the Samaritan visually distinct from Jewish characters — this is the entire point.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "Framing scene — Jesus telling the parable to the lawyer. Then cut to parable world.",
+          "camera_movement": "pull in on Jesus telling the story, then dissolve to parable",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "EWS",
+          "description": "Rocky road descending from Jerusalem to Jericho — beautiful and dangerous",
+          "camera_movement": "slow establishing",
+          "lens_note": "24mm wide"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The attack — fast, brutal, real. The man stripped and left half dead.",
+          "camera_movement": "kinetic during attack, then absolute stillness",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The man on the ground — point of view. Looking up at the road from the ditch.",
+          "camera_movement": "static — from the ground",
+          "lens_note": "wide from ground"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The priest approaches — slows — crosses to the other side. The man watches him pass.",
+          "camera_movement": "follow the priest until he disappears, then return to man on ground",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The Levite — same. He even comes closer, looks, then crosses away.",
+          "camera_movement": "push in on his looking, then pull back as he leaves",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "From below: a shadow falls on the wounded man. We see the shadow before we see the person.",
+          "camera_movement": "static from man's perspective",
+          "lens_note": "wide from ground"
+        },
+        {
+          "shot_type": "CU",
+          "description": "The Samaritan — kneeling in the dirt, pouring oil and wine. Focused, practical, tender.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "He lifts the man onto his donkey. The physical effort is real.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Return to Jesus telling the story — 'Which of these three do you think was a neighbor?'",
+          "camera_movement": "pull back to reveal the listening crowd",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "The Shadow Falls",
+          "duration_seconds": 30,
+          "hook": "He was lying in the ditch. The religious people walked past. Then a shadow fell over him.",
+          "caption_template": "The hero of the story was the person they despised. Luke 10:33",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Kneeling in Dust",
+          "duration_seconds": 25,
+          "hook": "No speech. No tweet. He stopped, knelt in the dust, and did the work.",
+          "caption_template": "'He took care of him.' Three words. Luke 10:34",
+          "platform_targets": ["tiktok", "reels"]
+        },
+        {
+          "label": "Who Is My Neighbor",
+          "duration_seconds": 20,
+          "hook": "He couldn't bring himself to say 'the Samaritan.' So he said 'the one who had mercy.'",
+          "caption_template": "'Go and do likewise.' Luke 10:37",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        }
+      ],
+      "target_audiences": ["secular_curious", "black_church", "youth_gen_z", "men", "evangelical_baptist", "hispanic_christian"],
+      "ai_prompts": {
+        "midjourney": "1st century rocky road Jerusalem to Jericho, Samaritan man in distinctive Samaritan travel dress kneeling over wounded bloodied Jewish traveler, pouring oil and wine on wounds with focused care, dusty arid landscape, late afternoon golden light, donkey visible behind, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century rocky desert road scene, a Samaritan traveler kneeling beside a badly wounded man on the ground, carefully pouring oil onto wounds, dusty arid Judean landscape in background, late afternoon golden light, expression of focused practical compassion, no one else on the road",
+        "runway_video": "Begin from inside the ditch — looking up at the road. The priest's feet approach, slow, cross away. The Levite's feet come closer, pause, cross away. Then a different pair of feet — they stop. A figure kneels down into frame. His face: not who we expected. He goes to work.",
+        "audio_notes": "Road sounds — wind, distant birds. The attack is sudden and fast — sound design visceral. Then silence. Distant footsteps approaching twice, leaving. Then different footsteps — stopping. The pouring of oil. No score until the Samaritan mounts with the wounded man — then one warm theme."
+      },
+      "production_notes": "The priest and Levite must have sympathetic logic — the ritual impurity law, the genuine danger of the road, the possibility the man is already dead. Let the audience understand why they passed by. That is what makes the Samaritan's stopping more radical."
+    },
+    {
+      "scene_id": "mary_martha_001",
+      "title": "Mary and Martha",
+      "episode_label": "The Parables",
+      "act": "act_04_parables",
+      "book": "luke",
+      "luke_reference": "Luke 10:38-42",
+      "chapter_start": 10,
+      "verse_start": 38,
+      "chapter_end": 10,
+      "verse_end": 42,
+      "characters": ["martha_001", "jesus_001"],
+      "location": "Bethany — Martha's home",
+      "time_of_day": "afternoon",
+      "estimated_runtime_min": 5,
+      "format": "short_film",
+      "emotional_beat": "hospitality overwhelm, resentment, appeal to Jesus, the gentle reframe",
+      "key_moment": "'Martha, Martha, you are worried and upset about many things, but few things are needed — or indeed only one.' Said with tenderness, not rebuke.",
+      "visual_direction": "Martha's world: the busy kitchen space, smoke from fire, many dishes, hearing laughter from the room where Jesus is teaching — and her sister sitting there. Her frustration is completely legitimate. Do not play her as petty. Then Jesus: he calls her name twice. That repetition is love.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "Interior of Martha's home — Jesus and disciples in the main room, Mary at his feet",
+          "camera_movement": "slow establishing",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Martha in the kitchen area — working hard, the sounds of cooking",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Martha's face — glancing toward the room. Mary is sitting. She is working.",
+          "camera_movement": "very slow push",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Martha steps into the room — direct address to Jesus: 'Lord, don't you care that my sister has left me to do the work by myself?'",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Jesus's face — before he speaks. The tenderness there.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Jesus: 'Martha, Martha...' — the repeated name is the whole sermon",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Martha's face receiving the answer — not crushed, reoriented",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "Martha Martha",
+          "duration_seconds": 25,
+          "hook": "She called him out in front of everyone. He answered with her name. Twice.",
+          "caption_template": "'Martha, Martha...' — he saw her. Luke 10:41",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        },
+        {
+          "label": "Don't You Care",
+          "duration_seconds": 20,
+          "hook": "She said it out loud. The thing everyone who serves alone has thought.",
+          "caption_template": "'Don't you care that my sister has left me to do the work?' Luke 10:40",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["women", "hispanic_christian", "evangelical_baptist", "secular_curious"],
+      "ai_prompts": {
+        "midjourney": "1st century Judean home interior, 1st century Jewish woman in working head covering and practical home clothes, hands floury or holding cooking pot, standing in doorway between kitchen and main room where group of men are visible, expression of legitimate frustration, warm interior lamp light, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century home interior, a Jewish woman in practical work clothes standing at a doorway, flour on hands, expression of exhausted frustration, looking toward a room where a teacher sits with listeners, warm oil lamp light, authentic domestic space",
+        "runway_video": "Begin in the kitchen — find Martha working, hear the laughter and teaching from the other room. Follow her to the doorway — she can see Mary sitting at Jesus's feet. Build her decision. Then she steps in. Stay on Jesus's face as she addresses him. Then ECU: 'Martha, Martha.'",
+        "audio_notes": "Kitchen sounds: fire, pottery, food preparation. Teaching sounds from the other room — muffled but warm. As Martha builds to her confrontation, the kitchen sounds intensify slightly. Then the room goes quiet when she speaks."
+      },
+      "production_notes": "This five-verse scene is one of the most universally relatable in Luke. Play it with full sympathy for Martha. Her frustration is valid. The answer she receives is not a rebuke — it is an invitation."
+    },
+    {
+      "scene_id": "lost_sheep_coin_001",
+      "title": "The Lost Sheep and Lost Coin",
+      "episode_label": "The Parables",
+      "act": "act_04_parables",
+      "book": "luke",
+      "luke_reference": "Luke 15:1-10",
+      "chapter_start": 15,
+      "verse_start": 1,
+      "chapter_end": 15,
+      "verse_end": 10,
+      "characters": ["jesus_001"],
+      "location": "Mixed — table setting where Jesus is eating with tax collectors and sinners",
+      "time_of_day": "evening",
+      "estimated_runtime_min": 6,
+      "format": "short_film",
+      "emotional_beat": "religious contempt, divine pursuit, the joy of finding, 'there is rejoicing in heaven'",
+      "key_moment": "A shepherd leaves ninety-nine to find one. A woman lights every lamp and sweeps every corner. And when they find what was lost — they call everyone to celebrate.",
+      "visual_direction": "Two parallel stories told visually with minimal cuts. The shepherd in the wilderness at night — the vulnerability of the search. The woman in her home — the intimacy of turning the whole house upside down for one coin. Both scenes should feel emotionally proportionate to what they represent: God searching for one person.",
+      "shot_list": [
+        {
+          "shot_type": "MS",
+          "description": "Framing: Pharisees muttering — 'This man welcomes sinners and eats with them.' Jesus begins to speak.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "EWS",
+          "description": "Parable 1: A shepherd with a flock — vast open hillside. One is missing.",
+          "camera_movement": "slow pan to establish the empty space where the one sheep should be",
+          "lens_note": "wide 24mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The shepherd going out — at night, with a lamp. Calling. Searching.",
+          "camera_movement": "follow through dark landscape",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "The found sheep — the shepherd's face when he hears it",
+          "camera_movement": "push on the face",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "He carries it home on his shoulders — the image Luke 15:5 — and calls his neighbors",
+          "camera_movement": "slow tracking, the joy is in the walk",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Parable 2: A woman's home — she lights a lamp, sweeps the whole house, searches carefully",
+          "camera_movement": "handheld, close, urgent — her search",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The coin glinting in the lamplight — found",
+          "camera_movement": "static",
+          "lens_note": "macro"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Her face when she finds it — disproportionate joy for one coin",
+          "camera_movement": "push",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Return to Jesus: 'In the same way there is more rejoicing in heaven over one sinner who repents than over ninety-nine righteous persons...'",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "He Leaves the Ninety-Nine",
+          "duration_seconds": 30,
+          "hook": "He had 99 safe. He left them all to find the one who was missing. That's the math of heaven.",
+          "caption_template": "He leaves the 99 to find the 1. Luke 15:4",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        },
+        {
+          "label": "Joy in Heaven",
+          "duration_seconds": 20,
+          "hook": "One person coming back causes a party in heaven. One.",
+          "caption_template": "'There is rejoicing in heaven over one sinner who repents.' Luke 15:7",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "catholic", "secular_curious", "women", "black_church"],
+      "ai_prompts": {
+        "midjourney": "1st century Palestinian shepherd carrying one sheep on shoulders across dark hillside, lamp light, expression of exhausted joy at finding what was lost, night landscape, cinematic photoreal warm lamp glow against cool night 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century shepherd carrying a single sheep on his shoulders at night, oil lamp in hand, dark hillside, warm lamplight on face showing relief and joy, journey home with found sheep",
+        "runway_video": "Parable 1: Find the shepherd in the vast flock. Then the counting. One is missing. Night falls — he lights a lamp and goes. The search in darkness. The sound before the sight. The carrying home. Parable 2: The woman's home — handheld, urgent. Every corner. The glint. The eruption of joy.",
+        "audio_notes": "Shepherd parable: night sounds, the shepherd calling the sheep's name. Silence of the missing one. Then: the sheep's cry, distant. The woman's parable: quiet home sounds, the sweep of the broom, her breath — then the coin sound on the floor."
+      },
+      "production_notes": "These two parables are spoken directly to the Pharisees who are complaining about Jesus eating with sinners. The audience for the parables is contemptuous religious people. Jesus is asking them why they are not rejoicing when someone is found."
+    },
+    {
+      "scene_id": "prodigal_son_001",
+      "title": "The Parable of the Prodigal Son",
+      "episode_label": "The Parables",
+      "act": "act_04_parables",
+      "book": "luke",
+      "luke_reference": "Luke 15:11-32",
+      "chapter_start": 15,
+      "verse_start": 11,
+      "chapter_end": 15,
+      "verse_end": 32,
+      "characters": ["prodigal_father_001", "prodigal_son_001", "elder_brother_001"],
+      "location": "Judean farmstead, far country city, road home",
+      "time_of_day": "various — the parable spans years",
+      "estimated_runtime_min": 14,
+      "format": "short_episode",
+      "emotional_beat": "entitlement, squandering, rock bottom, the long walk, the run, extravagant welcome, elder brother's wound",
+      "key_moment": "The father sees him from far off — and runs. A wealthy elder man hiking up his robes and running down the road. Undignified. Doesn't care.",
+      "visual_direction": "Three visual worlds: 1) warm golden farmstead home, 2) cold glittering city that becomes grey squalor, 3) the long dusty road home. The father running must be the most emotionally produced shot in the film. Begin with him as a tiny figure on a vast landscape — he starts to run. Camera holds wide. Let the running fill the screen before we reach his face.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "The farmstead — warm golden light, abundant, the father's world",
+          "camera_movement": "slow establishing",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The younger son's demand — 'Father, give me my share.' The father's face: he gives it.",
+          "camera_movement": "static — let the weight of the demand land",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The far country — city, glittering, cold palette",
+          "camera_movement": "wide establishing, then compression as the money runs out",
+          "lens_note": "24mm then tighter"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The pig sty — the younger son's hollow face, gaunt, the absolute bottom",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "'He came to himself' — something shifts in his eyes. The decision forming.",
+          "camera_movement": "very slow push",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "EWS",
+          "description": "THE RUN — father as tiny figure on the vast landscape of the road. He sees something in the distance. He begins to run.",
+          "camera_movement": "HOLD WIDE — do not cut. Very slow zoom as he runs.",
+          "lens_note": "wide 24mm with very slow telephoto push"
+        },
+        {
+          "shot_type": "CU",
+          "description": "The father's face running — tears, joy, robes hiked up, undignified, doesn't care",
+          "camera_movement": "tracking with him as he runs",
+          "lens_note": "85mm tracking"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The embrace — he falls on his neck. The son begins his prepared speech. The father interrupts with instructions: 'Quick! The robe. The ring. The sandals.'",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The feast — the whole house celebrating. Warmth, music, light.",
+          "camera_movement": "slow establishing of the joy",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The elder brother arriving from the fields — hears the music. Refuses to go in.",
+          "camera_movement": "exterior, cool evening light vs warm interior light spilling from doorway",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The father comes out to the elder son — goes out to both sons. Pleading, not commanding.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The elder son's face — righteous hurt. 'This son of yours...' He cannot say 'my brother.'",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The final frame — father at the doorway, elder son outside, the feast inside. Open ending. We don't know if he goes in.",
+          "camera_movement": "slow pull back to reveal the full scene",
+          "lens_note": "35mm pulling to 24mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "The Run",
+          "duration_seconds": 45,
+          "hook": "He saw him from far off. He ran. A wealthy elder man, robes hiked up, running down the road.",
+          "caption_template": "He ran. Before the apology was finished. Luke 15:20. This is the most viral clip in the project.",
+          "platform_targets": ["youtube", "tiktok", "reels", "youtube_shorts"]
+        },
+        {
+          "label": "He Came to Himself",
+          "duration_seconds": 20,
+          "hook": "Rock bottom has one name in this story. 'He came to himself.'",
+          "caption_template": "'He came to himself.' Luke 15:17",
+          "platform_targets": ["tiktok", "reels"]
+        },
+        {
+          "label": "This Son of Yours",
+          "duration_seconds": 25,
+          "hook": "He couldn't call him 'my brother.' He said 'this son of yours.' That's the wound.",
+          "caption_template": "'This son of yours.' Luke 15:30. The older son couldn't say 'my brother.'",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        },
+        {
+          "label": "Everything I Have Is Yours",
+          "duration_seconds": 20,
+          "hook": "The father went out to the older son too. He went out to both of them.",
+          "caption_template": "'Son, you are always with me, and everything I have is yours.' Luke 15:31",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["men", "secular_curious", "evangelical_baptist", "hispanic_christian", "black_church", "women", "youth_gen_z"],
+      "ai_prompts": {
+        "midjourney": "1st century elderly Jewish landowner age 60, silver beard, robes hiked up as he runs down dusty road toward distant figure, tears streaming, joy breaking through grief, golden sunset behind him, vast Judean countryside landscape, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic scene of an elderly 1st century Jewish man running down a dusty country road, robes hiked in undignified haste, tears on weathered face, arms reaching forward, warm golden sunset behind him, tiny figure ahead on the road, overwhelming parental joy",
+        "runway_video": "BEGIN WIDE — tiny father figure on vast landscape. He is still. Then he sees something distant. He begins to run. HOLD THE WIDE SHOT — do not cut to him. Very slowly zoom as he runs, but stay wide long enough that we see a wealthy old man with robes hiked running down a public road. Then: his face. Then: the embrace. Music enters only when he starts to run.",
+        "audio_notes": "Silence before the run. Then: his footsteps on the road — the only sound. Then when they embrace: music comes in — full warmth, not immediately orchestral, build from a single instrument. The feast inside: muffled joy. Elder son's scene: the music of the party contrasting with the cool silence outside."
+      },
+      "production_notes": "The run is the single most important moment in the entire project. Allocate the most screen time, the most production care, the best light to this shot. No cuts during the run. Wide shot. Let it breathe."
+    },
+    {
+      "scene_id": "pharisee_tax_collector_001",
+      "title": "The Pharisee and the Tax Collector",
+      "episode_label": "The Parables",
+      "act": "act_04_parables",
+      "book": "luke",
+      "luke_reference": "Luke 18:9-14",
+      "chapter_start": 18,
+      "verse_start": 9,
+      "chapter_end": 18,
+      "verse_end": 14,
+      "characters": ["jesus_001"],
+      "location": "Jerusalem Temple courts — parable setting",
+      "time_of_day": "morning prayer time",
+      "estimated_runtime_min": 4,
+      "format": "short_film",
+      "emotional_beat": "self-congratulation, comparison, honesty, reversal, humility",
+      "key_moment": "'God, have mercy on me, a sinner.' Eyes down. No justification. Just the truth. And that man went home justified.",
+      "visual_direction": "Two men praying in the same space, using the same words ('God'), but from opposite starting points. The Pharisee looks up. The tax collector cannot. The visual distinction is everything.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "Temple courts — morning prayer, many worshipers. Find the two men.",
+          "camera_movement": "slow pan to find them",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The Pharisee — standing, head up, the posture of a man pleased with himself",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "The Pharisee's prayer — 'God, I thank you that I am not like other people...' — his face",
+          "camera_movement": "very slow push to reveal the self-congratulation",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The tax collector — at a distance, will not even look up to heaven, beats his breast",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The tax collector's prayer — 'God, have mercy on me, a sinner.' Eyes down. Nothing else.",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Return to Jesus: 'I tell you that this man, rather than the other, went home justified before God.'",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "God Have Mercy",
+          "duration_seconds": 20,
+          "hook": "Five words. Eyes down. Nothing added. And that was the prayer that worked.",
+          "caption_template": "'God, have mercy on me, a sinner.' Luke 18:13",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "secular_curious", "catholic", "youth_gen_z"],
+      "ai_prompts": {
+        "midjourney": "1st century Jerusalem Temple courts morning prayer, two Jewish men at distance from each other, one standing with head raised in self-satisfied prayer, one hunched with head down beating his breast, both in prayer, morning light through Temple columns, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century Temple courts, two men at prayer, one standing upright with head raised looking satisfied, one distant with head bowed and hand on chest in genuine contrition, morning light, authentic Jewish prayer setting",
+        "runway_video": "Find the two men from across the Temple court. Move between them in contrast. Dwell with the tax collector longest — his downcast eyes, his hand on his chest, the five words.",
+        "audio_notes": "Temple ambient prayer sounds. The two prayers are heard clearly — perhaps the Pharisee slightly louder, the tax collector barely above a whisper. The whisper carries."
+      },
+      "production_notes": "This parable is four verses. The visual contrast between the two postures must do the theological work. No explanation needed after the prayer."
+    }
+  ]
+}

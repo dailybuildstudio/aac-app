@@ -1,0 +1,119 @@
+{
+  "schema_version": "2.0",
+  "character_id": "peter_001",
+  "canonical_name": "Simon Peter",
+  "hebrew_name": "Shim'on bar Yonah",
+  "aliases": ["Simon", "Cephas", "The Rock", "Simon bar Jonah"],
+  "role": "supporting_major",
+  "testament": "New",
+  "books_appearing_in": ["Luke", "Matthew", "Mark", "John", "Acts"],
+  "book": "luke",
+  "chapters_active": "4-9, 18, 22, 24",
+  "era": "1st Century AD, Galilee / Jerusalem",
+  "visual_dna": {
+    "age_range": "~30-35 during Luke's ministry narrative",
+    "ethnicity": "1st Century Jewish, Galilean fisherman from Bethsaida",
+    "skin_tone": "deeply tanned and weathered from years on the Sea of Galilee — sun and wind",
+    "hair_color": "dark brown, greying at the temples — he is older than most of the disciples",
+    "hair_texture": "short to medium, wind-worn, salt-dried",
+    "beard_style": "full fisherman's beard, medium-full, untrimmed",
+    "eye_color": "brown — wide and reactive, his face shows everything he feels",
+    "height_build": "stocky, broad-shouldered, powerful from years hauling nets — the biggest man in the group",
+    "distinguishing_marks": [
+      "large calloused hands — fisherman's hands, not scholar's hands",
+      "his face broadcasts every emotion — he cannot hide anything",
+      "impulsive posture — always slightly leaning forward, ready to speak or act",
+      "the kind of physical presence that fills a room without trying"
+    ],
+    "wardrobe_by_arc": {
+      "fishing_call": "working fisherman's tunic, damp and salt-stained, possibly knee-length for boat work",
+      "ministry": "simple traveling robe, worn sandals — he left the boat without packing",
+      "transfiguration": "travel robe, dusty from mountain climb, disheveled",
+      "denial": "outer cloak wrapped tight against the cold night of the high priest's courtyard"
+    }
+  },
+  "voice_profile": {
+    "register": "rough loud baritone — a man used to calling across water",
+    "pace": "fast — he speaks before he finishes thinking",
+    "accent_note": "thick Galilean accent — so distinctive that a servant girl identifies him by it at the denial (Luke 22:59)",
+    "speech_mannerisms": [
+      "declarations: 'You are the Messiah of God' — maximum confidence",
+      "volunteers first: 'I will build three shelters' (at Transfiguration)",
+      "'Even if all fall away, I will not' — the promise he cannot keep",
+      "the denial: three times, each one faster than the last"
+    ],
+    "notes": "His Galilean accent is historically documented in the denial scene. This is a casting and voice coaching note."
+  },
+  "emotional_arc": {
+    "opening": "Proud Galilean fisherman — successful business, boat, partners, family. Then Jesus says 'Follow me.' He leaves everything.",
+    "midpoint": "Inner circle — he sees the Transfiguration, he makes the great confession. He feels closest to Jesus when he is most about to fail.",
+    "climax": "The courtyard denial — three times, the last time with an oath. Then the rooster. Then Jesus turns and looks at him.",
+    "resolution": "He went outside and wept bitterly. Luke 24 — he runs to the tomb. He is being restored."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 5,
+        "notes": "The disciple who failed and was restored — core to salvation narrative, grace, redemption",
+        "marketing_angle": "He promised everything. Failed completely. Got back up. That's the whole story."
+      },
+      "catholic": {
+        "score": 5,
+        "notes": "The first pope — his primacy, his failure, his restoration all matter theologically",
+        "marketing_angle": "The first pope — flawed, forgiven, and given the keys anyway. His story is the Church's story."
+      },
+      "black_church": {
+        "score": 4,
+        "notes": "The imperfect vessel restored — his failure and restoration is a testimony",
+        "marketing_angle": "God doesn't use perfect people. Peter proves it."
+      },
+      "hispanic_christian": {
+        "score": 4,
+        "notes": "The man of big heart and big failure — restoration is central",
+        "marketing_angle": "El hombre que prometió todo y falló — y fue restaurado de todos modos"
+      },
+      "secular_curious": {
+        "score": 5,
+        "notes": "The most relatable disciple — he gets it wrong constantly, loudly, in front of everyone",
+        "marketing_angle": "He was the loudest, most confident one. He failed more publicly than anyone else. His story is the most human."
+      },
+      "youth_gen_z": {
+        "score": 4,
+        "notes": "The one who talks too big and fails — and is not defined by it",
+        "marketing_angle": "He said the worst thing you can say and still came back. That's the whole point."
+      },
+      "jewish_american": {
+        "score": 3,
+        "notes": "The Galilean fisherman — his world is accurately the world of 1st century Jewish Galilee",
+        "marketing_angle": "A Galilean fisherman — the fishing world of the Sea of Galilee, period-accurate"
+      },
+      "women": {
+        "score": 3,
+        "notes": "Less directly resonant but his failure vs the women's faithfulness at the cross is a noted contrast",
+        "marketing_angle": "The women stayed at the cross. He ran. Luke doesn't hide that."
+      },
+      "men": {
+        "score": 5,
+        "notes": "The man who failed publicly and came back — the most direct male redemption arc in the gospels",
+        "marketing_angle": "He promised everything and failed. Wept alone. Then ran to the empty tomb. Men know this arc."
+      }
+    },
+    "modern_parallel": "The guy who talks too big, fails publicly, weeps alone, and gets back up anyway",
+    "modern_parallel_detail": "Not a tragic figure. A restored one. Luke 22:32 — Jesus says 'when you have turned back, strengthen your brothers.' The restoration is already spoken before the failure happens."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century Jewish fisherman man age 30-35, deeply tanned sea-weathered skin, dark brown hair greying at temples, full medium beard, broad stocky powerful build, large calloused hands, simple working or traveling tunic, Sea of Galilee or Galilean landscape, cinematic photoreal, natural daylight, 8k, film grain",
+    "negative_prompt": "slim build, fine clothing, groomed aristocratic hair, cartoonish, European features",
+    "midjourney_style_params": "cinematic photoreal, natural daylight, warm Galilean tones, authentic working-class look",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of a 1st century Jewish Galilean fisherman, age 30-35, deeply tanned sea-weathered skin, dark brown hair with grey temples, full medium beard, broad stocky powerful build, large rough hands, simple worn tunic, Sea of Galilee background with fishing boats, natural warm daylight, authentic working-man appearance",
+    "reference_films": [
+      "The Chosen TV series — Jonathan Roumie cast but look at Shahar Isaac as Peter for physicality",
+      "The Passion of the Christ (2004) — disciples present at passion"
+    ],
+    "color_grading_notes": "Galilee scenes: warm golden sea-light. Denial scene: cold blue-grey night, courtyard fire casting orange on his face."
+  },
+  "production_notes": "The look Jesus gives Peter after the denial (Luke 22:61) — 'the Lord turned and looked straight at Peter' — is one of the greatest single shots in the film. No words. Just the look."
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0",
+  "character_id": "martha_001",
+  "canonical_name": "Martha of Bethany",
+  "hebrew_name": "Marta bat Avram",
+  "aliases": ["Martha", "Sister of Mary and Lazarus"],
+  "role": "supporting_minor",
+  "testament": "New",
+  "books_appearing_in": ["Luke", "John"],
+  "book": "luke",
+  "chapters_active": "10",
+  "era": "1st Century AD, Bethany (near Jerusalem)",
+  "visual_dna": {
+    "age_range": "~30-40 — likely the older sister, head of the household",
+    "ethnicity": "1st Century Jewish, from Bethany",
+    "skin_tone": "warm olive, slightly flushed — she is always in motion",
+    "hair_color": "dark brown, partially covered but often disheveled from work",
+    "hair_texture": "straight to wavy — usually under a working head covering",
+    "beard_style": "N/A",
+    "eye_color": "dark brown — direct, capable, frustrated in the key scene",
+    "height_build": "medium, capable and strong — someone who runs a household",
+    "distinguishing_marks": [
+      "always moving — hands busy, eyes scanning what needs doing",
+      "she is probably the homeowner — Jesus is welcomed into 'her' home (Luke 10:38)",
+      "the frustration when Mary sits down is genuine and very human",
+      "she is not wrong to serve — she is wrong to resent"
+    ],
+    "wardrobe_by_arc": {
+      "hosting_jesus": "home working clothes — practical, slightly disheveled from cooking and preparing, apron equivalent"
+    }
+  },
+  "voice_profile": {
+    "register": "warm alto, slightly clipped when stressed — the voice of someone used to managing",
+    "pace": "fast — she talks like someone who has a list",
+    "accent_note": "Judean Aramaic — Bethany is near Jerusalem",
+    "speech_mannerisms": [
+      "'Lord, don't you care that my sister has left me to do all the work by myself?' — a complaint addressed to Jesus, not Mary",
+      "she escalates: she asks Jesus to take her side",
+      "the rebuke she receives is the most gentle in the gospels: 'Martha, Martha...' — repeated name, full of tenderness"
+    ],
+    "notes": "Martha is not a villain. She is doing an excellent thing — hospitality is sacred. Jesus doesn't say she's wrong to serve. He says she's anxious about too many things. The distinction matters enormously for portrayal."
+  },
+  "emotional_arc": {
+    "opening": "She welcomes Jesus into her home — a woman of genuine faith and hospitality.",
+    "midpoint": "She is overwhelmed with preparations — and looks up to find her sister sitting at Jesus's feet learning.",
+    "climax": "'Martha, Martha, you are worried and upset about many things, but few things are needed — or indeed only one.'",
+    "resolution": "Luke ends the scene there. In John, her faith statement 'I believe that you are the Messiah' is one of the strongest confessions in any gospel — she is no small figure."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The lesson about choosing the better thing — Martha vs Mary as teaching on priorities",
+        "marketing_angle": "She was doing everything right. And still missed the moment. We know this feeling."
+      },
+      "catholic": {
+        "score": 4,
+        "notes": "St. Martha — patron of hospitality, domestic workers. Her John 11 faith statement is deeply resonant.",
+        "marketing_angle": "St. Martha — the patron of those who serve. Her frustration is the most relatable in the New Testament."
+      },
+      "black_church": {
+        "score": 4,
+        "notes": "The church mother who does everything — the one who carries the load and sometimes resents it",
+        "marketing_angle": "She did everything. She cooked, she served, she welcomed. And she was exhausted. We see you."
+      },
+      "hispanic_christian": {
+        "score": 5,
+        "notes": "The woman who prepares the meal — the one who makes everything happen. Very resonant.",
+        "marketing_angle": "She's the one who made it happen. The one who cooked while others listened. The most relatable woman in the gospel."
+      },
+      "secular_curious": {
+        "score": 4,
+        "notes": "The most human character in the scene — she breaks social convention to complain directly to Jesus",
+        "marketing_angle": "She complained to Jesus directly. He didn't rebuke her for complaining — he answered the real problem."
+      },
+      "youth_gen_z": {
+        "score": 3,
+        "notes": "The overworked one who finally says it out loud",
+        "marketing_angle": "She was the one doing everything and finally said it out loud. And Jesus didn't tell her to be quiet."
+      },
+      "jewish_american": {
+        "score": 3,
+        "notes": "The Jewish woman hosting in her home — hospitality as sacred duty, the conflict between duty and presence",
+        "marketing_angle": "Hospitality is a mitzvah. She was doing it right. Jesus complicated that."
+      },
+      "women": {
+        "score": 5,
+        "notes": "She is seen and named — her frustration is valid even if the answer reorients it",
+        "marketing_angle": "She said what every woman carrying everything alone has thought. Jesus answered with tenderness, not dismissal."
+      },
+      "men": {
+        "score": 3,
+        "notes": "Supporting character — more resonant for women",
+        "marketing_angle": "He called her by name twice. 'Martha, Martha.' That's not a rebuke. That's love."
+      }
+    },
+    "modern_parallel": "The person doing all the work who finally asks why no one else is helping — and gets an unexpected answer",
+    "modern_parallel_detail": "Her complaint is legitimate. Her resentment is understandable. The answer she receives doesn't dismiss her work — it reframes what the work is for."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century Jewish woman age 30-40, warm olive skin, dark hair partially under working head covering, flushed and in motion, practical home working robes, interior of a Judean home, holding a serving bowl or cooking implement, expression of frustration mixed with deep faith, cinematic photoreal, warm interior lamplight, 8k",
+    "negative_prompt": "cartoonish villain expression, European features, modern clothing, glowing features",
+    "midjourney_style_params": "cinematic photoreal, warm interior domestic light, active practical energy",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of a 1st century Jewish woman, age 30-40, olive skin, dark hair under practical head covering, dressed in working home clothes, in the interior of a Judean home with cooking vessels and serving dishes nearby, expression of exhausted frustration on the face of someone who carries everything, warm interior light",
+    "reference_films": [
+      "The Chosen TV series — Martha portrayed as capable homeowner"
+    ],
+    "color_grading_notes": "Domestic warmth — oil lamp interior light. The interior should feel like genuine hospitality, which makes her complaint even more poignant."
+  },
+  "production_notes": "Do not play Martha as petty. She is running a home, welcoming a traveling teacher and his twelve hungry disciples. She is overwhelmed for legitimate reasons. The gentle rebuke is the point, not her fault."
+}

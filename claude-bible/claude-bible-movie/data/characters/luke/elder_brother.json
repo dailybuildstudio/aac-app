@@ -1,0 +1,115 @@
+{
+  "schema_version": "2.0",
+  "character_id": "elder_brother_001",
+  "canonical_name": "The Elder Son (Parable of the Prodigal Son)",
+  "hebrew_name": "N/A — Unnamed Parable Character",
+  "aliases": ["The Elder Brother", "The Faithful Son", "The One Who Stayed"],
+  "role": "parable_character",
+  "testament": "New",
+  "books_appearing_in": ["Luke"],
+  "book": "luke",
+  "chapters_active": "15",
+  "era": "1st Century AD, Judean farmland — parable setting",
+  "visual_dna": {
+    "age_range": "~25-35 — older than the younger son, visibly worn from years of labor",
+    "ethnicity": "1st Century Jewish landowner's son",
+    "skin_tone": "olive, tanned and roughened — he has actually been working the fields all these years",
+    "hair_color": "dark, dusty from fieldwork",
+    "hair_texture": "medium, work-worn",
+    "beard_style": "full working beard — a man who does not have time to groom",
+    "eye_color": "dark brown — resentful in the climactic scene, but not without reason",
+    "height_build": "strong and capable — he has been doing the work of the farm alone",
+    "distinguishing_marks": [
+      "he is coming in from the FIELDS when he hears the music — he has been working all day",
+      "he refuses to go in — a public act of defiance that shames the father in that culture",
+      "calloused hands, dusty clothes — the visible evidence of his faithfulness",
+      "his anger is legitimate — his theology is wrong"
+    ],
+    "wardrobe_by_arc": {
+      "field_return": "working farm clothes — dusty, worn from the day's labor, practical"
+    }
+  },
+  "voice_profile": {
+    "register": "mid-range baritone, controlled — the control breaks when he speaks to his father",
+    "pace": "measured usually, then rapid and bitter in the confrontation",
+    "accent_note": "same Judean home accent as his father and brother",
+    "speech_mannerisms": [
+      "'Look! All these years I've been slaving for you and never disobeyed your orders' — every word is true",
+      "'Yet you never gave me even a young goat so I could celebrate with my friends' — this may also be true",
+      "'But when this son of yours...' — he cannot say 'my brother'. He says 'this son of yours'",
+      "'Who has squandered your property with prostitutes' — he doesn't know this. He assumed."
+    ],
+    "notes": "The elder son is the most important character in the parable for its original audience — the Pharisees and teachers of the law who were 'muttering' that Jesus ate with sinners. He is them."
+  },
+  "emotional_arc": {
+    "opening": "Years of faithful work — never disobeying, never asking for what he needed, accumulating resentment like compound interest.",
+    "midpoint": "He hears the music and dancing from the field. He asks a servant what's happening. He learns his brother is back — and that the party has already started.",
+    "climax": "He refuses to go in. The father comes out to him — also. Both sons require the father to leave the feast.",
+    "resolution": "The parable ends without resolution for the elder son — we do not know if he went in. That is intentional."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 5,
+        "notes": "The elder son is the warning to the religiously faithful — you can be obedient without being glad about grace",
+        "marketing_angle": "He did everything right. Followed every rule. And resented grace when it showed up."
+      },
+      "catholic": {
+        "score": 4,
+        "notes": "The danger of religious observance without love — an essential corrective",
+        "marketing_angle": "He was faithful. He was also furious that his brother was forgiven. Both things were true."
+      },
+      "black_church": {
+        "score": 4,
+        "notes": "The prophetic warning — faithfulness can become a transaction, and then grace becomes an offense",
+        "marketing_angle": "He stayed. He worked. He did everything right. And couldn't celebrate when his brother came home."
+      },
+      "hispanic_christian": {
+        "score": 4,
+        "notes": "The family tension — the one who stayed and the one who left, and the complexity of both",
+        "marketing_angle": "He stayed. He worked. He gave up years. His feelings were valid. The father loved him too."
+      },
+      "secular_curious": {
+        "score": 5,
+        "notes": "The most psychologically realistic character — his anger is completely understandable, and completely wrong",
+        "marketing_angle": "His anger makes perfect sense. He's also the villain of the story. These are not mutually exclusive."
+      },
+      "youth_gen_z": {
+        "score": 4,
+        "notes": "The person who followed all the rules and resents those who didn't and got the same outcome",
+        "marketing_angle": "He did everything right. Watched his brother get rewarded for coming back. His feelings were valid. His conclusion was wrong."
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "The original audience — Jesus told this parable to Pharisees who resented his eating with sinners. The elder son IS them.",
+        "marketing_angle": "The original audience recognized themselves in the elder son. That was the whole point."
+      },
+      "women": {
+        "score": 4,
+        "notes": "Universal — the experience of being the one who stays and does the work",
+        "marketing_angle": "He was the one who stayed. Who showed up. Who did the work. And felt invisible while doing it."
+      },
+      "men": {
+        "score": 5,
+        "notes": "The man who worked faithfully and felt uncelebrated — one of the most honest male portraits in scripture",
+        "marketing_angle": "He worked. He stayed. He never asked. Then resented that no one noticed. Men know this."
+      }
+    },
+    "modern_parallel": "The person who did everything right, followed every rule, and resents grace when it shows up for someone who didn't",
+    "modern_parallel_detail": "His anger is understandable. His theology is wrong. The father loves him too — 'Son, you are always with me, and everything I have is yours.' He was never without access to the feast. He just never threw one."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century young Jewish farmworker man age 25-35, tanned sun-weathered skin from field labor, dark dusty hair, full work-worn beard, rough practical field clothes covered in dust, standing outside a stone farmhouse at dusk, music audible from inside, arms crossed or fists clenched, face of righteous fury mixed with hurt, cinematic photoreal, warm interior light spilling from house door while he stands in the cool blue dusk, 8k",
+    "negative_prompt": "fine robes, cartoonish villain expression, European features, clean groomed appearance",
+    "midjourney_style_params": "cinematic photoreal, exterior cool dusk light vs warm interior light through doorway, moral tension in physical space",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic scene outside a 1st century Judean farmhouse at dusk, a young man in dusty field-worker clothes standing with arms crossed, expression of barely contained hurt and anger, warm celebratory light spilling from the open doorway behind him, music sounds implied, cool blue evening light on his face, his father visible in the doorway reaching toward him",
+    "reference_films": [
+      "The Prodigal Son (various adaptations) — for the father-at-the-door moment"
+    ],
+    "color_grading_notes": "The elder son's scene: he is bathed in cool evening blue while warm party light spills from the door. The visual choice tells the story — he is outside the warmth by choice."
+  },
+  "production_notes": "The parable ends without resolution for the elder son. DO NOT add a reconciliation scene. The open ending is the point — it puts the question to the audience. Will YOU go in? The Pharisees who heard this first were meant to feel the question."
+}

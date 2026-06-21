@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0",
+  "character_id": "anna_001",
+  "canonical_name": "Anna the Prophetess",
+  "hebrew_name": "Channah bat Phanuel",
+  "aliases": ["The Prophetess", "Anna of Asher", "The Widow at the Temple"],
+  "role": "supporting_minor",
+  "testament": "New",
+  "books_appearing_in": ["Luke"],
+  "book": "luke",
+  "chapters_active": "2",
+  "era": "1st Century AD, Jerusalem Temple",
+  "visual_dna": {
+    "age_range": "84 — explicitly stated in Luke 2:37. The specific age matters.",
+    "ethnicity": "1st Century Jewish, tribe of Asher",
+    "skin_tone": "deeply aged olive — the most lined face in the film",
+    "hair_color": "white, covered under widow's head covering",
+    "hair_texture": "hidden — widow's covering",
+    "beard_style": "N/A",
+    "eye_color": "sharp dark eyes that have spent 84 years watching — and still see clearly",
+    "height_build": "small, thin, bent with extreme age — but the energy around her is young",
+    "distinguishing_marks": [
+      "she has not left the Temple for decades — this is her world",
+      "widow's clothing — she was married for seven years, then widowed, and has served in the Temple ever since",
+      "she fasts and prays day and night — the asceticism is visible in her frame but not in her joy",
+      "she speaks immediately and publicly, to everyone present — a prophetess in action"
+    ],
+    "wardrobe_by_arc": {
+      "temple_testimony": "widow's simple robes, worn with the ease of someone who has worn nothing else for sixty years"
+    }
+  },
+  "voice_profile": {
+    "register": "thin, elderly — but when she prophesies, something larger speaks through her",
+    "pace": "urgent for her age — she has waited and now she moves quickly",
+    "accent_note": "Jerusalem Aramaic, elderly woman's voice, slightly trembling with age",
+    "speech_mannerisms": [
+      "she 'gave thanks to God' — the thanksgiving comes first, always",
+      "she spoke about the child to everyone who was looking for redemption — a public declaration",
+      "Luke calls her a prophetess, not a teacher — she speaks what she receives, she doesn't argue it"
+    ],
+    "notes": "Anna is the first evangelist in Luke. She tells everyone. She has been waiting eighty years to do this."
+  },
+  "emotional_arc": {
+    "opening": "Married seven years. Widowed young. A choice: leave or stay. She stayed. Sixty-plus years in the Temple courts.",
+    "midpoint": "She has been praying for the redemption of Jerusalem — probably since before anyone alive can remember.",
+    "climax": "She sees Simeon take the child. She comes immediately. She knows. Thanksgiving pours out.",
+    "resolution": "She tells everyone. The first person in Luke to spread the news publicly. 84 years old."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The intercessor who prayed for decades — and saw her prayers answered",
+        "marketing_angle": "She had been praying for this for sixty years. When it walked into the Temple, she knew it immediately."
+      },
+      "catholic": {
+        "score": 4,
+        "notes": "The consecrated widow, prophetess at the Temple — a forerunner of religious life",
+        "marketing_angle": "She gave her life to the Temple. In return she became the first person to publicly proclaim what she saw."
+      },
+      "black_church": {
+        "score": 5,
+        "notes": "The church mother, the elder woman of prayer — deeply recognized archetype",
+        "marketing_angle": "The church mother who prayed for decades and never stopped. She saw the answer walk in."
+      },
+      "hispanic_christian": {
+        "score": 5,
+        "notes": "La abuela de la fe — the grandmother of prayer and persistence",
+        "marketing_angle": "La profetisa que esperó ochenta años. Y luego fue a contarle a todo el mundo."
+      },
+      "secular_curious": {
+        "score": 3,
+        "notes": "An extraordinary human portrait — a woman who gave her entire life to one purpose",
+        "marketing_angle": "She was 84. She had been a widow for over 60 years. She told everyone anyway."
+      },
+      "youth_gen_z": {
+        "score": 2,
+        "notes": "Less directly resonant — powerful to those with older women in their lives",
+        "marketing_angle": "Your grandmother who has been praying for you since before you were born. That's her."
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "The female prophet in Jewish tradition — Miriam, Deborah, Huldah — she continues a lineage",
+        "marketing_angle": "The prophetess — the last in a lineage from Miriam and Deborah. In the Temple. At 84."
+      },
+      "women": {
+        "score": 5,
+        "notes": "The elder woman who never stopped — her faith, her vocation, her voice matter",
+        "marketing_angle": "She was not background. She was a prophetess. She was the first to tell the public."
+      },
+      "men": {
+        "score": 2,
+        "notes": "Supporting character — most resonant for women and older audiences",
+        "marketing_angle": "The 84-year-old woman who had been praying in the same place for sixty years. And was right."
+      }
+    },
+    "modern_parallel": "The church mother who has been praying for something for sixty years — and lived to see it",
+    "modern_parallel_detail": "She did not wait for someone to announce it. She came immediately and started talking. A prophetess acts."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century extremely elderly Jewish woman age 84, deeply lined aged olive face, white hair under widow's head covering, small thin frame bent with age, simple widow's robes worn smooth from decades of use, bright sharp dark eyes, standing in Jerusalem Temple courts, expression of overwhelming joy and certainty, gesturing as she speaks, cinematic photoreal, soft morning Temple light, 8k",
+    "negative_prompt": "young woman, glamorous, cartoonish, European features, glowing halo, modern clothing",
+    "midjourney_style_params": "cinematic photoreal, soft morning light, Temple courts, intimate joy",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of an extremely elderly 1st century Jewish woman, age 84, very deeply lined olive face, white hair under worn widow's head covering, simple aged robes, small thin frame, remarkably sharp dark eyes full of joy, standing in Jerusalem Temple courts, gesturing expressively as she speaks to people around her, soft morning light through stone columns",
+    "reference_films": [
+      "The Nativity Story (2006) — Temple scene supporting characters"
+    ],
+    "color_grading_notes": "Morning light in the Temple courts — slightly different from the afternoon light of Simeon's scene. She is the second witness, a different quality of light."
+  },
+  "production_notes": "Anna must be portrayed at age 84 with full physical authenticity. She is also full of energy and joy — age and vitality coexist. She is the film's first public evangelist."
+}

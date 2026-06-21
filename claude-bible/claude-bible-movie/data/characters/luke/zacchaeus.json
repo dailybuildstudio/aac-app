@@ -1,0 +1,115 @@
+{
+  "schema_version": "2.0",
+  "character_id": "zacchaeus_001",
+  "canonical_name": "Zacchaeus",
+  "hebrew_name": "Zakkai",
+  "aliases": ["The Tax Collector of Jericho", "The Short One in the Tree"],
+  "role": "supporting_minor",
+  "testament": "New",
+  "books_appearing_in": ["Luke"],
+  "book": "luke",
+  "chapters_active": "19",
+  "era": "1st Century AD, Jericho",
+  "visual_dna": {
+    "age_range": "~40-50 — established chief tax collector, wealthy",
+    "ethnicity": "1st Century Jewish — chief tax collector for a major city",
+    "skin_tone": "olive, soft from indoor wealthy life — he does not labor in the sun",
+    "hair_color": "dark brown, thinning",
+    "hair_texture": "short, well-kept — he can afford good grooming",
+    "beard_style": "short, well-trimmed — prosperity in the details",
+    "eye_color": "brown, sharp and calculating — then shocked, then joyful",
+    "height_build": "notably short — Luke 19:3 explicitly states he was short and couldn't see over the crowd. This is the entire mechanism of the scene.",
+    "distinguishing_marks": [
+      "short stature — explicitly stated, must be visible in casting and framing",
+      "fine quality Roman-influenced robes — chief tax collector wealth is visible",
+      "gold accessories — rings, belt detail — the visible signs of his collaboration with Rome",
+      "a wealthy powerful man in a sycamore tree because he had no other option — dignity surrendered to desperation"
+    ],
+    "wardrobe_by_arc": {
+      "tree_scene": "fine quality robes now crumpled from climbing a tree, gold accessories, fine sandals — a wealthy man in an undignified position",
+      "post_encounter": "same clothing — but the posture has completely changed"
+    }
+  },
+  "voice_profile": {
+    "register": "higher tenor — nervous energy in the tree scene, then sudden bold declaration",
+    "pace": "quick, anxious before — then deliberate and generous after",
+    "accent_note": "Jericho Aramaic — a major trading city accent",
+    "speech_mannerisms": [
+      "nothing before the encounter — he is watching, not speaking",
+      "'Look, Lord! Here and now I give half of my possessions to the poor' — the transformation is immediate and excessive",
+      "'If I have cheated anybody out of anything, I will pay back four times the amount' — the language of a man who knows exactly what he's done"
+    ],
+    "notes": "The theological point of the scene is that Jesus initiates — 'I must stay at your house today.' Zacchaeus did not invite him. He only wanted to see. Jesus invited himself."
+  },
+  "emotional_arc": {
+    "opening": "Wealthy, powerful, despised. The most hated man in Jericho. So isolated in his wealth that he climbs a tree alone to see a passing teacher.",
+    "midpoint": "Jesus stops. In a crowd of hundreds. And calls his name. Looks up. 'Zacchaeus, come down immediately. I must stay at your house today.'",
+    "climax": "The crowd's disgust — 'He has gone to be the guest of a sinner.' Then Zacchaeus stands up and announces radical generosity.",
+    "resolution": "'Today salvation has come to this house, because this man, too, is a son of Abraham.' Jesus names what happened."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The salvation narrative — 'Today salvation has come to this house.' Clear gospel moment.",
+        "marketing_angle": "Jesus walked past thousands of people that day. He stopped under one tree. And called one name."
+      },
+      "catholic": {
+        "score": 3,
+        "notes": "The encounter of grace — Jesus's initiative of love, Zacchaeus's response",
+        "marketing_angle": "He didn't invite Jesus. Jesus invited himself. That's grace."
+      },
+      "black_church": {
+        "score": 4,
+        "notes": "The collaborator redeemed — his radical generosity as a sign of genuine transformation",
+        "marketing_angle": "He worked for the oppressor. One encounter changed not just his heart but his checkbook."
+      },
+      "hispanic_christian": {
+        "score": 4,
+        "notes": "The encounter that transforms — the immediacy of the conversion resonates",
+        "marketing_angle": "El momento en que Jesús lo vio — y su vida nunca fue la misma"
+      },
+      "secular_curious": {
+        "score": 5,
+        "notes": "The most visually comedic and theologically rich scene in Luke — the mechanics are brilliant",
+        "marketing_angle": "The most powerful man in the room couldn't see over the crowd. So he climbed a tree. And someone stopped under it."
+      },
+      "youth_gen_z": {
+        "score": 4,
+        "notes": "The person no one liked who got seen by the one person who mattered",
+        "marketing_angle": "He was the most hated man in the city. Jesus walked past everyone else and stopped at his tree."
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "The tax collector who worked for Rome — 'a son of Abraham' reclaims his Jewish identity",
+        "marketing_angle": "Jesus calls him 'a son of Abraham' — reclaiming his identity that his collaboration had cost him"
+      },
+      "women": {
+        "score": 3,
+        "notes": "Supporting character",
+        "marketing_angle": "The man everyone wrote off. The one Jesus refused to walk past."
+      },
+      "men": {
+        "score": 4,
+        "notes": "Wealthy, successful, empty — the man who had everything and was completely alone",
+        "marketing_angle": "He had everything. He was completely alone. One conversation changed everything."
+      }
+    },
+    "modern_parallel": "The rich man everyone hated — including himself — until one encounter changed everything",
+    "modern_parallel_detail": "He didn't ask for salvation. He asked for a view. Jesus had bigger plans."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century wealthy Jewish chief tax collector age 40-50, notably short stature, olive skin soft from indoor life, thinning dark hair, short trimmed beard, fine quality Roman-influenced robes, gold accessories, perched awkwardly in a sycamore fig tree above a Jericho street crowd, expression shifting from anxious effort to shocked joy, bright midday Jericho sun, cinematic photoreal, 8k",
+    "negative_prompt": "tall build, poor clothing, cartoonish, European features, obviously villainous expression",
+    "midjourney_style_params": "cinematic photoreal, bright Jericho midday sun, wide street establishing then intimate close on face",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic scene of a notably short, wealthy 1st century Jewish man, age 40-50, in fine robes and gold accessories, awkwardly perched in a sycamore fig tree above a crowded Jericho street, expression of surprised joy as he looks down at someone calling his name, bright midday Mediterranean sunlight, crowd below, cinematic framing from below looking up at him",
+    "reference_films": [
+      "The Chosen TV series — for tax collector world and character complexity"
+    ],
+    "color_grading_notes": "Jericho: bright, commercial, wealthy — one of the richest cities in Judea. The scene should feel prosperous and hot. His transformation changes his expression but not his clothes — same man, different heart."
+  },
+  "production_notes": "The tree shot is the signature image of this scene. Frame it: wealthy powerful man in fine robes, crammed into a tree like a boy. Then Jesus stops directly underneath and looks up. The humor and the holiness coexist."
+}

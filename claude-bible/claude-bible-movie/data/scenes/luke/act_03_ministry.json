@@ -1,0 +1,800 @@
+{
+  "schema_version": "2.0",
+  "book": "luke",
+  "act": "act_03_ministry",
+  "act_label": "The Galilean Ministry",
+  "chapters": "5-9",
+  "total_runtime_min": 58,
+  "scenes": [
+    {
+      "scene_id": "call_of_peter_001",
+      "title": "The Miraculous Catch — Call of Simon Peter",
+      "episode_label": "The Galilean Ministry",
+      "act": "act_03_ministry",
+      "book": "luke",
+      "luke_reference": "Luke 5:1-11",
+      "chapter_start": 5,
+      "verse_start": 1,
+      "chapter_end": 5,
+      "verse_end": 11,
+      "characters": ["peter_001", "james_apostle_001", "john_apostle_001", "jesus_001"],
+      "location": "Lake of Gennesaret (Sea of Galilee) — shoreline and fishing boats",
+      "time_of_day": "early morning, post-dawn",
+      "estimated_runtime_min": 10,
+      "format": "feature_sequence",
+      "emotional_beat": "exhaustion and failure, curious compliance, overwhelming miracle, terror and unworthiness, total surrender",
+      "key_moment": "Peter falls to his knees in the overloaded boat: 'Go away from me, Lord; I am a sinful man!' And Jesus: 'Don't be afraid; from now on you will fish for people.'",
+      "visual_direction": "Open on the quiet exhaustion of men who worked all night and caught nothing. The boats pulled up, the nets being washed — the work of failure. Jesus in the boat teaching, the crowd pressed to the water's edge to hear him. Then: 'Put out into the deep water and let down your nets.' Peter's compliance is weary, skeptical, polite. Then the nets fill. The boats begin to sink. And in the overloaded boat, surrounded by more fish than he has ever seen, Peter knows exactly who is in the boat with him — and he cannot stand it.",
+      "shot_list": [
+        {
+          "shot_type": "EWS",
+          "description": "Lake of Gennesaret at dawn — the fishing boats pulled up on the shore, men washing nets",
+          "camera_movement": "slow wide establishing, water still, the light beginning",
+          "lens_note": "24mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Peter — washing nets, tired. The look of a man who worked all night for nothing.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The crowd pressing toward Jesus at the water's edge. Jesus spots Peter's boat — steps in, asks him to push out a little.",
+          "camera_movement": "slow push from crowd to Jesus to the boat",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Jesus teaching from the boat — the crowd on shore listening. Peter at the oars, not particularly listening.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "'Put out into the deep water and let down your nets for a catch.' Peter's expression: polite, skeptical, tired.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "'Because you say so, I will let down the nets.' Compliance without expectation.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The nets going into the water. The moment of stillness. Then: the water begins to churn.",
+          "camera_movement": "static on the nets, then kinetic as the catch happens",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The boats filling with fish — the nets breaking, the other boat called over, both boats beginning to sink",
+          "camera_movement": "handheld — the chaos of abundance",
+          "lens_note": "35mm handheld"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Peter's face — moving from astonishment to something else. Recognition. He moves toward Jesus.",
+          "camera_movement": "push toward Peter",
+          "lens_note": "50mm to 85mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Peter falls to his knees at Jesus's feet in the overloaded boat: 'Go away from me, Lord; I am a sinful man!'",
+          "camera_movement": "static — hold on this",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "'Don't be afraid; from now on you will fish for people.' Jesus's face — not amused. Not gentle. Certain.",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "They bring the boats to shore — they leave everything. They follow him. The fish still in the boats.",
+          "camera_movement": "pull back wide as they walk away — the abandoned boats full of fish",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "Sinful Man",
+          "duration_seconds": 30,
+          "hook": "He'd been fishing all night. Then one cast changed everything. His first response? 'Go away from me.'",
+          "caption_template": "'Go away from me, Lord; I am a sinful man!' Luke 5:8. That's the man Jesus chose first.",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "They Left Everything",
+          "duration_seconds": 20,
+          "hook": "The boats were full. The catch was real. They left all of it.",
+          "caption_template": "'They pulled their boats up on shore, left everything and followed him.' Luke 5:11",
+          "platform_targets": ["tiktok", "reels", "youtube"]
+        },
+        {
+          "label": "Because You Say So",
+          "duration_seconds": 25,
+          "hook": "He'd caught nothing all night. Jesus said try again. His answer: 'Because you say so.'",
+          "caption_template": "'Because you say so, I will let down the nets.' Luke 5:5. That's obedience without evidence.",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        }
+      ],
+      "target_audiences": ["men", "evangelical_baptist", "secular_curious", "youth_gen_z", "black_church"],
+      "ai_prompts": {
+        "midjourney": "1st century Sea of Galilee shoreline at dawn, two wooden fishing boats overloaded with fish beginning to sink, fishermen in ancient robes hauling in nets bursting with catch, one man on his knees in the boat before a standing figure, expressions of astonishment and awe, golden morning light reflecting on water, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century fishing scene, dawn light on the Sea of Galilee, overloaded fishing boats heavy with a miraculous catch, fishermen in ancient robes struggling with nets bursting with fish, one man kneeling in reverence in the boat, golden early morning light on the water, authentic period boats and equipment",
+        "runway_video": "Open wide on quiet failure — boats on shore, nets being washed, exhausted men. Then the lesson from the boat. Then the cast. Hold on the water. Then: the net fills — kinetic chaos. Two boats sinking under abundance. Then slow: Peter's face crossing from astonishment to terror to kneeling. Hold on the kneeling man in the sinking boat. Then: they walk away from everything.",
+        "audio_notes": "Begin quiet — water, nets, the sounds of failure being cleaned up. The crowd ambience as Jesus teaches. Then the splash of the net going in. A long moment of silence. Then: the water erupting. The shouts of the fishermen. Wood creaking under weight. And under all of it, Peter's voice: 'Go away from me, Lord.' Then silence again. Then footsteps walking away."
+      },
+      "production_notes": "James and John are present as partners (Luke 5:10) — they are astonished but Peter is the one who falls. The call happens in the middle of the greatest professional success Peter has ever seen. That is the point. He walks away from the biggest catch of his life."
+    },
+    {
+      "scene_id": "call_of_matthew_001",
+      "title": "Levi at the Tax Booth",
+      "episode_label": "The Galilean Ministry",
+      "act": "act_03_ministry",
+      "book": "luke",
+      "luke_reference": "Luke 5:27-32",
+      "chapter_start": 5,
+      "verse_start": 27,
+      "chapter_end": 5,
+      "verse_end": 32,
+      "characters": ["matthew_levi_001", "jesus_001"],
+      "location": "Capernaum — the tax collector's booth, then Levi's house",
+      "time_of_day": "midday",
+      "estimated_runtime_min": 6,
+      "format": "short_film",
+      "emotional_beat": "the gaze that ends everything, immediate surrender, scandalous celebration, the Pharisees' contempt, the answer that reframes everything",
+      "key_moment": "'Follow me.' Two words. Levi got up, left everything, and followed him. Then he threw a party.",
+      "visual_direction": "The tax booth is a place of small transactions and enormous contempt. Levi sits at his table — prosperous, isolated. Everyone who approaches him is paying under compulsion. The moment Jesus walks by and looks at him: everything stops. Two words. Levi gets up and leaves the money on the table. That night: a great banquet at Levi's house. The Pharisees see who is there and start asking the disciples. Jesus answers them directly.",
+      "shot_list": [
+        {
+          "shot_type": "MS",
+          "description": "Levi at his tax booth — the transaction table, coins, the contempt of every person who approaches",
+          "camera_movement": "static — let the isolation land",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Jesus passing by on the street — not stopping yet. Levi looks up.",
+          "camera_movement": "track with Jesus until he stops",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Jesus looks at Levi. Two words: 'Follow me.'",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Levi's face — the moment of decision. Something changes.",
+          "camera_movement": "very slow push",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Levi stands, leaves the coins on the table — walks away. The booth unmanned. Money still there.",
+          "camera_movement": "pull back wide — the abandoned booth the frame's center",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Levi's house — a great banquet. Tax collectors, sinners, Jesus, the disciples. A crowd of the wrong people.",
+          "camera_movement": "slow establishing — this is a real celebration",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The Pharisees outside, muttering to the disciples: 'Why do you eat and drink with tax collectors and sinners?'",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Jesus: 'It is not the healthy who need a doctor, but the sick. I have not come to call the righteous, but sinners to repentance.'",
+          "camera_movement": "static — direct",
+          "lens_note": "85mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "Left Everything",
+          "duration_seconds": 20,
+          "hook": "No application. No interview. No questions. Two words: 'Follow me.' He left everything.",
+          "caption_template": "'Levi got up, left everything and followed him.' Luke 5:28. The booth still had money in it.",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Not the Healthy",
+          "duration_seconds": 25,
+          "hook": "They asked why he ate with sinners. His answer: 'I came for the sick, not the healthy.'",
+          "caption_template": "'I have not come to call the righteous, but sinners to repentance.' Luke 5:32",
+          "platform_targets": ["tiktok", "reels", "youtube"]
+        }
+      ],
+      "target_audiences": ["secular_curious", "men", "evangelical_baptist", "youth_gen_z", "hispanic_christian"],
+      "ai_prompts": {
+        "midjourney": "1st century Capernaum street, Roman-era tax collection booth with coins and ledgers on a stone table, well-dressed Jewish tax collector sitting at the booth looking up at someone passing, expression of sudden transformation, Mediterranean midday light, stone streets, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century tax collector's booth scene, a prosperous man in fine robes sitting at a stone table covered with coins and documents, looking up with an expression of sudden recognition and decision, midday Mediterranean light, stone street market context",
+        "runway_video": "Open on the isolation of the booth — the contempt in every transaction. Then Jesus in the street. The walk slows. Hold on Levi's face as the two words land. Then: he stands. Coins left on the table. He walks. Wide pull back — the abandoned booth. Cut to: the banquet. Noise, celebration, the wrong crowd. Then: the Pharisees outside. Then: Jesus's answer, direct to camera.",
+        "audio_notes": "The booth: transaction sounds — coins, murmured exchanges, the ambient contempt of a marketplace. When Jesus speaks the two words: a beat of silence. Then footsteps. Then the banquet: full and celebratory. Under the Pharisee conversation: the sound of the party still going inside."
+      },
+      "production_notes": "Luke's account (5:27-28) is the most compressed call narrative in the gospels — Luke says Levi 'left everything' which is explicit. The banquet follows immediately. The Pharisees' objection in this scene is the setup for the 'doctor for the sick' answer — one of Jesus's most quoted lines."
+    },
+    {
+      "scene_id": "sermon_plain_001",
+      "title": "The Sermon on the Plain",
+      "episode_label": "The Galilean Ministry",
+      "act": "act_03_ministry",
+      "book": "luke",
+      "luke_reference": "Luke 6:17-49",
+      "chapter_start": 6,
+      "verse_start": 17,
+      "chapter_end": 6,
+      "verse_end": 49,
+      "characters": ["jesus_001", "peter_001"],
+      "location": "A level place — hillside plateau above Galilee, large crowd",
+      "time_of_day": "morning",
+      "estimated_runtime_min": 10,
+      "format": "feature_sequence",
+      "emotional_beat": "the crowd pressed and healed, the Beatitudes as provocation, love your enemies as impossibility, do not judge, the two builders",
+      "key_moment": "Blessed are you who are poor. Blessed are you who weep. But woe to you who are rich. Woe to you who laugh now. Luke's Beatitudes are harder than Matthew's — they are concrete, they are about now, and the woes are real.",
+      "visual_direction": "Unlike Matthew's Sermon on the Mount, Luke places Jesus on a level plain — among the crowd, not above it. He has just chosen the twelve. The crowd has come from Judea, Jerusalem, Tyre, Sidon — they've traveled to hear and to be healed. People are pressing to touch him, power is going out from him. He looks at the disciples and begins. The Beatitudes in Luke are not principles — they are reversals. Shoot them as reversals. The poor right now. The weeping right now. The hated right now. Then: love your enemies. Then: the two builders. End on the crowd's silence.",
+      "shot_list": [
+        {
+          "shot_type": "EWS",
+          "description": "The level place — a great crowd from across the region, people pressing in, sick being brought forward",
+          "camera_movement": "sweeping wide — the scale of the gathering",
+          "lens_note": "24mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "People pressing to touch Jesus — and power going out from him. The healings are happening continuously.",
+          "camera_movement": "slow push through the crowd, people touching the edge of his robe",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Jesus looks at the disciples — he addresses them directly, but the crowd hears everything",
+          "camera_movement": "static — establish the double audience: disciples close, crowd behind",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "'Blessed are you who are poor, for yours is the kingdom of God.' Direct. Concrete. Now.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Faces in the crowd receiving each beatitude — the poor, the weeping, the hungry, the hated",
+          "camera_movement": "slow pan across faces, each reacting differently",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "'But woe to you who are rich, for you have already received your comfort.' The crowd shifts. This is not comfortable.",
+          "camera_movement": "static — hold on the discomfort",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "'Love your enemies. Do good to those who hate you.' The words as impossibility. Jesus's face: he means it.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "'Do not judge, and you will not be judged.' The crowd absorbing — some nodding, some unsettled.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The two builders parable — he gestures toward actual houses visible in the distance: one on rock, one on sand",
+          "camera_movement": "slow push as the parable builds",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "'The one who hears my words and does not put them into practice is like a man who built a house on the ground without a foundation.' The end of the teaching.",
+          "camera_movement": "very slow pull back from his face",
+          "lens_note": "135mm pulling to 85mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The crowd — silence. The weight of what was just said.",
+          "camera_movement": "slow wide — hold on the silence",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "The Woes",
+          "duration_seconds": 30,
+          "hook": "Everyone knows the Beatitudes. But Luke's version has woes. Jesus said them too.",
+          "caption_template": "'Woe to you who are rich, for you have already received your comfort.' Luke 6:24",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Love Your Enemies",
+          "duration_seconds": 25,
+          "hook": "Not 'tolerate your enemies.' Not 'forgive your enemies.' LOVE them. Do good to them.",
+          "caption_template": "'Love your enemies, do good to those who hate you.' Luke 6:27. He meant it.",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Do Not Judge",
+          "duration_seconds": 20,
+          "hook": "The most quoted verse. In context, it's even harder.",
+          "caption_template": "'Do not judge, and you will not be judged. Do not condemn, and you will not be condemned.' Luke 6:37",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        },
+        {
+          "label": "Power Going Out",
+          "duration_seconds": 20,
+          "hook": "Before the sermon, people were pressing to touch him. Power was going out from him.",
+          "caption_template": "'Power was coming from him and healing them all.' Luke 6:19. Then he started teaching.",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "secular_curious", "catholic", "black_church", "hispanic_christian", "youth_gen_z", "women", "men"],
+      "ai_prompts": {
+        "midjourney": "1st century Galilee hillside level area, large diverse crowd gathered around a Jewish teacher standing among them not above them, people from various regions in ancient robes, expressions of attentive listening and unsettlement, some touching the edge of his robe, bright morning Mediterranean light on the plain, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century hillside teaching scene, large crowd gathered on a level plain, diverse crowd of men and women in ancient robes listening to a teacher standing among them, faces showing a range of reactions from wonder to discomfort, bright morning light, authentic period setting with Galilean landscape",
+        "runway_video": "Open sweeping wide — the scale of the gathering. Then: people pressing to touch him, power leaving him. Then: he looks at the disciples. Hold on his face as the Beatitudes begin. Cut between his words and faces in the crowd receiving them. The poor hearing they are blessed. The rich hearing the woe. 'Love your enemies' — hold on the impossible ask. End: wide on the silent crowd after the two builders.",
+        "audio_notes": "Begin with the ambience of a large crowd — movement, voices, healings happening. As he begins to speak, the crowd noise drops — but doesn't disappear. His voice carries. The Beatitudes land in near silence. The woes: a murmur moves through the crowd. 'Love your enemies': absolute silence. Hold the silence at the end."
+      },
+      "production_notes": "Luke's Sermon on the Plain (6:17-49) is the parallel to Matthew's Sermon on the Mount but is distinctly harder. The beatitudes are in second person ('blessed are you'), the woes are present ('woe to you'), and the location — a level place, not a mountain — is theologically significant: Jesus is among the people, not above them. The crowd includes people from Tyre and Sidon (Gentile territories). This is the most universally important teaching in Luke and should be treated as a set piece."
+    },
+    {
+      "scene_id": "sinful_woman_001",
+      "title": "The Woman Who Was a Sinner",
+      "episode_label": "The Galilean Ministry",
+      "act": "act_03_ministry",
+      "book": "luke",
+      "luke_reference": "Luke 7:36-50",
+      "chapter_start": 7,
+      "verse_start": 36,
+      "chapter_end": 7,
+      "verse_end": 50,
+      "characters": ["jesus_001", "mary_magdalene_001"],
+      "location": "Simon the Pharisee's house — a formal dinner, reclining at table",
+      "time_of_day": "evening",
+      "estimated_runtime_min": 9,
+      "format": "feature_sequence",
+      "emotional_beat": "social transgression, a woman's grief and love without words, the Pharisee's silent contempt, the parable of the two debtors, 'your sins are forgiven', 'your faith has saved you — go in peace'",
+      "key_moment": "She has not stopped kissing my feet since I came in. She is identified in the text only as 'a woman who lived a sinful life in that town.' She says nothing. She does everything. And Simon sees only her sin. Jesus sees only her love.",
+      "visual_direction": "The social world of this scene is layered: a formal Pharisee dinner with reclining couches, honored guests, the rules of hospitality carefully observed. She arrives uninvited. The alabaster jar. She stands behind Jesus at his feet — weeping. Not quietly. Her tears fall on his feet. She wipes them with her hair. She kisses his feet. She anoints them. Every gesture is deliberate, costly, and entirely legible to everyone in the room. Simon watches. Jesus watches Simon watching. The parable of the two debtors is the key. Then: 'Your sins are forgiven.' The dinner guests: who is this? Then: 'Your faith has saved you — go in peace.'",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "Simon the Pharisee's house — a formal dinner, the reclining couches, the honored guests, the careful social arrangement",
+          "camera_movement": "slow establishing — the formality of the room",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "She enters — uninvited. The room notices. The alabaster jar in her hands.",
+          "camera_movement": "track her from the entrance toward the couches",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "She stops behind Jesus — she begins to weep. The tears are not quiet.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Her tears falling on his feet. Then: her hair loosened, wiping them. Then: the kiss.",
+          "camera_movement": "very slow push — each gesture is deliberate",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Simon's face — the contempt and the question he doesn't say aloud: 'If this man were a prophet, he would know what kind of woman is touching him.'",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "'Simon, I have something to tell you.' The parable of the two debtors — Jesus's voice is quiet. He is still watching Simon.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "'You gave me no water for my feet, but she wet my feet with her tears and wiped them with her hair.'",
+          "camera_movement": "static — the indictment delivered quietly",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Simon's face receiving the verdict — he is the one who has loved little.",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Jesus to the woman — not to the room. 'Your sins are forgiven.'",
+          "camera_movement": "static — intimate",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The dinner guests murmuring to each other: 'Who is this who even forgives sins?'",
+          "camera_movement": "slow pan across the confused, offended faces",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "'Your faith has saved you; go in peace.' Her face — receiving it.",
+          "camera_movement": "very slow push",
+          "lens_note": "135mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "She Has Not Stopped",
+          "duration_seconds": 35,
+          "hook": "Simon gave him no water, no kiss, no oil. She has not stopped since he walked in.",
+          "caption_template": "'She has not stopped kissing my feet since I came in.' Luke 7:45. Who loved more?",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Go in Peace",
+          "duration_seconds": 20,
+          "hook": "She said nothing. She did everything. He said: your faith has saved you. Go in peace.",
+          "caption_template": "'Your faith has saved you; go in peace.' Luke 7:50",
+          "platform_targets": ["tiktok", "reels", "youtube"]
+        },
+        {
+          "label": "She Loved Much",
+          "duration_seconds": 25,
+          "hook": "He who is forgiven little loves little. He who is forgiven much — loves much. That's the whole parable.",
+          "caption_template": "'Whoever has been forgiven little loves little.' Luke 7:47",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        }
+      ],
+      "target_audiences": ["women", "secular_curious", "evangelical_baptist", "catholic", "hispanic_christian", "black_church"],
+      "ai_prompts": {
+        "midjourney": "1st century Galilean formal dinner, men reclining at a low table in ancient robes, a woman in torn garments standing behind the honored guest weeping, hair loosened, alabaster jar in her hands, tears visible on her face, the formal dinner guests watching with expressions of contempt and shock, warm lamplight in a stone interior, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century dinner scene, formal Pharisee household interior, a woman kneeling behind a reclining teacher weeping with an alabaster jar nearby, other dinner guests visible watching with shocked expressions, warm interior lamplight on stone walls, authentic period setting with attention to emotion and social tension",
+        "runway_video": "Open on the formal dinner — the careful social order. Then her entrance. Track her movement through the room — the stares, the whispered recognition. She stops behind Jesus. Hold on her face as the tears come. Then: the gestures, each one. Then: cut to Simon's face as he watches. Jesus watching Simon. The parable delivered quietly. Simon's face receiving the verdict. Then: Jesus turning to her. Intimate. The words. Her face receiving them.",
+        "audio_notes": "The dinner: low conversation, the sounds of a formal meal. When she enters: the conversation fades. In her section of the scene: near silence. Her weeping. The sound of the alabaster jar. Then Jesus's voice — low, for Simon. The parable. Then: the dinner guests murmuring. Then: Jesus's final words to her — in complete silence. Her breath. His voice. Go in peace."
+      },
+      "production_notes": "The woman is unnamed in Luke. Tradition associates her with Mary Magdalene; Luke does not make this identification. The scene immediately follows Luke 7:34 where Jesus is accused of being 'a friend of tax collectors and sinners' — this scene is his answer. Play Simon as genuinely confused, not cartoonishly evil. He invited Jesus because he was curious. The parable is the scene's hinge: who loved more? The answer undoes Simon completely."
+    },
+    {
+      "scene_id": "stilling_storm_001",
+      "title": "Stilling the Storm",
+      "episode_label": "The Galilean Ministry",
+      "act": "act_03_ministry",
+      "book": "luke",
+      "luke_reference": "Luke 8:22-25",
+      "chapter_start": 8,
+      "verse_start": 22,
+      "chapter_end": 8,
+      "verse_end": 25,
+      "characters": ["jesus_001", "peter_001", "james_apostle_001", "john_apostle_001"],
+      "location": "Sea of Galilee — open water during a squall",
+      "time_of_day": "daytime, sudden storm",
+      "estimated_runtime_min": 5,
+      "format": "short_film",
+      "emotional_beat": "Jesus sleeping in the middle of the storm, the disciples' terror, the waking, the rebuking of the wind and waves, the question that changes everything, the disciples' new terror",
+      "key_moment": "He rebukes the wind and the raging water. They stop. Then: 'Where is your faith?' And then — more frightening than the storm — the disciples ask each other: 'Who is this? He commands even the winds and the water, and they obey him.'",
+      "visual_direction": "Luke 8:22-25 is four verses and maximum drama. The disciples are experienced fishermen — Peter, James, and John have fished this lake their whole lives. When they are terrified, the storm is genuinely life-threatening. Jesus is asleep. The waking. His voice rebuking the storm as if addressing a person. The silence after. Then the disciples: more afraid in the silence than they were in the storm.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "The boat on the lake — calm water, Jesus asleep in the stern",
+          "camera_movement": "slow wide establishing — peace",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The storm arriving — fast. The squall. Waves crashing over the bow. The boat filling.",
+          "camera_movement": "handheld — the chaos of the storm",
+          "lens_note": "35mm handheld"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Peter's face — genuine fear. These are fishermen. They know what this means.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Jesus — still asleep. The disciples waking him: 'Master, Master, we're going to drown!'",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Jesus standing in the boat — he rebukes the wind and the raging water. His voice: as if addressing a person.",
+          "camera_movement": "static — hold on the authority",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The wind stops. The waves calm. Immediately. The lake: glass.",
+          "camera_movement": "hold wide on the impossible stillness",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "'Where is your faith?' The disciples — in the silence, looking at him.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "The disciples' faces — not relief. New fear. Whispering to each other: 'Who is this?'",
+          "camera_movement": "slow pan across the faces",
+          "lens_note": "85mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "More Afraid After",
+          "duration_seconds": 25,
+          "hook": "They were afraid during the storm. They were more afraid when it stopped.",
+          "caption_template": "'Who is this? He commands even the winds and the water.' Luke 8:25. The calm was scarier.",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Where Is Your Faith",
+          "duration_seconds": 20,
+          "hook": "Twelve grown men woke him up because they were drowning. His first question after the miracle?",
+          "caption_template": "'Where is your faith?' Luke 8:25. Asked in the sudden, perfect calm.",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        }
+      ],
+      "target_audiences": ["men", "evangelical_baptist", "secular_curious", "youth_gen_z", "black_church"],
+      "ai_prompts": {
+        "midjourney": "1st century wooden fishing boat on the Sea of Galilee in a violent storm, enormous waves crashing over the bow, disciples in ancient robes drenched and terrified, one figure standing calm in the stern amid the chaos, dark storm clouds, dramatic contrast between the chaos and the central standing figure, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic storm scene on the Sea of Galilee, a small wooden boat surrounded by massive waves and dark storm clouds, men in ancient soaked robes gripping the sides with expressions of terror, a central figure standing calmly, dramatic lighting through storm clouds, spray and rain, authentic period vessel",
+        "runway_video": "Begin wide on the calm lake, the sleeping figure in the stern. Then: the storm arrives fast — handheld chaos. The boat filling with water. Disciples in genuine terror. Hold on the face of a fisherman who is afraid. Then: the waking. The figure standing. The rebuke. Then: hold on the lake — the impossible stillness. Then: their faces. The new fear is quieter than the storm. Hold it.",
+        "audio_notes": "Begin: water, wind, the sound of a boat. Then: the storm erupts. Wind, waves crashing wood, shouting. The waking — voices over the storm. His single voice: the rebuke, clear over everything. Then: absolute silence. No wind. No waves. Just the boat. The water. Their breathing. In that silence: the whispered question."
+      },
+      "production_notes": "Luke 8:23 says 'a squall came down on the lake so that the boat was being swamped' — these are Galilean squalls, real and fast. The experienced fishermen's terror is not weakness; it is evidence of the storm's severity. Jesus asleep in the storm is its own image. The miracle is in two parts: the calming, and the question that follows. The second part — 'who is this?' — is the scene's real climax."
+    },
+    {
+      "scene_id": "feeding_5000_001",
+      "title": "Feeding the Five Thousand",
+      "episode_label": "The Galilean Ministry",
+      "act": "act_03_ministry",
+      "book": "luke",
+      "luke_reference": "Luke 9:10-17",
+      "chapter_start": 9,
+      "verse_start": 10,
+      "chapter_end": 9,
+      "verse_end": 17,
+      "characters": ["jesus_001", "peter_001", "james_apostle_001", "john_apostle_001"],
+      "location": "Bethsaida — a remote place, open hillside near the lake",
+      "time_of_day": "late afternoon",
+      "estimated_runtime_min": 8,
+      "format": "feature_sequence",
+      "emotional_beat": "the twelve returning from mission, withdrawal sought, the crowd following, welcome and healing, the disciples' impossible problem, five loaves and two fish, giving thanks and breaking, twelve baskets remaining",
+      "key_moment": "'You give them something to eat.' The disciples have five loaves and two fish for five thousand men. Jesus takes the food, looks up to heaven, gives thanks, breaks, gives to the disciples to distribute. Everyone eats. Twelve baskets left over.",
+      "visual_direction": "This is the only miracle that appears in all four gospels. In Luke, it follows the return of the twelve from their mission. They are tired. Jesus tries to withdraw. The crowd follows — five thousand people. He welcomes them. Heals them. Teaches them all day. As the sun begins to set, the disciples bring the problem. Jesus turns it back to them: 'You give them something to eat.' The five loaves and two fish. The blessing. The breaking. The impossible distribution. The twelve baskets remaining. This is the Last Supper in preview — the same gesture, the same words.",
+      "shot_list": [
+        {
+          "shot_type": "EWS",
+          "description": "A remote hillside near Bethsaida — the crowd has followed. Five thousand people on the hillside.",
+          "camera_movement": "sweeping crane — the scale of the crowd",
+          "lens_note": "24mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Jesus welcoming them, healing, teaching — all day. The crowd pressing in.",
+          "camera_movement": "slow track through the crowd — the scope of the ministry",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Late afternoon — the disciples approaching Jesus: 'Send the crowd away so they can go find food and lodging.'",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "'You give them something to eat.' The disciples' faces — the impossible math of the problem.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "'We have only five loaves of bread and two fish.' The disciples showing him — the smallness of it.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Jesus directs the crowd to sit — groups of fifty on the grass. The crowd organizing.",
+          "camera_movement": "wide pull back — the crowd sitting",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "He takes the five loaves and two fish — looks up to heaven — gives thanks — breaks them",
+          "camera_movement": "very slow push as the gesture builds",
+          "lens_note": "50mm to 85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The breaking — his hands. The same gesture as the Last Supper. The same words.",
+          "camera_movement": "static",
+          "lens_note": "macro/135mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The distribution — the disciples carrying baskets, the crowd eating. The food is enough. It is more than enough.",
+          "camera_movement": "wide track through the eating crowd — abundance visible everywhere",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The twelve baskets of broken pieces remaining. More than they started with.",
+          "camera_movement": "static — hold on the twelve baskets",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "You Give Them",
+          "duration_seconds": 25,
+          "hook": "Five thousand people. No food. The disciples had a plan. Jesus had a different one.",
+          "caption_template": "'You give them something to eat.' Luke 9:13. With what you have.",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Twelve Baskets",
+          "duration_seconds": 20,
+          "hook": "They started with five loaves and two fish. After everyone ate: twelve baskets left over.",
+          "caption_template": "More remained than they started with. Luke 9:17.",
+          "platform_targets": ["tiktok", "reels", "youtube"]
+        },
+        {
+          "label": "He Gave Thanks First",
+          "duration_seconds": 20,
+          "hook": "Before the miracle happened, he gave thanks. For the five loaves. For the two fish.",
+          "caption_template": "'He gave thanks and broke them.' Luke 9:16. Gratitude before the miracle.",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "catholic", "black_church", "hispanic_christian", "secular_curious", "women", "men"],
+      "ai_prompts": {
+        "midjourney": "1st century Galilean hillside, enormous crowd of five thousand people seated on grass in organized groups of fifty, a figure at the front breaking bread and fish, disciples distributing food through the crowd, late afternoon golden light on the hillside, baskets visible being passed through the seated crowd, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century hillside scene, large crowd seated on grass in the late afternoon, a man breaking bread at the front as disciples distribute food through the crowd, warm golden afternoon light, authentic period clothing, the scale of the crowd visible across the hillside, baskets of bread visible",
+        "runway_video": "Open sweeping crane on the hillside — five thousand people, the scale overwhelming. Track through the crowd: healing, teaching, the day passing. Then: the disciples approaching with the problem. Pull in to their faces doing the impossible math. Then: the five loaves and two fish — hold on the smallness. He takes them. The gesture of thanksgiving. The breaking — ECU on his hands. Then: wide as the distribution begins and the crowd eats. End on twelve baskets.",
+        "audio_notes": "Begin with the ambience of five thousand people — a contained crowd hum. Teaching, healing sounds. As the sun drops: the disciples' conversation. 'Five loaves. Two fish.' Quiet. His thanks: his voice only. The breaking: audible. Then: the growing sound of a crowd eating. A different kind of crowd noise — satisfied. The twelve baskets: silence."
+      },
+      "production_notes": "Luke 9:10-17 is the miracle that precedes Peter's confession ('You are the Messiah of God') and the Transfiguration. The gesture of taking, blessing, breaking, giving is identical to the Last Supper (22:19) — this is deliberate on Luke's part and should be shot identically. The crowd sits 'in groups of about fifty' — this detail is specific and should be visible in the visual. Only Luke mentions Bethsaida as the location."
+    },
+    {
+      "scene_id": "transfiguration_001",
+      "title": "The Transfiguration",
+      "episode_label": "The Galilean Ministry",
+      "act": "act_03_ministry",
+      "book": "luke",
+      "luke_reference": "Luke 9:28-36",
+      "chapter_start": 9,
+      "verse_start": 28,
+      "chapter_end": 9,
+      "verse_end": 36,
+      "characters": ["jesus_001", "peter_001", "james_apostle_001", "john_apostle_001"],
+      "location": "A mountain — traditionally identified as Mount Hermon or Mount Tabor",
+      "time_of_day": "night, then dawn",
+      "estimated_runtime_min": 10,
+      "format": "feature_sequence",
+      "emotional_beat": "the prayer on the mountain, the disciples falling asleep, the appearance of Moses and Elijah, the disciples waking to glory, Peter's overwhelming response, the voice from the cloud, the sudden aloneness, the silence kept",
+      "key_moment": "'This is my Son, whom I have chosen; listen to him.' The voice from the cloud. And then — Jesus alone. As if nothing had happened. And they kept silent and told no one any of what they had seen.",
+      "visual_direction": "Luke uniquely tells us the disciples were 'heavy with sleep' when the transfiguration began — they woke to it. Luke also tells us Moses and Elijah were speaking with Jesus about 'his departure, which he was about to bring to fulfillment at Jerusalem.' This is the only account that tells us what they discussed. The transfiguration in Luke is not triumphant glory — it is a conversation about Jerusalem, witnessed by three sleeping men who wake to find their teacher has become something they cannot describe. The cloud. The voice. And then: Jesus alone. And they tell no one.",
+      "shot_list": [
+        {
+          "shot_type": "EWS",
+          "description": "The mountain at night — Jesus and the three disciples climbing, distant from the other nine",
+          "camera_movement": "slow track up the mountain path, stars overhead",
+          "lens_note": "24mm wide"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Jesus praying — the three disciples resting, heavy with sleep. They begin to fall asleep.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The appearance begins — the change in Jesus's face, his clothes becoming white and blazing",
+          "camera_movement": "very slow push — the change happens gradually then completely",
+          "lens_note": "50mm to 85mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Two figures with Jesus — Moses and Elijah, in glorious appearance. They are speaking with him.",
+          "camera_movement": "static wide — three figures in conversation in the light",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The disciples waking — fully awake. What they see: his glory. And the two men with him.",
+          "camera_movement": "track from sleeping to suddenly sitting upright",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Peter's face — receiving what he is seeing. The awe is absolute.",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Peter speaking — 'Master, it is good for us to be here. Let us put up three shelters.' He does not know what he is saying.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The cloud — coming. Enveloping them. The disciples entering the cloud. Afraid.",
+          "camera_movement": "slow push into the cloud — the world changing",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "The voice from the cloud: 'This is my Son, whom I have chosen; listen to him.'",
+          "camera_movement": "static — only the voice",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The cloud passes. Jesus — alone. Standing as he always stands. The two men gone. The light gone.",
+          "camera_movement": "slow pull back wide — Jesus alone on the mountain",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "The three disciples' faces — the silence they chose. They told no one.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "They Woke Up to It",
+          "duration_seconds": 25,
+          "hook": "Luke says they were heavy with sleep. They woke up in the middle of the transfiguration.",
+          "caption_template": "'When they became fully awake, they saw his glory.' Luke 9:32. They almost missed it.",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Listen to Him",
+          "duration_seconds": 20,
+          "hook": "God has only said this twice in Luke. At the baptism and here. 'This is my Son. Listen to him.'",
+          "caption_template": "'This is my Son, whom I have chosen; listen to him.' Luke 9:35",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "They Kept Silent",
+          "duration_seconds": 20,
+          "hook": "They saw Moses and Elijah standing with Jesus in blazing light. They told no one.",
+          "caption_template": "'They kept this to themselves and told no one at that time what they had seen.' Luke 9:36",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "catholic", "secular_curious", "jewish_american", "men", "women"],
+      "ai_prompts": {
+        "midjourney": "1st century mountaintop at night, a Jewish man at center in blazing white light that transforms his appearance, two ancient figures standing with him in conversation, three disciples kneeling on the ground in awe, night sky above, mountain summit, supernatural light emanating from the central figure, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic mountaintop supernatural scene, a man at center radiating brilliant white light with transformed appearance, two ancient-appearing figures with him in conversation, three men kneeling in awe at the edge of the scene, dark night sky, mountain summit, light source is the central figure himself, authentic ancient robes",
+        "runway_video": "Begin on the dark mountain — the three climbing behind him. They pray. They sleep. Then: the light changes — slowly at first, then overwhelming. The disciples waking: we see their faces before we see what they're seeing. Then: the full wide — Jesus transformed, Moses and Elijah present, in conversation. Then: the cloud descending. The disciples entering it, afraid. The voice. Then: the cloud passing. Jesus alone. The mountain. Silence. Hold on their three faces making the choice to be silent.",
+        "audio_notes": "Begin: night sounds, the climb, wind. Silence as Jesus prays. The sleeping: quiet. Then the light begins — and a sound that is not sound, a frequency felt more than heard. The conversation of the three is not intelligible — it is the texture of something ancient speaking. The cloud: the sound drops to nothing. The voice: from everywhere. Then: absolute silence. Night sounds returning. The mountain. Three men choosing not to speak."
+      },
+      "production_notes": "Luke's account differs from Matthew and Mark in three specific ways: (1) the disciples were asleep and woke to it — they 'became fully awake' (2) Luke alone says Moses and Elijah 'spoke about his departure [Greek: exodus] which he was about to bring to fulfillment at Jerusalem' — the transfiguration is about the cross (3) Luke says 'they told no one at that time' — implying they eventually did. The Jewish audience will recognize Moses (Torah) and Elijah (Prophets) as the entirety of the Hebrew scriptures. The transfiguration is the scriptures declaring: this is the one."
+    }
+  ]
+}

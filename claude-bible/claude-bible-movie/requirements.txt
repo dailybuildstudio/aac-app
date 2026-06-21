@@ -1,0 +1,2 @@
+# No third-party dependencies — stdlib only (Python 3.9+)
+# dataclasses, json, pathlib, argparse, enum, typing are all built-in

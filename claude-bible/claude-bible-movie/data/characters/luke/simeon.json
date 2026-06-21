@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0",
+  "character_id": "simeon_001",
+  "canonical_name": "Simeon",
+  "hebrew_name": "Shim'on",
+  "aliases": ["The Righteous One", "The Consolation of Israel"],
+  "role": "supporting_minor",
+  "testament": "New",
+  "books_appearing_in": ["Luke"],
+  "book": "luke",
+  "chapters_active": "2",
+  "era": "1st Century AD, Jerusalem Temple",
+  "visual_dna": {
+    "age_range": "~80-90 — very elderly, has been waiting most of his life",
+    "ethnicity": "1st Century Jewish, Jerusalem",
+    "skin_tone": "olive, heavily aged and lined — a face that has seen decades",
+    "hair_color": "white, sparse",
+    "hair_texture": "thin, white — elder man's hair",
+    "beard_style": "long full silver beard of an elder",
+    "eye_color": "milky with age but sharp — he was told he would see, and he sees",
+    "height_build": "slightly stooped with age, moving carefully through the Temple courts",
+    "distinguishing_marks": [
+      "moves through the Temple as one who belongs there — he has been here every day for decades",
+      "his hands, when he holds the infant Jesus, are the hands of someone who has waited his whole life",
+      "the Nunc Dimittis is spoken looking upward — he is already leaving"
+    ],
+    "wardrobe_by_arc": {
+      "temple_presentation": "elder's robe, Temple-appropriate — worn with the ease of someone who has never left"
+    }
+  },
+  "voice_profile": {
+    "register": "thin, elderly — but the Nunc Dimittis carries weight beyond his physical strength",
+    "pace": "slow with age, then suddenly deep and prophetic",
+    "accent_note": "Jerusalem Aramaic, educated speech — a righteous man of standing",
+    "speech_mannerisms": [
+      "the Nunc Dimittis: 'Lord, now let your servant depart in peace' — words of completion, not sadness",
+      "speaks the prophecy to Mary almost gently, then: 'A sword will pierce your own soul too'",
+      "a man who has waited so long that when it finally arrives, there is no drama — only peace"
+    ],
+    "notes": "The Nunc Dimittis is one of the most beautiful passages in Luke. It is not a sad speech — it is the speech of a man whose life has just been completed."
+  },
+  "emotional_arc": {
+    "opening": "A lifetime of faithfulness, moved by the Spirit — promised he will see the Messiah before he dies. Still waiting.",
+    "midpoint": "The Spirit moves him to go to the Temple on the day of Jesus's presentation. He goes.",
+    "climax": "He takes the infant in his arms. The Nunc Dimittis. 'My eyes have seen your salvation.'",
+    "resolution": "He hands the child back and speaks a sword-prophecy over Mary. He has seen everything he needed to see."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The man who waited in faith — and received exactly what was promised",
+        "marketing_angle": "He had one promise from God: he would not die before he saw the Messiah. He walked into the Temple that morning, and there was a baby."
+      },
+      "catholic": {
+        "score": 5,
+        "notes": "The Presentation is a major feast — Simeon's canticle is in the Liturgy of the Hours (Compline)",
+        "marketing_angle": "The Nunc Dimittis — spoken in chapels and cathedrals every night for 2,000 years. This is where it came from."
+      },
+      "black_church": {
+        "score": 4,
+        "notes": "The elder who waited in faith — prophetic tradition, lived to see the promise",
+        "marketing_angle": "He held the promise of generations in his arms. 'Now I can go in peace.'"
+      },
+      "hispanic_christian": {
+        "score": 4,
+        "notes": "The abuelo who lived to see the hope of his people — deeply resonant",
+        "marketing_angle": "El anciano que esperó toda su vida para este momento. Y lo vio."
+      },
+      "secular_curious": {
+        "score": 3,
+        "notes": "A beautiful human moment — the old man who waited, received, was at peace",
+        "marketing_angle": "An old man walked into the Temple that day moved by something he couldn't explain. And then he held a baby and said goodbye."
+      },
+      "youth_gen_z": {
+        "score": 2,
+        "notes": "Less directly resonant — depth appreciated by older viewers",
+        "marketing_angle": "He waited his entire life for one moment. It lasted about sixty seconds. It was enough."
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "The righteous Jew of the Second Temple period — his speech echoes Isaiah 42 and 49 directly",
+        "marketing_angle": "A righteous man of the Temple, waiting for the consolation of Israel — the Isaiah prophecy held in his hands"
+      },
+      "women": {
+        "score": 4,
+        "notes": "His prophecy to Mary is one of the most important moments in Luke for Mary's arc",
+        "marketing_angle": "He blessed them — and then turned to Mary alone and told her what was coming"
+      },
+      "men": {
+        "score": 4,
+        "notes": "The elder man at peace — a portrait of a life completed",
+        "marketing_angle": "He had been waiting long enough. 'Now dismiss your servant in peace.' A man who finished well."
+      }
+    },
+    "modern_parallel": "The elder who waited a lifetime for one thing — and recognized it the moment it arrived",
+    "modern_parallel_detail": "He asked for nothing else. He took the child, said his words, handed him back, and spoke truth about what it would cost. Then walked away at peace."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century very elderly Jewish man age 80-90, sparse white hair, long full silver beard, heavily lined olive face full of peace and joy, slightly stooped with age, simple elder's robe, holding an infant with ancient careful hands, Jerusalem Temple court setting, soft natural light through Temple columns, cinematic photoreal, 8k",
+    "negative_prompt": "young man, cartoonish, European features, theatrical pose, glowing halo, modern clothing",
+    "midjourney_style_params": "cinematic photoreal, soft natural light, intimate and sacred feeling, warm tones",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of a very elderly 1st century Jewish man, age 80-90, sparse white hair, long silver beard, deeply lined olive face, wearing simple elder's robes, standing in Jerusalem Temple courts holding a small infant with reverent aged hands, expression of profound peace and completion, warm natural light through stone columns",
+    "reference_films": [
+      "The Nativity Story (2006) — Temple Presentation scene"
+    ],
+    "color_grading_notes": "Temple presentation: warm filtered light through stone columns — dust in the air, sacred and ordinary at once."
+  },
+  "production_notes": "The Nunc Dimittis scene is one of the most powerful in all of Luke. 90 seconds, practically no movement. Let it breathe."
+}

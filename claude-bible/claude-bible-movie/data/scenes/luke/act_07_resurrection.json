@@ -1,0 +1,323 @@
+{
+  "schema_version": "2.0",
+  "book": "luke",
+  "act": "act_07_resurrection",
+  "act_label": "The Resurrection",
+  "chapters": "24",
+  "total_runtime_min": 30,
+  "scenes": [
+    {
+      "scene_id": "empty_tomb_001",
+      "title": "The Empty Tomb",
+      "episode_label": "The Resurrection",
+      "act": "act_07_resurrection",
+      "book": "luke",
+      "luke_reference": "Luke 24:1-12",
+      "chapter_start": 24,
+      "verse_start": 1,
+      "chapter_end": 24,
+      "verse_end": 12,
+      "characters": ["mary_magdalene_001", "peter_001"],
+      "location": "Garden tomb Jerusalem — pre-dawn",
+      "time_of_day": "pre-dawn, first light",
+      "estimated_runtime_min": 10,
+      "format": "feature_sequence",
+      "emotional_beat": "grief, mission, confusion, terror, dawning impossible hope",
+      "key_moment": "'Why do you look for the living among the dead? He is not here; he has risen!' And then Peter running.",
+      "visual_direction": "Pre-dawn blue light. Women moving through a sleeping city carrying spices. Their grief is real — they are NOT expecting resurrection. They are going to finish a burial. The stone moved is not triumphant yet — it is terrifying. Then the men in gleaming clothes. Then Peter running. Then Peter inside the tomb — alone, wondering.",
+      "shot_list": [
+        {
+          "shot_type": "EWS",
+          "description": "Pre-dawn Jerusalem — blue light, sleeping city, small group of women moving through empty streets",
+          "camera_movement": "very slow tracking from behind",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The garden — approaching the tomb in the blue pre-dawn. The stone visible from a distance.",
+          "camera_movement": "slow push toward the tomb",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The stone — moved. Wrong. Something is wrong. The women stop.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Inside the tomb — empty. The burial cloths. No body.",
+          "camera_movement": "slow interior push — wide to find the cloths",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Mary Magdalene's face — grief, confusion, terror",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Two men in gleaming clothes appear — the women are terrified, faces to the ground",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "'Why do you look for the living among the dead? He is not here; he has risen!'",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Mary's face — grief to confusion to the beginning of something she cannot name",
+          "camera_movement": "very slow push",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The women running — back to the city. The news that will not keep.",
+          "camera_movement": "track with them running",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Peter receiving the news — disbelief. Then: he runs.",
+          "camera_movement": "track with him running",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Peter alone inside the empty tomb — the cloths, the absence. 'He went away wondering to himself.'",
+          "camera_movement": "static wide — he is very small in the tomb space",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "Why Look for the Living",
+          "duration_seconds": 25,
+          "hook": "They came to finish a burial. The stone was moved. Then the words.",
+          "caption_template": "'Why do you look for the living among the dead? He is not here.' Luke 24:5",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Mary at the Tomb",
+          "duration_seconds": 35,
+          "hook": "She came with spices. She left with news the world wasn't ready for.",
+          "caption_template": "She was first. She stayed. She ran to tell them. Luke 24:10",
+          "platform_targets": ["tiktok", "reels", "youtube"]
+        },
+        {
+          "label": "Peter Wondering",
+          "duration_seconds": 20,
+          "hook": "Peter ran to the tomb. He went home wondering. Not yet understanding.",
+          "caption_template": "'He went away wondering to himself.' Luke 24:12. That's the most honest verse.",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "women", "catholic", "secular_curious", "men"],
+      "ai_prompts": {
+        "midjourney": "1st century Jerusalem garden tomb pre-dawn, Jewish women in mourning robes approaching stone tomb entrance in blue early morning light, large stone rolled away from entrance, spice jars in hands, expressions of grief turning to shock, cold blue-grey pre-dawn atmosphere, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic pre-dawn garden tomb scene, Jewish women in dark mourning robes approaching a stone tomb with the entrance stone rolled away, carrying burial spices, pre-dawn cold blue light, expressions of shock and dawning awe, the tomb opening visible in background",
+        "runway_video": "Begin dark. Sound of footsteps on stone. Pre-dawn cold blue. Camera behind the women as they approach — we don't see their faces yet. The stone comes into frame. Wrong. They stop. Camera moves around them to find their faces. Then inside — the cloths. The question. Then: Mary's face across the full journey from grief to confusion to dawning impossible hope. No cut.",
+        "audio_notes": "Pre-dawn city sounds — distant. Footsteps on stone streets. Their breathing. Then the garden: near silence — wind, birds beginning. The stone's emptiness has a sound — the absence. The announcement: the words land in silence. Then: running footsteps."
+      },
+      "production_notes": "Luke says the women's testimony was not believed — 'their words seemed to them like nonsense.' Play this. The disciples' disbelief is part of the story. Only Peter runs to check."
+    },
+    {
+      "scene_id": "road_emmaus_001",
+      "title": "The Road to Emmaus",
+      "episode_label": "The Resurrection",
+      "act": "act_07_resurrection",
+      "book": "luke",
+      "luke_reference": "Luke 24:13-35",
+      "chapter_start": 24,
+      "verse_start": 13,
+      "chapter_end": 24,
+      "verse_end": 35,
+      "characters": ["jesus_001"],
+      "location": "Road from Jerusalem to Emmaus — 7 miles, then a home in Emmaus",
+      "time_of_day": "late afternoon to evening",
+      "estimated_runtime_min": 12,
+      "format": "feature_sequence",
+      "emotional_beat": "grief on the road, a stranger joins, slow recognition, the breaking of bread, the moment of recognition, the running back",
+      "key_moment": "'When he broke the bread, their eyes were opened and they recognized him, and he disappeared from their sight.' Presence. Recognition. Absence. Immediately.",
+      "visual_direction": "This is the most cinematically perfect scene in all of Luke. Two disciples walking away from Jerusalem, grief-heavy. A stranger joins them. They talk for seven miles. He opens the scriptures. Their hearts burn within them. Then the breaking of bread — the same gesture as the upper room — and recognition. And in the moment of recognition, he vanishes. They look at the empty seat. Then they run.",
+      "shot_list": [
+        {
+          "shot_type": "EWS",
+          "description": "The road from Jerusalem — afternoon, two figures walking away from the city, heads down",
+          "camera_movement": "wide establishing then slow push from behind",
+          "lens_note": "35mm then tighter"
+        },
+        {
+          "shot_type": "MS",
+          "description": "A third figure joins them from the side of the road — appears to have come from nowhere",
+          "camera_movement": "static as he joins",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "'What are you discussing together as you walk along?' Their faces — grief breaking through in response",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "They tell him everything — the hopes, the death, the strange news from the women this morning",
+          "camera_movement": "track all three walking together",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "He begins to explain — 'beginning with Moses and all the Prophets.' The whole Bible opened to them.",
+          "camera_movement": "very slow push as he speaks, the light beginning to warm as afternoon deepens",
+          "lens_note": "35mm to 50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Emmaus — arriving at the house. 'Stay with us, for it is nearly evening.' He acts as if going further.",
+          "camera_movement": "static",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "At the table — he takes the bread. He gives thanks. He breaks it.",
+          "camera_movement": "very slow push toward the table",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The breaking — his hands on the bread. The same gesture as the upper room.",
+          "camera_movement": "static",
+          "lens_note": "macro/135mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "'Their eyes were opened and they recognized him' — their faces in the moment of recognition",
+          "camera_movement": "very slow push to each face",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "'He disappeared from their sight.' The empty seat. The bread on the table. Silence.",
+          "camera_movement": "static — hold on the empty seat",
+          "lens_note": "50mm wide"
+        },
+        {
+          "shot_type": "MS",
+          "description": "'Were not our hearts burning within us while he talked with us on the road?' They look at each other.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "They rise immediately — seven miles back to Jerusalem. Night. Running.",
+          "camera_movement": "track with them leaving",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "Hearts Burning",
+          "duration_seconds": 30,
+          "hook": "They walked with him for seven miles without recognizing him. 'Were not our hearts burning within us?'",
+          "caption_template": "'Were not our hearts burning within us while he talked with us?' Luke 24:32",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Recognition at the Breaking",
+          "duration_seconds": 25,
+          "hook": "He took the bread. He broke it. And in that moment — they recognized him.",
+          "caption_template": "The same gesture. The bread. The breaking. Recognition. Luke 24:30-31",
+          "platform_targets": ["tiktok", "reels", "youtube"]
+        },
+        {
+          "label": "The Empty Seat",
+          "duration_seconds": 15,
+          "hook": "The moment they recognized him — he disappeared. Just the bread on the table.",
+          "caption_template": "He disappeared from their sight. Luke 24:31. The empty seat is the sermon.",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "catholic", "secular_curious", "men", "women", "youth_gen_z"],
+      "ai_prompts": {
+        "midjourney": "1st century road from Jerusalem at late afternoon, two Jewish travelers walking with a third figure who joined them, backs to camera, road stretching ahead, warm golden afternoon light, long shadows, seven miles of conversation, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century road scene, three figures walking together in late afternoon light, long shadows, warm golden hour, the road ahead stretching toward a distant village, intimate conversation between travelers, authentic period clothing and landscape",
+        "runway_video": "Begin behind the two disciples on the road — their walk is heavy, slumped. The third figure joins from the side. Stay behind all three as they walk — the conversation is audible but we primarily see their body language change. The walk becomes less heavy. At the house: follow inside. The table. The bread. The hands. The break. Hold on their faces. Hold on the empty seat. Then: they rise.",
+        "audio_notes": "Road sounds throughout — wind, footsteps, birds. His voice as he explains the scriptures: not audible as specific words, but the sound of understanding gradually warming. At the table: near silence. The breaking of bread: the only sound. Then recognition — and absolute silence. Then: their voices, overlapping, realizing. Then: running footsteps."
+      },
+      "production_notes": "The Road to Emmaus is the most perfectly structured narrative in Luke. Every element is intentional: the grief, the stranger, the seven miles, the hospitality, the bread, the recognition, the disappearance, the running back. Do not rush any of it. This is a 12-minute scene minimum."
+    },
+    {
+      "scene_id": "ascension_001",
+      "title": "The Ascension",
+      "episode_label": "The Resurrection",
+      "act": "act_07_resurrection",
+      "book": "luke",
+      "luke_reference": "Luke 24:50-53",
+      "chapter_start": 24,
+      "verse_start": 50,
+      "chapter_end": 24,
+      "verse_end": 53,
+      "characters": ["jesus_001"],
+      "location": "Bethany — the Mount of Olives",
+      "time_of_day": "evening",
+      "estimated_runtime_min": 5,
+      "format": "feature_sequence",
+      "emotional_beat": "blessing, departure, worship, great joy, return to Jerusalem",
+      "key_moment": "He lifts his hands to bless them, and while blessing them, he leaves. The disciples worship. Then: 'And they returned to Jerusalem with great joy.'",
+      "visual_direction": "The departure is quiet. Not spectacular. He is blessing them as he goes — the last thing they see are his hands lifted in blessing. Then: the disciples worshipping. And then Luke's final note: 'they were continually at the temple, praising God.' The gospel ends in praise.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "Bethany — the disciples gathered with Jesus for the last time",
+          "camera_movement": "slow establishing",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "He lifts his hands to bless them — the gesture of the priestly blessing",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "He is taken up — Luke's language is quiet. The departure is not spectacular.",
+          "camera_movement": "tilt up slowly with him — do not show what cannot be shown. End on the sky.",
+          "lens_note": "35mm tilting"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The disciples — worshipping. Then: turning to look at each other.",
+          "camera_movement": "static",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "EWS",
+          "description": "Jerusalem — they return. The Temple in the evening light. The gospel ends with praise.",
+          "camera_movement": "slow establishing — end on the Temple and the gathering light",
+          "lens_note": "wide 24mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "Great Joy",
+          "duration_seconds": 25,
+          "hook": "He left. And they returned to Jerusalem with great joy. That's the ending Luke chose.",
+          "caption_template": "'And they returned to Jerusalem with great joy.' Luke 24:52. That's how the gospel ends.",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "catholic", "secular_curious", "men", "women"],
+      "ai_prompts": {
+        "midjourney": "1st century Bethany hillside evening light, group of Jewish disciples gathered looking upward with expressions of worship and wonder, hands raised, warm evening golden light, Jerusalem visible in the distant valley, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century hillside scene at evening, group of people in ancient robes looking upward with expressions of worship, warm golden late evening light, Jerusalem visible in the distance below, sacred and joyful atmosphere",
+        "runway_video": "Begin with the group gathered. Jesus's hands lifting in blessing. Very slow tilt up — end on the sky. Then: the disciples. They worship. Then they turn to each other. Then: pull back to see them beginning to walk back toward Jerusalem. End on Jerusalem in the evening light.",
+        "audio_notes": "Silence for the departure. Then: the beginning of one voice, then others — the sound of worship growing. Then footsteps on the road back. The last sound of the film should be the Temple, and voices praising."
+      },
+      "production_notes": "Luke ends his gospel in three verses. The ascension in Luke is quieter than in Acts (where Luke describes it in more detail). Follow Luke's restraint. The last image of the gospel is people returning to Jerusalem with great joy. End there."
+    }
+  ]
+}

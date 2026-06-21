@@ -1,0 +1,118 @@
+{
+  "schema_version": "2.0",
+  "character_id": "mary_magdalene_001",
+  "canonical_name": "Mary Magdalene",
+  "hebrew_name": "Miriam of Magdala",
+  "aliases": ["Miriam of Magdala", "The Apostle to the Apostles", "Mary of Magdala"],
+  "role": "supporting_major",
+  "testament": "New",
+  "books_appearing_in": ["Luke", "Mark", "John"],
+  "book": "luke",
+  "chapters_active": "8, 23-24",
+  "era": "1st Century AD, Magdala / Jerusalem",
+  "visual_dna": {
+    "age_range": "~25-35 during ministry",
+    "ethnicity": "1st Century Jewish, from Magdala (a prosperous Galilean fishing town)",
+    "skin_tone": "warm olive, expressive face — eyes that have seen darkness and now see light",
+    "hair_color": "dark auburn to black",
+    "hair_texture": "long, wavy — in some scenes loose, in others covered",
+    "beard_style": "N/A",
+    "eye_color": "dark brown, intense — depth of someone who has been through something real",
+    "height_build": "medium build, strong presence — not fragile",
+    "distinguishing_marks": [
+      "eyes that hold both darkness and light simultaneously",
+      "she is always listed first when women disciples are named — Luke 8:2 puts her at the head of the list",
+      "not the 'sinful woman' of Luke 7 — Luke is careful to introduce her separately in Luke 8",
+      "the last at the cross, first at the tomb — her loyalty is absolute and physical"
+    ],
+    "wardrobe_by_arc": {
+      "healed_follower": "modest but not poor — Magdala was a prosperous town, she may have had means",
+      "ministry_travel": "modest traveling women's robes, practical for the road",
+      "crucifixion_witness": "grief-stricken, dark earth tones — she did not go home",
+      "resurrection_morning": "same garments as crucifixion — she came before dawn, no sleep, carrying spices"
+    }
+  },
+  "voice_profile": {
+    "register": "warm alto, emotional depth when moved — mostly quiet",
+    "pace": "measured, deliberate — she does not waste words",
+    "accent_note": "Galilean — from Magdala, a busy fishing and trading town",
+    "speech_mannerisms": [
+      "in Luke she speaks almost nothing directly — her action is her voice",
+      "she is present at everything that matters — the presence says what words cannot",
+      "at the tomb: she runs to tell the disciples. Her testimony is immediate and specific."
+    ],
+    "notes": "Luke distinguishes Mary Magdalene from the unnamed sinful woman of Luke 7. They are NOT the same person. This must be the portrayal."
+  },
+  "emotional_arc": {
+    "opening": "Luke 8:2 — 'from whom seven demons had gone out.' We meet her already healed. Whatever she endured is in her past and visible in her eyes.",
+    "midpoint": "Faithful follower and financial supporter of the ministry — 'these women were helping to support them out of their own means.'",
+    "climax": "At the cross — Luke 23:49: she watched from a distance. Then at the tomb: she is named first.",
+    "resolution": "First witness to the resurrection — 'Why do you look for the living among the dead?' She runs. She tells. She is not believed. She tells anyway."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The woman delivered from darkness, now serving faithfully — a clear testimony narrative",
+        "marketing_angle": "Delivered from something real. Then she funded the ministry. Then she stayed at the cross."
+      },
+      "catholic": {
+        "score": 4,
+        "notes": "St. Mary Magdalene — feast day July 22. John Paul II called her 'Apostle to the Apostles'",
+        "marketing_angle": "The Apostle to the Apostles — she told the men what happened. They didn't believe her."
+      },
+      "black_church": {
+        "score": 5,
+        "notes": "The woman history tried to rewrite — who showed up when everyone else ran",
+        "marketing_angle": "History tried to make her someone she wasn't. She was there. She stayed. She ran to tell them."
+      },
+      "hispanic_christian": {
+        "score": 5,
+        "notes": "La Magdalena — deeply embedded in Hispanic Catholic devotion, her story of redemption resonates",
+        "marketing_angle": "La Magdalena — ella estuvo en la cruz. Ella fue la primera en la tumba. Ella corrió a contarlo."
+      },
+      "secular_curious": {
+        "score": 5,
+        "notes": "The most misrepresented woman in history — her actual story vs what tradition made her",
+        "marketing_angle": "For 1,400 years she was called a prostitute. She wasn't. Who was she really?"
+      },
+      "youth_gen_z": {
+        "score": 5,
+        "notes": "A woman whose story was stolen and who deserves to have it told correctly",
+        "marketing_angle": "She was erased from her own story. She stayed at the cross when the men ran. She was first."
+      },
+      "jewish_american": {
+        "score": 3,
+        "notes": "A Jewish woman from Magdala — her world is 1st century Galilean Jewish life",
+        "marketing_angle": "A Jewish woman from Magdala — her story told without the medieval additions"
+      },
+      "women": {
+        "score": 5,
+        "notes": "The patron saint of women whose stories were taken from them — her reclamation is powerful",
+        "marketing_angle": "She was first. She stayed. She witnessed what changed everything. And then was told her testimony didn't count."
+      },
+      "men": {
+        "score": 3,
+        "notes": "Her faithfulness contrasts with the male disciples' flight — a convicting contrast",
+        "marketing_angle": "The women stayed at the cross. She was the first to see the resurrection. The men were hiding."
+      }
+    },
+    "modern_parallel": "The woman whose story was stolen and rewritten — who showed up anyway",
+    "modern_parallel_detail": "She funded the ministry (Luke 8:3), was present at the cross, was first at the tomb, was first to see the risen Christ. And was not believed. She told them anyway."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century Jewish woman age 25-35, warm olive skin, long dark wavy hair, intense dark brown eyes with depth of one who has seen darkness and light, medium strong build, modest traveling robes, Galilean landscape or Jerusalem setting, cinematic photoreal, golden hour natural light, 8k, film grain",
+    "negative_prompt": "red dress, sexualized depiction, cartoonish, European features, halo, passive expression, tearful victim look",
+    "midjourney_style_params": "cinematic photoreal, warm golden light, emotionally complex expression, dignified presence",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of a 1st century Jewish woman, age 25-35, warm olive skin, long dark wavy hair, intense dark brown eyes conveying both past suffering and present strength, modest traveling robes, Galilean hillside background, warm natural light, dignified and strong expression, cinematic depth of field",
+    "reference_films": [
+      "Mary Magdalene (2018) — Rooney Mara portrayal for non-sexualized dignity",
+      "The Passion of the Christ (2004) — her presence at the cross"
+    ],
+    "color_grading_notes": "Ministry scenes: warm golden Galilean light. Cross scene: desaturated grief. Tomb scene: pre-dawn blue shifting to dawn gold at the moment of recognition."
+  },
+  "production_notes": "CRITICAL: Mary Magdalene is NOT the sinful woman of Luke 7. Luke is explicit — he introduces her separately in Luke 8:2. The 1,400-year conflation (Pope Gregory 591 AD) must not be reproduced here."
+}

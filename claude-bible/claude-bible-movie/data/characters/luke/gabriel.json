@@ -1,0 +1,117 @@
+{
+  "schema_version": "2.0",
+  "character_id": "gabriel_001",
+  "canonical_name": "Gabriel",
+  "hebrew_name": "Gavriel",
+  "aliases": ["The Angel Gabriel", "The Messenger", "He Who Stands Before God"],
+  "role": "supporting_minor",
+  "testament": "New",
+  "books_appearing_in": ["Luke", "Daniel"],
+  "book": "luke",
+  "chapters_active": "1",
+  "era": "1st Century AD — appears in Temple (to Zacharias) and Nazareth (to Mary)",
+  "visual_dna": {
+    "age_range": "Timeless — appears as an adult male of indeterminate age, perhaps 30-40 in human terms",
+    "ethnicity": "Not human — appears in human-like form but with something clearly other",
+    "skin_tone": "Luminous — not white, not any earthly tone. The light is in the bearing, not a special effect.",
+    "hair_color": "dark, close-cropped or pulled back — not flowing angel hair",
+    "hair_texture": "clean, simple",
+    "beard_style": "possibly clean-shaven — military bearing, not priestly",
+    "eye_color": "dark, unnervingly direct — Zacharias was 'gripped with fear' simply from being seen",
+    "height_build": "tall, perfectly proportioned — not a superhero build, but undeniably commanding presence",
+    "distinguishing_marks": [
+      "the terror he produces is from presence, not appearance — he looks human enough to be terrifying",
+      "first words are always 'Do not be afraid' — which means they are always afraid",
+      "no visible wings in Luke — that is a later tradition",
+      "he waits, he is still, he speaks with no urgency — eternity has no rush"
+    ],
+    "wardrobe_by_arc": {
+      "temple_appearance": "white linen — formal, simple, nothing theatrical. The terror is in what he is, not what he wears.",
+      "annunciation": "same white linen — appears in Mary's ordinary space, making the ordinary sacred"
+    }
+  },
+  "voice_profile": {
+    "register": "deep baritone — resonant in a way that feels like it comes from somewhere larger than the room",
+    "pace": "measured, unhurried — the cadence of someone who has all of time available to them",
+    "accent_note": "No accent as we understand it — the language itself carries weight",
+    "speech_mannerisms": [
+      "always begins with 'Do not be afraid' — acknowledging the fear he cannot help but cause",
+      "declarative, not explanatory — 'You will conceive and give birth to a son'",
+      "gives reasons and signs as gifts, not as proof — 'Elizabeth is also expecting'",
+      "the name 'I am Gabriel, who stands in the presence of God' — said once, clearly"
+    ],
+    "notes": "Gabriel does not perform. He delivers. Two appearances in Luke — Zacharias (disbelieved, paid a price) and Mary (believed, given everything)."
+  },
+  "emotional_arc": {
+    "opening": "Appearance to Zacharias in the Temple — he has been waiting at the altar of incense for this assignment",
+    "midpoint": "Responds to Zacharias's doubt with measured consequence — not anger, not contempt. Matter-of-fact.",
+    "climax": "Appearance to Mary — 'Greetings, you who are highly favored.' The most important message ever delivered.",
+    "resolution": "Departure — 'Then the angel left her.' Nothing more needed."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "Messenger of the Word, fulfilling the divine plan",
+        "marketing_angle": "He had been waiting to deliver this message. For centuries."
+      },
+      "catholic": {
+        "score": 5,
+        "notes": "The Annunciation is a central feast — Gabriel's appearance is doctrinally critical",
+        "marketing_angle": "The Annunciation — Gabriel arrives not with thunder but with a question she has to answer"
+      },
+      "black_church": {
+        "score": 3,
+        "notes": "The divine messenger, prophetic tradition",
+        "marketing_angle": "God sent his word ahead. He always does."
+      },
+      "hispanic_christian": {
+        "score": 4,
+        "notes": "The angel of the Lord — deeply embedded in Hispanic Catholic popular devotion",
+        "marketing_angle": "El ángel que trajo las mejores noticias del mundo — a una niña"
+      },
+      "secular_curious": {
+        "score": 3,
+        "notes": "The question of what Mary actually experienced — the most honest portrayal possible",
+        "marketing_angle": "What did she actually see? Not what stained glass tells you."
+      },
+      "youth_gen_z": {
+        "score": 3,
+        "notes": "The messenger who shows up when no one expects it",
+        "marketing_angle": "He showed up in the middle of her ordinary day. And nothing was ordinary again."
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "Gabriel appears in Daniel — the continuity of the angel across Hebrew scripture is significant",
+        "marketing_angle": "The same Gabriel who appeared to Daniel. The thread runs from exile to Nazareth."
+      },
+      "women": {
+        "score": 4,
+        "notes": "He chose Mary — the entire annunciation is a divine conversation with a woman",
+        "marketing_angle": "God sent his most important message to a teenage girl. Gabriel was the delivery."
+      },
+      "men": {
+        "score": 3,
+        "notes": "The warrior-messenger archetype — not soft, not theatrical",
+        "marketing_angle": "He is not a cherub. He is the one who stands in the presence of God."
+      }
+    },
+    "modern_parallel": "The bearer of news that changes everything — who arrives without fanfare and waits for your answer",
+    "modern_parallel_detail": "He does not force. He delivers, explains, offers a sign — and waits. Both recipients have to respond."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "angelic messenger in 1st century setting, tall commanding human-like male figure, simple white linen robe, luminous skin without glowing effects, dark intense eyes of absolute calm, standing in Temple or Galilean home interior, the light from him is subtle — it is in his bearing, not a special effect, cinematic photoreal, 8k, dramatic interior light",
+    "negative_prompt": "wings (unless explicitly needed), halo, glowing orb of light, cherub baby, blonde hair, European cherub look, theatrical pose, cartoonish, painted",
+    "midjourney_style_params": "cinematic photoreal, dramatic interior lighting, sense of the sacred in the ordinary",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic 1st century scene, tall commanding figure in simple white linen standing in a stone temple interior or Galilean home, dark intense eyes of absolute calm, no wings, no halo, the holiness is in the stillness not special effects, dramatic available light from temple lamp or window, other figure showing fear in background, cinematic drama",
+    "reference_films": [
+      "The Nativity Story (2006) — Gabriel's appearance handled without theatrics",
+      "A Hidden Life (2019) — Terrence Malick's treatment of the sacred in the ordinary"
+    ],
+    "color_grading_notes": "Temple scene: warm gold torchlight against stone. The light on Gabriel slightly cooler than everything else — not glowing, just different."
+  },
+  "production_notes": "Critical direction: the terror Gabriel causes must come from presence, not VFX. No wings in Luke. The holiness is in the quiet."
+}

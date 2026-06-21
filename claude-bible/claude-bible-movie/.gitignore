@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# macOS
+.DS_Store
+
+# Generated output (prompts exported at runtime)
+output/
+
+# OMC session state
+.omc/
+
+# Editor
+.vscode/
+.idea/

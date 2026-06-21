@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1777153699374,
+  "projectRoot": "/Users/amandashelton/claude-projects",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {},
+  "hotPaths": [
+    {
+      "path": "claude-bible/files/README.md",
+      "accessCount": 1,
+      "lastAccessed": 1777235266490,
+      "type": "file"
+    },
+    {
+      "path": "claude-bible/files/generate.py",
+      "accessCount": 1,
+      "lastAccessed": 1777235706943,
+      "type": "file"
+    },
+    {
+      "path": "claude-bible/files/output/john.json",
+      "accessCount": 1,
+      "lastAccessed": 1777235706953,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

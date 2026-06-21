@@ -1,0 +1,121 @@
+{
+  "schema_version": "2.0",
+  "character_id": "jesus_001",
+  "canonical_name": "Jesus of Nazareth",
+  "hebrew_name": "Yeshua ben Yosef",
+  "aliases": ["Yeshua", "The Christ", "Son of Man", "Messiah", "Rabbi", "The Word"],
+  "role": "protagonist",
+  "testament": "New",
+  "books_appearing_in": ["Luke", "Matthew", "Mark", "John"],
+  "book": "luke",
+  "chapters_active": "1-24",
+  "era": "1st Century AD, Roman-occupied Judea and Galilee",
+  "visual_dna": {
+    "age_range": "0 (birth) to 33 (crucifixion) — ministry scenes: 30-33",
+    "ethnicity": "1st Century Jewish, Galilean",
+    "skin_tone": "warm olive-brown, sun-weathered from years of outdoor ministry",
+    "hair_color": "dark brown to black",
+    "hair_texture": "wavy, shoulder-length, worn natural",
+    "beard_style": "full beard, medium length, natural — not groomed",
+    "eye_color": "dark brown — deep, perceptive, others notice them",
+    "height_build": "average for era (~5'5\"), lean but strong from carpentry and walking hundreds of miles",
+    "distinguishing_marks": [
+      "calloused hands from carpentry",
+      "dusty sandaled feet from travel",
+      "intense, unhurried eye contact",
+      "calm bearing that reads as authority, not aggression"
+    ],
+    "wardrobe_by_arc": {
+      "ministry": "simple undyed linen tunic, outer robe (tallith with tassels/tzitzit), worn leather sandals",
+      "transfiguration": "radiant white garments — description: 'his clothes became as bright as a flash of lightning'",
+      "passion": "worn tunic, crown of thorns, purple robe (mockery), later stripped",
+      "post_resurrection": "clean linen, unrecognized at first — ordinary yet extraordinary"
+    }
+  },
+  "voice_profile": {
+    "register": "warm baritone — not thunderous, authority through depth not volume",
+    "pace": "measured, never hurried — comfortable with silence before key statements",
+    "accent_note": "Galilean Aramaic speaker — his accent was noted and identifiable (Mark 14:70)",
+    "speech_mannerisms": [
+      "answers questions with questions",
+      "uses parable and story naturally, not as technique",
+      "quotes Torah with authority — 'you have heard it said... but I tell you'",
+      "addresses individuals by name at pivotal moments (Zacchaeus, Simon, Martha)",
+      "long pauses before the most important words"
+    ],
+    "notes": "Never raises his voice in anger except once — the Temple. In every other context, his authority is quiet."
+  },
+  "emotional_arc": {
+    "opening": "Joy and purpose at launch of ministry — reading Isaiah in Nazareth synagogue: 'Today this scripture is fulfilled'",
+    "midpoint": "Growing tension — setting his face toward Jerusalem (Luke 9:51), knowing what awaits. Teaching with increasing urgency.",
+    "climax": "Gethsemane — 'Father, if you are willing, take this cup from me. Yet not my will, but yours.' Sweat like drops of blood. Then the cross.",
+    "resolution": "Resurrection appearances — calm, unhurried, eating fish with them. 'Peace be with you.' The wound marks still present."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 5,
+        "notes": "The fulfillment of prophecy, substitutionary atonement, resurrection — every core doctrine in Luke",
+        "marketing_angle": "The fulfillment of every prophecy, walking among us — not a story. History."
+      },
+      "catholic": {
+        "score": 5,
+        "notes": "The Incarnate Word, Real Presence, institution of Eucharist at Last Supper",
+        "marketing_angle": "The Incarnate Word — fully human at the table, fully divine at the tomb"
+      },
+      "black_church": {
+        "score": 5,
+        "notes": "Liberation theology gold — Jesus centers the poor, the outcast, the oppressed throughout Luke",
+        "marketing_angle": "The liberator who walked into rooms with broken people and made them feel seen"
+      },
+      "hispanic_christian": {
+        "score": 5,
+        "notes": "El milagro, la familia, el sufrimiento — suffering and resurrection resonate deeply",
+        "marketing_angle": "El Salvador del mundo — healer, miracle-worker, the one who never gives up on family"
+      },
+      "secular_curious": {
+        "score": 4,
+        "notes": "The historical Jesus — most compelling figure in human history. Luke written as historical account.",
+        "marketing_angle": "The most compelling, disruptive figure who ever lived — who was he really?"
+      },
+      "youth_gen_z": {
+        "score": 4,
+        "notes": "Rejected by institutions, radical in love, died for what he believed, changed everything",
+        "marketing_angle": "Rejected by the system. Died for what he believed. Changed everything anyway."
+      },
+      "jewish_american": {
+        "score": 3,
+        "notes": "Portrayed as deeply Jewish — the Torah-observant rabbi from Galilee. Not the European figure.",
+        "marketing_angle": "A Jewish rabbi from Galilee — his story told in its actual historical context"
+      },
+      "women": {
+        "score": 5,
+        "notes": "Luke centers women more than any other gospel — Mary, Elizabeth, the women who funded his ministry, Mary Magdalene",
+        "marketing_angle": "He noticed women everyone else overlooked. In Luke, they're never the background."
+      },
+      "men": {
+        "score": 5,
+        "notes": "Strong, confrontational, courageous — overturns tables, faces death without flinching. Not passive.",
+        "marketing_angle": "Fearless. Direct. Walked toward danger. The toughest thing he ever said was 'forgive them.'"
+      }
+    },
+    "modern_parallel": "The leader who walks into rooms with broken people and makes them feel seen",
+    "modern_parallel_detail": "Not a CEO, not a general — but someone with genuine authority that doesn't need a title. People left everything to follow him."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century Jewish man age 30-33, warm olive-brown sun-weathered skin, dark wavy shoulder-length hair, full natural beard, dark brown eyes with depth and calm authority, lean strong build from years of walking, simple undyed linen tunic and outer robe with tassels, worn leather sandals, cinematic photoreal, golden hour natural light, 8k, film grain",
+    "negative_prompt": "blue eyes, blonde hair, European features, white skin, halo, glowing body, cartoonish, painted illustration, modern clothing, medieval costume, muscular bodybuilder physique, long flowing luxurious hair",
+    "midjourney_style_params": "cinematic photoreal, golden hour natural light, shallow depth of field, film grain",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of a 1st century Jewish man, age 30-33, olive-brown sun-weathered complexion, dark wavy shoulder-length hair, full natural beard, deep dark brown eyes radiating calm authority, lean build, wearing simple linen robes and sandals, Galilean hillside background, warm golden hour light, shallow depth of field, cinematic drama",
+    "reference_films": [
+      "The Passion of the Christ (2004) — texture, grit, physicality of suffering",
+      "Risen (2016) — naturalistic daylight, investigative realism",
+      "Son of God (2014) — warmth and approachability of ministry scenes"
+    ],
+    "color_grading_notes": "Warm golden tones for ministry. Cool blue-grey for passion scenes. Dawn light for resurrection."
+  },
+  "production_notes": ""
+}

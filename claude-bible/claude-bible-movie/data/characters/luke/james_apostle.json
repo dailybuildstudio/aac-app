@@ -1,0 +1,116 @@
+{
+  "schema_version": "2.0",
+  "character_id": "james_apostle_001",
+  "canonical_name": "James son of Zebedee",
+  "hebrew_name": "Ya'akov ben Zavdai",
+  "aliases": ["James the Greater", "Son of Thunder", "Boanerges"],
+  "role": "supporting_minor",
+  "testament": "New",
+  "books_appearing_in": ["Luke", "Matthew", "Mark", "Acts"],
+  "book": "luke",
+  "chapters_active": "5-6, 8-9",
+  "era": "1st Century AD, Galilee / Jerusalem",
+  "visual_dna": {
+    "age_range": "~25-30 — he and John are likely younger than Peter",
+    "ethnicity": "1st Century Jewish, Galilean fisherman",
+    "skin_tone": "tanned from outdoor fishing life on the Sea of Galilee",
+    "hair_color": "dark brown to black",
+    "hair_texture": "medium, slightly wavy, worn natural",
+    "beard_style": "medium beard, younger looking than Peter",
+    "eye_color": "dark brown — hot, reactive, quick to flare",
+    "height_build": "strong and physical from fishing — slightly leaner than Peter",
+    "distinguishing_marks": [
+      "named 'Son of Thunder' with John — the name suggests fire and volume",
+      "in Luke 9:54 wants to call fire down on Samaritans — Jesus rebukes him",
+      "present at the Transfiguration (inner circle: Peter, James, John)",
+      "brother dynamic with John — inseparable"
+    ],
+    "wardrobe_by_arc": {
+      "fishing_call": "fisherman's working clothes, mending nets when called",
+      "ministry": "simple traveling robe — left the boat with Peter and John",
+      "transfiguration": "dusty travel robe, climbing clothes"
+    }
+  },
+  "voice_profile": {
+    "register": "baritone, energetic — louder than John",
+    "pace": "fast, reactive — the kind of person who finishes sentences before thinking",
+    "accent_note": "Galilean — same regional accent as Peter and John",
+    "speech_mannerisms": [
+      "speaks in tandem with John — they often seem to finish each other's thoughts",
+      "the fire-calling proposal in Luke 9 — bold, impulsive, confident he knows what righteousness looks like",
+      "Jesus rebukes him without anger — 'You do not know what spirit you are of'"
+    ],
+    "notes": "James is defined partly by his fiery temper and partly by being in the inner circle. He and John requested seats at Jesus's right and left — audacious ask."
+  },
+  "emotional_arc": {
+    "opening": "Fisherman with his father Zebedee — called alongside John by Jesus on the same day as Peter.",
+    "midpoint": "Inner circle — present at Jairus's daughter, Transfiguration. The fire being slowly shaped.",
+    "climax": "Luke ends before James's martyrdom — but he is the first apostle killed (Acts 12:2). His arc is incomplete in Luke, but the shape of what he becomes is visible.",
+    "resolution": "Following, learning — not yet the leader he will be, not yet the martyr."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The inner circle disciple — his zeal is relatable, his rebukes teachable",
+        "marketing_angle": "He wanted to call fire from heaven. Jesus said no. That's a lesson."
+      },
+      "catholic": {
+        "score": 4,
+        "notes": "St. James the Greater — patron of pilgrims, the Camino de Santiago",
+        "marketing_angle": "The apostle whose shrine draws millions every year. This is who he was before he was a saint."
+      },
+      "black_church": {
+        "score": 3,
+        "notes": "The zealous one, refined by proximity to Jesus",
+        "marketing_angle": "His zeal was real. Jesus just redirected it."
+      },
+      "hispanic_christian": {
+        "score": 4,
+        "notes": "Santiago — patron saint of Spain and Latin America, deeply embedded in Hispanic identity",
+        "marketing_angle": "Santiago — millions have walked the Camino in his name. This is where it started."
+      },
+      "secular_curious": {
+        "score": 3,
+        "notes": "The disciple who wanted to call fire from heaven — a very human impulse",
+        "marketing_angle": "He saw a Samaritan village reject Jesus. His first instinct was: burn it down. Jesus said no."
+      },
+      "youth_gen_z": {
+        "score": 3,
+        "notes": "The hot-headed one who gets rebuked — relatable",
+        "marketing_angle": "He wanted justice. He just had the wrong method. Jesus didn't kick him out for it."
+      },
+      "jewish_american": {
+        "score": 2,
+        "notes": "Supporting disciple character",
+        "marketing_angle": "A Galilean fisherman of the 1st century — his world authentically rendered"
+      },
+      "women": {
+        "score": 2,
+        "notes": "Supporting character",
+        "marketing_angle": "The brother who followed his whole life and died for it first"
+      },
+      "men": {
+        "score": 4,
+        "notes": "The hot-headed man who is being shaped — his arc is deeply relatable for men",
+        "marketing_angle": "He was the angriest one. Jesus kept him in the inner circle anyway."
+      }
+    },
+    "modern_parallel": "The passionate hothead who's actually right about justice but wrong about methods",
+    "modern_parallel_detail": "His impulse to call fire on the Samaritans comes from genuine righteousness misdirected. Jesus doesn't reject him — he redirects him."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century Jewish Galilean fisherman man age 25-30, tanned skin from outdoor life, dark hair, medium beard, strong build from fishing, simple tunic and travel robe, Sea of Galilee or Galilean countryside setting, cinematic photoreal, natural daylight, 8k",
+    "negative_prompt": "old man, fine robes, European features, cartoonish, halo",
+    "midjourney_style_params": "cinematic photoreal, natural warm daylight, Galilean fishing world",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of a young 1st century Jewish Galilean fisherman, age 25-30, tanned skin, dark hair, medium beard, strong build, simple worn traveling tunic, Sea of Galilee backdrop, natural warm daylight, energetic expression",
+    "reference_films": [
+      "The Chosen TV series — for fisherman disciple world-building"
+    ],
+    "color_grading_notes": "Warm Galilean light — same palette as Peter but slightly younger energy."
+  },
+  "production_notes": "James and John should be cast as clearly brothers — similar features, similar energy, but James slightly more dominant/louder."
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0",
+  "character_id": "good_samaritan_001",
+  "canonical_name": "The Samaritan (Parable of the Good Samaritan)",
+  "hebrew_name": "N/A — Unnamed Parable Character",
+  "aliases": ["The Good Samaritan", "The Neighbor", "The One Who Showed Mercy"],
+  "role": "parable_character",
+  "testament": "New",
+  "books_appearing_in": ["Luke"],
+  "book": "luke",
+  "chapters_active": "10",
+  "era": "1st Century AD, road from Jerusalem to Jericho — parable setting",
+  "visual_dna": {
+    "age_range": "~30-45 — traveling merchant or tradesman",
+    "ethnicity": "Samaritan — visually and culturally distinct from Jewish characters. This distinction is the entire point of the parable.",
+    "skin_tone": "olive-brown, weathered from travel — a man who is on the road regularly",
+    "hair_color": "dark, possibly lighter than Judean Jewish characters — Samaritan population had some different features",
+    "hair_texture": "medium, travel-worn",
+    "beard_style": "medium beard — not the priestly look, a working man's beard",
+    "eye_color": "dark brown — the eyes that see a wounded man and stop",
+    "height_build": "medium, capable — a man who can lift an injured person onto a donkey",
+    "distinguishing_marks": [
+      "Samaritan dress — visually distinct from Jewish dress. The Jewish audience would have identified him immediately as 'other'.",
+      "travel bags and supplies — he has oil, wine, and bandages available because he is a prepared traveler",
+      "a donkey — he has an animal the wounded man can ride",
+      "he kneels in the dust — a man of whatever status getting dirt on his robes to help a stranger"
+    ],
+    "wardrobe_by_arc": {
+      "road_scene": "Samaritan traveling clothes — distinctive enough that a Jewish audience would immediately identify him as Samaritan, practical for long road travel"
+    }
+  },
+  "voice_profile": {
+    "register": "steady, practical baritone",
+    "pace": "unhurried — he has time for this",
+    "accent_note": "Samaritan dialect of Aramaic — slightly different from Jewish Aramaic",
+    "speech_mannerisms": [
+      "he barely speaks in the parable — his action is his voice",
+      "at the inn: practical instructions to the innkeeper — 'Look after him and when I return I will reimburse you'",
+      "no dramatic speech — just the next practical thing"
+    ],
+    "notes": "The Samaritan's silence and action is intentional. In contrast to the lawyer who asks 'who is my neighbor?' with words, the Samaritan answers 'who is my neighbor?' with hands and money."
+  },
+  "emotional_arc": {
+    "opening": "Traveling the dangerous road from Jerusalem to Jericho — the same road as everyone else.",
+    "midpoint": "He sees the man. The priest saw him. The Levite saw him. He sees him too — and something different happens.",
+    "climax": "He crosses the road. He kneels in the dust. He pours out oil and wine. He lifts the man. He takes him to the inn. He pays.",
+    "resolution": "'Which of these three do you think was a neighbor to the man who fell into the hands of robbers?' The lawyer cannot bring himself to say 'the Samaritan.' He says 'the one who had mercy.'"
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The command to love neighbor — the parable's answer to 'who is my neighbor?' is radical",
+        "marketing_angle": "Jesus made the hero of his parable the person the audience despised. That's not an accident."
+      },
+      "catholic": {
+        "score": 4,
+        "notes": "Works of mercy — the corporal works of mercy embodied in a single scene",
+        "marketing_angle": "Every hospital named Good Samaritan, every rescue mission — it started here."
+      },
+      "black_church": {
+        "score": 5,
+        "notes": "The outsider who does what the insiders won't — a prophetic reversal central to liberation theology",
+        "marketing_angle": "The religious leaders walked past. The foreigner stopped. Jesus says: go and do likewise."
+      },
+      "hispanic_christian": {
+        "score": 5,
+        "notes": "El buen samaritano — one of the most recognized parables in Hispanic Christian culture",
+        "marketing_angle": "El extranjero que se detuvo cuando los religiosos siguieron caminando. ¿Quién es tu prójimo?"
+      },
+      "secular_curious": {
+        "score": 5,
+        "notes": "The most universally recognized parable — the concept of the 'good Samaritan' has entered secular culture and law",
+        "marketing_angle": "This two-minute scene changed how humans think about obligation to strangers. It still has. 'Good Samaritan laws' exist because of it."
+      },
+      "youth_gen_z": {
+        "score": 5,
+        "notes": "Anti-hypocrisy, cross-cultural solidarity, action over words — this parable speaks directly to Gen Z values",
+        "marketing_angle": "The religious people walked past. The outsider stopped. Jesus said: he's the one who got it right."
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "The Samaritan-Jewish conflict was deep and real — understanding it makes the parable's shock value comprehensible",
+        "marketing_angle": "Jews and Samaritans did not associate. That's the whole point. Jesus made the Samaritan the hero."
+      },
+      "women": {
+        "score": 4,
+        "notes": "Universal — mercy as the defining ethic",
+        "marketing_angle": "He stopped when no one would have blamed him for walking past. That's the definition."
+      },
+      "men": {
+        "score": 5,
+        "notes": "Practical heroism — he does the actual work, pays the actual money",
+        "marketing_angle": "He crossed the road. He lifted the man. He paid the bill. He said I'll be back to check. That's it. That's the whole lesson."
+      }
+    },
+    "modern_parallel": "The person from the group everyone despises who stops and helps when the respectable people walk past",
+    "modern_parallel_detail": "The shock of the parable in its first-century context was that the hero was a Samaritan. In every culture, there is a group that fills that role. The parable instructs us to look carefully at who we're casting in that role."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century Samaritan traveling man age 30-45, olive-brown weathered skin, dark medium hair and beard, visually distinct Samaritan travel clothing different from Jewish dress, kneeling in the dirt of a rocky road, tending to a wounded bloodied man, pouring oil and wine on wounds, a donkey visible behind him, rocky Jerusalem to Jericho road, dusty arid landscape, late afternoon golden light, cinematic photoreal, 8k",
+    "negative_prompt": "fine palace clothing, European features, cartoonish, obviously heroic pose, modern clothing",
+    "midjourney_style_params": "cinematic photoreal, dusty golden afternoon light, rocky road setting, human dignity in action",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic scene on a rocky ancient road, a 1st century Samaritan traveler kneeling beside a wounded man on the ground, pouring oil carefully onto wounds, dust-covered both men, a donkey tied to a tree nearby, golden late afternoon desert light, expression of focused compassionate attention, wide barren Judean hills in background",
+    "reference_films": [
+      "The Gospel of John (2003) — for period travel and road authenticity"
+    ],
+    "color_grading_notes": "The road: harsh, exposed, dangerous-looking — the yellow dust of the Jerusalem-Jericho descent. The Samaritan's presence adds warmth to a cold scene."
+  },
+  "production_notes": "The casting direction is explicit: the Samaritan must read as culturally and visually OTHER to the Jewish characters. The priest and Levite must be played sympathetically — they are not cartoonishly evil, they are afraid and rule-following. The Samaritan's mercy is more radical when surrounded by understandable cowardice."
+}

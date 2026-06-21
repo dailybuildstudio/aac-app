@@ -1,0 +1,602 @@
+{
+  "schema_version": "1.0",
+  "book": "Luke",
+  "testament": "New",
+  "last_updated": "2026-05-28",
+  "characters": [
+    {
+      "character_id": "jesus_001",
+      "canonical_name": "Jesus of Nazareth",
+      "aliases": ["Yeshua", "The Christ", "Son of Man", "Messiah", "Rabbi"],
+      "role": "protagonist",
+      "testament": "New",
+      "books_appearing_in": ["Luke", "Matthew", "Mark", "John"],
+      "luke_chapters_active": "1-24",
+      "era": "1st Century AD, Roman-occupied Judea/Galilee",
+
+      "visual_dna": {
+        "age_range_in_luke": "0 (birth) to 33 (crucifixion)",
+        "primary_age_for_ministry": "30-33",
+        "ethnicity": "1st Century Jewish, Galilean",
+        "skin_tone": "warm olive-brown, sun-weathered",
+        "hair_color": "dark brown to black",
+        "hair_texture": "wavy, shoulder length",
+        "beard_style": "full beard, medium length, natural",
+        "eye_color": "dark brown",
+        "height_build": "average height for era (~5'5\"), lean but strong from carpentry and travel",
+        "distinguishing_marks": "calloused hands, intense eyes, calm bearing",
+        "wardrobe_by_arc": {
+          "ministry": "simple undyed linen tunic, outer robe (tallith), sandals",
+          "transfiguration": "radiant white garments",
+          "passion": "worn tunic, crown of thorns, later stripped",
+          "post_resurrection": "clean white linen"
+        }
+      },
+
+      "voice_personality": {
+        "speech_style": "authoritative yet tender, uses parables and questions, never rushes",
+        "personality_traits": ["compassionate", "fearless", "perceptive", "joyful", "grieving", "bold"],
+        "emotional_arc": "joy at ministry launch → growing tension with authorities → sorrow in Gethsemane → triumph at resurrection",
+        "voice_profile_notes": "warm baritone, measured pace, pauses before key statements"
+      },
+
+      "audience_targeting": {
+        "demographic_resonance": {
+          "evangelical_baptist": 5,
+          "catholic": 5,
+          "black_church": 5,
+          "hispanic_christian": 5,
+          "secular_curious": 4,
+          "youth_gen_z": 4,
+          "jewish_american": 3,
+          "women": 5,
+          "men": 5
+        },
+        "modern_parallel": "The leader who walks into rooms with broken people and makes them feel seen",
+        "marketing_angles": {
+          "evangelical_baptist": "The fulfillment of every prophecy, walking among us",
+          "catholic": "The Incarnate Word, fully human and fully divine",
+          "black_church": "The liberator who centers the poor, the outcast, and the oppressed",
+          "hispanic_christian": "El Salvador del mundo — healer, miracle-worker, family restorer",
+          "secular_curious": "The most compelling historical figure who ever lived — who was he really?",
+          "youth_gen_z": "Rejected by the system, radical in love, changed everything"
+        }
+      },
+
+      "ai_generation": {
+        "consistency_seed_prompt": "1st century Jewish man, age 30-33, warm olive-brown sun-weathered skin, dark wavy shoulder-length hair, full natural beard, dark brown eyes, lean strong build, simple linen robes, sandals, cinematic photoreal, dramatic natural lighting, 8k, film grain",
+        "negative_prompt": "blue eyes, blonde hair, European features, halo, cartoonish, painted, illustration, modern clothing, white skin",
+        "style_preset": "cinematic photoreal, golden hour natural light, shallow depth of field",
+        "reference_films": ["The Passion of the Christ 2004 — texture/grit", "Risen 2016 — naturalistic lighting"]
+      }
+    },
+
+    {
+      "character_id": "mary_mother_001",
+      "canonical_name": "Mary of Nazareth",
+      "aliases": ["Miriam", "The Virgin Mary", "Mother of God", "Theotokos"],
+      "role": "supporting_major",
+      "testament": "New",
+      "books_appearing_in": ["Luke", "Matthew", "John", "Acts"],
+      "luke_chapters_active": "1-2, 8, 11",
+      "era": "1st Century AD, Nazareth/Bethlehem/Jerusalem",
+
+      "visual_dna": {
+        "age_range_in_luke": "14-16 (annunciation) to ~48 (post-resurrection era)",
+        "primary_age_for_annunciation_nativity": "14-16",
+        "primary_age_for_passion_scenes": "46-48",
+        "ethnicity": "1st Century Jewish, Galilean",
+        "skin_tone": "olive-warm, smooth",
+        "hair_color": "dark brown to black",
+        "hair_texture": "straight to wavy, covered by headscarf in public",
+        "eye_color": "dark brown",
+        "height_build": "petite, graceful",
+        "distinguishing_marks": "quiet strength in expression, head covering always present",
+        "wardrobe_by_arc": {
+          "annunciation": "simple blue-grey linen headscarf and tunic, modest",
+          "nativity": "travel-worn robes, deep blue outer garment",
+          "temple_presentation": "clean ceremonial dress",
+          "passion": "dark mourning tones, tear-stained"
+        }
+      },
+
+      "voice_personality": {
+        "speech_style": "poetic, prophetic (Magnificat), deeply reflective, few words but each weighted",
+        "personality_traits": ["faithful", "courageous", "contemplative", "strong", "grief-bearing"],
+        "emotional_arc": "wonder at annunciation → fierce maternal love → anguish at the cross → joy at resurrection",
+        "voice_profile_notes": "soft mezzo-soprano, warm, words chosen carefully"
+      },
+
+      "audience_targeting": {
+        "demographic_resonance": {
+          "evangelical_baptist": 4,
+          "catholic": 5,
+          "black_church": 5,
+          "hispanic_christian": 5,
+          "secular_curious": 4,
+          "youth_gen_z": 4,
+          "jewish_american": 3,
+          "women": 5,
+          "men": 3
+        },
+        "modern_parallel": "The young woman who said yes to something that would cost her everything — and meant it",
+        "marketing_angles": {
+          "catholic": "The Blessed Mother — Queen of Heaven, model of faith",
+          "hispanic_christian": "La Virgen — her courage is our courage",
+          "black_church": "A young woman of color under occupation who trusted God anyway",
+          "women": "The most consequential mother in history — her story told truthfully",
+          "secular_curious": "A teenage girl who changed the world without ever holding a sword"
+        }
+      },
+
+      "ai_generation": {
+        "consistency_seed_prompt": "1st century Jewish young woman age 14-16, olive warm skin, dark hair under blue-grey linen headscarf, dark brown eyes, petite graceful build, modest simple tunic, Galilean village setting, cinematic photoreal, soft natural light, 8k",
+        "negative_prompt": "European features, blonde hair, blue eyes, crown, halo, cartoonish, painted, white skin, anachronistic clothing",
+        "style_preset": "cinematic photoreal, soft diffused natural light, intimate framing"
+      }
+    },
+
+    {
+      "character_id": "john_baptist_001",
+      "canonical_name": "John the Baptist",
+      "aliases": ["Yochanan", "The Forerunner", "The Voice in the Wilderness"],
+      "role": "supporting_major",
+      "testament": "New",
+      "books_appearing_in": ["Luke", "Matthew", "Mark", "John"],
+      "luke_chapters_active": "1, 3, 7",
+      "era": "1st Century AD, Judean wilderness, Jordan River",
+
+      "visual_dna": {
+        "age_range_in_luke": "0 (birth) to ~33 (martyrdom)",
+        "primary_age_for_ministry": "30-33",
+        "ethnicity": "1st Century Jewish, priestly lineage (Levite)",
+        "skin_tone": "deeply tanned, desert-weathered",
+        "hair_color": "dark, wild and unkempt",
+        "hair_texture": "long, matted, wild",
+        "beard_style": "long, full, untrimmed",
+        "eye_color": "intense dark brown, almost black",
+        "height_build": "tall, extremely lean, sinewy from desert life",
+        "distinguishing_marks": "gaunt from fasting, wild eyes, commanding presence despite rough appearance",
+        "wardrobe_by_arc": {
+          "wilderness_ministry": "camel hair garment, leather belt, rough-hewn sandals",
+          "prison": "dirty stripped-down version of same"
+        }
+      },
+
+      "voice_personality": {
+        "speech_style": "thunderous, urgent, no softening of hard truths, prophetic fire",
+        "personality_traits": ["fearless", "uncompromising", "humble before Jesus", "urgent", "prophetic"],
+        "emotional_arc": "blazing confidence → humility before Christ → doubt in prison → martyrdom",
+        "voice_profile_notes": "deep resonant bass, loud, weathered, force behind every word"
+      },
+
+      "audience_targeting": {
+        "demographic_resonance": {
+          "evangelical_baptist": 5,
+          "catholic": 4,
+          "black_church": 5,
+          "hispanic_christian": 4,
+          "secular_curious": 4,
+          "youth_gen_z": 5,
+          "jewish_american": 4,
+          "women": 3,
+          "men": 5
+        },
+        "modern_parallel": "The outsider prophet who calls out corruption and gets canceled for it",
+        "marketing_angles": {
+          "men": "The man who lived on nothing, feared no one, and told the king the truth to his face",
+          "youth_gen_z": "The radical who rejected the system completely — and had millions following him",
+          "black_church": "The voice crying in the wilderness — justice cannot wait"
+        }
+      },
+
+      "ai_generation": {
+        "consistency_seed_prompt": "1st century Jewish man age 30-33, deeply tanned desert-weathered skin, wild long dark matted hair and long unkempt beard, intensely dark eyes, extremely lean sinewy build, rough camel hair garment and leather belt, Jordan River wilderness setting, cinematic photoreal, harsh dramatic sunlight, 8k",
+        "negative_prompt": "clean groomed appearance, fine clothing, soft lighting, cartoonish, painted, European features",
+        "style_preset": "cinematic photoreal, harsh desert sunlight, high contrast dramatic shadows"
+      }
+    },
+
+    {
+      "character_id": "peter_001",
+      "canonical_name": "Simon Peter",
+      "aliases": ["Simon", "Cephas", "The Rock"],
+      "role": "supporting_major",
+      "testament": "New",
+      "books_appearing_in": ["Luke", "Matthew", "Mark", "John", "Acts"],
+      "luke_chapters_active": "4-9, 18, 22, 24",
+      "era": "1st Century AD, Galilee/Jerusalem",
+
+      "visual_dna": {
+        "age_range_in_luke": "~30-35",
+        "ethnicity": "1st Century Jewish, Galilean fisherman",
+        "skin_tone": "tanned and weathered from sun and sea",
+        "hair_color": "dark brown, greying at temples",
+        "hair_texture": "short to medium, wind-worn",
+        "beard_style": "full fisherman's beard, medium",
+        "eye_color": "brown",
+        "height_build": "stocky, broad-shouldered, powerful from years of fishing",
+        "distinguishing_marks": "large hands, impulsive expression, scar from sea work",
+        "wardrobe_by_arc": {
+          "fishing_call": "working fisherman's tunic, damp, salt-stained",
+          "ministry": "simple traveling robe, worn sandals",
+          "denial": "outer cloak wrapped tight in cold night of courtyard"
+        }
+      },
+
+      "voice_personality": {
+        "speech_style": "blunt, impulsive, speaks before thinking, passionate declarations",
+        "personality_traits": ["impulsive", "loyal", "cowardly under pressure", "repentant", "eventually bold"],
+        "emotional_arc": "proud fisherman → zealous follower → crushing denial → weeping repentance → restored",
+        "voice_profile_notes": "rough Galilean accent, loud baritone, full of feeling"
+      },
+
+      "audience_targeting": {
+        "demographic_resonance": {
+          "evangelical_baptist": 5,
+          "catholic": 5,
+          "black_church": 4,
+          "hispanic_christian": 4,
+          "secular_curious": 5,
+          "youth_gen_z": 4,
+          "jewish_american": 3,
+          "women": 3,
+          "men": 5
+        },
+        "modern_parallel": "The guy who talks too big, fails publicly, and gets back up anyway",
+        "marketing_angles": {
+          "men": "He promised everything and failed — and it wasn't the end of his story",
+          "secular_curious": "The most relatable disciple — he got it wrong more than anyone",
+          "catholic": "The first pope — flawed, forgiven, and given the keys anyway"
+        }
+      },
+
+      "ai_generation": {
+        "consistency_seed_prompt": "1st century Jewish fisherman man age 30-35, tanned sea-weathered skin, dark brown hair greying at temples, full medium beard, broad stocky powerful build, large calloused hands, simple working tunic, Galilee Sea setting, cinematic photoreal, natural daylight, 8k",
+        "negative_prompt": "slim build, fine clothing, groomed hair, cartoonish, European features",
+        "style_preset": "cinematic photoreal, natural daylight, warm Galilean tones"
+      }
+    },
+
+    {
+      "character_id": "mary_magdalene_001",
+      "canonical_name": "Mary Magdalene",
+      "aliases": ["Miriam of Magdala", "The Apostle to the Apostles"],
+      "role": "supporting_major",
+      "testament": "New",
+      "books_appearing_in": ["Luke", "Mark", "John"],
+      "luke_chapters_active": "8, 23-24",
+      "era": "1st Century AD, Magdala/Jerusalem",
+
+      "visual_dna": {
+        "age_range_in_luke": "~25-35",
+        "ethnicity": "1st Century Jewish, Galilean",
+        "skin_tone": "warm olive, expressive face",
+        "hair_color": "dark auburn to black",
+        "hair_texture": "long, wavy",
+        "eye_color": "dark brown, intense",
+        "height_build": "medium build, strong presence",
+        "distinguishing_marks": "eyes that have seen darkness and light — depth of expression",
+        "wardrobe_by_arc": {
+          "healed_follower": "modest but not destitute, traveling women's robes",
+          "crucifixion_witness": "grief-stricken, dark tones",
+          "resurrection_witness": "same garments, transformed expression"
+        }
+      },
+
+      "voice_personality": {
+        "speech_style": "measured, deeply emotional when moved, loyal and direct",
+        "personality_traits": ["devoted", "courageous", "the last at the cross and first at the tomb", "healed", "grateful"],
+        "emotional_arc": "delivered from darkness → devoted follower → first resurrection witness",
+        "voice_profile_notes": "warm alto, emotional depth, quiet strength"
+      },
+
+      "audience_targeting": {
+        "demographic_resonance": {
+          "evangelical_baptist": 4,
+          "catholic": 4,
+          "black_church": 5,
+          "hispanic_christian": 5,
+          "secular_curious": 5,
+          "youth_gen_z": 5,
+          "jewish_american": 3,
+          "women": 5,
+          "men": 3
+        },
+        "modern_parallel": "The woman history tried to erase — who showed up when everyone else ran",
+        "marketing_angles": {
+          "women": "She was first. She stayed. She witnessed what changed everything.",
+          "secular_curious": "The most misrepresented woman in history — who was she really?",
+          "youth_gen_z": "She had every reason to stay hidden. She didn't."
+        }
+      },
+
+      "ai_generation": {
+        "consistency_seed_prompt": "1st century Jewish woman age 25-35, warm olive skin, long dark wavy hair, intense dark brown eyes, medium build, modest traveling robes, Galilean landscape, cinematic photoreal, natural golden hour light, 8k",
+        "negative_prompt": "red dress, cartoonish, European features, sexualized depiction, halo, painted",
+        "style_preset": "cinematic photoreal, warm golden light, emotionally expressive framing"
+      }
+    },
+
+    {
+      "character_id": "zacchaeus_001",
+      "canonical_name": "Zacchaeus",
+      "aliases": ["The Tax Collector of Jericho"],
+      "role": "supporting_minor",
+      "testament": "New",
+      "books_appearing_in": ["Luke"],
+      "luke_chapters_active": "19",
+      "era": "1st Century AD, Jericho",
+
+      "visual_dna": {
+        "age_range_in_luke": "~40-50",
+        "ethnicity": "1st Century Jewish",
+        "skin_tone": "olive, soft from wealthy indoor life",
+        "hair_color": "dark brown, thinning",
+        "beard_style": "short, well-trimmed (wealthy man's grooming)",
+        "eye_color": "brown, calculating then surprised",
+        "height_build": "notably short, stocky, well-fed",
+        "distinguishing_marks": "short stature — explicitly noted in Luke 19:3",
+        "wardrobe_by_arc": {
+          "tree_scene": "fine Roman-influenced robes, wealthy tax collector, gold accessories",
+          "post_encounter": "same clothing, completely different posture and expression"
+        }
+      },
+
+      "voice_personality": {
+        "speech_style": "nervous, then suddenly bold and generous",
+        "personality_traits": ["outcast despite wealth", "lonely", "desperate to see Jesus", "radically transformed"],
+        "emotional_arc": "isolated wealthy man → desperate seeker → instantaneous transformation",
+        "voice_profile_notes": "higher tenor, quick speech, nervous energy that becomes joy"
+      },
+
+      "audience_targeting": {
+        "demographic_resonance": {
+          "evangelical_baptist": 4,
+          "catholic": 3,
+          "black_church": 4,
+          "hispanic_christian": 4,
+          "secular_curious": 5,
+          "youth_gen_z": 4,
+          "jewish_american": 4,
+          "women": 3,
+          "men": 4
+        },
+        "modern_parallel": "The rich man who everyone hated — including himself — until one encounter changed everything",
+        "marketing_angles": {
+          "secular_curious": "What happens when the most hated man in town climbs a tree to catch a glimpse?",
+          "men": "Wealthy. Successful. Empty. Until someone actually saw him."
+        }
+      },
+
+      "ai_generation": {
+        "consistency_seed_prompt": "1st century Jewish wealthy man age 40-50, short stature, olive skin, thinning dark hair, short trimmed beard, fine Roman-influenced robes, gold accessories, Jericho street setting, sycamore tree background, cinematic photoreal, bright midday light, 8k",
+        "negative_prompt": "tall build, poor clothing, cartoonish, European features",
+        "style_preset": "cinematic photoreal, bright Jericho sunlight, wide establishing then intimate close"
+      }
+    },
+
+    {
+      "character_id": "elizabeth_001",
+      "canonical_name": "Elizabeth",
+      "aliases": ["Elisheba", "Mother of John the Baptist"],
+      "role": "supporting_minor",
+      "testament": "New",
+      "books_appearing_in": ["Luke"],
+      "luke_chapters_active": "1",
+      "era": "1st Century AD, hill country of Judea",
+
+      "visual_dna": {
+        "age_range_in_luke": "~60-70 (elderly, past childbearing age — the miracle is the point)",
+        "ethnicity": "1st Century Jewish, priestly family (Levite)",
+        "skin_tone": "olive, deeply lined and aged",
+        "hair_color": "silver-white",
+        "eye_color": "warm brown, joyful in old age",
+        "height_build": "small, elderly, but luminous joy in pregnancy",
+        "wardrobe_by_arc": {
+          "visitation": "elder woman's headcovering, simple modest robes, visible pregnancy"
+        }
+      },
+
+      "voice_personality": {
+        "speech_style": "warm, prophetic when filled with the Spirit, deeply maternal",
+        "personality_traits": ["faithful through barrenness", "joyful", "Spirit-filled", "humble"],
+        "emotional_arc": "years of shame in barrenness → miraculous conception joy → prophesies over Mary",
+        "voice_profile_notes": "elderly warm contralto, trembling with joy"
+      },
+
+      "audience_targeting": {
+        "demographic_resonance": {
+          "evangelical_baptist": 4,
+          "catholic": 5,
+          "black_church": 4,
+          "hispanic_christian": 5,
+          "secular_curious": 3,
+          "youth_gen_z": 2,
+          "women": 5,
+          "men": 2
+        },
+        "modern_parallel": "The woman who waited decades for a promise — and got it",
+        "marketing_angles": {
+          "women": "She waited her whole life. The miracle came when she was 'too old.' She leapt.",
+          "hispanic_christian": "La abuela whose faith outlasted the wait"
+        }
+      },
+
+      "ai_generation": {
+        "consistency_seed_prompt": "1st century elderly Jewish woman age 60-70, silver white hair under head covering, deeply lined warm olive face, joyful luminous expression, visibly pregnant, simple elder's robes, Judean hill country home interior, cinematic photoreal, warm interior light, 8k",
+        "negative_prompt": "young woman, cartoonish, European features, modern setting",
+        "style_preset": "cinematic photoreal, warm interior candlelight/oil lamp glow"
+      }
+    },
+
+    {
+      "character_id": "judas_001",
+      "canonical_name": "Judas Iscariot",
+      "aliases": ["Judas", "The Betrayer"],
+      "role": "supporting_major",
+      "testament": "New",
+      "books_appearing_in": ["Luke", "Matthew", "Mark", "John"],
+      "luke_chapters_active": "6, 22",
+      "era": "1st Century AD, Galilee/Jerusalem",
+
+      "visual_dna": {
+        "age_range_in_luke": "~28-35",
+        "ethnicity": "1st Century Jewish, possibly from Judea (Iscariot = man of Kerioth)",
+        "skin_tone": "olive, slightly paler than Galilean disciples",
+        "hair_color": "dark brown to black",
+        "beard_style": "neat, well-kept — he managed the money",
+        "eye_color": "dark, intelligent, guarded",
+        "height_build": "average, alert posture, watchful",
+        "distinguishing_marks": "eyes that calculate, subtle tension always present",
+        "wardrobe_by_arc": {
+          "ministry": "slightly better quality robe than other disciples — money bag keeper",
+          "betrayal_night": "dark cloak, tense movement"
+        }
+      },
+
+      "voice_personality": {
+        "speech_style": "intelligent, controlled, occasional bitterness beneath the surface",
+        "personality_traits": ["intelligent", "trusted by the group", "secretly disillusioned", "complex motivations"],
+        "emotional_arc": "trusted treasurer → growing disillusionment → betrayal → crushing remorse",
+        "voice_profile_notes": "smooth controlled baritone, measured — until it breaks"
+      },
+
+      "audience_targeting": {
+        "demographic_resonance": {
+          "evangelical_baptist": 4,
+          "catholic": 4,
+          "black_church": 3,
+          "secular_curious": 5,
+          "youth_gen_z": 5,
+          "women": 3,
+          "men": 4
+        },
+        "modern_parallel": "The insider who rationalized betrayal — and couldn't live with what he'd done",
+        "marketing_angles": {
+          "secular_curious": "Was he a villain or a tragic figure? The most complex character in the story.",
+          "youth_gen_z": "He made the worst choice of his life in a moment — and couldn't take it back"
+        }
+      },
+
+      "ai_generation": {
+        "consistency_seed_prompt": "1st century Jewish man age 28-35, olive skin slightly pale, neat dark hair and beard, intelligent guarded dark eyes, slightly better quality robes than others, alert watchful posture, Jerusalem setting, cinematic photoreal, dramatic shadow and light, 8k",
+        "negative_prompt": "cartoonish evil expression, red clothing, obvious villain look, European features",
+        "style_preset": "cinematic photoreal, dramatic chiaroscuro lighting, tension-filled framing"
+      }
+    },
+
+    {
+      "character_id": "pilate_001",
+      "canonical_name": "Pontius Pilate",
+      "aliases": ["The Governor", "Prefect of Judea"],
+      "role": "antagonist_secondary",
+      "testament": "New",
+      "books_appearing_in": ["Luke", "Matthew", "Mark", "John"],
+      "luke_chapters_active": "3, 13, 23",
+      "era": "1st Century AD, Jerusalem/Caesarea Maritima",
+
+      "visual_dna": {
+        "age_range_in_luke": "~40-50",
+        "ethnicity": "Roman, Italian",
+        "skin_tone": "lighter Mediterranean — Roman, indoor court life",
+        "hair_color": "dark brown, military-cut short",
+        "beard_style": "clean-shaven (Roman military fashion) or very short",
+        "eye_color": "grey-brown",
+        "height_build": "medium-tall, military posture, beginning to soften from bureaucratic life",
+        "distinguishing_marks": "Roman magistrate bearing, signet ring, toga praetexta in formal settings",
+        "wardrobe_by_arc": {
+          "trial_scene": "Roman praetorium formal white toga with purple stripe, magistrate chair"
+        }
+      },
+
+      "voice_personality": {
+        "speech_style": "political, measured, veiled contempt for Jewish customs, ultimately spineless",
+        "personality_traits": ["pragmatic", "morally weak", "politically calculating", "haunted by the decision"],
+        "emotional_arc": "dismissive → troubled by Jesus → attempts escape → capitulates to crowd → washes hands",
+        "voice_profile_notes": "clipped Roman Latin-accented authority, controlled but increasingly unsettled"
+      },
+
+      "audience_targeting": {
+        "demographic_resonance": {
+          "secular_curious": 5,
+          "youth_gen_z": 4,
+          "evangelical_baptist": 3,
+          "catholic": 3,
+          "jewish_american": 4,
+          "men": 4,
+          "women": 3
+        },
+        "modern_parallel": "The executive who knew what was right, chose his career instead, and called it pragmatism",
+        "marketing_angles": {
+          "secular_curious": "He had the power to stop it. He didn't. Why?",
+          "men": "The man who asked 'What is truth?' — and then looked away"
+        }
+      },
+
+      "ai_generation": {
+        "consistency_seed_prompt": "Roman governor 1st century AD, age 40-50, lighter Mediterranean Roman features, short dark hair military cut, clean-shaven, white toga with purple stripe, gold magistrate details, Jerusalem praetorium stone courtyard, cinematic photoreal, harsh morning light, 8k",
+        "negative_prompt": "cartoonish, obviously evil expression, anachronistic uniform, medieval costume",
+        "style_preset": "cinematic photoreal, harsh morning sunlight, cool stone architecture tones"
+      }
+    },
+
+    {
+      "character_id": "prodigal_father_001",
+      "canonical_name": "The Father (Parable of the Prodigal Son)",
+      "aliases": ["The Waiting Father", "The Forgiving Father"],
+      "role": "parable_character",
+      "testament": "New",
+      "books_appearing_in": ["Luke"],
+      "luke_chapters_active": "15",
+      "era": "1st Century AD, Judean farmland (parable setting)",
+
+      "visual_dna": {
+        "age_range_in_luke": "~55-70",
+        "ethnicity": "1st Century Jewish landowner",
+        "skin_tone": "olive, aged and weathered",
+        "hair_color": "silver and white",
+        "beard_style": "full elder's beard, long silver",
+        "eye_color": "deep brown, full of sorrow and watching",
+        "height_build": "medium, slightly stooped with age but runs when he sees his son",
+        "distinguishing_marks": "eyes that have been scanning the horizon for years",
+        "wardrobe_by_arc": {
+          "waiting": "landowner's robe, fine but worn — he's been working while waiting",
+          "reunion_run": "robes flying as he runs — undignified for a man of his status, and he doesn't care"
+        }
+      },
+
+      "voice_personality": {
+        "speech_style": "few words, enormous feeling, the robe-around-shoulders says more than the speech",
+        "personality_traits": ["patient beyond reason", "extravagant in forgiveness", "grieving", "joyful"],
+        "emotional_arc": "years of grief and watching → recognition at a distance → running → celebration",
+        "voice_profile_notes": "deep weathered bass, breaks with emotion at reunion"
+      },
+
+      "audience_targeting": {
+        "demographic_resonance": {
+          "evangelical_baptist": 5,
+          "catholic": 5,
+          "black_church": 5,
+          "hispanic_christian": 5,
+          "secular_curious": 5,
+          "youth_gen_z": 4,
+          "women": 4,
+          "men": 5
+        },
+        "modern_parallel": "Every father who kept the light on. Every parent who waited at the window.",
+        "marketing_angles": {
+          "men": "He saw him from far off. He ran. He didn't wait for the apology to finish.",
+          "secular_curious": "This 2-minute scene is the greatest portrait of unconditional love ever told",
+          "hispanic_christian": "El padre que corrió — family is worth running for"
+        }
+      },
+
+      "ai_generation": {
+        "consistency_seed_prompt": "1st century elderly Jewish landowner age 55-70, silver white full beard, deep weathered olive face with grief-lines, fine but worn landowner's robes, scanning the horizon with waiting eyes, Judean countryside farmland, cinematic photoreal, warm golden sunset light, 8k",
+        "negative_prompt": "young man, European features, modern clothing, cartoonish",
+        "style_preset": "cinematic photoreal, warm golden sunset, wide landscape then extreme close on face"
+      }
+    }
+  ]
+}

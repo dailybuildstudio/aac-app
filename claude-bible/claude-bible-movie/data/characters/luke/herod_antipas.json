@@ -1,0 +1,117 @@
+{
+  "schema_version": "2.0",
+  "character_id": "herod_antipas_001",
+  "canonical_name": "Herod Antipas",
+  "hebrew_name": "Herodes Antipas",
+  "aliases": ["Herod the Tetrarch", "Herod", "The Fox"],
+  "role": "antagonist_secondary",
+  "testament": "New",
+  "books_appearing_in": ["Luke", "Matthew", "Mark"],
+  "book": "luke",
+  "chapters_active": "3, 9, 13, 23",
+  "era": "1st Century AD, Galilee and Perea — Herodian tetrarch under Rome",
+  "visual_dna": {
+    "age_range": "~45-55 during Luke's narrative — reigned from 4 BC to 39 AD",
+    "ethnicity": "Idumean/Edomite — Herodian dynasty, Jewish by religion but not by ethnicity, Hellenized",
+    "skin_tone": "Mediterranean olive — court life, mixed heritage",
+    "hair_color": "dark, greying — a man who has been in power for decades",
+    "hair_texture": "short, groomed — Hellenistic aristocratic styling",
+    "beard_style": "short, well-maintained — Hellenistic-Roman court fashion, not full Jewish beard",
+    "eye_color": "dark, shrewd — the eyes of someone who has survived in politics for twenty years",
+    "height_build": "medium, beginning to soften from palace life but still carries authority",
+    "distinguishing_marks": [
+      "Herodian royal dress — opulent, Roman-influenced but not Roman",
+      "signet ring and royal trappings",
+      "Jesus calls him 'that fox' — the cunning is visible in how he moves in rooms",
+      "his face in the trial scene — he wanted a miracle, he got silence"
+    ],
+    "wardrobe_by_arc": {
+      "court_life": "Herodian royal robes — opulent fabric, gold detail, Mediterranean palace aesthetic",
+      "trial_of_jesus": "formal court robes — the scene where Jesus says nothing to him"
+    }
+  },
+  "voice_profile": {
+    "register": "smooth tenor of a man raised in courts — political, never raw",
+    "pace": "controlled, deliberate — he has learned to say little and watch much",
+    "accent_note": "possibly Greek-influenced Aramaic — the Herodian dynasty operated in Greek and Aramaic",
+    "speech_mannerisms": [
+      "curious about Jesus — 'He tried to see him' (Luke 9:9). Wants entertainment, not transformation.",
+      "at the trial: 'he asked him many questions, but Jesus gave him no answer' — his curiosity met with silence",
+      "had John killed because a promise trapped him — he is a man governed by his own public image",
+      "mocked Jesus with the soldiers and dressed him in elegant clothes — a cruel joke from a man with no real power"
+    ],
+    "notes": "Jesus's silence before Herod is one of the most powerful moments in the passion. He speaks to Pilate. He speaks to the high priest. To Herod — nothing."
+  },
+  "emotional_arc": {
+    "opening": "Fascinated by John the Baptist — Mark says Herod enjoyed listening to him, was 'greatly puzzled' but kept him safe. Then the birthday promise.",
+    "midpoint": "John's execution — he regrets it but cannot take it back. He continues to be curious about Jesus from a distance.",
+    "climax": "The trial — finally gets his wish to see Jesus. Asks many questions. Receives absolute silence. Then turns to cruelty out of frustration.",
+    "resolution": "He and Pilate become friends that day (Luke 23:12) — two men who failed the same test on the same morning."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 3,
+        "notes": "The politically powerful man who heard the truth and silenced it",
+        "marketing_angle": "He had John the Baptist imprisoned. He executed him because a party promise trapped him. Power and weakness in the same man."
+      },
+      "catholic": {
+        "score": 3,
+        "notes": "His role in the passion narrative — one of three interrogators",
+        "marketing_angle": "He wanted to see a miracle. He got silence. No miracle was given to the curious and the cruel."
+      },
+      "black_church": {
+        "score": 3,
+        "notes": "The king who killed the prophet — a recurring historical archetype",
+        "marketing_angle": "He killed the prophet. He tried to see Jesus. He was given nothing."
+      },
+      "hispanic_christian": {
+        "score": 2,
+        "notes": "Secondary antagonist in the passion",
+        "marketing_angle": "El rey que quería ver un milagro — y recibió silencio"
+      },
+      "secular_curious": {
+        "score": 5,
+        "notes": "A historically documented figure — Josephus writes about him extensively. The intersection of Herodian politics and the Jesus movement.",
+        "marketing_angle": "Herod Antipas is a historical figure. His divorce and remarriage that killed John the Baptist is documented by Josephus. This is history."
+      },
+      "youth_gen_z": {
+        "score": 3,
+        "notes": "The powerful man who wanted to use something real for entertainment — and was ignored",
+        "marketing_angle": "He wanted to see the miracle like it was a show. Jesus gave him nothing."
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "The Herodian dynasty — the complex politics of client kings under Rome, the Herodian family's relationship to Jewish identity",
+        "marketing_angle": "The Herodian dynasty — Jewish in name, Roman in practice. The politics of occupied Judea."
+      },
+      "women": {
+        "score": 3,
+        "notes": "His wife Herodias (not in Luke's trial scene) drove the execution of John — a complex female antagonist in Mark",
+        "marketing_angle": "His wife demanded John's head. His stepdaughter danced for it. He gave it."
+      },
+      "men": {
+        "score": 4,
+        "notes": "The man trapped by his own public promise — pride as the mechanism of murder",
+        "marketing_angle": "He didn't want to kill John. He was trapped by a promise made at a party. His pride wouldn't let him back down."
+      }
+    },
+    "modern_parallel": "The executive who silences truth-tellers when they become politically inconvenient",
+    "modern_parallel_detail": "He liked John. Found him interesting. Had him killed anyway because the alternative cost him face. He wanted to see Jesus like a curiosity — was given silence for his cruelty."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "Herodian Jewish-Roman tetrarch 1st century AD, age 45-55, dark Mediterranean olive skin, greying short hair in Hellenistic style, short groomed beard, opulent Herodian court robes with gold detail, palace setting or formal trial setting, shrewd calculating eyes, the bearing of a man used to absolute power in a small domain, cinematic photoreal, palace interior warm light, 8k",
+    "negative_prompt": "cartoonish evil face, Roman centurion uniform, medieval European crown, obvious villain look, European features",
+    "midjourney_style_params": "cinematic photoreal, warm palace interior light, opulent setting, political authority",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of a 1st century Herodian tetrarch, age 45-55, olive Mediterranean complexion, short dark greying hair in Hellenistic Roman style, short groomed beard, wearing opulent Herodian royal robes with gold detail, palace or formal court setting, expression of shrewd political calculation, warm interior palace light, cinematic authority",
+    "reference_films": [
+      "Ben-Hur (2016) — Herodian palace production design",
+      "The Passion of the Christ (2004) — trial scene atmosphere"
+    ],
+    "color_grading_notes": "Palace scenes: warm opulent gold — the comfort of power. Trial scene: harsh morning light, the unreality of the day."
+  },
+  "production_notes": "Jesus's silence before Herod must be played as an active choice, not passivity. Every other interrogator gets an answer. Herod gets nothing. That silence is the most powerful thing in his scene."
+}

@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luke Film Project — Character Bible</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c9a84c;
+    --gold-dim: #8a6e2f;
+    --parchment: #f5ead6;
+    --ink: #1a1209;
+    --stone: #2d2418;
+    --sand: #e8d5b0;
+    --rust: #8b3a1a;
+    --olive: #4a5e2a;
+    --shadow: rgba(0,0,0,0.6);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--ink);
+    color: var(--parchment);
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* Texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  header {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 52px 24px 36px;
+    border-bottom: 1px solid var(--gold-dim);
+    background: linear-gradient(180deg, #0d0a05 0%, transparent 100%);
+  }
+
+  .header-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    text-shadow: 0 2px 20px rgba(201,168,76,0.3);
+  }
+
+  .header-sub {
+    font-style: italic;
+    color: var(--sand);
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.8;
+  }
+
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    color: var(--gold);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+  }
+
+  /* Controls */
+  .controls {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 12px;
+    padding: 20px 32px;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    background: rgba(0,0,0,0.3);
+  }
+
+  .filter-label {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+
+  .filter-btn {
+    background: transparent;
+    border: 1px solid var(--gold-dim);
+    color: var(--sand);
+    padding: 6px 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: 'Crimson Text', serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .progress-summary {
+    margin-left: auto;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    color: var(--gold);
+  }
+
+  /* Grid */
+  .grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2px;
+    padding: 2px;
+  }
+
+  /* Card */
+  .card {
+    background: linear-gradient(135deg, #1e160a 0%, #16100a 100%);
+    border: 1px solid rgba(201,168,76,0.12);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .card:hover {
+    border-color: rgba(201,168,76,0.35);
+  }
+
+  .card:hover::before {
+    opacity: 1;
+  }
+
+  .card.done {
+    opacity: 0.55;
+  }
+
+  .card.done::after {
+    content: '✓ CREATED IN FLOW';
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--olive);
+    border: 1px solid var(--olive);
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+
+  .card-role {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .role-protagonist { color: var(--gold); }
+  .role-supporting_major { color: #7a9e5a; }
+  .role-supporting_minor { color: #6a8a9e; }
+  .role-antagonist_secondary { color: var(--rust); }
+  .role-parable_character { color: #9e7a5a; }
+
+  .card-name {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--parchment);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .card-chapters {
+    font-size: 13px;
+    color: var(--gold-dim);
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+
+  .card-parallel {
+    font-style: italic;
+    color: var(--sand);
+    font-size: 15px;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 2px solid var(--gold-dim);
+    line-height: 1.4;
+  }
+
+  /* Audience bars */
+  .audience-section {
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 10px;
+  }
+
+  .audience-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .aud-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .aud-label {
+    width: 130px;
+    color: var(--sand);
+    flex-shrink: 0;
+    font-size: 12px;
+  }
+
+  .aud-bar-bg {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .aud-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+    transition: width 0.6s ease;
+  }
+
+  .aud-score {
+    width: 20px;
+    text-align: right;
+    color: var(--gold-dim);
+    font-size: 11px;
+  }
+
+  /* Wardrobe arcs */
+  .wardrobe-section {
+    margin-bottom: 20px;
+  }
+
+  .arc-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .arc-pill {
+    font-size: 11px;
+    padding: 3px 10px;
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 2px;
+    color: var(--sand);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+  }
+
+  .arc-pill:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .arc-desc {
+    font-size: 13px;
+    color: var(--sand);
+    font-style: italic;
+    margin-top: 8px;
+    min-height: 20px;
+    opacity: 0.8;
+  }
+
+  /* Prompt box */
+  .prompt-section {
+    margin-top: 20px;
+  }
+
+  .prompt-box {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 2px;
+    padding: 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #c8b87a;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    word-break: break-word;
+  }
+
+  .prompt-box.negative {
+    color: #8a6a6a;
+    font-size: 11px;
+  }
+
+  .prompt-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+    margin-bottom: 6px;
+  }
+
+  /* Character info box */
+  .char-info-box {
+    background: rgba(74, 94, 42, 0.1);
+    border: 1px solid rgba(74, 94, 42, 0.3);
+    border-radius: 2px;
+    padding: 12px;
+    font-size: 13px;
+    color: #a8c080;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  /* Buttons */
+  .btn-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    flex: 1;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    min-width: 100px;
+  }
+
+  .btn-copy {
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  .btn-copy:hover {
+    background: #e0c060;
+    transform: translateY(-1px);
+  }
+
+  .btn-copy.copied {
+    background: var(--olive);
+    color: white;
+  }
+
+  .btn-copy-info {
+    background: rgba(74,94,42,0.3);
+    color: #a8c080;
+    border: 1px solid rgba(74,94,42,0.4);
+  }
+
+  .btn-copy-info:hover {
+    background: rgba(74,94,42,0.5);
+  }
+
+  .btn-done {
+    background: transparent;
+    color: var(--gold-dim);
+    border: 1px solid var(--gold-dim);
+    flex: 0;
+    padding: 10px 16px;
+  }
+
+  .btn-done:hover {
+    background: rgba(201,168,76,0.1);
+  }
+
+  .card.done .btn-done {
+    background: rgba(74,94,42,0.2);
+    color: var(--olive);
+    border-color: var(--olive);
+  }
+
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: var(--gold);
+    color: var(--ink);
+    padding: 12px 24px;
+    border-radius: 2px;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    z-index: 100;
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .toast.show {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Decorative divider */
+  .divider {
+    text-align: center;
+    color: var(--gold-dim);
+    font-size: 14px;
+    margin: 12px 0;
+    opacity: 0.5;
+  }
+
+  .voice-note {
+    font-size: 13px;
+    color: #9a8a6a;
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+
+  .arc-text {
+    font-size: 13px;
+    color: var(--sand);
+    opacity: 0.75;
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-eyebrow">Gospel of Luke — Production Bible</div>
+  <h1>Character Dashboard</h1>
+  <div class="header-sub">AI Film Project · US Market · 2026</div>
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-num" id="total-count">10</span>
+      <span class="stat-label">Characters</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="done-count">0</span>
+      <span class="stat-label">Created in Flow</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">10</span>
+      <span class="stat-label">Scenes</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">94</span>
+      <span class="stat-label">Est. Minutes</span>
+    </div>
+  </div>
+</header>
+
+<div class="controls">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
+  <button class="filter-btn" onclick="filterCards('protagonist', this)">Protagonist</button>
+  <button class="filter-btn" onclick="filterCards('supporting_major', this)">Major</button>
+  <button class="filter-btn" onclick="filterCards('supporting_minor', this)">Minor</button>
+  <button class="filter-btn" onclick="filterCards('done', this)">✓ Done</button>
+  <button class="filter-btn" onclick="filterCards('todo', this)">Remaining</button>
+  <div class="progress-summary" id="progress-text">0 / 10 created in Flow</div>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const CHARACTERS = [
+  {
+    id: "jesus_001",
+    name: "Jesus of Nazareth",
+    role: "protagonist",
+    chapters: "Luke 1–24",
+    parallel: "The leader who walks into rooms with broken people and makes them feel seen",
+    prompt: "1st century Jewish man, age 30-33, warm olive-brown sun-weathered skin, dark wavy shoulder-length hair, full natural beard, dark brown eyes, lean strong build, simple linen robes, sandals, cinematic photoreal, dramatic natural lighting, 8k, film grain",
+    negative: "blue eyes, blonde hair, European features, halo, cartoonish, painted, illustration, modern clothing, white skin",
+    charInfo: "Authoritative yet tender. Speaks slowly and deliberately, uses questions and parables. Never rushes. Calm and present in every situation. Compassionate with outcasts, fearless with authorities. When he speaks, people stop what they are doing.",
+    voice: "Warm baritone, measured pace, pauses before key statements",
+    arc: "Joy at ministry launch → growing tension with authorities → sorrow in Gethsemane → triumph at resurrection",
+    wardrobe: {
+      "Ministry": "Simple undyed linen tunic, outer robe (tallith), sandals",
+      "Transfiguration": "Radiant white garments",
+      "Passion": "Worn tunic, crown of thorns, later stripped",
+      "Post-Resurrection": "Clean white linen"
+    },
+    audience: { "Evangelical": 5, "Catholic": 5, "Black Church": 5, "Hispanic": 5, "Secular": 4, "Gen Z": 4, "Women": 5, "Men": 5 }
+  },
+  {
+    id: "john_baptist_001",
+    name: "John the Baptist",
+    role: "supporting_major",
+    chapters: "Luke 1, 3, 7",
+    parallel: "The outsider prophet who calls out corruption and gets canceled for it",
+    prompt: "1st century man age 30-33, deeply tanned desert-weathered skin, wild long dark matted hair and long unkempt beard, intensely dark eyes, extremely lean sinewy build, rough camel hair garment and leather belt, Jordan River wilderness setting, cinematic photoreal, harsh dramatic sunlight, 8k",
+    negative: "clean groomed appearance, fine clothing, soft lighting, cartoonish, painted, European features",
+    charInfo: "Thunderous and urgent. No softening of hard truths. Prophetic fire in every word. Fearless before kings. But goes quiet and humble the moment Jesus appears.",
+    voice: "Deep resonant bass, loud, weathered, force behind every word",
+    arc: "Blazing confidence → humility before Christ → doubt in prison → martyrdom",
+    wardrobe: {
+      "Wilderness Ministry": "Camel hair garment, leather belt, rough-hewn sandals",
+      "Prison": "Dirty stripped-down version of same"
+    },
+    audience: { "Evangelical": 5, "Catholic": 4, "Black Church": 5, "Hispanic": 4, "Secular": 4, "Gen Z": 5, "Women": 3, "Men": 5 }
+  },
+  {
+    id: "mary_mother_001",
+    name: "Mary of Nazareth",
+    role: "supporting_major",
+    chapters: "Luke 1–2, 8, 11",
+    parallel: "The young woman who said yes to something that would cost her everything — and meant it",
+    prompt: "Young woman age 14-16, olive warm skin, dark hair under blue-grey linen headscarf, dark brown eyes, petite graceful build, modest simple tunic, Galilean village setting, cinematic photoreal, soft natural light, 8k",
+    negative: "European features, blonde hair, blue eyes, crown, halo, cartoonish, painted, white skin, anachronistic clothing",
+    charInfo: "Few words but each one weighted. Poetic and deeply reflective. Courageous beneath her quietness. Carries both joy and sorrow simultaneously.",
+    voice: "Soft mezzo-soprano, warm, words chosen carefully",
+    arc: "Wonder at annunciation → fierce maternal love → anguish at the cross → joy at resurrection",
+    wardrobe: {
+      "Annunciation": "Simple blue-grey linen headscarf and tunic, modest",
+      "Nativity": "Travel-worn robes, deep blue outer garment",
+      "Passion": "Dark mourning tones, tear-stained"
+    },
+    audience: { "Evangelical": 4, "Catholic": 5, "Black Church": 5, "Hispanic": 5, "Secular": 4, "Gen Z": 4, "Women": 5, "Men": 3 }
+  },
+  {
+    id: "peter_001",
+    name: "Simon Peter",
+    role: "supporting_major",
+    chapters: "Luke 4–9, 18, 22, 24",
+    parallel: "The guy who talks too big, fails publicly, and gets back up anyway",
+    prompt: "Man age 30-35, tanned sea-weathered skin, dark brown hair greying at temples, full medium beard, broad stocky powerful build, large calloused hands, simple working tunic, Sea of Galilee setting, cinematic photoreal, natural daylight, 8k",
+    negative: "slim build, fine clothing, groomed hair, cartoonish, European features",
+    charInfo: "Blunt and impulsive. Speaks before thinking. Passionate declarations he can't always back up. Deeply loyal but buckles under pressure. Full of remorse when he fails.",
+    voice: "Rough Galilean accent, loud baritone, full of feeling",
+    arc: "Proud fisherman → zealous follower → crushing denial → weeping repentance → restored",
+    wardrobe: {
+      "Fishing Call": "Working fisherman's tunic, damp, salt-stained",
+      "Ministry": "Simple traveling robe, worn sandals",
+      "Denial": "Outer cloak wrapped tight in cold courtyard night"
+    },
+    audience: { "Evangelical": 5, "Catholic": 5, "Black Church": 4, "Hispanic": 4, "Secular": 5, "Gen Z": 4, "Women": 3, "Men": 5 }
+  },
+  {
+    id: "mary_magdalene_001",
+    name: "Mary Magdalene",
+    role: "supporting_major",
+    chapters: "Luke 8, 23–24",
+    parallel: "The woman history tried to erase — who showed up when everyone else ran",
+    prompt: "Woman age 25-35, warm olive skin, long dark wavy hair, intense dark brown eyes, medium build, modest traveling robes, Galilean landscape, cinematic photoreal, warm golden hour light, 8k",
+    negative: "red dress, cartoonish, European features, sexualized depiction, halo, painted",
+    charInfo: "Measured and deeply loyal. The last at the cross and first at the tomb. Quiet strength. Has seen darkness and come through it — that depth shows in her eyes.",
+    voice: "Warm alto, emotional depth, quiet strength",
+    arc: "Delivered from darkness → devoted follower → first resurrection witness",
+    wardrobe: {
+      "Healed Follower": "Modest but not destitute, traveling women's robes",
+      "Crucifixion Witness": "Grief-stricken, dark tones",
+      "Resurrection Witness": "Same garments, transformed expression"
+    },
+    audience: { "Evangelical": 4, "Catholic": 4, "Black Church": 5, "Hispanic": 5, "Secular": 5, "Gen Z": 5, "Women": 5, "Men": 3 }
+  },
+  {
+    id: "judas_001",
+    name: "Judas Iscariot",
+    role: "supporting_major",
+    chapters: "Luke 6, 22",
+    parallel: "The insider who rationalized betrayal — and couldn't live with what he'd done",
+    prompt: "Man age 28-35, olive skin slightly pale, neat dark hair and beard, intelligent guarded dark eyes, slightly better quality robes than the others, alert watchful posture, Jerusalem setting, cinematic photoreal, dramatic shadow and light, 8k",
+    negative: "cartoonish evil expression, red clothing, obvious villain look, European features",
+    charInfo: "Intelligent and controlled. Trusted by everyone in the group. Speaks carefully. Occasional bitterness surfaces beneath the surface. Increasingly conflicted as events unfold.",
+    voice: "Smooth controlled baritone, measured — until it breaks",
+    arc: "Trusted treasurer → growing disillusionment → betrayal → crushing remorse",
+    wardrobe: {
+      "Ministry": "Slightly better quality robe — money bag keeper",
+      "Betrayal Night": "Dark cloak, tense movement"
+    },
+    audience: { "Evangelical": 4, "Catholic": 4, "Black Church": 3, "Hispanic": 3, "Secular": 5, "Gen Z": 5, "Women": 3, "Men": 4 }
+  },
+  {
+    id: "zacchaeus_001",
+    name: "Zacchaeus",
+    role: "supporting_minor",
+    chapters: "Luke 19",
+    parallel: "The rich man who everyone hated — including himself — until one encounter changed everything",
+    prompt: "Short stocky wealthy man age 40-50, olive skin, thinning dark hair, short trimmed beard, fine Roman-influenced robes, gold accessories, Jericho street setting, sycamore tree background, cinematic photoreal, bright midday light, 8k",
+    negative: "tall build, poor clothing, cartoonish, European features",
+    charInfo: "Nervous energy, speaks quickly. Powerful in public but deeply lonely. Desperate to be seen. When Jesus calls his name everything changes — sudden overwhelming joy.",
+    voice: "Higher tenor, quick speech, nervous energy that becomes joy",
+    arc: "Isolated wealthy man → desperate seeker → instantaneous transformation",
+    wardrobe: {
+      "Tree Scene": "Fine Roman-influenced robes, wealthy tax collector, gold accessories",
+      "Post-Encounter": "Same clothing, completely different posture and expression"
+    },
+    audience: { "Evangelical": 4, "Catholic": 3, "Black Church": 4, "Hispanic": 4, "Secular": 5, "Gen Z": 4, "Women": 3, "Men": 4 }
+  },
+  {
+    id: "elizabeth_001",
+    name: "Elizabeth",
+    role: "supporting_minor",
+    chapters: "Luke 1",
+    parallel: "The woman who waited decades for a promise — and got it",
+    prompt: "Elderly woman age 60-70, silver white hair under head covering, deeply lined warm olive face, joyful luminous expression, visibly pregnant, simple elder robes, Judean hill country home interior, cinematic photoreal, warm interior light, 8k",
+    negative: "young woman, cartoonish, European features, modern setting",
+    charInfo: "Warm and deeply faithful. Waited decades for this. When filled with the Spirit she speaks with prophetic authority. Trembling with joy she can barely contain.",
+    voice: "Elderly warm contralto, trembling with joy",
+    arc: "Years of shame in barrenness → miraculous conception joy → prophesies over Mary",
+    wardrobe: {
+      "Visitation": "Elder woman's headcovering, simple modest robes, visible pregnancy"
+    },
+    audience: { "Evangelical": 4, "Catholic": 5, "Black Church": 4, "Hispanic": 5, "Secular": 3, "Gen Z": 2, "Women": 5, "Men": 2 }
+  },
+  {
+    id: "pilate_001",
+    name: "Pontius Pilate",
+    role: "antagonist_secondary",
+    chapters: "Luke 3, 13, 23",
+    parallel: "The executive who knew what was right, chose his career instead, and called it pragmatism",
+    prompt: "Roman governor age 40-50, lighter Mediterranean Roman features, short dark hair military cut, clean-shaven, white toga with purple stripe, gold magistrate details, Jerusalem praetorium stone courtyard, cinematic photoreal, harsh morning light, 8k",
+    negative: "cartoonish, obviously evil expression, anachronistic uniform, medieval costume",
+    charInfo: "Politically calculating and measured. Veiled contempt beneath diplomatic courtesy. Morally troubled by Jesus but unwilling to act on it. Increasingly unsettled as the trial proceeds.",
+    voice: "Clipped authority, controlled but increasingly unsettled",
+    arc: "Dismissive → troubled by Jesus → attempts escape → capitulates to crowd → washes hands",
+    wardrobe: {
+      "Trial Scene": "Roman praetorium formal white toga with purple stripe, magistrate chair"
+    },
+    audience: { "Evangelical": 3, "Catholic": 3, "Black Church": 3, "Hispanic": 3, "Secular": 5, "Gen Z": 4, "Women": 3, "Men": 4 }
+  },
+  {
+    id: "prodigal_father_001",
+    name: "The Prodigal Father",
+    role: "parable_character",
+    chapters: "Luke 15",
+    parallel: "Every father who kept the light on. Every parent who waited at the window.",
+    prompt: "Elderly landowner age 55-70, silver white full beard, deeply weathered olive face with grief-lines, fine but worn landowner's robes, scanning the horizon with waiting eyes, Judean countryside farmland, cinematic photoreal, warm golden sunset light, 8k",
+    negative: "young man, European features, modern clothing, cartoonish",
+    charInfo: "Patient beyond reason. Years of grief held quietly. When he sees his son in the distance he doesn't hesitate — he runs. Extravagant love that doesn't wait for the apology to finish.",
+    voice: "Deep weathered bass, breaks with emotion at reunion",
+    arc: "Years of grief and watching → recognition at a distance → running → celebration",
+    wardrobe: {
+      "Waiting": "Landowner's robe, fine but worn — he's been working while waiting",
+      "The Run": "Robes flying — undignified for a man of his status, and he doesn't care"
+    },
+    audience: { "Evangelical": 5, "Catholic": 5, "Black Church": 5, "Hispanic": 5, "Secular": 5, "Gen Z": 4, "Women": 4, "Men": 5 }
+  }
+];
+
+const ROLE_LABELS = {
+  protagonist: "Protagonist",
+  supporting_major: "Supporting — Major",
+  supporting_minor: "Supporting — Minor",
+  antagonist_secondary: "Antagonist",
+  parable_character: "Parable Character"
+};
+
+let doneSet = new Set(JSON.parse(localStorage.getItem('donechars') || '[]'));
+let currentFilter = 'all';
+
+function saveDone() {
+  localStorage.setItem('donechars', JSON.stringify([...doneSet]));
+}
+
+function updateProgress() {
+  const done = doneSet.size;
+  const total = CHARACTERS.length;
+  document.getElementById('done-count').textContent = done;
+  document.getElementById('progress-text').textContent = `${done} / ${total} created in Flow`;
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+function copyText(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    showToast('Prompt copied — paste into Google Flow');
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+
+function toggleDone(id) {
+  if (doneSet.has(id)) {
+    doneSet.delete(id);
+  } else {
+    doneSet.add(id);
+    showToast('Marked as created in Flow ✓');
+  }
+  saveDone();
+  renderCards();
+  updateProgress();
+}
+
+function filterCards(filter, btn) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCards();
+}
+
+function showArcDesc(cardEl, wardrobe, arcKey) {
+  cardEl.querySelector('.arc-desc').textContent = wardrobe[arcKey];
+  cardEl.querySelectorAll('.arc-pill').forEach(p => {
+    p.style.borderColor = p.dataset.arc === arcKey ? 'var(--gold)' : '';
+    p.style.color = p.dataset.arc === arcKey ? 'var(--gold)' : '';
+  });
+}
+
+function renderCards() {
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+
+  const filtered = CHARACTERS.filter(c => {
+    if (currentFilter === 'all') return true;
+    if (currentFilter === 'done') return doneSet.has(c.id);
+    if (currentFilter === 'todo') return !doneSet.has(c.id);
+    return c.role === currentFilter;
+  });
+
+  filtered.forEach(char => {
+    const isDone = doneSet.has(char.id);
+    const card = document.createElement('div');
+    card.className = `card${isDone ? ' done' : ''}`;
+    card.dataset.id = char.id;
+
+    const arcKeys = Object.keys(char.wardrobe);
+    const firstArc = arcKeys[0];
+
+    const audienceBars = Object.entries(char.audience).map(([seg, score]) => `
+      <div class="aud-row">
+        <span class="aud-label">${seg}</span>
+        <div class="aud-bar-bg">
+          <div class="aud-bar-fill" style="width:${score*20}%"></div>
+        </div>
+        <span class="aud-score">${score}</span>
+      </div>
+    `).join('');
+
+    const arcPills = arcKeys.map(k => `
+      <span class="arc-pill" data-arc="${k}" onclick="showArcDesc(this.closest('.card'), ${JSON.stringify(char.wardrobe)}, '${k}')">${k}</span>
+    `).join('');
+
+    const fullPrompt = `${char.prompt} --no ${char.negative} --ar 16:9 --style raw --v 7`;
+
+    card.innerHTML = `
+      <div class="card-role role-${char.role}">${ROLE_LABELS[char.role]}</div>
+      <div class="card-name">${char.name}</div>
+      <div class="card-chapters">${char.chapters}</div>
+      <div class="card-parallel">"${char.parallel}"</div>
+
+      <div class="divider">· · ·</div>
+
+      <div class="audience-section">
+        <div class="section-title">Audience Resonance</div>
+        <div class="audience-bars">${audienceBars}</div>
+      </div>
+
+      <div class="wardrobe-section">
+        <div class="section-title">Wardrobe Arcs</div>
+        <div class="arc-pills">${arcPills}</div>
+        <div class="arc-desc">${char.wardrobe[firstArc]}</div>
+      </div>
+
+      <div class="divider">· · ·</div>
+
+      <div class="prompt-section">
+        <div class="section-title">Google Flow — Image Prompt</div>
+        <div class="prompt-box">${char.prompt}</div>
+        <div class="prompt-label">Negative (exclude)</div>
+        <div class="prompt-box negative">${char.negative}</div>
+        <div class="section-title" style="margin-top:12px">Character Info (paste into Flow)</div>
+        <div class="char-info-box">${char.charInfo}</div>
+        <div class="voice-note">🎙 ${char.voice}</div>
+        <div class="arc-text">Arc: ${char.arc}</div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-copy" onclick="copyText('${char.prompt.replace(/'/g,"\\'")}', this)">Copy Prompt</button>
+        <button class="btn btn-copy-info" onclick="copyText('${char.charInfo.replace(/'/g,"\\'")}', this)">Copy Char Info</button>
+        <button class="btn btn-done" onclick="toggleDone('${char.id}')">${isDone ? '✓ Done' : 'Mark Done'}</button>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+renderCards();
+updateProgress();
+</script>
+</body>
+</html>

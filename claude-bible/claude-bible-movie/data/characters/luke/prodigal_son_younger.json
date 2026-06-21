@@ -1,0 +1,119 @@
+{
+  "schema_version": "2.0",
+  "character_id": "prodigal_son_001",
+  "canonical_name": "The Younger Son (Parable of the Prodigal Son)",
+  "hebrew_name": "N/A — Unnamed Parable Character",
+  "aliases": ["The Prodigal Son", "The Lost Son", "The Younger Brother"],
+  "role": "parable_character",
+  "testament": "New",
+  "books_appearing_in": ["Luke"],
+  "book": "luke",
+  "chapters_active": "15",
+  "era": "1st Century AD, Judean farmland and 'far country' city — parable setting",
+  "visual_dna": {
+    "age_range": "~18-25 — young enough to be reckless, old enough to demand his inheritance",
+    "ethnicity": "1st Century Jewish — son of a Judean landowner",
+    "skin_tone": "olive, healthy at the start — then pallid, dirty, hollow-cheeked at the bottom",
+    "hair_color": "dark, youthful",
+    "hair_texture": "medium, kempt at start — matted and unwashed at rock bottom",
+    "beard_style": "young man's light beard at start — unshaved and unkempt at the pig sty",
+    "eye_color": "dark brown — entitled at the start, dead at the bottom, tearful and alive on the road home",
+    "height_build": "young, healthy, well-fed at the start — visibly thin and hollow from starvation at the sty",
+    "distinguishing_marks": [
+      "three distinct visual states: prosperous son → hollow wreck → restored son",
+      "his clothes tell the story: fine home robes → shredded city rags → the father's own robe",
+      "hollow cheeks and haunted eyes at the pig sty are essential — 'no one gave him anything'",
+      "the walk home: Luke says 'he came to his senses.' Something shifts in his eyes before he moves."
+    ],
+    "wardrobe_by_arc": {
+      "departure": "quality home clothes — fine enough that losing them will be visible",
+      "far_country_wealth": "fashionable city clothes, the kind money buys when you don't know better",
+      "rock_bottom": "rags, filth, emaciated — tending pigs in the heat, longing to eat their food",
+      "road_home": "still in rags — he has prepared a speech but not his appearance",
+      "restored": "the father's best robe, sandals, ring — he is dressed above what he asked for"
+    }
+  },
+  "voice_profile": {
+    "register": "young tenor, entitled at the start — thin and broken at the bottom — desperate and honest on the road",
+    "pace": "quick and confident at the start, slow and defeated at the sty, deliberate on the journey home",
+    "accent_note": "same as the father — Judean home",
+    "speech_mannerisms": [
+      "the demand: 'Father, give me my share of the estate' — no please, no gratitude, just entitlement",
+      "the prepared speech he rehearsed at the pig sty: 'Father, I have sinned against heaven and against you...' — he rehearses it because he does not think he will be received",
+      "he never finishes the speech — the father interrupts with restoration before the hired-servant part comes out"
+    ],
+    "notes": "'He came to his senses' — Luke's phrase for his turning point. The Greek is literally 'he came to himself.' He had been living as if he were someone other than who he was."
+  },
+  "emotional_arc": {
+    "opening": "Entitlement — he wants his future now. He wishes his father were dead in the most practical sense possible.",
+    "midpoint": "Rock bottom — the far country, the famine, the pigs. 'How many of my father's hired servants have food to spare, and here I am starving to death.'",
+    "climax": "The road home — the long walk of shame and rehearsed speech, and then: his father running.",
+    "resolution": "The robe, the ring, the sandals. 'This son of mine was dead and is alive again.' The feast begins."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 5,
+        "notes": "The prodigal's return is the clearest picture of salvation in the synoptic gospels",
+        "marketing_angle": "He rehearsed his confession in a pig sty. He never got to finish it. The father was already running."
+      },
+      "catholic": {
+        "score": 5,
+        "notes": "The sacrament of reconciliation — his journey is the theological structure of confession and absolution",
+        "marketing_angle": "He came home expecting to be a servant. He received a son's welcome. That's the sacrament."
+      },
+      "black_church": {
+        "score": 5,
+        "notes": "The lost one who comes back — the community that receives back the one who strayed",
+        "marketing_angle": "He wasted everything. He came home with nothing. And there was a party waiting."
+      },
+      "hispanic_christian": {
+        "score": 5,
+        "notes": "El hijo pródigo — one of the most beloved stories in Hispanic Catholic and Pentecostal culture",
+        "marketing_angle": "El hijo que regresó. No como hijo — como siervo, pensó él. Pero su padre lo vio desde lejos."
+      },
+      "secular_curious": {
+        "score": 5,
+        "notes": "Universal — the story of someone who wasted their life, hit bottom, and came home. Every culture has this story.",
+        "marketing_angle": "Rock bottom has a different face for everyone. But 'coming to himself' looks the same."
+      },
+      "youth_gen_z": {
+        "score": 5,
+        "notes": "The young person who burned everything down — and found out the door was still open",
+        "marketing_angle": "He burned everything down. Came home expecting to be a servant. Got a party instead."
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "Teshuvah — the return. The parable maps precisely onto Jewish theology of repentance.",
+        "marketing_angle": "He 'came to himself' — the Hebrew concept of teshuvah, of turning back. This parable is deeply Jewish."
+      },
+      "women": {
+        "score": 4,
+        "notes": "The lost child who comes home — universal across gender",
+        "marketing_angle": "He came home expecting nothing and received everything. That's the story."
+      },
+      "men": {
+        "score": 5,
+        "notes": "The man who destroyed his own life, hit the absolute bottom, and made the hard walk home",
+        "marketing_angle": "He hit bottom in a pig sty. He made the walk anyway. That's the hardest thing in the story."
+      }
+    },
+    "modern_parallel": "The young person who burned everything down, hit absolute bottom, and made the long walk home",
+    "modern_parallel_detail": "He doesn't deserve the welcome. He knows it. He has a speech prepared that downshifts his expectations to servant. He never gets to say it."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "ROCK BOTTOM STATE: 1st century young Jewish man age 18-25, hollow sunken cheeks, pallid emaciated form, tattered filthy rags, unwashed matted hair and scraggly beard, sitting in a muddy pig pen in a distant land, longing eyes staring into the distance, crushing shame and hunger on the face, cinematic photoreal, harsh flat dusty light, 8k — ROAD HOME STATE: same young man walking a long dusty road alone, ragged clothes, empty hands, head slightly bowed, resolve building in the face",
+    "negative_prompt": "well-fed appearance at rock bottom, clean clothes at pig sty, cartoonish, European features",
+    "midjourney_style_params": "cinematic photoreal, three visual states requiring separate prompts — far country opulence, pig sty despair, road home determination",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic scene: a young 1st century Jewish man, age 18-25, emaciated and hollow-cheeked, wearing torn filthy rags, sitting in a muddy pig enclosure under a harsh sun, expression of despair and dawning self-awareness, crushing poverty visible in every detail, cinematic drama",
+    "reference_films": [
+      "Into the Wild (2007) — physical deterioration arc",
+      "The Prodigal Son (various) — for the three-state visual journey"
+    ],
+    "color_grading_notes": "Three color worlds: HOME = warm golden Judean farmland. FAR COUNTRY wealth = cold glittering over-saturated city. FAR COUNTRY bottom = desaturated, bleached, flat. ROAD HOME = the warm palette of home beginning to re-enter as he gets closer."
+  },
+  "production_notes": "The physical transformation across three states is essential and must be cast/made-up accordingly. The pig sty scene should be genuinely shocking — this was the lowest state a Jewish person could occupy. Tending pigs was ritual impurity. He has hit the absolute bottom of his world."
+}

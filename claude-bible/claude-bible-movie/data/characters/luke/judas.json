@@ -1,0 +1,117 @@
+{
+  "schema_version": "2.0",
+  "character_id": "judas_001",
+  "canonical_name": "Judas Iscariot",
+  "hebrew_name": "Yehuda ish-Keriyot",
+  "aliases": ["Judas", "The Betrayer", "Judas of Kerioth"],
+  "role": "supporting_major",
+  "testament": "New",
+  "books_appearing_in": ["Luke", "Matthew", "Mark", "John"],
+  "book": "luke",
+  "chapters_active": "6, 22",
+  "era": "1st Century AD, Galilee / Jerusalem",
+  "visual_dna": {
+    "age_range": "~28-35 — established enough to be trusted with finances",
+    "ethnicity": "1st Century Jewish — possibly from Kerioth in Judea, making him the only non-Galilean disciple",
+    "skin_tone": "olive, slightly paler than the Galilean disciples — Judean indoor life",
+    "hair_color": "dark brown to black, well-kept",
+    "hair_texture": "medium, neat — he is the treasurer, presentation matters to him",
+    "beard_style": "neat, well-trimmed — money management consciousness",
+    "eye_color": "dark, intelligent, guarded — used to reading situations quickly",
+    "height_build": "average, alert posture — watchful, rarely relaxed",
+    "distinguishing_marks": [
+      "slightly better quality robe than the other disciples — he manages the money bag",
+      "always positioned where he can see everyone — a reader of rooms",
+      "the calculated quality to his face that occasionally slips into something harder",
+      "he is trusted fully until he isn't — nobody saw it coming except Jesus"
+    ],
+    "wardrobe_by_arc": {
+      "ministry": "slightly better quality robe than average — the treasurer has discretionary judgment",
+      "conspiracy": "dark traveling cloak — he meets the chief priests privately",
+      "betrayal_night": "dark cloak, deliberate movement — this is the night he has planned"
+    }
+  },
+  "voice_profile": {
+    "register": "smooth, controlled baritone — a man who has learned to manage tone",
+    "pace": "measured, precise — he thinks before he speaks",
+    "accent_note": "possibly slightly less Galilean than the others — Judean origin if Iscariot = man of Kerioth",
+    "speech_mannerisms": [
+      "Luke gives him very little speech — what he does is speak to the chief priests, agree on a price, look for an opportunity",
+      "the kiss in Gethsemane — a greeting that is a signal, and Jesus names it: 'Judas, are you betraying the Son of Man with a kiss?'",
+      "his intelligence and control mask his interiority — we do not fully know what he thought"
+    ],
+    "notes": "Do not play Judas as obviously sinister from the beginning. The disciples had no idea. He was trusted with the money. He was present for everything. Something changed, or had always been there undetected."
+  },
+  "emotional_arc": {
+    "opening": "Selected, trusted, entrusted with the group's finances. Present at every miracle. He saw everything the others saw.",
+    "midpoint": "Growing disillusionment — possibly with the direction of the movement, possibly with his own compromises at the money bag.",
+    "climax": "Luke 22:3 — 'Then Satan entered Judas.' He goes to the chief priests. 'What are you willing to give me?' Thirty silver pieces.",
+    "resolution": "The kiss. Jesus's eyes. Luke does not record his remorse (that is Matthew) — but Judas's fate is referenced in Acts. He knew immediately what he had done."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The warning — proximity to Jesus is not the same as transformation. A sobering figure.",
+        "marketing_angle": "He saw every miracle. He was there for all of it. And it wasn't enough. That's the hardest part."
+      },
+      "catholic": {
+        "score": 4,
+        "notes": "The betrayer — his role in the passion narrative is theologically essential",
+        "marketing_angle": "Without him, the arrest doesn't happen the way it did. He is woven into the story at its darkest point."
+      },
+      "black_church": {
+        "score": 3,
+        "notes": "The insider who betrayed — the danger of proximity without transformation",
+        "marketing_angle": "He was on the inside. He knew everything. He sold the information."
+      },
+      "hispanic_christian": {
+        "score": 3,
+        "notes": "The betrayer — a cautionary figure in the passion narrative",
+        "marketing_angle": "El que lo traicionó — y nunca pudo vivir con lo que hizo"
+      },
+      "secular_curious": {
+        "score": 5,
+        "notes": "The most psychologically complex figure in the story — what was he thinking? What went wrong?",
+        "marketing_angle": "What was he thinking? We still don't know. Two thousand years later, his motives are still debated."
+      },
+      "youth_gen_z": {
+        "score": 5,
+        "notes": "The one who made the worst choice of his life and couldn't take it back",
+        "marketing_angle": "He made one choice in a moment. And then couldn't undo it. We all know something about that."
+      },
+      "jewish_american": {
+        "score": 3,
+        "notes": "Careful: his story has been used for centuries to fuel antisemitism. Portray with full historical complexity.",
+        "marketing_angle": "His story has been weaponized for 2,000 years. Here it is told as it actually was: one man's failure, not a people's crime."
+      },
+      "women": {
+        "score": 3,
+        "notes": "Supporting character — primarily relevant to passion arc",
+        "marketing_angle": "He was trusted with everything. He gave it all away for thirty pieces of silver."
+      },
+      "men": {
+        "score": 4,
+        "notes": "The insider who rationalized and couldn't live with the result — a male arc of tragic proportion",
+        "marketing_angle": "He had talked himself into it step by step. By the time the moment came, the choice was already made."
+      }
+    },
+    "modern_parallel": "The trusted insider who rationalized betrayal step by step — and couldn't live with what he'd done",
+    "modern_parallel_detail": "His betrayal didn't happen in one moment. The money bag compromises came first. Each small decision made the next one easier. The kiss in the garden was the last step of a long road."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century Jewish man age 28-35, olive skin slightly paler than Galilean disciples, neat dark hair and trimmed beard, intelligent guarded dark eyes, alert watchful posture, slightly better quality robe than the other disciples, Jerusalem or Galilean setting, cinematic photoreal, dramatic shadow and light, 8k, film grain",
+    "negative_prompt": "cartoonish villain expression, red clothing, obvious evil appearance, European features, glowing sinister eyes",
+    "midjourney_style_params": "cinematic photoreal, dramatic chiaroscuro, tension-filled framing, shadows present even in daylight scenes",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of a 1st century Jewish man, age 28-35, olive skin, neat dark hair, trimmed beard, intelligent watchful dark eyes, slightly better quality robe than average, standing in Jerusalem or at a Last Supper table scene, expression of controlled calculation beneath a composed exterior, dramatic candlelight or evening light, cinematic shadow and depth",
+    "reference_films": [
+      "The Passion of the Christ (2004) — Hristo Naumov Shopov but especially for the betrayal moment",
+      "Jesus Christ Superstar (2018 revival) — for complex psychological portrayal approach"
+    ],
+    "color_grading_notes": "Always slightly cooler than the warm scenes around him. The chiaroscuro in his scenes should deepen as the passion approaches. Gethsemane: torchlight and shadow."
+  },
+  "production_notes": "CRITICAL: Do not play Judas as obviously evil from the beginning. The disciples were surprised. Cast and direct him as intelligent, trusted, genuinely committed — until he isn't. The tragedy requires the surprise."
+}

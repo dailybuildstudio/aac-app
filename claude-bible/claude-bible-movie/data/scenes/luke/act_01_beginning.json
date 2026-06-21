@@ -1,0 +1,517 @@
+{
+  "schema_version": "2.0",
+  "book": "luke",
+  "act": "act_01_beginning",
+  "act_label": "The Beginning",
+  "chapters": "1-2",
+  "total_runtime_min": 55,
+  "scenes": [
+    {
+      "scene_id": "gabriel_zacharias_001",
+      "title": "Gabriel Appears to Zacharias",
+      "episode_label": "The Beginning",
+      "act": "act_01_beginning",
+      "book": "luke",
+      "luke_reference": "Luke 1:5-25",
+      "chapter_start": 1,
+      "verse_start": 5,
+      "chapter_end": 1,
+      "verse_end": 25,
+      "characters": ["zacharias_001", "gabriel_001"],
+      "location": "Jerusalem Temple — altar of incense, inner sanctuary",
+      "time_of_day": "midday temple service",
+      "estimated_runtime_min": 6,
+      "format": "short_film",
+      "emotional_beat": "faithful routine, sudden terror, divine encounter, doubt, consequence",
+      "key_moment": "Gabriel appears at the right side of the altar. Zacharias is gripped with fear. The announcement of a son. The doubt. The silence.",
+      "visual_direction": "Begin with the ordinariness of Temple service — priests at their duties, incense smoke rising, the rhythm of worship. Then everything stops. The crowd outside is waiting. Inside, something impossible is happening. Gabriel does not glow — his presence is the source of terror, not his appearance. The muting of Zacharias must be physical and immediate.",
+      "shot_list": [
+        {
+          "shot_type": "EWS",
+          "description": "Jerusalem Temple exterior — crowds outside during service, routine holy day",
+          "camera_movement": "slow push toward Temple entrance",
+          "lens_note": "wide 24mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Zacharias at the altar of incense, alone, performing his priestly duty — the lot had fallen to him, perhaps for the first and only time",
+          "camera_movement": "static, observational",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Zacharias's face as he becomes aware of a presence — before he turns",
+          "camera_movement": "very slow push",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Gabriel standing at the right side of the altar — the composition puts him exactly where he should not be",
+          "camera_movement": "static — let the strangeness land",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Zacharias's eyes — terror",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Gabriel speaks — 'Do not be afraid, Zacharias...'",
+          "camera_movement": "static — no movement during the announcement",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Zacharias: 'How can I be sure of this? I am an old man and my wife is well along in years.'",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Gabriel's response — measured, not angry — 'I am Gabriel. I stand in the presence of God.' Then the consequence.",
+          "camera_movement": "slight push on 'You will be silent'",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Zacharias's mouth — tries to speak. Nothing. His hand goes to his throat.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Zacharias emerges from the Temple — the crowd realizes something happened. He gestures. He cannot speak. He remains mute.",
+          "camera_movement": "slow pull back as he emerges into light",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "I Am Gabriel",
+          "duration_seconds": 20,
+          "hook": "He said he was sure God wouldn't answer. So God sent Gabriel.",
+          "caption_template": "He doubted in the Temple. Gabriel was already there. Luke 1:19",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        },
+        {
+          "label": "The Muting",
+          "duration_seconds": 15,
+          "hook": "He didn't believe the angel. He lost his voice for nine months.",
+          "caption_template": "Doubt has consequences. Luke 1:20",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "catholic", "jewish_american", "men"],
+      "ai_prompts": {
+        "midjourney": "1st century Jerusalem Temple inner sanctuary, golden incense smoke, elderly Jewish priest in white linen priestly robes at golden altar, standing figure in simple white at right side of altar radiating calm authority, stone walls torchlight shadows, terror on priest's face, cinematic photoreal chiaroscuro --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century Jerusalem Temple interior, elderly Jewish priest in white priestly linen at incense altar, incense smoke rising, standing figure of commanding presence at altar's right side, dramatic torchlight on stone walls, priest's face showing sudden terror, sacred and austere atmosphere",
+        "runway_video": "Begin with slow push through Temple entrance. Find elderly priest alone at the golden altar. Incense smoke. He goes still. We stay wide — we see what he sees but cannot comprehend it. Hold. Then move to his face. Then his mouth trying to form words in silence.",
+        "audio_notes": "Temple sounds — distant chanting of crowd, incense crackling — then absolute silence when Gabriel appears. The silence is louder than anything before it."
+      },
+      "production_notes": "The interior of the Temple is a world most audiences have never seen rendered accurately. This scene is worth significant production design investment."
+    },
+    {
+      "scene_id": "annunciation_001",
+      "title": "The Annunciation",
+      "episode_label": "The Beginning",
+      "act": "act_01_beginning",
+      "book": "luke",
+      "luke_reference": "Luke 1:26-38",
+      "chapter_start": 1,
+      "verse_start": 26,
+      "chapter_end": 1,
+      "verse_end": 38,
+      "characters": ["mary_mother_001", "gabriel_001"],
+      "location": "Nazareth — Mary's home interior, a simple Galilean village dwelling",
+      "time_of_day": "afternoon",
+      "estimated_runtime_min": 5,
+      "format": "short_film",
+      "emotional_beat": "ordinary day, shock, question, explanation, surrender, courage",
+      "key_moment": "Mary says 'Let it be to me according to your word.' The most consequential yes in history, spoken by a girl in an ordinary room.",
+      "visual_direction": "The contrast with the Temple scene must be immediate. Where Zacharias had ceremony, incense, and crowd — Mary has a small room, a task, oil-lamp light. Gabriel appears in her ordinary space and makes it sacred. The terror Gabriel produces is the same — but Mary's response is different. No theatrics — the holiness is in her answer.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "Nazareth from outside — a poor Galilean village, ordinary afternoon life",
+          "camera_movement": "static establishing",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Mary inside — doing an ordinary task, head covering, simple room, oil lamp",
+          "camera_movement": "slow gentle push",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Mary goes still — something has changed in the room",
+          "camera_movement": "very slow push",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "'Greetings, you who are highly favored! The Lord is with you.' Mary is 'greatly troubled.'",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Mary's face — fear, confusion, then the question forming: 'How will this be?'",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The explanation — 'The Holy Spirit will come on you...' — Gabriel gives her the sign: Elizabeth.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Mary's eyes — the decision happening in real time. Fear becoming courage.",
+          "camera_movement": "absolutely static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "'I am the Lord's servant. May your word to me be fulfilled.' Gabriel departs.",
+          "camera_movement": "very slow pull back — she is now alone in the room, but the room is different",
+          "lens_note": "50mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "The Yes",
+          "duration_seconds": 30,
+          "hook": "She was fourteen. She said yes to something that would cost her everything.",
+          "caption_template": "'Let it be to me according to your word.' The most important yes in history. Luke 1:38",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "How Will This Be",
+          "duration_seconds": 20,
+          "hook": "She didn't just accept it. She asked how. That's faith that thinks.",
+          "caption_template": "She asked a real question. Then she believed the real answer. Luke 1:34",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["catholic", "hispanic_christian", "women", "evangelical_baptist", "secular_curious"],
+      "ai_prompts": {
+        "midjourney": "1st century Nazareth simple stone interior, teenage Jewish girl age 14-16 in blue-grey headscarf and modest tunic, oil lamp warm light, expression shifting from fear to resolve, intimate domestic space suddenly sacred, cinematic photoreal soft natural light 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic intimate interior of a 1st century Galilean home, teenage Jewish girl in simple headscarf and linen tunic, oil lamp casting warm shadows on stone walls, expression of extraordinary courage on a young face, sacred moment in an ordinary room, soft intimate light",
+        "runway_video": "Begin outside the house — street sounds, ordinary village. Camera moves through the low doorway. Find Mary at her task. She goes completely still. Stay with her face through the entire conversation. End on her alone in the room after Gabriel has left — the same room, entirely changed.",
+        "audio_notes": "Nazareth street sounds drop away completely when Gabriel speaks. Near silence — only her breathing. Her voice at the 'yes' should be almost inaudible. Then a breath. Then the room returns to ordinary sounds."
+      },
+      "production_notes": "The director's task: make the ordinary room sacred. The audience should feel what Mary feels — that the world just changed in a small room in a village no one had ever heard of."
+    },
+    {
+      "scene_id": "visitation_001",
+      "title": "The Visitation — Mary and Elizabeth",
+      "episode_label": "The Beginning",
+      "act": "act_01_beginning",
+      "book": "luke",
+      "luke_reference": "Luke 1:39-56",
+      "chapter_start": 1,
+      "verse_start": 39,
+      "chapter_end": 1,
+      "verse_end": 56,
+      "characters": ["mary_mother_001", "elizabeth_001"],
+      "location": "Hill country of Judea — Elizabeth's home, a Judean village",
+      "time_of_day": "afternoon",
+      "estimated_runtime_min": 7,
+      "format": "short_film",
+      "emotional_beat": "urgent journey, recognition, joy, prophecy, solidarity",
+      "key_moment": "Elizabeth's cry of recognition — the baby leaps — and then the Magnificat. Mary prophesying justice and the overturning of power.",
+      "visual_direction": "Two impossible pregnancies, two women bound by what God has done. The Magnificat must not be soft or sweet — it is a declaration of justice. She is prophesying the downfall of the powerful and the lifting up of the lowly. Frame it as a declaration, not a lullaby. The solidarity between a teenage girl and an old woman is the emotional core.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "Mary traveling alone or in a small group through the Judean hill country — urgency in her movement",
+          "camera_movement": "tracking alongside",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Mary arrives at Elizabeth's door — Elizabeth opens it. The moment before either speaks.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Elizabeth: suddenly filled with the Spirit — 'Blessed are you among women!' The cry is involuntary.",
+          "camera_movement": "slight push",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Elizabeth's hand on her own belly — 'the baby in my womb leaped for joy'",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Elizabeth's eyes to Mary: 'Blessed is she who has believed that the Lord would fulfill his promises to her!'",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Mary begins the Magnificat — standing, looking outward, the words bigger than her small frame",
+          "camera_movement": "very slow pull back to reveal the full scene — young girl, old woman, impossible hope",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The Magnificat's conclusion — two women, hill country light, the weight of what they carry",
+          "camera_movement": "static",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "Elizabeth's Recognition",
+          "duration_seconds": 25,
+          "hook": "The first human to confirm what the angel told Mary was a 60-year-old woman.",
+          "caption_template": "'Why am I so favored that the mother of my Lord should come to me?' Luke 1:43",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        },
+        {
+          "label": "The Magnificat Opening",
+          "duration_seconds": 45,
+          "hook": "She was fourteen. And she prophesied the overthrow of the powerful.",
+          "caption_template": "The Magnificat — not a lullaby. A declaration. Luke 1:46-55",
+          "platform_targets": ["youtube", "tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["women", "catholic", "hispanic_christian", "black_church"],
+      "ai_prompts": {
+        "midjourney": "1st century Judean hillside home doorway, teenage Jewish girl and elderly woman in her sixth month of pregnancy, both women in head coverings and modest robes, embracing with tears of joy and recognition, warm afternoon hill country light through doorway, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic scene at a 1st century Judean home doorway, a teenage girl and an elderly pregnant woman embracing joyfully, both in modest linen robes and head coverings, warm afternoon light, expression of mutual recognition and overwhelming joy, tears on both faces, intimate and sacred",
+        "runway_video": "Begin on the dusty Judean road — Mary walking. Find the house. She arrives. Hold on the threshold moment before Elizabeth opens the door. Then the eruption of joy — Elizabeth's cry is physical, not controlled. Then pull slowly back as Mary begins the Magnificat — let it land as a declaration, not a song.",
+        "audio_notes": "The Magnificat in Aramaic or Hebrew with subtitles — the original language carries weight the translation loses. Build slowly — Mary begins quietly, then the words grow. No orchestra swell. Solo voice."
+      },
+      "production_notes": "This scene is the only private female conversation in Luke 1. Two women holding impossible hopes in the hill country of Judea. It deserves unhurried time."
+    },
+    {
+      "scene_id": "nativity_001",
+      "title": "The Nativity",
+      "episode_label": "The Beginning",
+      "act": "act_01_beginning",
+      "book": "luke",
+      "luke_reference": "Luke 2:1-20",
+      "chapter_start": 2,
+      "verse_start": 1,
+      "chapter_end": 2,
+      "verse_end": 20,
+      "characters": ["mary_mother_001", "jesus_001"],
+      "location": "Bethlehem — stable/cave, then fields with shepherds",
+      "time_of_day": "night",
+      "estimated_runtime_min": 18,
+      "format": "special_episode",
+      "emotional_beat": "exhaustion, displacement, the sacred in the ordinary, wonder in the rough",
+      "key_moment": "Not the cleaned-up nativity. She is exhausted. It is cold. The manger is a feeding trough. And somehow — this is it.",
+      "visual_direction": "Gritty and real. No glowing baby. The wonder is in the contrast between the ordinariness of the setting and the magnitude of what is happening. Shepherds arrive — rough, smelling of sheep, terrified and then laughing with joy. Mary watches all this and 'pondered these things in her heart.'",
+      "shot_list": [
+        {
+          "shot_type": "EWS",
+          "description": "Bethlehem at night — Roman census crowds, the town full, torchlight streets",
+          "camera_movement": "slow overhead, then descend to street level",
+          "lens_note": "wide 24mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Mary on the donkey, Joseph leading — the exhaustion is real and visible",
+          "camera_movement": "tracking alongside",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The stable cave entrance — the only space available. Low doorway. Sound of animals.",
+          "camera_movement": "slow push toward low doorway",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Interior of the stable — stone manger, hay, single oil lamp Joseph has lit",
+          "camera_movement": "slow pan to find the space",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The baby in the manger — a stone feeding trough. Cold stone. Hay. This is where he is.",
+          "camera_movement": "very slow push",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Mary's face — exhausted, tender, something she cannot name in her expression",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "EWS",
+          "description": "Fields outside Bethlehem — shepherds at night, sudden violent light",
+          "camera_movement": "static then rapid expansion of light",
+          "lens_note": "24mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Shepherds terrified on the ground — 'Do not be afraid. I bring you good news that will cause great joy for all the people.'",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Shepherds arriving at the stable — rough, smelling of sheep, completely out of place, completely welcome",
+          "camera_movement": "low angle from inside stable looking at doorway as they enter",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "A shepherd's face looking at the baby — wonder breaking through the roughness",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Mary watching them — 'Mary treasured up all these things and pondered them in her heart.'",
+          "camera_movement": "very slow push",
+          "lens_note": "85mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "The Manger",
+          "duration_seconds": 30,
+          "hook": "Not the Christmas card version. A stone feeding trough. Cold. Real.",
+          "caption_template": "She wrapped him in cloths and placed him in a manger. Luke 2:7",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts", "youtube"]
+        },
+        {
+          "label": "Shepherds Arrive",
+          "duration_seconds": 45,
+          "hook": "The first announcement went to shepherds. Not kings. Not priests. Shepherds.",
+          "caption_template": "The first visitors were the people nobody invited. Luke 2:16",
+          "platform_targets": ["youtube", "tiktok", "reels"]
+        },
+        {
+          "label": "Mary Pondered",
+          "duration_seconds": 20,
+          "hook": "After everything that happened that night — she pondered it quietly.",
+          "caption_template": "'Mary treasured up all these things and pondered them in her heart.' Luke 2:19",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "catholic", "hispanic_christian", "secular_curious", "women", "men"],
+      "ai_prompts": {
+        "midjourney": "1st century Bethlehem stone stable cave interior, young Jewish mother in dark blue travel robe, newborn baby in stone animal feeding trough on hay, single oil lamp deep shadows, cold night, breath visible, exhausted tender expression, cinematic photoreal chiaroscuro 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century stone stable cave, young mother in worn blue robes next to a stone manger with newborn, single oil lamp light in deep darkness, cold night visible in the breath and the shadows, raw and authentic, no glowing figures, exhausted maternal tenderness",
+        "runway_video": "Begin outside the stable — sound of wind, distant city noise. Camera slowly moves through low stone doorway into warm lamplight. Find the mother first. Then, slowly, the child in the stone manger. No sudden reveals. Let the ordinary setting land before the magnitude does.",
+        "audio_notes": "No choir yet. Night sounds. Stable sounds. Then silence. A single voice, a capella, after the shepherds arrive. The orchestra, if any, begins only when the shepherds go out again, rejoicing."
+      },
+      "production_notes": "This is the most-told story in human history. The only way to make it new is to make it real. The cold. The blood. The stone. The smell of animals. Mary's exhaustion. The indignity of the space. Then — wonder."
+    },
+    {
+      "scene_id": "temple_presentation_001",
+      "title": "Presentation at Temple — Simeon and Anna",
+      "episode_label": "The Beginning",
+      "act": "act_01_beginning",
+      "book": "luke",
+      "luke_reference": "Luke 2:21-40",
+      "chapter_start": 2,
+      "verse_start": 21,
+      "chapter_end": 2,
+      "verse_end": 40,
+      "characters": ["mary_mother_001", "simeon_001", "anna_001", "jesus_001"],
+      "location": "Jerusalem Temple — the outer courts",
+      "time_of_day": "morning",
+      "estimated_runtime_min": 8,
+      "format": "short_film",
+      "emotional_beat": "ritual obedience, unexpected encounter, prophecy, sword-word, ancient witness",
+      "key_moment": "Simeon takes the infant in ancient arms and speaks the Nunc Dimittis. Then turns to Mary alone with the sword prophecy. Then Anna — 84 years old — begins to tell everyone.",
+      "visual_direction": "Temple courts in morning light. The ordinary ritual of presentation — then Simeon appears, moved by the Spirit. The Nunc Dimittis is a quiet scene of enormous weight. Then Anna bursts in — the contrast between Simeon's stillness and Anna's urgent joy.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "Jerusalem Temple outer courts — morning, families presenting infants, the ordinary world of religious obligation",
+          "camera_movement": "slow establishing pan",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Mary and Joseph with the infant — modest offering (two doves — the offering of the poor), joining the queue",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Simeon — moving through the courts with purpose, as if drawn by something he cannot see",
+          "camera_movement": "tracking with him",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Simeon reaches Mary — asks to take the child. She gives him the infant.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "The aged hands holding the infant — ancient and new at once",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Simeon's face — peace that has been sixty years in the making",
+          "camera_movement": "very slow push",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "The Nunc Dimittis — Simeon looking upward, the words of completion",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Simeon turns specifically to Mary — the sword prophecy. 'And a sword will pierce your own soul too.'",
+          "camera_movement": "very slow push toward Mary's face",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Anna arriving — elderly, urgent, immediately speaking to everyone around her",
+          "camera_movement": "track with her energy",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "Nunc Dimittis",
+          "duration_seconds": 35,
+          "hook": "He had been waiting his entire life for one moment. 'Now dismiss your servant in peace.'",
+          "caption_template": "'My eyes have seen your salvation.' — Simeon. Luke 2:30",
+          "platform_targets": ["youtube", "tiktok", "reels"]
+        },
+        {
+          "label": "The Sword Word",
+          "duration_seconds": 20,
+          "hook": "After the blessing came a warning only for her.",
+          "caption_template": "'A sword will pierce your own soul too.' — Luke 2:35",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["catholic", "women", "evangelical_baptist", "jewish_american"],
+      "ai_prompts": {
+        "midjourney": "1st century Jerusalem Temple outer courts morning, very elderly Jewish man in simple robes holding infant carefully with ancient hands, young Jewish mother watching, soft light through stone columns, expression of profound peace and completion on aged face, other Temple visitors visible in background, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century Jerusalem Temple court morning scene, very elderly man holding a newborn infant in aged careful hands, young mother in simple robes watching, warm morning light through stone Temple columns, expression of lifelong prayer finally answered on the old man's face",
+        "runway_video": "Find Simeon in the crowd. Follow him with purpose through the morning Temple courts. He finds Mary. He takes the child. Hold on the ancient hands holding the infant. Rise to his face. The Nunc Dimittis. Then his eyes go to Mary only. Stay on her face for the sword word.",
+        "audio_notes": "Near silence through the Nunc Dimittis — the Temple's ambient sound drops away. Anna's arrival brings it back — the noise of the world returning to this sacred ordinary moment."
+      },
+      "production_notes": "Two scenes in one: the stillness of Simeon and the urgency of Anna. The contrast is directorial gold."
+    }
+  ]
+}

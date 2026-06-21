@@ -1,0 +1,117 @@
+{
+  "schema_version": "2.0",
+  "character_id": "john_apostle_001",
+  "canonical_name": "John son of Zebedee",
+  "hebrew_name": "Yochanan ben Zavdai",
+  "aliases": ["John the Apostle", "The Beloved Disciple", "Son of Thunder", "Boanerges"],
+  "role": "supporting_minor",
+  "testament": "New",
+  "books_appearing_in": ["Luke", "Matthew", "Mark", "John", "Acts", "Revelation"],
+  "book": "luke",
+  "chapters_active": "5-6, 8-9, 22",
+  "era": "1st Century AD, Galilee / Jerusalem",
+  "visual_dna": {
+    "age_range": "~20-25 — likely the youngest of the twelve, possibly a teenager when called",
+    "ethnicity": "1st Century Jewish, Galilean fisherman",
+    "skin_tone": "tanned but slightly lighter than Peter — possibly less time in the sun due to age",
+    "hair_color": "dark brown, youthful",
+    "hair_texture": "medium, natural",
+    "beard_style": "young man's beard — less full than the older disciples",
+    "eye_color": "dark brown — observant, takes everything in, deeply feeling",
+    "height_build": "lean, younger build — not yet the physical weight of Peter or James",
+    "distinguishing_marks": [
+      "the youngest energy in the group — quick, observant",
+      "runs to the tomb and outruns Peter (John 20) — his youth shows in his body",
+      "present at everything important — Transfiguration, Garden of Gethsemane, the cross itself",
+      "the only male disciple recorded at the crucifixion in all four gospels"
+    ],
+    "wardrobe_by_arc": {
+      "fishing_call": "working clothes with James — they were mending nets when Jesus called",
+      "ministry": "simple traveling robe",
+      "last_supper": "close to Jesus at the table — the one 'whom Jesus loved' reclining next to him",
+      "at_the_cross": "present when others fled — witness to everything"
+    }
+  },
+  "voice_profile": {
+    "register": "younger tenor — he has not yet grown into the full voice he will have",
+    "pace": "observant, thoughtful — asks deeper questions than most of the disciples",
+    "accent_note": "Galilean — same regional accent as James and Peter",
+    "speech_mannerisms": [
+      "tends to ask the quiet question others are afraid to ask",
+      "with James at Luke 9:54 — willing to suggest calling fire, but less loud about it",
+      "the one who reports to Jesus that they stopped someone casting out demons 'because he doesn't follow us' — a legalism Jesus corrects"
+    ],
+    "notes": "John's emotional intelligence sets him apart from the other disciples. He observes more than he speaks. That quality will make him the mystic writer of the fourth gospel."
+  },
+  "emotional_arc": {
+    "opening": "Young fisherman with his father and brother — called the same day as Peter.",
+    "midpoint": "Inner circle — the relationship with Jesus deepens beyond what the others have access to.",
+    "climax": "At the cross — standing with the women, with Mary, when all other male disciples except possibly others are gone.",
+    "resolution": "The beloved disciple — his arc in Luke prepares but does not complete. He carries what he witnessed."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The Beloved Disciple — his later writings (Gospel of John, Revelation) are deeply embedded in evangelical theology",
+        "marketing_angle": "He was there for everything. And he never left."
+      },
+      "catholic": {
+        "score": 4,
+        "notes": "St. John the Evangelist — his gospel and epistles are central to Catholic mystical tradition",
+        "marketing_angle": "The one Jesus trusted with his mother. The mystic who wrote 'God is love.'"
+      },
+      "black_church": {
+        "score": 3,
+        "notes": "The faithful witness who stayed",
+        "marketing_angle": "He stayed at the cross when others ran. Witness matters."
+      },
+      "hispanic_christian": {
+        "score": 3,
+        "notes": "The beloved disciple — his closeness to Jesus resonates",
+        "marketing_angle": "El discípulo amado — el que se quedó"
+      },
+      "secular_curious": {
+        "score": 3,
+        "notes": "The youngest one who became the deepest thinker — an intriguing arc",
+        "marketing_angle": "The youngest disciple became the oldest apostle. And never stopped writing."
+      },
+      "youth_gen_z": {
+        "score": 4,
+        "notes": "Possibly a teenager when called — the youngest, the most emotionally perceptive",
+        "marketing_angle": "He might have been seventeen when Jesus called him. He's the one who stayed at the cross."
+      },
+      "jewish_american": {
+        "score": 2,
+        "notes": "Supporting character",
+        "marketing_angle": "A young Galilean fisherman — the world of 1st century Jewish fishing community"
+      },
+      "women": {
+        "score": 4,
+        "notes": "He was trusted with Mary at the cross — 'Woman, here is your son.' His closeness to women disciples is distinctive",
+        "marketing_angle": "He was trusted to care for Mary. He was with the women at the cross. He sees what the others miss."
+      },
+      "men": {
+        "score": 3,
+        "notes": "The young man who became the one who loved most deeply — different kind of strength",
+        "marketing_angle": "The youngest one. The one who ran fastest to the tomb. The one who never stopped believing."
+      }
+    },
+    "modern_parallel": "The young observer who feels everything deeply and becomes the one who loves most",
+    "modern_parallel_detail": "He was likely a teenager when called. He is the one who leans on Jesus, who stays at the cross, who runs first to the tomb. His strength is not Peter's strength — it is a different kind."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century Jewish young Galilean fisherman man age 20-25, tanned skin, dark brown hair, young man's beard, lean youthful build, simple traveling tunic, observant and thoughtful expression, Galilean hillside or lake setting, cinematic photoreal, warm natural light, 8k",
+    "negative_prompt": "old man, European features, cartoonish, fine robes, halo, long flowing robes",
+    "midjourney_style_params": "cinematic photoreal, warm natural daylight, youthful energy, Galilean world",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of a young 1st century Jewish man, age 20-25, youthful lean build, tanned olive skin, dark hair, light beard, wearing simple traveling tunic and robe, thoughtful observant expression, Galilean landscape, warm natural light, cinematic framing",
+    "reference_films": [
+      "The Chosen TV series — for young disciple world-building"
+    ],
+    "color_grading_notes": "Same warm Galilean palette as James — but slightly lighter and more youthful."
+  },
+  "production_notes": "Cast John visibly younger than the others — the age contrast with Peter matters. His closeness to Jesus should be visible in blocking and positioning."
+}

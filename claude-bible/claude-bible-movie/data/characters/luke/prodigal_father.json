@@ -1,0 +1,118 @@
+{
+  "schema_version": "2.0",
+  "character_id": "prodigal_father_001",
+  "canonical_name": "The Father (Parable of the Prodigal Son)",
+  "hebrew_name": "N/A — Parable Character",
+  "aliases": ["The Waiting Father", "The Forgiving Father", "The Running Father"],
+  "role": "parable_character",
+  "testament": "New",
+  "books_appearing_in": ["Luke"],
+  "book": "luke",
+  "chapters_active": "15",
+  "era": "1st Century AD, Judean farmland — parable setting",
+  "visual_dna": {
+    "age_range": "~55-70 — old enough to have two adult sons, prosperous farmer",
+    "ethnicity": "1st Century Jewish landowner",
+    "skin_tone": "olive, aged and weathered — a man who has worked his land and waited at his gate",
+    "hair_color": "silver and white",
+    "hair_texture": "short, elder's hair",
+    "beard_style": "full long silver beard of an honored elder — the beard of a man of standing",
+    "eye_color": "deep brown — eyes that have been scanning the horizon for years",
+    "height_build": "medium, slightly stooped with age — but when he sees his son, he runs. A man who runs in robes is undignified. He doesn't care.",
+    "distinguishing_marks": [
+      "eyes permanently oriented toward the road — he has been watching for his son to return",
+      "when he runs, his robes hike up — undignified for a man of his status in that culture",
+      "the robe he puts on his son was prepared — or he takes his own off",
+      "the ring he places on his son's finger restores sonship — it is his own signet ring"
+    ],
+    "wardrobe_by_arc": {
+      "waiting": "landowner's fine robe, worn with the ease of a man who has been working and watching",
+      "reunion_run": "same robe, now hiked up as he runs — dignity abandoned for his son",
+      "celebration": "feast clothes — this is a party, and he is throwing it"
+    }
+  },
+  "voice_profile": {
+    "register": "deep weathered bass — the voice of a man who has given orders and also wept alone",
+    "pace": "deliberate usually, but at the reunion there are no words at first — only embrace",
+    "accent_note": "wealthy Judean landowner's Aramaic — educated, formal when needed",
+    "speech_mannerisms": [
+      "the instructions come fast: 'Quick! Bring the best robe, bring the ring, bring sandals, kill the fattened calf'",
+      "the theological statement: 'This son of mine was dead and is alive again; he was lost and is found'",
+      "to the elder son, outside the feast: patient, pleading — 'Son, you are always with me, and everything I have is yours'",
+      "the final line of the parable is him pleading with the older son — we don't know if the older son went in"
+    ],
+    "notes": "He runs. In 1st century Jewish culture, a man of his standing running in the street was a significant act of self-humiliation. He does it anyway."
+  },
+  "emotional_arc": {
+    "opening": "The younger son demands his inheritance — legally, this is equivalent to wishing the father dead. He gives it. He lets him go.",
+    "midpoint": "Years pass. He watches the road. Every day. 'While he was still a long way off, his father saw him.' He was looking.",
+    "climax": "He runs. He falls on his neck. He kisses him. Before the son finishes his prepared speech, the father is already calling for the robe.",
+    "resolution": "The feast. Then the older son. The father goes out to him too — he goes out to both sons. The parable ends with the father pleading, not commanding."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 5,
+        "notes": "The parable of grace — the father is Jesus's portrait of God. The most important parable in Luke.",
+        "marketing_angle": "He saw him from far off. He ran. He didn't wait for the apology to finish. That's the whole gospel."
+      },
+      "catholic": {
+        "score": 5,
+        "notes": "The sacrament of reconciliation — this parable is its theological heart",
+        "marketing_angle": "The father runs. Before confession is complete, restoration is happening. That's what reconciliation is."
+      },
+      "black_church": {
+        "score": 5,
+        "notes": "The father who kept the light on — the community that receives back the one who left",
+        "marketing_angle": "He kept watching the road. Years. And when he saw him, he ran. That's the God of this story."
+      },
+      "hispanic_christian": {
+        "score": 5,
+        "notes": "El padre que corrió — family reunion, extravagant welcome, el hijo pródigo — deeply embedded in Hispanic culture",
+        "marketing_angle": "El padre que corrió. Familia es familia. Él mató el ternero gordo. Fiesta."
+      },
+      "secular_curious": {
+        "score": 5,
+        "notes": "Widely considered the greatest short story ever told — emotionally universal",
+        "marketing_angle": "Two minutes of screen time. The greatest portrait of unconditional love ever told."
+      },
+      "youth_gen_z": {
+        "score": 4,
+        "notes": "The parent who kept watching, who ran without being asked — the parent everyone wishes they had",
+        "marketing_angle": "He saw him from far off. He ran. Not when the son was cleaned up. When he was still a mess."
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "Teshuvah — the Jewish concept of return. The parable maps onto it precisely.",
+        "marketing_angle": "The father's extravagant welcome mirrors the theology of teshuvah — return is met with restoration, not probation."
+      },
+      "women": {
+        "score": 4,
+        "notes": "Every parent who kept the light on",
+        "marketing_angle": "He kept watching. He had a robe ready. He knew what restoration would look like before it arrived."
+      },
+      "men": {
+        "score": 5,
+        "notes": "The father who showed extravagant love without losing authority — a powerful male archetype",
+        "marketing_angle": "He hiked up his robes and ran down the road. A wealthy elder man. He didn't care what anyone thought."
+      }
+    },
+    "modern_parallel": "Every father who kept the light on. Every parent who watched the road.",
+    "modern_parallel_detail": "The running father is the emotional center of the entire parable — and the entire gospel of Luke. This two-minute scene is your most viral moment in the project."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century elderly Jewish landowner age 55-70, silver white full beard, deeply weathered olive face with grief-lines that have become joy-lines, fine but worn landowner's robes hiked up as he runs, tears on weathered face, running down a dusty Judean road toward a distant figure, golden sunset behind him, cinematic photoreal, warm sunset light, 8k, film grain",
+    "negative_prompt": "young man, European features, modern clothing, cartoonish, calm dignified walking pose",
+    "midjourney_style_params": "cinematic photoreal, warm golden sunset, wide landscape then extreme close on running face",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic scene of an elderly 1st century Jewish landowner, age 55-70, silver beard, weathered olive face streaming with tears of joy, robes hiked up as he runs down a dusty road in Judean countryside, arms reaching forward toward a distant figure on the horizon, warm golden late afternoon sun behind him, cinematic emotion",
+    "reference_films": [
+      "The Shack (2017) — for warm reconciliation lighting approach",
+      "The Passion of the Christ (2004) — for Middle Eastern landscape"
+    ],
+    "color_grading_notes": "The reunion must be shot in warm golden sunset light — the warmest, most golden moment in the entire film. After the cold colors of the far country, this warmth is intentional."
+  },
+  "production_notes": "The father running is the most important single shot in the Parables episode — and possibly in the entire project. Begin wide: small figure on large landscape. He runs. Camera VERY SLOWLY zooms in. By the embrace we are at his face. No cuts. Music enters only when he starts to run."
+}

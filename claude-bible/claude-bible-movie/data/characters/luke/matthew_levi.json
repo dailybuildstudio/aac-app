@@ -1,0 +1,116 @@
+{
+  "schema_version": "2.0",
+  "character_id": "matthew_levi_001",
+  "canonical_name": "Matthew (Levi)",
+  "hebrew_name": "Mattityahu bar Avram (Levi)",
+  "aliases": ["Levi", "Matthew the Tax Collector", "Levi son of Alphaeus"],
+  "role": "supporting_minor",
+  "testament": "New",
+  "books_appearing_in": ["Luke", "Matthew", "Mark"],
+  "book": "luke",
+  "chapters_active": "5-6",
+  "era": "1st Century AD, Capernaum tax booth / Galilee",
+  "visual_dna": {
+    "age_range": "~30-40 — established enough in his career to have a house large enough for a feast",
+    "ethnicity": "1st Century Jewish — but employed by the Roman tax system, making him a collaborator",
+    "skin_tone": "olive, indoor life — a tax collector sits at a booth, not in the fields",
+    "hair_color": "dark, well-kept — he has money",
+    "hair_texture": "medium, groomed — he can afford to care about appearance",
+    "beard_style": "neat, trimmed beard — prosperity visible in grooming",
+    "eye_color": "dark, sharp — used to calculating and reading people",
+    "height_build": "medium build, not laborer's physique — an indoor occupation",
+    "distinguishing_marks": [
+      "sitting at a tax booth on the Capernaum road when Jesus walks by",
+      "wealthy enough to host a great feast immediately after being called",
+      "the feast is full of 'tax collectors and sinners' — his social world",
+      "he was despised by his own people — Jewish tax collectors were seen as traitors"
+    ],
+    "wardrobe_by_arc": {
+      "tax_booth": "better quality robes than most — possibly Roman-influenced dress, practical but prosperous",
+      "feast_host": "finer robes at his own feast — a man in his home showing his wealth",
+      "after_calling": "traveling disciple clothes — he left the booth and the income"
+    }
+  },
+  "voice_profile": {
+    "register": "educated baritone — tax collecting required literacy and numeracy, unusual for the era",
+    "pace": "measured, precise — a man who counts carefully",
+    "accent_note": "possibly slightly more cosmopolitan than the Galilean fishermen — his work connected him to Romans",
+    "speech_mannerisms": [
+      "Jesus calls him and he 'got up, left everything and followed him' — Luke says no more. His obedience is wordless.",
+      "the feast he throws is immediate and lavish — he responds with his whole life",
+      "Luke does not record Matthew speaking — he is a watcher, a recorder, even in the narrative"
+    ],
+    "notes": "In Luke he is called Levi. He later appears as Matthew in the apostle list. The same man — but Luke preserves his birth name, not the name Jesus may have given him."
+  },
+  "emotional_arc": {
+    "opening": "Prosperous, isolated. Wealthy but socially dead among his own people. Sitting at the booth is his whole world.",
+    "midpoint": "Jesus walks by and says two words: 'Follow me.' He leaves everything — the booth, the income, the structure of his life.",
+    "climax": "The feast — he throws open his house to everyone like him. The Pharisees are appalled. Jesus is at the table.",
+    "resolution": "He follows. He eventually writes down what he saw. The careful recorder finds his true calling."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The sinner called and transformed — his response is immediate and total",
+        "marketing_angle": "Two words. 'Follow me.' He got up and left everything. No negotiation."
+      },
+      "catholic": {
+        "score": 3,
+        "notes": "St. Matthew the Evangelist — his calling is an important feast day",
+        "marketing_angle": "The tax collector who became an evangelist. The feast he threw is where it all turned."
+      },
+      "black_church": {
+        "score": 4,
+        "notes": "The collaborator who was redeemed — working within a corrupt system, called out of it",
+        "marketing_angle": "He worked for the oppressor's system. Jesus walked up to his booth and called him out of it."
+      },
+      "hispanic_christian": {
+        "score": 3,
+        "notes": "The sinner welcomed at the table — the feast of fellowship",
+        "marketing_angle": "His first act after being called was to throw a party. That's faith."
+      },
+      "secular_curious": {
+        "score": 5,
+        "notes": "The most complex calling — a collaborator with empire who abandons it immediately",
+        "marketing_angle": "He worked for Rome, extracting money from his own people. Jesus walked past his booth and said his name. And he left."
+      },
+      "youth_gen_z": {
+        "score": 4,
+        "notes": "The person society wrote off as corrupt who turned out to be worth knowing",
+        "marketing_angle": "Everyone had him written off. Everyone was wrong."
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "The Jewish tax collector — the most hated category in 1st century Jewish society, and why",
+        "marketing_angle": "Tax collectors were Jews working for Rome — seen as traitors. Jesus kept eating with them."
+      },
+      "women": {
+        "score": 2,
+        "notes": "Supporting character primarily",
+        "marketing_angle": "He opened his house to everyone society rejected. The table was open."
+      },
+      "men": {
+        "score": 4,
+        "notes": "The man who left a lucrative career with two words — the radical call and the radical response",
+        "marketing_angle": "He had a good income, a structured life, a place in the system. He left it all in five seconds."
+      }
+    },
+    "modern_parallel": "The successful person working in a corrupt industry who leaves everything when something real walks in",
+    "modern_parallel_detail": "He was not stupid or unaware of the moral compromises his job required. He was complicit in the system. Then Jesus walked by."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century Jewish tax collector man age 30-40, olive skin, neat dark hair, trimmed beard, medium build, better quality robes than fishermen, sitting at a stone toll booth on a Capernaum road, sharp calculating eyes, cinematic photoreal, bright midday Galilean light, 8k",
+    "negative_prompt": "fisherman's rough clothes, extremely wealthy Roman dress, cartoonish, European features, modern clothing",
+    "midjourney_style_params": "cinematic photoreal, bright Galilean daylight, toll booth setting, period-accurate prosperity",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of a 1st century Jewish tax collector, age 30-40, neat dark hair and trimmed beard, olive skin, wearing better quality robes than the average worker, sitting at a stone toll booth on a Capernaum road, sharp eyes, expression of calculation changing to surprise, bright midday light",
+    "reference_films": [
+      "The Chosen TV series — Levi/Matthew arc across season 1"
+    ],
+    "color_grading_notes": "Tax booth scene: bright, commercial, midday — the ordinary world before the call. Feast scene: warm interior lamps, celebratory."
+  },
+  "production_notes": "The calling of Levi is one of the shortest scenes in Luke (three verses) and one of the most powerful. The feast that immediately follows must feel lavish — he held nothing back."
+}

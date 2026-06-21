@@ -1,0 +1,119 @@
+{
+  "schema_version": "2.0",
+  "character_id": "mary_mother_001",
+  "canonical_name": "Mary of Nazareth",
+  "hebrew_name": "Miriam bat Joachim",
+  "aliases": ["Miriam", "The Virgin Mary", "Mother of God", "Theotokos", "La Virgen"],
+  "role": "supporting_major",
+  "testament": "New",
+  "books_appearing_in": ["Luke", "Matthew", "John", "Acts"],
+  "book": "luke",
+  "chapters_active": "1-2, 8, 11",
+  "era": "1st Century AD, Nazareth / Bethlehem / Jerusalem",
+  "visual_dna": {
+    "age_range": "14-16 (annunciation/nativity) to ~48 (post-resurrection references)",
+    "ethnicity": "1st Century Jewish, Galilean — from Nazareth",
+    "skin_tone": "warm olive, smooth, young in early scenes",
+    "hair_color": "dark brown to black",
+    "hair_texture": "straight to wavy — always covered by headscarf in public scenes",
+    "beard_style": "N/A",
+    "eye_color": "dark brown — deep and reflective, she 'pondered these things in her heart'",
+    "height_build": "petite, graceful — young girl in annunciation scenes",
+    "distinguishing_marks": [
+      "head covering always present in public — culturally accurate",
+      "quiet strength in facial expression — not passive, chosen",
+      "expression shifts from girl to mother across Luke's narrative"
+    ],
+    "wardrobe_by_arc": {
+      "annunciation": "simple blue-grey linen headscarf and modest tunic — working girl's clothes, Nazareth interior",
+      "visitation": "travel robe over tunic, slightly dusty from journey to hill country",
+      "nativity": "travel-worn dark blue outer garment, exhausted but luminous",
+      "temple_presentation": "clean ceremonial dress — modest but their best for the Temple",
+      "passion": "dark mourning tones, tear-stained, grief-aged face of a woman in her 40s"
+    }
+  },
+  "voice_profile": {
+    "register": "warm mezzo-soprano, soft — rises to prophetic when the Spirit fills her",
+    "pace": "careful, thoughtful — she speaks rarely but each word is weighted",
+    "accent_note": "Galilean Aramaic, young woman's voice in early scenes",
+    "speech_mannerisms": [
+      "the Magnificat — prophetic declaration, not a lullaby",
+      "questions that show she is thinking deeply: 'How will this be?'",
+      "stores words rather than speaks them — 'Mary treasured all these things'",
+      "'Do whatever he tells you' — her last recorded words, at Cana"
+    ],
+    "notes": "The Magnificat (Luke 1:46-55) must not be softened. She is prophesying justice and the overturning of power."
+  },
+  "emotional_arc": {
+    "opening": "Wonder mixed with fear at annunciation — then courage: 'Let it be to me according to your word.' The most consequential yes in history from a teenage girl.",
+    "midpoint": "The sword Simeon prophesies piercing her soul — she carries knowledge of what's coming through years of watching her son's ministry.",
+    "climax": "At the foot of the cross — not running, not collapsing. Standing. The most costly thing she ever did.",
+    "resolution": "Present in the upper room at Pentecost (Acts 1). The grief held. The faith completed."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The obedient servant, handmaid of the Lord — her yes makes the gospel possible",
+        "marketing_angle": "Before the manger, there was her answer. 'Let it be to me.' Everything started there."
+      },
+      "catholic": {
+        "score": 5,
+        "notes": "The Blessed Mother, Theotokos — Queen of Heaven, model of faith, intercessor",
+        "marketing_angle": "The Blessed Mother — her courage is the beginning of the whole story"
+      },
+      "black_church": {
+        "score": 5,
+        "notes": "A young woman of color under occupation, saying yes to God at enormous personal cost",
+        "marketing_angle": "A teenager under Roman occupation who trusted God with everything — and meant it"
+      },
+      "hispanic_christian": {
+        "score": 5,
+        "notes": "La Virgen — central to Hispanic Catholic and Pentecostal faith, deeply personal",
+        "marketing_angle": "La Virgen — her courage is our courage. Her yes changed everything."
+      },
+      "secular_curious": {
+        "score": 4,
+        "notes": "A teenage girl who said yes to something that would cost her everything — historically extraordinary",
+        "marketing_angle": "A teenager who changed the world without ever holding a sword or a crown"
+      },
+      "youth_gen_z": {
+        "score": 4,
+        "notes": "Young, overlooked by the world, chosen by God — her story is one of radical trust",
+        "marketing_angle": "Fourteen years old. Nobody. And she said yes to the most dangerous thing God ever asked."
+      },
+      "jewish_american": {
+        "score": 3,
+        "notes": "Miriam — a young Jewish woman, her Magnificat echoes Hannah's prayer and the prophets",
+        "marketing_angle": "Miriam of Nazareth — her song echoes Hannah, Deborah, the prophets. Deeply Jewish."
+      },
+      "women": {
+        "score": 5,
+        "notes": "The most important woman in the western tradition — told on her own terms",
+        "marketing_angle": "She was not a background figure. She was the first believer. The last at the cross."
+      },
+      "men": {
+        "score": 3,
+        "notes": "The mother who raised him — her courage grounds the nativity",
+        "marketing_angle": "The woman who stood at the cross while most of the men had run"
+      }
+    },
+    "modern_parallel": "The young woman who said yes to something that would cost her everything — and meant it",
+    "modern_parallel_detail": "Not a passive figure. She asks hard questions (How will this be?), she prophesies justice (Magnificat), she stands at the cross when others flee."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century Jewish young woman age 14-16, warm olive skin, dark hair under blue-grey linen headscarf, dark reflective brown eyes, petite graceful build, simple modest linen tunic, Galilean village interior, oil lamp warm light, expression of wonder and courage, cinematic photoreal, soft natural light, 8k, film grain",
+    "negative_prompt": "European features, blonde hair, blue eyes, crown, halo, cartoonish, painted, white skin, anachronistic clothing, sexualized depiction, glamorous styling",
+    "midjourney_style_params": "cinematic photoreal, soft diffused natural light, intimate framing, warm earth tones",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of a 1st century Jewish teenage girl, age 14-16, warm olive complexion, dark hair covered by a simple blue-grey linen headscarf, dark expressive brown eyes, petite build, modest linen tunic, Galilean home interior, warm oil lamp light, expression shifting from fear to quiet courage, intimate cinematic framing",
+    "reference_films": [
+      "The Nativity Story (2006) — Keisha Castle-Hughes casting, authentic age and ethnicity",
+      "Young Woman and the Sea (2024) — period authenticity, young female lead emotional realism"
+    ],
+    "color_grading_notes": "Annunciation: warm amber oil-lamp tones. Nativity: cool blue night with warm lamp center. Passion: desaturated grief-blues."
+  },
+  "production_notes": "Critical: cast Mary at historically accurate age (14-16) for annunciation/nativity scenes. Do not age up."
+}

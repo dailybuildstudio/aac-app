@@ -1,0 +1,115 @@
+{
+  "schema_version": "2.0",
+  "character_id": "elizabeth_001",
+  "canonical_name": "Elizabeth",
+  "hebrew_name": "Elisheba",
+  "aliases": ["Mother of John the Baptist", "The Barren One Who Bore a Prophet"],
+  "role": "supporting_minor",
+  "testament": "New",
+  "books_appearing_in": ["Luke"],
+  "book": "luke",
+  "chapters_active": "1",
+  "era": "1st Century AD, hill country of Judea",
+  "visual_dna": {
+    "age_range": "~60-70 — the miracle is that she is past childbearing age. This must be visible.",
+    "ethnicity": "1st Century Jewish, priestly Levite family",
+    "skin_tone": "olive, deeply lined, aged gracefully",
+    "hair_color": "silver-white, covered by elder woman's head covering",
+    "hair_texture": "hidden under coverings in all public and home scenes",
+    "beard_style": "N/A",
+    "eye_color": "warm brown, lit by deep joy in pregnancy scenes",
+    "height_build": "small, elderly — but luminous with joy and the Holy Spirit in her sixth month",
+    "distinguishing_marks": [
+      "visibly pregnant at an age when pregnancy is impossible — the miracle must show",
+      "the joy of someone who has waited sixty years for one answer",
+      "elder dignity — she is of priestly family and carries herself with it"
+    ],
+    "wardrobe_by_arc": {
+      "hiding": "plain elder's home robes — 'she went into seclusion for five months' (Luke 1:24)",
+      "visitation": "simple home robes, visibly pregnant, rushing to meet Mary at the door",
+      "john_naming": "elder woman at celebration — modest, joyful, full of Spirit"
+    }
+  },
+  "voice_profile": {
+    "register": "warm contralto, aged, trembling with joy in key scenes",
+    "pace": "measured and motherly — then suddenly Spirit-filled and prophetic",
+    "accent_note": "Judean Aramaic, educated priestly household speech",
+    "speech_mannerisms": [
+      "the cry at Mary's arrival — 'Blessed are you among women!' — comes involuntarily, filled with the Spirit",
+      "her first response is joy before theology",
+      "she identifies Mary's faith as the key: 'Blessed is she who has believed'"
+    ],
+    "notes": "Elizabeth is the first human in Luke to confirm what Gabriel told Mary. Her Spirit-filled recognition is the first testimony to the incarnation."
+  },
+  "emotional_arc": {
+    "opening": "A lifetime of shame in a culture where barrenness was seen as divine disfavor. Faithful anyway.",
+    "midpoint": "Conception — five months in hiding, marveling: 'The Lord has done this for me.'",
+    "climax": "Mary arrives, the baby leaps, the Spirit falls — 'Why am I so favored that the mother of my Lord should come to me?'",
+    "resolution": "She insists the baby's name is John — against family pressure. Faith holds."
+  },
+  "audience_targeting": {
+    "segments": {
+      "evangelical_baptist": {
+        "score": 4,
+        "notes": "The faith of Elizabeth and Zacharias — waiting for God's timing, rewarded",
+        "marketing_angle": "She waited her entire life to be a mother. God called it 'the right time.'"
+      },
+      "catholic": {
+        "score": 5,
+        "notes": "The Visitation is a major feast — Elizabeth's role is theologically essential",
+        "marketing_angle": "The first human to confirm the Incarnation was an elderly woman who leaped for joy"
+      },
+      "black_church": {
+        "score": 4,
+        "notes": "The woman who waited — and received. The community of faithful women.",
+        "marketing_angle": "She carried her shame for sixty years. Then God showed up and called it a miracle."
+      },
+      "hispanic_christian": {
+        "score": 5,
+        "notes": "La abuela — the elder woman whose faith outlasted the wait, beloved in popular devotion",
+        "marketing_angle": "La abuela whose faith outlasted the wait — and whose baby leaped at the sound of grace"
+      },
+      "secular_curious": {
+        "score": 3,
+        "notes": "The woman whose impossible pregnancy sets the stage for an even more impossible one",
+        "marketing_angle": "Her pregnancy was medically impossible. That was the point."
+      },
+      "youth_gen_z": {
+        "score": 2,
+        "notes": "Less directly resonant — supporting character for nativity arc",
+        "marketing_angle": "She waited sixty years for the miracle. It was worth it."
+      },
+      "jewish_american": {
+        "score": 4,
+        "notes": "Her story echoes Hannah, Sarah — the barren woman who bears a prophet is a deep Hebrew pattern",
+        "marketing_angle": "Sarah, Hannah, Elizabeth — the barren women who shaped history. One more."
+      },
+      "women": {
+        "score": 5,
+        "notes": "The scene between Elizabeth and Mary is the first female conversation in Luke — both carrying impossible hopes",
+        "marketing_angle": "Two women, one young, one old — both carrying something the world wasn't ready for"
+      },
+      "men": {
+        "score": 2,
+        "notes": "Secondary — primarily resonant for women and older audiences",
+        "marketing_angle": "The woman whose husband didn't believe. She did."
+      }
+    },
+    "modern_parallel": "The woman who waited decades for a promise — and got it when the world said it was too late",
+    "modern_parallel_detail": "She hid herself for five months — not from shame, but from wonder. She needed time to hold what had happened before anyone could talk about it."
+  },
+  "ai_generation": {
+    "consistency_seed_prompt": "1st century elderly Jewish woman age 60-70, silver white hair under simple head covering, deeply lined warm olive face, luminous joy in expression, visibly pregnant, simple elder's home robes, Judean hillside stone home interior, warm natural light through doorway, cinematic photoreal, 8k",
+    "negative_prompt": "young woman, glamorous styling, cartoonish, European features, modern setting, glowing halo",
+    "midjourney_style_params": "cinematic photoreal, warm interior natural light, intimate domestic setting",
+    "midjourney_version_params": "--ar 16:9 --style raw --v 7",
+    "firefly_content_class": "photo",
+    "firefly_style_preset": "cinematic",
+    "firefly_prompt": "Photorealistic portrait of an elderly 1st century Jewish woman, age 60-70, silver hair under simple cloth head covering, deeply lined warm olive face filled with joy, visibly pregnant, simple home robes, stone interior of a Judean hillside home, warm afternoon light, expression of wonder and delight, intimate framing",
+    "reference_films": [
+      "The Nativity Story (2006) — Elizabeth played with age-appropriate casting"
+    ],
+    "color_grading_notes": "Warm, domestic, intimate. The joy in Elizabeth's home should feel like golden afternoon light — the opposite of the Temple's formal gold."
+  },
+  "production_notes": "Elizabeth must be cast old enough for the miracle to read. A woman in her 30s or 40s destroys the entire theological point."
+}

@@ -1,0 +1,280 @@
+{
+  "schema_version": "2.0",
+  "book": "luke",
+  "act": "act_02_launch",
+  "act_label": "The Launch",
+  "chapters": "3-4",
+  "total_runtime_min": 25,
+  "scenes": [
+    {
+      "scene_id": "john_ministry_001",
+      "title": "John's Ministry in the Wilderness",
+      "episode_label": "The Launch",
+      "act": "act_02_launch",
+      "book": "luke",
+      "luke_reference": "Luke 3:1-18",
+      "chapter_start": 3,
+      "verse_start": 1,
+      "chapter_end": 3,
+      "verse_end": 18,
+      "characters": ["john_baptist_001"],
+      "location": "Judean wilderness — Jordan River banks",
+      "time_of_day": "harsh midday",
+      "estimated_runtime_min": 6,
+      "format": "short_film",
+      "emotional_beat": "prophetic urgency, confrontation, call to repentance, the crowd's hunger",
+      "key_moment": "'You brood of vipers! Who warned you to flee from the coming wrath?' — and then the crowds asking 'What should we do?' He has an answer for each of them.",
+      "visual_direction": "John is physically striking against the wilderness backdrop — the most extreme figure anyone in the crowd has ever seen. The crowds come from everywhere: soldiers, tax collectors, ordinary people. Each category gets a specific answer. He is not ranting — he is diagnosing and prescribing.",
+      "shot_list": [
+        {
+          "shot_type": "EWS",
+          "description": "Judean wilderness — vast, empty, bleached. Then a distant crowd moving toward something.",
+          "camera_movement": "slow pull back to reveal scale of crowd",
+          "lens_note": "wide 24mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "John in the crowd — the camel hair, the leather belt, the wild hair. Exactly as described.",
+          "camera_movement": "push in through the crowd",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "John's voice: 'You brood of vipers!' — the face behind the rebuke",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "The crowd's faces — some convicted, some angry, some hungry. A cross-section of Israel.",
+          "camera_movement": "slow pan across crowd faces",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "John answering each group — soldiers, tax collectors, ordinary people — specific, practical, radical",
+          "camera_movement": "static per group",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "John: 'One who is more powerful than I will come... I baptize you with water. He will baptize you with the Holy Spirit and fire.'",
+          "camera_movement": "very slow push",
+          "lens_note": "85mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "What Should We Do",
+          "duration_seconds": 45,
+          "hook": "He preached repentance. They asked what to do. His answers were shockingly practical.",
+          "caption_template": "Share your coat. Don't collect more than required. Don't extort anyone. Luke 3:10-14",
+          "platform_targets": ["youtube", "tiktok", "reels"]
+        },
+        {
+          "label": "More Powerful Than I",
+          "duration_seconds": 20,
+          "hook": "He had 10,000 followers. He pointed them all away from himself.",
+          "caption_template": "'I am not worthy to untie his sandals.' Luke 3:16",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        }
+      ],
+      "target_audiences": ["men", "evangelical_baptist", "black_church", "secular_curious", "youth_gen_z"],
+      "ai_prompts": {
+        "midjourney": "1st century Judean wilderness Jordan River bank, wild desert prophet in rough camel hair with leather belt, crowds of Jewish people surrounding him in arid landscape, harsh midday sun, dust and dry riverbank vegetation, faces in the crowd showing conviction and hunger, cinematic photoreal dramatic shadows 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic 1st century desert wilderness, a gaunt wild-haired prophet in rough camel hair garment addressing a large crowd on a desert riverbank, harsh sunlight, crowd faces showing fear and hunger, Jordan River in background, dramatic wide landscape",
+        "runway_video": "Begin with extreme wide — tiny figure in vast wilderness, then discover the crowd is enormous. Push in through the crowd to find John. His physicality is shocking — gaunt, wild, burning. Pull back to crowd reactions: convicted, afraid, hungry for something true.",
+        "audio_notes": "Wilderness ambient — wind, distant water. John's voice carries without strain. The crowd's silence when he speaks is the most dramatic sound — thousands of people choosing not to move."
+      },
+      "production_notes": "The Jordan River crossing scene (Luke 3:1-2) establishes historical and political context before we see John. Tiberius Caesar, Pontius Pilate, Herod — Luke is announcing this is history, not myth."
+    },
+    {
+      "scene_id": "baptism_001",
+      "title": "The Baptism of Jesus",
+      "episode_label": "The Launch",
+      "act": "act_02_launch",
+      "book": "luke",
+      "luke_reference": "Luke 3:21-22",
+      "chapter_start": 3,
+      "verse_start": 21,
+      "chapter_end": 3,
+      "verse_end": 22,
+      "characters": ["jesus_001", "john_baptist_001"],
+      "location": "Jordan River — wilderness banks",
+      "time_of_day": "midday",
+      "estimated_runtime_min": 5,
+      "format": "short_film",
+      "emotional_beat": "holy tension, recognition, surrender, divine affirmation",
+      "key_moment": "John — who has been thundering at everyone — goes still and small when Jesus approaches. Then the voice from heaven: 'You are my Son, whom I love; with you I am well pleased.'",
+      "visual_direction": "The contrast between John's wild fire and Jesus's calm is the cinematic engine of this scene. The Spirit as dove — subtle, real, not a CGI spectacular. The voice from heaven: let the audience feel it rather than hear it as an echo-chamber production.",
+      "shot_list": [
+        {
+          "shot_type": "WS",
+          "description": "The Jordan River — mass baptism happening, John in the water with crowds",
+          "camera_movement": "static wide",
+          "lens_note": "35mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Jesus arrives at the bank — no announcement, no crowd parting. He waits in line.",
+          "camera_movement": "static",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "John's face the moment he sees Jesus — the fire goes out of him. Something else takes over.",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Underwater — looking up at two pairs of feet in the river. The submersion. The rising.",
+          "camera_movement": "static underwater",
+          "lens_note": "wide underwater lens"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Jesus rising from the water — praying. The sky opens.",
+          "camera_movement": "crane up from water level to sky",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "A dove descending — not theatrical, real. Lands and is gone.",
+          "camera_movement": "follow the dove",
+          "lens_note": "85mm long"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "Jesus's face — the voice. 'You are my Son, whom I love; with you I am well pleased.'",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "John Goes Still",
+          "duration_seconds": 30,
+          "hook": "John had no fear of anyone. Then Jesus walked toward him. And he went completely still.",
+          "caption_template": "'I need to be baptized by you, and do you come to me?' Luke 3:21",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        },
+        {
+          "label": "The Voice",
+          "duration_seconds": 20,
+          "hook": "The sky opened. A voice spoke. This is how it started.",
+          "caption_template": "'You are my Son, whom I love.' Luke 3:22",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["evangelical_baptist", "men", "secular_curious", "youth_gen_z", "catholic"],
+      "ai_prompts": {
+        "midjourney": "1st century Jordan River waist-deep water, wild desert prophet in camel hair and lean 1st century Jewish man in simple linen, two men in the river, shaft of light breaking through clouds above, moment of holy recognition between them, cinematic photoreal dramatic natural light 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic Jordan River baptism scene, two 1st century Jewish men waist-deep in river water, one gaunt wild-haired desert prophet, one calm bearded man in simple linen, dramatic shaft of sunlight breaking through cloud cover above them, cinematic awe",
+        "runway_video": "Begin underwater — looking up at two pairs of feet entering the river. Break the surface. Find the faces. Stay with John's face as his fire goes quiet. Then Jesus rising from the water. The dove descending — real, not CGI spectacular. Then the light. Then Jesus's face as the voice speaks.",
+        "audio_notes": "River sounds throughout. At the baptism: the water sounds become the only sound. The dove: near silence. The voice from heaven: felt more than heard — perhaps the sound drops away entirely and we read the words. Then the river resumes."
+      },
+      "production_notes": "The baptism is three verses in Luke. It should be five minutes of screen time. The white space matters — don't fill every second with score."
+    },
+    {
+      "scene_id": "temptation_001",
+      "title": "The Temptation in the Wilderness",
+      "episode_label": "The Launch",
+      "act": "act_02_launch",
+      "book": "luke",
+      "luke_reference": "Luke 4:1-13",
+      "chapter_start": 4,
+      "verse_start": 1,
+      "chapter_end": 4,
+      "verse_end": 13,
+      "characters": ["jesus_001"],
+      "location": "Judean wilderness — stark, rocky, isolated",
+      "time_of_day": "various — across 40 days",
+      "estimated_runtime_min": 8,
+      "format": "short_film",
+      "emotional_beat": "isolation, hunger, psychological warfare, identity attack, victory",
+      "key_moment": "The three temptations — bread, kingdoms, Temple. Each time: the Word. The adversary leaves 'until an opportune time.'",
+      "visual_direction": "The adversary is never shown as theatrical — the temptations come as thoughts, whispers, internal struggle made visual. Jesus is genuinely gaunt, cracked lips, physically suffering from forty days of fasting. The wilderness itself is the antagonist. The final line — 'Away from me' — is spoken with absolute authority from a man who has no physical strength left.",
+      "shot_list": [
+        {
+          "shot_type": "EWS",
+          "description": "Judean wilderness — vast, hostile, beautiful. Day one.",
+          "camera_movement": "slow crane up to reveal the scale of the emptiness",
+          "lens_note": "wide 24mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Timelapse — light rotating over barren rock. The passage of days. Jesus smaller in the frame.",
+          "camera_movement": "timelapse — static",
+          "lens_note": "wide 24mm"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Day 40 — Jesus's face. Gaunt, cracked lips, hollow eyes. Still.",
+          "camera_movement": "very slow push",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "The first temptation — bread. Close on his face as the thought comes. His eyes go to a stone.",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Second temptation — a high place, the kingdoms of the world spread below. Vast.",
+          "camera_movement": "crane up to reveal the vista",
+          "lens_note": "wide"
+        },
+        {
+          "shot_type": "CU",
+          "description": "Jesus — looking at the kingdoms. Then: 'Worship the Lord your God and serve him only.'",
+          "camera_movement": "static",
+          "lens_note": "85mm"
+        },
+        {
+          "shot_type": "MS",
+          "description": "Third temptation — the Temple pinnacle. The height. The vertigo.",
+          "camera_movement": "low angle looking down, then find Jesus",
+          "lens_note": "50mm"
+        },
+        {
+          "shot_type": "ECU",
+          "description": "'Away from me.' The final word — absolute authority from physical emptiness.",
+          "camera_movement": "static",
+          "lens_note": "135mm"
+        },
+        {
+          "shot_type": "WS",
+          "description": "Jesus alone in the wilderness — the adversary gone. Then: 'angels came and attended him.'",
+          "camera_movement": "very slow pull back",
+          "lens_note": "35mm"
+        }
+      ],
+      "social_clip_moments": [
+        {
+          "label": "The Answer",
+          "duration_seconds": 20,
+          "hook": "He was starving. Alone. And every attack was answered with one thing.",
+          "caption_template": "'It is written.' Three times. Luke 4:1-13",
+          "platform_targets": ["tiktok", "reels", "youtube_shorts"]
+        },
+        {
+          "label": "Away From Me",
+          "duration_seconds": 15,
+          "hook": "Forty days. No food. Completely alone. And this is how it ended.",
+          "caption_template": "'Away from me, Satan.' Spoken by a man with nothing left. Luke 4:8",
+          "platform_targets": ["tiktok", "reels"]
+        }
+      ],
+      "target_audiences": ["men", "evangelical_baptist", "secular_curious", "youth_gen_z"],
+      "ai_prompts": {
+        "midjourney": "1st century Jewish man age 30-33 deeply gaunt from 40-day fast, cracked lips, hollow cheeks, alone in barren Judean rocky wilderness, intense dark eyes still burning with resolve, simple linen robe worn and dusty, harsh desert midday sun, cinematic photoreal 8k --ar 16:9 --style raw --v 7",
+        "firefly": "Photorealistic portrait of a 1st century man after 40 days of fasting in desert wilderness, gaunt face, cracked lips, deeply tanned skin, hollow cheeks, intense eyes of absolute resolve, wearing worn dusty linen robes, barren rocky landscape, harsh unforgiving desert light",
+        "runway_video": "Timelapse of days rotating over wilderness — find him smaller each day. Day 40: tight on face. Lips cracked. Eyes still burning. The temptations come as changes in his expression — not as theatrical visitors. End on him alone, standing, in the silence. Then light changes as the angels come.",
+        "audio_notes": "Near silence throughout — the wilderness sounds. Wind. Distant bird. When the temptations come, the ambient sound drops. When Jesus answers, the ambient returns. No score until the end — when the angels arrive, then one note."
+      },
+      "production_notes": "The adversary should NEVER be shown as a visible figure with horns or theatrical evil. The temptations are interior — shown through Jesus's face and reaction. This is more frightening and more honest."
+    }
+  ]
+}
