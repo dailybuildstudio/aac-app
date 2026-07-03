@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The AI Product Audit Scoring Framework — productconsulting.ai</title>
+  <meta name="description" content="The opinionated 5-dimension scoring model used in paid AI Product Audits — distilled into a working framework you can apply to your own product this week." />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236b5bff'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>pc</text></svg>" />
+
+  <style>
+    :root {
+      --ink: #0B1020;
+      --ink-2: #1F2540;
+      --muted: #5B6478;
+      --line: #E7E9F0;
+      --bg: #FFFFFF;
+      --bg-soft: #F6F7FB;
+      --accent: #6B5BFF;
+      --accent-2: #B057FF;
+      --accent-soft: #EEF0FF;
+      --good: #2DD4A4;
+      --warn: #F5C84B;
+      --bad: #FF5D6C;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+    h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -0.02em; margin: 0; }
+    h1 { font-size: clamp(34px, 4.5vw, 46px); font-weight: 800; letter-spacing: -0.03em; }
+    h2 { font-size: 26px; font-weight: 800; margin-top: 56px; }
+    h3 { font-size: 18px; font-weight: 700; margin-top: 28px; }
+    h4 { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+    p { margin: 14px 0 0; color: var(--ink-2); font-size: 16.5px; }
+    ul, ol { margin: 14px 0 0; padding-left: 22px; color: var(--ink-2); font-size: 16.5px; }
+    li { margin: 8px 0; }
+    em { color: var(--ink); font-style: italic; }
+    strong { color: var(--ink); }
+
+    /* header */
+    .doc-head { padding-bottom: 32px; border-bottom: 1px solid var(--line); margin-bottom: 16px; }
+    .doc-brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 15px; color: var(--ink); margin-bottom: 28px; }
+    .doc-brand .dot { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: grid; place-items: center; color: #fff; font-size: 12px; font-weight: 800; }
+    .doc-brand .name { letter-spacing: -0.02em; }
+    .doc-brand .name span { color: var(--accent); }
+    .doc-eyebrow { font-size: 12.5px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: .12em; }
+    .doc-byline { color: var(--muted); font-size: 14px; margin-top: 24px; }
+    .doc-byline strong { color: var(--ink); font-weight: 700; }
+
+    /* lead */
+    .lead { font-size: 19px; color: var(--ink-2); margin-top: 22px; font-weight: 500; line-height: 1.55; }
+
+    /* sections */
+    .section-num { font-size: 12.5px; font-weight: 800; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; }
+
+    /* dimension cards */
+    .dims { display: grid; gap: 14px; margin-top: 18px; }
+    .dim {
+      border: 1px solid var(--line); border-radius: 14px; padding: 22px;
+      background: var(--bg-soft);
+    }
+    .dim h3 { margin: 0; font-size: 17px; display: flex; align-items: center; gap: 12px; }
+    .dim .badge { font-size: 11.5px; font-weight: 800; color: var(--accent); background: var(--accent-soft); border: 1px solid #e0e2ff; padding: 3px 9px; border-radius: 999px; letter-spacing: .04em; }
+    .dim .ask { color: var(--ink-2); font-size: 15px; margin-top: 10px; font-style: italic; }
+    .dim .anchors { margin-top: 14px; }
+    .anchors-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 6px; }
+    @media (max-width: 600px) { .anchors-grid { grid-template-columns: 1fr; } }
+    .anchor {
+      font-size: 13px; padding: 8px 10px; border-radius: 8px; background: #fff; border: 1px solid var(--line);
+    }
+    .anchor b { color: var(--ink); font-weight: 700; }
+    .anchor.low b  { color: var(--bad); }
+    .anchor.mid b  { color: var(--warn); }
+    .anchor.high b { color: var(--good); }
+
+    /* formula box */
+    .formula {
+      background: var(--ink); color: #fff; border-radius: 14px; padding: 28px; margin-top: 18px;
+    }
+    .formula .eq {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 16px; color: #fff; margin: 0; line-height: 1.7;
+    }
+    .formula .eq b { color: #c4b0ff; }
+    .formula .note { color: #aeb6cf; font-size: 14px; margin-top: 14px; }
+
+    /* verdict table */
+    table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 15px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+    th { background: var(--bg-soft); color: var(--ink); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; }
+    tr:last-child td { border-bottom: 0; }
+    td.score { font-weight: 700; font-variant-numeric: tabular-nums; }
+    td.verdict-good { color: var(--good); font-weight: 700; }
+    td.verdict-mid  { color: var(--warn); font-weight: 700; }
+    td.verdict-bad  { color: var(--bad); font-weight: 700; }
+
+    /* example callout */
+    .example {
+      border-left: 3px solid var(--accent); background: var(--bg-soft); padding: 22px 26px; border-radius: 0 12px 12px 0; margin-top: 20px;
+    }
+    .example h4 { font-size: 12.5px; color: var(--accent); margin: 0; }
+    .example .title { font-weight: 700; color: var(--ink); margin-top: 6px; font-size: 17px; }
+    .example p { margin-top: 8px; font-size: 15px; }
+
+    /* call to action footer */
+    .cta-card {
+      margin-top: 64px; padding: 36px; border-radius: 18px;
+      background: linear-gradient(135deg, #0B1020, #1c2444);
+      color: #fff; position: relative; overflow: hidden;
+    }
+    .cta-card::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(500px 280px at 80% 0%, rgba(176,87,255,.28), transparent 60%);
+      pointer-events: none;
+    }
+    .cta-card h3 { color: #fff; font-size: 22px; position: relative; }
+    .cta-card p { color: #c3c9de; margin-top: 12px; position: relative; }
+    .cta-card .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 22px; padding: 12px 22px; border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff; font-weight: 700; font-size: 15px; position: relative;
+      box-shadow: 0 8px 30px rgba(107,91,255,.4);
+    }
+    .cta-card .btn:hover { transform: translateY(-1px); text-decoration: none; }
+
+    .doc-foot { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+
+    /* print styles */
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: 100%; padding: 36px 32px; }
+      h2 { margin-top: 36px; }
+      .cta-card { background: var(--bg-soft); color: var(--ink); border: 1px solid var(--line); }
+      .cta-card::before { display: none; }
+      .cta-card h3, .cta-card p { color: var(--ink); }
+      .cta-card p { color: var(--ink-2); }
+      .formula { background: var(--bg-soft); color: var(--ink); border: 1px solid var(--line); }
+      .formula .eq { color: var(--ink); }
+      .formula .eq b { color: var(--accent); }
+      .formula .note { color: var(--muted); }
+      a { color: var(--accent); }
+      .dim, .example, table { break-inside: avoid; }
+      h2, h3 { break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="doc-head">
+      <div class="doc-brand">
+        <span class="dot">pc</span>
+        <span class="name">productconsulting<span>.ai</span></span>
+      </div>
+      <span class="doc-eyebrow">A framework from productconsulting.ai</span>
+      <h1 style="margin-top:14px;">The AI Product Audit Scoring Framework</h1>
+      <p class="lead">The opinionated 5-dimension scoring model I use in paid client audits — distilled into a working tool you can apply to your own product this week.</p>
+      <div class="doc-byline">By <strong>Amanda Shelton, MBA</strong> · Senior Product Manager · <a href="https://productconsulting.ai" target="_blank" rel="noopener">productconsulting.ai</a></div>
+    </header>
+
+    <h2>Why most AI features quietly fail</h2>
+    <p>
+      <strong>95% of enterprise GenAI pilots deliver no measurable P&amp;L impact</strong> (MIT, 2025). That number isn't about model quality — it's about <em>product judgment</em>. Teams pick the wrong bet, scope it so it never ships, or launch features nobody adopts.
+    </p>
+    <p>
+      Every AI feature is a bet. The job of this framework is to score the bet honestly, <strong>before</strong> you commit weeks of engineering. The teams that do this well don't have better models — they have better questions.
+    </p>
+
+    <h2>The 5 dimensions, each scored 1–5</h2>
+    <p>
+      The output isn't "yes/no" — it's a structured argument you can defend to a board, a founder, or yourself at 11pm when you're tempted to chase a shiny demo.
+    </p>
+
+    <div class="dims">
+      <div class="dim">
+        <h3><span class="badge">1</span> User value</h3>
+        <p class="ask">Does this improve a real moment in the user's day — measurably?</p>
+        <div class="anchors-grid">
+          <div class="anchor low"><b>1 — Cosmetic.</b> Nice demo, no behavior change.</div>
+          <div class="anchor mid"><b>3 — Useful sometimes.</b> Improves a moment users already have.</div>
+          <div class="anchor high"><b>5 — Hard to give up.</b> Users return weekly for this alone.</div>
+        </div>
+      </div>
+
+      <div class="dim">
+        <h3><span class="badge">2</span> Business impact</h3>
+        <p class="ask">If this works, what specific metric moves — and by how much?</p>
+        <div class="anchors-grid">
+          <div class="anchor low"><b>1 — Vague.</b> "Innovation" / "competitive parity."</div>
+          <div class="anchor mid"><b>3 — Lift a secondary metric.</b> Engagement, NPS, CSAT.</div>
+          <div class="anchor high"><b>5 — Moves the P&amp;L.</b> Revenue, retention, cost, conversion.</div>
+        </div>
+      </div>
+
+      <div class="dim">
+        <h3><span class="badge">3</span> Feasibility</h3>
+        <p class="ask">Can we actually build this with the team, data, and tools we have?</p>
+        <div class="anchors-grid">
+          <div class="anchor low"><b>1 — Research-grade.</b> Needs data/teams we don't have.</div>
+          <div class="anchor mid"><b>3 — Doable with hires.</b> Real but solvable gaps.</div>
+          <div class="anchor high"><b>5 — Off the shelf.</b> Today's APIs and data make it trivial.</div>
+        </div>
+      </div>
+
+      <div class="dim">
+        <h3><span class="badge">4</span> Time to value</h3>
+        <p class="ask">How fast can we ship something that meaningfully tests the bet?</p>
+        <div class="anchors-grid">
+          <div class="anchor low"><b>1 — Quarters.</b> Months before any user sees it.</div>
+          <div class="anchor mid"><b>3 — Weeks.</b> A real prototype in 4–6 weeks.</div>
+          <div class="anchor high"><b>5 — Days.</b> Useful version in under two weeks.</div>
+        </div>
+      </div>
+
+      <div class="dim">
+        <h3><span class="badge">5</span> Defensibility</h3>
+        <p class="ask">Does this compound advantage — or is it a commodity bolt-on?</p>
+        <div class="anchors-grid">
+          <div class="anchor low"><b>1 — Commodity.</b> Every competitor will have it in 6 months.</div>
+          <div class="anchor mid"><b>3 — Sticky integration.</b> Tied to your workflow / data.</div>
+          <div class="anchor high"><b>5 — Compounding moat.</b> Better with usage, hard to copy.</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>The priority score</h2>
+    <p>Sum all five dimensions for a 5-to-25 score. That number is the start of the conversation — not the end.</p>
+
+    <div class="formula">
+      <p class="eq"><b>Priority</b> = User Value + Business Impact + Feasibility + Time to Value + Defensibility</p>
+      <p class="note">Each dimension scored 1–5. Maximum 25, minimum 5. Use as a structured tiebreaker, not a god-number.</p>
+    </div>
+
+    <h3>How to read the total</h3>
+    <table>
+      <tr><th>Score</th><th>Verdict</th><th>What to do</th></tr>
+      <tr><td class="score">21–25</td><td class="verdict-good">Strong bet</td><td>Tighten scope and ship a small version fast.</td></tr>
+      <tr><td class="score">17–20</td><td class="verdict-good">Real opportunity</td><td>Fix the lowest-scoring dimension before committing.</td></tr>
+      <tr><td class="score">13–16</td><td class="verdict-mid">Mixed — sharpen</td><td>Rework scope or pick a sharper sub-problem.</td></tr>
+      <tr><td class="score">5–12</td><td class="verdict-bad">Likely wrong bet</td><td>Consider a different opportunity entirely.</td></tr>
+    </table>
+
+    <h2>How to weight by stage and industry</h2>
+    <p>Raw totals are a useful default — but stage and industry should change which dimension you over-index on. A few honest rules of thumb:</p>
+    <ul>
+      <li><strong>Seed-stage startup:</strong> double-weight <em>Time to Value</em>. You don't have quarters; you have weeks. A "Strong bet" that takes 6 months is a weak bet for you.</li>
+      <li><strong>Scale-up (Series A/B):</strong> double-weight <em>Business Impact</em>. You need metrics that justify the next round — not features that look cool in the all-hands.</li>
+      <li><strong>Enterprise product team:</strong> double-weight <em>Feasibility</em> and <em>Defensibility</em>. You have data and distribution; play to those, not to demos.</li>
+      <li><strong>Regulated industry</strong> (fintech, healthtech, legal): add an implicit <em>safety</em> filter. A high-score idea that can't be explained or audited is a no.</li>
+    </ul>
+
+    <h2>The "what NOT to build" checklist</h2>
+    <p>Counterintuitively, this is the highest-impact part of an audit. Most teams over-index on what they <em>could</em> build and under-index on what they <em>shouldn't</em>. Drop any idea that hits two or more:</p>
+    <ul>
+      <li>It scores <strong>≤ 2 on User Value</strong> — nobody asked for it; you just want to use the model.</li>
+      <li>It scores <strong>≤ 2 on Defensibility</strong> AND is in a commoditized space (chatbots, generic summarization, content gen).</li>
+      <li>You can't name the <strong>specific metric</strong> it should move within the first month.</li>
+      <li>The team can't articulate the <strong>smallest version</strong> that proves it works.</li>
+      <li>It needs <strong>data you don't have</strong> and won't have for a quarter.</li>
+      <li>The success story relies on <strong>users behaving differently</strong> than they have for years.</li>
+    </ul>
+
+    <h2>A worked example</h2>
+    <p>A SaaS team is debating three AI features. Here's how the framework forces real prioritization:</p>
+
+    <div class="example">
+      <h4>Idea A — AI customer support chatbot</h4>
+      <p class="title">Total: 14 — Mixed, sharpen or skip</p>
+      <p>User value 3, Business impact 4, Feasibility 5, Time to value 4, Defensibility <strong>1 (commodity)</strong>. Easy to build; everyone has one in 6 months. Buy a vendor — don't build.</p>
+    </div>
+
+    <div class="example">
+      <h4>Idea B — AI-assisted onboarding</h4>
+      <p class="title">Total: 22 — Strong bet</p>
+      <p>User value 5, Business impact 5, Feasibility 4, Time to value 4, Defensibility 4. Activation is upstream of every downstream metric; the AI version adapts to user inputs, which gets better with usage. Build this one first.</p>
+    </div>
+
+    <div class="example">
+      <h4>Idea C — Generative content tool for the marketing team</h4>
+      <p class="title">Total: 13 — Sharpen the brief</p>
+      <p>User value 3, Business impact 3, Feasibility 5, Time to value 4, Defensibility <strong>1 (commodity)</strong>. Don't build a product feature — buy the marketing team a tool. Reclaim the budget for Idea B.</p>
+    </div>
+
+    <p style="margin-top: 24px;"><strong>The framework forced a decision:</strong> Idea B is the build-first. The other two get explicit "don't build" verdicts with reasons — saving a quarter of misspent engineering.</p>
+
+    <h2>How to apply it to your product this week</h2>
+    <ol>
+      <li><strong>List 5–9 AI opportunities</strong> you've been considering. Be honest, not aspirational.</li>
+      <li><strong>Score each one</strong> against the five dimensions. Use the anchor descriptions above so the scores are defensible, not vibes.</li>
+      <li><strong>Apply the "what NOT to build" filter</strong> first — drop anything that hits two or more criteria.</li>
+      <li><strong>Pick the highest-scoring survivor</strong> and write a one-paragraph build-first plan: smallest valuable version, success metric, target timeline.</li>
+      <li><strong>Re-score in 30 days.</strong> Real data changes the picture. The framework is a tool, not a verdict.</li>
+    </ol>
+
+    <div class="cta-card">
+      <h3>Want this run on your actual product?</h3>
+      <p>This is the framework. The <strong>AI Product Audit</strong> is the engagement — I apply it to your product, interview your team, score 5–9 real opportunities, and deliver a ranked roadmap plus a concrete first-build recommendation. Two weeks, $3,000 flat.</p>
+      <a class="btn" href="https://cal.com/amanda-shelton/teardown" target="_blank" rel="noopener">Book a free 30-min teardown →</a>
+    </div>
+
+    <div class="doc-foot">
+      © productconsulting.ai · Product thinking for AI products · <a href="https://productconsulting.ai" target="_blank" rel="noopener">productconsulting.ai</a>
+    </div>
+
+  </div>
+</body>
+</html>

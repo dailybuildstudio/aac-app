@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Shelter Now — Florida</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .tap { min-height: 56px; }
+    .focus-ring:focus-visible { outline: 3px solid #fbbf24; outline-offset: 2px; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <!-- Quick Exit + Language Switcher (fixed) -->
+  <div class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+    <div class="max-w-3xl mx-auto px-4 py-2 flex items-center justify-between">
+      <button id="lang-toggle" class="focus-ring text-sm font-semibold px-3 py-2 rounded hover:bg-slate-100" aria-label="Switch language">
+        <span data-i18n="lang_label">Español</span>
+      </button>
+      <button id="quick-exit" class="focus-ring bg-red-600 text-white text-sm font-bold px-4 py-2 rounded hover:bg-red-700 tap" aria-label="Quick exit">
+        <span data-i18n="quick_exit">✕ Quick Exit</span>
+      </button>
+    </div>
+  </div>
+
+  <main class="pt-16 pb-32 max-w-3xl mx-auto px-4">
+
+    <!-- HOME -->
+    <section data-route="home" class="route">
+      <div class="text-center pt-6 pb-4">
+        <h1 class="text-4xl font-extrabold tracking-tight" data-i18n="home_title">Find Shelter Now</h1>
+        <p class="text-lg text-slate-600 mt-2" data-i18n="home_sub">Florida — free, anonymous, no signup</p>
+      </div>
+
+      <div class="grid gap-4 mt-6">
+        <a href="#hurricane" class="focus-ring block bg-blue-700 hover:bg-blue-800 text-white rounded-2xl p-6 shadow-lg tap">
+          <div class="text-5xl">🌀</div>
+          <div class="text-2xl font-bold mt-2" data-i18n="mode_hurricane">Hurricane Shelters</div>
+          <div class="text-sm opacity-90 mt-1" data-i18n="mode_hurricane_sub">Live status during state emergencies</div>
+        </a>
+
+        <a href="#housing" class="focus-ring block bg-emerald-700 hover:bg-emerald-800 text-white rounded-2xl p-6 shadow-lg tap">
+          <div class="text-5xl">🏠</div>
+          <div class="text-2xl font-bold mt-2" data-i18n="mode_housing">Homeless Shelters</div>
+          <div class="text-sm opacity-90 mt-1" data-i18n="mode_housing_sub">Year-round directory across Florida</div>
+        </a>
+      </div>
+
+      <div class="mt-8 bg-amber-50 border border-amber-300 rounded-xl p-4">
+        <div class="font-bold text-amber-900" data-i18n="hotline_title">Need a different kind of help?</div>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="tel:211" class="focus-ring underline font-semibold tap inline-block py-1"><strong>211</strong> — <span data-i18n="hotline_211">General help / shelter beds tonight</span></a></li>
+          <li><a href="tel:988" class="focus-ring underline font-semibold tap inline-block py-1"><strong>988</strong> — <span data-i18n="hotline_988">Mental health crisis</span></a></li>
+          <li><a href="tel:18007997233" class="focus-ring underline font-semibold tap inline-block py-1"><strong>1-800-799-7233</strong> — <span data-i18n="hotline_dv">Domestic violence</span></a></li>
+        </ul>
+      </div>
+
+      <div class="mt-6 text-center text-sm text-slate-500 space-x-4">
+        <a href="#about" class="underline focus-ring" data-i18n="link_about">About</a>
+        <a href="#safety" class="underline focus-ring" data-i18n="link_safety">Safety</a>
+      </div>
+    </section>
+
+    <!-- HURRICANE -->
+    <section data-route="hurricane" class="route hidden">
+      <a href="#" class="text-blue-700 underline focus-ring" data-i18n="back">← Back</a>
+      <h2 class="text-3xl font-bold mt-4">🌀 <span data-i18n="hurricane_title">Hurricane Shelters</span></h2>
+
+      <div id="activation-banner" class="mt-4 bg-red-100 border-2 border-red-500 rounded-lg p-4">
+        <div class="font-bold text-red-900" data-i18n="active_title">⚠ Emergency Activation Active</div>
+        <div class="text-sm text-red-800 mt-1" data-i18n="active_sub">Tropical Storm — Demo activation. Data refreshed every 5 min.</div>
+      </div>
+
+      <div class="mt-6">
+        <label class="block font-semibold mb-2" data-i18n="county_label">Select your county</label>
+        <select id="county-select" class="focus-ring w-full p-3 border-2 border-slate-300 rounded-lg tap text-lg">
+          <option value="">— Choose —</option>
+          <option value="Miami-Dade">Miami-Dade</option>
+          <option value="Hillsborough">Hillsborough</option>
+          <option value="Orange">Orange</option>
+          <option value="Broward">Broward</option>
+        </select>
+      </div>
+
+      <div class="mt-4 flex flex-wrap gap-2" id="filter-bar">
+        <label class="focus-ring inline-flex items-center gap-2 bg-white border-2 border-slate-300 rounded-full px-4 py-2 cursor-pointer tap">
+          <input type="checkbox" data-filter="pets" class="w-5 h-5" />
+          <span data-i18n="filter_pets">🐾 Pet-friendly</span>
+        </label>
+        <label class="focus-ring inline-flex items-center gap-2 bg-white border-2 border-slate-300 rounded-full px-4 py-2 cursor-pointer tap">
+          <input type="checkbox" data-filter="special" class="w-5 h-5" />
+          <span data-i18n="filter_special">♿ Special needs</span>
+        </label>
+        <label class="focus-ring inline-flex items-center gap-2 bg-white border-2 border-slate-300 rounded-full px-4 py-2 cursor-pointer tap">
+          <input type="checkbox" data-filter="lastresort" class="w-5 h-5" />
+          <span data-i18n="filter_last">🆘 Last resort</span>
+        </label>
+      </div>
+
+      <div id="hurricane-list" class="mt-6 space-y-4"></div>
+
+      <p class="mt-6 text-xs text-slate-500" data-i18n="src_hurricane">
+        Source: FloridaDisaster.org + FEMA NSS + American Red Cross. Always call 211 to confirm.
+      </p>
+    </section>
+
+    <!-- HOUSING -->
+    <section data-route="housing" class="route hidden">
+      <a href="#" class="text-emerald-700 underline focus-ring" data-i18n="back">← Back</a>
+      <h2 class="text-3xl font-bold mt-4">🏠 <span data-i18n="housing_title">Homeless Shelters</span></h2>
+
+      <div class="mt-4 bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm">
+        <strong data-i18n="housing_disclaimer_t">We don't show real-time bed counts.</strong>
+        <span data-i18n="housing_disclaimer_b">To check if a bed is open tonight, call <a href="tel:211" class="underline font-bold">211</a> or the shelter directly.</span>
+      </div>
+
+      <div class="mt-6">
+        <label class="block font-semibold mb-2" data-i18n="county_label">Select your county</label>
+        <select id="housing-county-select" class="focus-ring w-full p-3 border-2 border-slate-300 rounded-lg tap text-lg">
+          <option value="">— Choose —</option>
+          <option value="Miami-Dade">Miami-Dade</option>
+          <option value="Hillsborough">Hillsborough</option>
+          <option value="Orange">Orange</option>
+          <option value="Broward">Broward</option>
+        </select>
+      </div>
+
+      <div id="housing-list" class="mt-6 space-y-4"></div>
+
+      <p class="mt-6 text-xs text-slate-500" data-i18n="src_housing">
+        Source: Florida Coalition to End Homelessness, county CoCs, 211. Updated quarterly.
+      </p>
+    </section>
+
+    <!-- ABOUT -->
+    <section data-route="about" class="route hidden">
+      <a href="#" class="text-blue-700 underline focus-ring" data-i18n="back">← Back</a>
+      <h2 class="text-3xl font-bold mt-4" data-i18n="about_title">About</h2>
+      <div class="mt-4 prose prose-slate text-slate-700 space-y-3">
+        <p data-i18n="about_p1">Find Shelter Now is a free, anonymous, mobile-first directory of Florida shelters. We do not collect any personal information. We do not require accounts.</p>
+        <p data-i18n="about_p2">During state-declared emergencies, we show real-time hurricane shelter status pulled from FloridaDisaster.org. Year-round, we publish a curated directory of homeless shelters.</p>
+        <p data-i18n="about_p3"><strong>What we don't do:</strong> domestic violence shelter listings (call 1-800-799-7233), real-time bed counts for homeless shelters (call 211), or anything outside Florida.</p>
+        <p data-i18n="about_p4"><strong>Always call 211 to confirm</strong> any shelter information before you travel.</p>
+      </div>
+    </section>
+
+    <!-- SAFETY -->
+    <section data-route="safety" class="route hidden">
+      <a href="#" class="text-blue-700 underline focus-ring" data-i18n="back">← Back</a>
+      <h2 class="text-3xl font-bold mt-4" data-i18n="safety_title">Your safety</h2>
+      <div class="mt-4 space-y-3 text-slate-700">
+        <p data-i18n="safety_p1">The red <strong>Quick Exit</strong> button at the top of every page sends you to a neutral weather site instantly.</p>
+        <p data-i18n="safety_p2">We don't track you. We don't store anything you click on.</p>
+        <p data-i18n="safety_p3">If you are in immediate danger, call <a href="tel:911" class="underline font-bold">911</a>.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="fixed bottom-0 left-0 right-0 bg-slate-900 text-white text-xs py-3 px-4">
+    <div class="max-w-3xl mx-auto flex justify-between">
+      <span data-i18n="footer_attr">Public data — always call 211 to confirm</span>
+      <span id="updated-stamp"></span>
+    </div>
+  </footer>
+
+  <script>
+    // Mock shelter data
+    const SHELTERS = {
+      hurricane: {
+        "Miami-Dade": [
+          { name: "Miami Senior High School", addr: "2450 SW 1st St, Miami", status: "Open", pets: true, special: true, last: false },
+          { name: "North Miami Senior High", addr: "13110 NE 8th Ave, North Miami", status: "Full", pets: false, special: true, last: false },
+          { name: "Robert Morgan Educational Center", addr: "18180 SW 122nd Ave, Miami", status: "Open", pets: true, special: false, last: true },
+        ],
+        "Hillsborough": [
+          { name: "Jefferson High School", addr: "4401 W Cypress St, Tampa", status: "Open", pets: false, special: true, last: false },
+          { name: "Strawberry Crest High School", addr: "4691 Gallagher Rd, Dover", status: "Open", pets: true, special: false, last: false },
+        ],
+        "Orange": [
+          { name: "Boone High School", addr: "1000 E Kaley St, Orlando", status: "Open", pets: true, special: true, last: false },
+          { name: "Dr. Phillips High School", addr: "6500 Turkey Lake Rd, Orlando", status: "Closed", pets: false, special: false, last: false },
+        ],
+        "Broward": [
+          { name: "Coral Springs High School", addr: "7201 W Sample Rd, Coral Springs", status: "Open", pets: false, special: true, last: true },
+        ],
+      },
+      housing: {
+        "Miami-Dade": [
+          { name: "Camillus House", addr: "1603 NW 7th Ave, Miami", phone: "305-374-1065", services: "Emergency shelter, meals, case management", hours: "24/7 intake" },
+          { name: "Chapman Partnership", addr: "1550 N Miami Ave, Miami", phone: "305-329-3000", services: "Family shelter, kids welcome", hours: "24/7" },
+        ],
+        "Hillsborough": [
+          { name: "Metropolitan Ministries", addr: "2002 N Florida Ave, Tampa", phone: "813-209-1000", services: "Family shelter, meals, hot showers", hours: "Daily 6am-9pm" },
+          { name: "Salvation Army Tampa", addr: "1521 E Henry Ave, Tampa", phone: "813-549-1700", services: "Men's & women's emergency shelter", hours: "24/7 intake" },
+        ],
+        "Orange": [
+          { name: "Coalition for the Homeless of Central FL", addr: "639 W Central Blvd, Orlando", phone: "407-426-1250", services: "Emergency shelter, women & families", hours: "24/7" },
+        ],
+        "Broward": [
+          { name: "Broward Outreach Center", addr: "2056 Scott St, Hollywood", phone: "954-924-3571", services: "Men's emergency shelter, meals", hours: "24/7 intake" },
+        ],
+      },
+    };
+
+    // Translations
+    const I18N = {
+      en: {
+        lang_label: "Español", quick_exit: "✕ Quick Exit",
+        home_title: "Find Shelter Now", home_sub: "Florida — free, anonymous, no signup",
+        mode_hurricane: "Hurricane Shelters", mode_hurricane_sub: "Live status during state emergencies",
+        mode_housing: "Homeless Shelters", mode_housing_sub: "Year-round directory across Florida",
+        hotline_title: "Need a different kind of help?",
+        hotline_211: "General help / shelter beds tonight",
+        hotline_988: "Mental health crisis",
+        hotline_dv: "Domestic violence",
+        link_about: "About", link_safety: "Safety",
+        back: "← Back",
+        hurricane_title: "Hurricane Shelters",
+        active_title: "⚠ Emergency Activation Active",
+        active_sub: "Tropical Storm — Demo activation. Data refreshed every 5 min.",
+        county_label: "Select your county",
+        filter_pets: "🐾 Pet-friendly", filter_special: "♿ Special needs", filter_last: "🆘 Last resort",
+        src_hurricane: "Source: FloridaDisaster.org + FEMA NSS + American Red Cross. Always call 211 to confirm.",
+        housing_title: "Homeless Shelters",
+        housing_disclaimer_t: "We don't show real-time bed counts.",
+        housing_disclaimer_b: ' To check if a bed is open tonight, call <a href="tel:211" class="underline font-bold">211</a> or the shelter directly.',
+        src_housing: "Source: Florida Coalition to End Homelessness, county CoCs, 211. Updated quarterly.",
+        about_title: "About",
+        about_p1: "Find Shelter Now is a free, anonymous, mobile-first directory of Florida shelters. We do not collect any personal information. We do not require accounts.",
+        about_p2: "During state-declared emergencies, we show real-time hurricane shelter status pulled from FloridaDisaster.org. Year-round, we publish a curated directory of homeless shelters.",
+        about_p3: "<strong>What we don't do:</strong> domestic violence shelter listings (call 1-800-799-7233), real-time bed counts for homeless shelters (call 211), or anything outside Florida.",
+        about_p4: "<strong>Always call 211 to confirm</strong> any shelter information before you travel.",
+        safety_title: "Your safety",
+        safety_p1: 'The red <strong>Quick Exit</strong> button at the top of every page sends you to a neutral weather site instantly.',
+        safety_p2: "We don't track you. We don't store anything you click on.",
+        safety_p3: 'If you are in immediate danger, call <a href="tel:911" class="underline font-bold">911</a>.',
+        footer_attr: "Public data — always call 211 to confirm",
+        status_Open: "Open", status_Full: "Full", status_Closed: "Closed",
+        no_shelters: "Choose a county to see shelters.",
+        call: "Call", directions: "Directions",
+        last_updated: "Updated",
+        services_label: "Services", hours_label: "Hours",
+      },
+      es: {
+        lang_label: "English", quick_exit: "✕ Salir rápido",
+        home_title: "Encuentre Refugio Ahora", home_sub: "Florida — gratis, anónimo, sin registro",
+        mode_hurricane: "Refugios de Huracán", mode_hurricane_sub: "Estado en vivo durante emergencias",
+        mode_housing: "Albergues para Personas sin Hogar", mode_housing_sub: "Directorio anual en toda Florida",
+        hotline_title: "¿Necesita otro tipo de ayuda?",
+        hotline_211: "Ayuda general / camas de refugio esta noche",
+        hotline_988: "Crisis de salud mental",
+        hotline_dv: "Violencia doméstica",
+        link_about: "Acerca de", link_safety: "Seguridad",
+        back: "← Volver",
+        hurricane_title: "Refugios de Huracán",
+        active_title: "⚠ Activación de Emergencia Activa",
+        active_sub: "Tormenta Tropical — Activación de demostración. Datos actualizados cada 5 min.",
+        county_label: "Seleccione su condado",
+        filter_pets: "🐾 Permite mascotas", filter_special: "♿ Necesidades especiales", filter_last: "🆘 Último recurso",
+        src_hurricane: "Fuente: FloridaDisaster.org + FEMA NSS + Cruz Roja. Siempre llame al 211 para confirmar.",
+        housing_title: "Albergues para Personas sin Hogar",
+        housing_disclaimer_t: "No mostramos camas disponibles en tiempo real.",
+        housing_disclaimer_b: ' Para saber si hay cama esta noche, llame al <a href="tel:211" class="underline font-bold">211</a> o al albergue directamente.',
+        src_housing: "Fuente: Florida Coalition to End Homelessness, CoCs del condado, 211. Actualizado trimestralmente.",
+        about_title: "Acerca de",
+        about_p1: "Encuentre Refugio Ahora es un directorio gratuito, anónimo y móvil de refugios en Florida. No recopilamos información personal. No requerimos cuenta.",
+        about_p2: "Durante emergencias declaradas por el estado, mostramos el estado de los refugios en tiempo real de FloridaDisaster.org. Todo el año publicamos un directorio curado de albergues.",
+        about_p3: "<strong>Lo que no hacemos:</strong> refugios de violencia doméstica (llame al 1-800-799-7233), camas en tiempo real (llame al 211), ni servicios fuera de Florida.",
+        about_p4: "<strong>Siempre llame al 211 para confirmar</strong> antes de viajar.",
+        safety_title: "Su seguridad",
+        safety_p1: 'El botón rojo <strong>Salir rápido</strong> arriba de cada página le lleva a un sitio neutral de clima al instante.',
+        safety_p2: "No le rastreamos. No guardamos nada de lo que hace clic.",
+        safety_p3: 'Si está en peligro inmediato, llame al <a href="tel:911" class="underline font-bold">911</a>.',
+        footer_attr: "Datos públicos — siempre llame al 211 para confirmar",
+        status_Open: "Abierto", status_Full: "Lleno", status_Closed: "Cerrado",
+        no_shelters: "Elija un condado para ver albergues.",
+        call: "Llamar", directions: "Indicaciones",
+        last_updated: "Actualizado",
+        services_label: "Servicios", hours_label: "Horario",
+      },
+    };
+
+    let LANG = "en";
+
+    function t(key) { return I18N[LANG][key] || key; }
+
+    function applyLang() {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (I18N[LANG][key]) el.innerHTML = I18N[LANG][key];
+      });
+      document.documentElement.lang = LANG;
+      // Re-render any active list
+      const county = document.getElementById("county-select").value;
+      if (county) renderHurricane(county);
+      const hcounty = document.getElementById("housing-county-select").value;
+      if (hcounty) renderHousing(hcounty);
+    }
+
+    document.getElementById("lang-toggle").addEventListener("click", () => {
+      LANG = LANG === "en" ? "es" : "en";
+      applyLang();
+    });
+
+    // Quick exit
+    document.getElementById("quick-exit").addEventListener("click", () => {
+      try {
+        // Replace history so back button doesn't return
+        window.location.replace("https://weather.com");
+      } catch (e) {
+        window.location.href = "https://weather.com";
+      }
+    });
+
+    // Hash routing
+    function route() {
+      const hash = window.location.hash.replace("#", "") || "home";
+      document.querySelectorAll(".route").forEach(s => s.classList.add("hidden"));
+      const target = document.querySelector(`[data-route="${hash}"]`);
+      if (target) target.classList.remove("hidden");
+      else document.querySelector('[data-route="home"]').classList.remove("hidden");
+      window.scrollTo(0, 0);
+    }
+    window.addEventListener("hashchange", route);
+    route();
+
+    // Hurricane list rendering
+    function activeFilters() {
+      return Array.from(document.querySelectorAll("#filter-bar input:checked")).map(i => i.dataset.filter);
+    }
+
+    function statusBadge(status) {
+      const map = {
+        Open: "bg-emerald-100 text-emerald-900 border-emerald-500",
+        Full: "bg-amber-100 text-amber-900 border-amber-500",
+        Closed: "bg-slate-200 text-slate-700 border-slate-400",
+      };
+      return `<span class="inline-block border-2 ${map[status]} px-3 py-1 rounded-full text-sm font-bold">${t("status_" + status)}</span>`;
+    }
+
+    function renderHurricane(county) {
+      const list = document.getElementById("hurricane-list");
+      if (!county) {
+        list.innerHTML = `<p class="text-slate-500">${t("no_shelters")}</p>`;
+        return;
+      }
+      let shelters = SHELTERS.hurricane[county] || [];
+      const filters = activeFilters();
+      if (filters.includes("pets")) shelters = shelters.filter(s => s.pets);
+      if (filters.includes("special")) shelters = shelters.filter(s => s.special);
+      if (filters.includes("lastresort")) shelters = shelters.filter(s => s.last);
+
+      if (shelters.length === 0) {
+        list.innerHTML = `<p class="text-slate-500 italic">No shelters match those filters. Try removing one, or call <a href="tel:211" class="underline font-bold">211</a>.</p>`;
+        return;
+      }
+      list.innerHTML = shelters.map(s => `
+        <div class="bg-white border-2 border-slate-200 rounded-xl p-4 shadow-sm">
+          <div class="flex justify-between items-start gap-3">
+            <h3 class="text-xl font-bold">${s.name}</h3>
+            ${statusBadge(s.status)}
+          </div>
+          <p class="text-slate-600 mt-1">${s.addr}</p>
+          <div class="mt-2 flex flex-wrap gap-2 text-xs">
+            ${s.pets ? '<span class="bg-blue-50 px-2 py-1 rounded">🐾 Pets</span>' : ""}
+            ${s.special ? '<span class="bg-blue-50 px-2 py-1 rounded">♿ Special needs</span>' : ""}
+            ${s.last ? '<span class="bg-blue-50 px-2 py-1 rounded">🆘 Last resort</span>' : ""}
+          </div>
+          <div class="mt-3 flex gap-2">
+            <a href="https://maps.google.com/?q=${encodeURIComponent(s.addr)}" target="_blank" rel="noopener" class="flex-1 text-center bg-blue-700 hover:bg-blue-800 text-white font-semibold rounded-lg px-3 py-2 tap focus-ring">${t("directions")}</a>
+          </div>
+          <p class="text-xs text-slate-400 mt-2">${t("last_updated")}: ${new Date().toLocaleTimeString()}</p>
+        </div>
+      `).join("");
+    }
+
+    function renderHousing(county) {
+      const list = document.getElementById("housing-list");
+      if (!county) {
+        list.innerHTML = `<p class="text-slate-500">${t("no_shelters")}</p>`;
+        return;
+      }
+      const shelters = SHELTERS.housing[county] || [];
+      list.innerHTML = shelters.map(s => `
+        <div class="bg-white border-2 border-slate-200 rounded-xl p-4 shadow-sm">
+          <h3 class="text-xl font-bold">${s.name}</h3>
+          <p class="text-slate-600 mt-1">${s.addr}</p>
+          <div class="mt-2 text-sm">
+            <p><strong>${t("hours_label")}:</strong> ${s.hours}</p>
+            <p class="mt-1"><strong>${t("services_label")}:</strong> ${s.services}</p>
+          </div>
+          <div class="mt-3 flex gap-2">
+            <a href="tel:${s.phone.replace(/-/g,'')}" class="flex-1 text-center bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg px-3 py-2 tap focus-ring">${t("call")} ${s.phone}</a>
+            <a href="https://maps.google.com/?q=${encodeURIComponent(s.addr)}" target="_blank" rel="noopener" class="flex-1 text-center bg-slate-700 hover:bg-slate-800 text-white font-semibold rounded-lg px-3 py-2 tap focus-ring">${t("directions")}</a>
+          </div>
+          <p class="text-xs text-amber-700 mt-3 bg-amber-50 p-2 rounded">⚠ ${LANG === "en" ? "Call 211 to confirm a bed is open tonight." : "Llame al 211 para confirmar cama esta noche."}</p>
+        </div>
+      `).join("");
+    }
+
+    document.getElementById("county-select").addEventListener("change", e => renderHurricane(e.target.value));
+    document.querySelectorAll("#filter-bar input").forEach(i =>
+      i.addEventListener("change", () => renderHurricane(document.getElementById("county-select").value))
+    );
+    document.getElementById("housing-county-select").addEventListener("change", e => renderHousing(e.target.value));
+
+    // Footer timestamp
+    document.getElementById("updated-stamp").textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>

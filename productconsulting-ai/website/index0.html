@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>productconsulting.ai — AI features that ship and get used</title>
+  <meta name="description" content="Product thinking for AI products. We help seed to Series A teams turn AI ambition into features that ship and get used — not another strategy deck." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="productconsulting.ai — Product thinking for AI products" />
+  <meta property="og:description" content="AI features that ship and get used — not another strategy deck. Start with a fixed-scope AI Product Audit." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon (inline, no external file needed) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%235b5bff'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>pc</text></svg>" />
+
+  <!-- TODO: paste your analytics snippet here (e.g. Plausible, Fathom, or Google Analytics).
+       Plausible example:
+       <script defer data-domain="productconsulting.ai" src="https://plausible.io/js/script.js"></script> -->
+
+  <style>
+    :root {
+      --ink: #0b1020;
+      --ink-2: #1a2138;
+      --muted: #5b6478;
+      --line: #e7e9f0;
+      --bg: #ffffff;
+      --bg-soft: #f6f7fb;
+      --accent: #5b5bff;
+      --accent-2: #8b5cf6;
+      --accent-ink: #2a2a8a;
+      --ok: #0f9d58;
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0; }
+    p { margin: 0; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 22px; border-radius: 999px; font-weight: 600; font-size: 15px;
+      border: 1px solid transparent; cursor: pointer; transition: transform .12s ease, box-shadow .12s ease, background .2s;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff; box-shadow: 0 8px 24px rgba(91,91,255,.28);
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(91,91,255,.36); }
+    .btn-ghost { background: #fff; border-color: var(--line); color: var(--ink); }
+    .btn-ghost:hover { border-color: #c9cde0; }
+
+    /* Nav */
+    header.nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,.82); backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.02em; font-size: 17px; }
+    .logo .dot {
+      width: 26px; height: 26px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 800;
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; font-size: 15px; color: var(--muted); font-weight: 500; }
+    .nav-links a:hover { color: var(--ink); }
+    @media (max-width: 760px) { .nav-links { display: none; } }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(900px 400px at 80% -10%, rgba(139,92,246,.14), transparent 60%),
+        radial-gradient(700px 380px at 0% 10%, rgba(91,91,255,.12), transparent 55%);
+      pointer-events: none;
+    }
+    .hero-inner { padding: 84px 0 64px; position: relative; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 600; color: var(--accent-ink);
+      background: #eef0ff; border: 1px solid #e0e2ff; padding: 6px 12px; border-radius: 999px; margin-bottom: 22px;
+    }
+    .hero h1 { font-size: clamp(34px, 5.4vw, 60px); max-width: 16ch; font-weight: 800; }
+    .hero h1 .grad { background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p.sub { font-size: clamp(17px, 2vw, 21px); color: var(--muted); max-width: 56ch; margin-top: 22px; }
+    .hero-cta { display: flex; gap: 14px; margin-top: 34px; flex-wrap: wrap; }
+    .trustline { margin-top: 22px; font-size: 14px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+    .trustline .tick { color: var(--ok); font-weight: 800; }
+
+    /* Stat band */
+    .stats { background: var(--ink); color: #fff; }
+    .stats-inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 44px 0; }
+    .stat .n { font-size: clamp(30px, 4vw, 44px); font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #a5a5ff, #c4b0ff); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .stat .l { color: #aeb6cf; font-size: 14.5px; margin-top: 6px; }
+    @media (max-width: 760px) { .stats-inner { grid-template-columns: 1fr; gap: 28px; text-align: center; } }
+
+    /* Sections */
+    section.block { padding: 84px 0; }
+    .section-head { max-width: 60ch; margin-bottom: 48px; }
+    .section-head .tag { font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; }
+    .section-head h2 { font-size: clamp(28px, 3.6vw, 40px); margin-top: 12px; font-weight: 800; }
+    .section-head p { color: var(--muted); font-size: 18px; margin-top: 16px; }
+
+    /* Problem cards */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
+    .card { background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+    .card h3 { font-size: 19px; margin-bottom: 10px; }
+    .card p { color: var(--muted); font-size: 15.5px; }
+    .card .ico { width: 42px; height: 42px; border-radius: 11px; background: #eef0ff; display: grid; place-items: center; margin-bottom: 16px; font-size: 20px; }
+
+    /* Offer ladder */
+    .offers { background: var(--bg-soft); }
+    .ladder { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    @media (max-width: 1000px) { .ladder { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .ladder { grid-template-columns: 1fr; } }
+    .offer {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .offer:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(11,16,32,.08); border-color: #d7daea; }
+    .offer.featured { border-color: var(--accent); box-shadow: 0 18px 44px rgba(91,91,255,.16); position: relative; }
+    .offer.featured::after {
+      content: "Start here"; position: absolute; top: -12px; right: 18px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff;
+      font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 999px;
+    }
+    .offer .step { font-size: 12.5px; font-weight: 700; color: var(--accent); letter-spacing: .05em; }
+    .offer h3 { font-size: 20px; margin: 10px 0 4px; }
+    .offer .price { font-size: 22px; font-weight: 800; margin: 8px 0 4px; }
+    .offer .price span { font-size: 14px; font-weight: 600; color: var(--muted); }
+    .offer .meta { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+    .offer p.desc { font-size: 14.5px; color: var(--muted); flex: 1; }
+
+    /* Process */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: step; }
+    @media (max-width: 900px) { .steps { grid-template-columns: 1fr; } }
+    .step-item { padding: 24px; border-left: 3px solid var(--accent); background: var(--bg-soft); border-radius: 0 12px 12px 0; }
+    .step-item .num { font-size: 13px; font-weight: 800; color: var(--accent); }
+    .step-item h3 { font-size: 17px; margin: 8px 0; }
+    .step-item p { color: var(--muted); font-size: 14.5px; }
+
+    /* Fit columns */
+    .grid-2-fit { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    @media (max-width: 800px) { .grid-2-fit { grid-template-columns: 1fr; } }
+    .fit-col { border-radius: var(--radius); padding: 30px; border: 1px solid var(--line); }
+    .fit-yes { background: #f1fbf5; border-color: #cdeede; }
+    .fit-no { background: var(--bg-soft); }
+    .fit-col h3 { font-size: 18px; display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .fit-mark { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-size: 14px; font-weight: 800; color: #fff; }
+    .fit-yes .fit-mark { background: var(--ok); }
+    .fit-no .fit-mark { background: #9aa3b8; }
+    .fit-col ul { margin: 0; padding-left: 0; list-style: none; }
+    .fit-col li { padding: 9px 0 9px 26px; position: relative; color: var(--ink-2); font-size: 15.5px; border-top: 1px solid rgba(0,0,0,.05); }
+    .fit-col li:first-child { border-top: none; }
+    .fit-col li::before { content: "—"; position: absolute; left: 0; color: var(--muted); }
+
+    /* Testimonials */
+    .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 900px) { .quotes { grid-template-columns: 1fr; } }
+    .qcard { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+    .qcard p { font-size: 15.5px; color: var(--ink-2); }
+    .qcard .who { margin-top: 18px; font-size: 14px; color: var(--muted); font-weight: 600; }
+    .qcard .stars { color: #f5a623; letter-spacing: 2px; margin-bottom: 12px; }
+
+    /* FAQ */
+    .faq details { border: 1px solid var(--line); border-radius: 12px; padding: 4px 22px; margin-bottom: 12px; background: #fff; }
+    .faq summary { cursor: pointer; font-weight: 600; font-size: 16.5px; padding: 18px 0; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; color: var(--accent); font-size: 22px; font-weight: 700; }
+    .faq details[open] summary::after { content: "–"; }
+    .faq details p { color: var(--muted); font-size: 15.5px; padding: 0 0 18px; }
+
+    /* About */
+    .about { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
+    @media (max-width: 900px) { .about { grid-template-columns: 1fr; } }
+    .about .quote { background: var(--ink); color: #fff; border-radius: var(--radius); padding: 36px; }
+    .about .quote p { font-size: 19px; font-weight: 500; }
+    .about .quote .by { color: #aeb6cf; font-size: 14px; margin-top: 18px; }
+    .creds { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .chip { font-size: 13.5px; font-weight: 600; color: var(--accent-ink); background: #eef0ff; border: 1px solid #e0e2ff; padding: 7px 13px; border-radius: 999px; }
+    .linkedin { display: inline-block; margin-top: 20px; font-weight: 600; color: var(--accent); font-size: 15px; }
+    .linkedin:hover { text-decoration: underline; }
+    .headshot { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; display: block; margin: 14px 0 6px; border: 3px solid #fff; box-shadow: 0 8px 24px rgba(11,16,32,.12); }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, var(--ink), #1c2444);
+      color: #fff; border-radius: 24px; padding: 64px 48px; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta::before { content: ""; position: absolute; inset: 0;
+      background: radial-gradient(600px 300px at 70% 0%, rgba(139,92,246,.3), transparent 60%); }
+    .cta h2 { font-size: clamp(28px, 4vw, 42px); position: relative; font-weight: 800; }
+    .cta p { color: #c3c9de; margin-top: 16px; font-size: 18px; position: relative; max-width: 52ch; margin-left: auto; margin-right: auto; }
+    .cta .btn { margin-top: 30px; position: relative; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--line); padding: 40px 0; color: var(--muted); font-size: 14px; }
+    .foot-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#top">
+        <span class="dot">pc</span>
+        productconsulting<span style="color:var(--accent)">.ai</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#offers">Engagements</a>
+        <a href="#process">How it works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-primary" href="https://cal.com/amanda-shelton/teardown" target="_blank" rel="noopener">Book a teardown call</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <span class="eyebrow">● Product thinking for AI products</span>
+      <h1>AI features that <span class="grad">ship and get used</span> — not another strategy deck.</h1>
+      <p class="sub">
+        Most AI initiatives stall because they're led by engineers without product judgment, or consultants who aren't AI-native. I bring senior product leadership to the messy middle — so your team builds the right AI features and actually ships them.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://cal.com/amanda-shelton/teardown" target="_blank" rel="noopener">Book a free 30-min teardown →</a>
+        <a class="btn btn-ghost" href="#offers">See engagements</a>
+      </div>
+      <div class="trustline"><span class="tick">✓</span> Fixed-scope AI Product Audit from $3,000 — no open-ended retainers to say yes to.</div>
+    </div>
+  </section>
+
+  <!-- STAT BAND -->
+  <section class="stats">
+    <div class="wrap stats-inner">
+      <div class="stat">
+        <div class="n">95%</div>
+        <div class="l">of enterprise GenAI pilots deliver no measurable P&amp;L impact (MIT, 2025)</div>
+      </div>
+      <div class="stat">
+        <div class="n">~67%</div>
+        <div class="l">of organizations know they need AI but have no product strategy for it</div>
+      </div>
+      <div class="stat">
+        <div class="n">2×</div>
+        <div class="l">higher success rate when AI is built with outside product help vs. internal-only</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="block" id="problem">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="tag">The problem</div>
+        <h2>The gap isn't the model. It's the product judgment around it.</h2>
+        <p>Teams can call an API. What they struggle with is deciding what's worth building, scoping it so it ships, and making sure people actually use it. That's a product problem — and it's where most AI work quietly fails.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="ico">🎯</div>
+          <h3>Wrong bets</h3>
+          <p>AI features chosen by hype or demo appeal, not by ROI and user value. Effort goes to things nobody needed.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🌀</div>
+          <h3>Scope that never ships</h3>
+          <p>Ambitious "AI everywhere" projects that balloon, lose momentum, and stall before reaching users.</p>
+        </div>
+        <div class="card">
+          <div class="ico">📉</div>
+          <h3>Built but unused</h3>
+          <p>Features that launch to a press release and then flatline — no adoption, no measurable impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="block" id="fit">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="tag">Fit</div>
+        <h2>Who this is for — and who it isn't.</h2>
+        <p>Sharp focus is the point. If you're outside this, I'll happily refer you to someone better suited.</p>
+      </div>
+      <div class="grid-2-fit">
+        <div class="fit-col fit-yes">
+          <h3><span class="fit-mark">✓</span> A great fit</h3>
+          <ul>
+            <li>Seed to Series A companies with a real product and real users.</li>
+            <li>Founders/CEOs who want AI to move a metric, not generate a headline.</li>
+            <li>Teams that can build but need product judgment on <em>what</em> to build.</li>
+            <li>You want a senior operator in the work, not a deck delivered from arm's length.</li>
+          </ul>
+        </div>
+        <div class="fit-col fit-no">
+          <h3><span class="fit-mark">✕</span> Not a fit (yet)</h3>
+          <ul>
+            <li>Enterprises wanting a 6-month org-wide "AI transformation" program.</li>
+            <li>Pre-product ideas looking for someone to build an app from scratch.</li>
+            <li>Pure research / model-training work with no product to ship into.</li>
+            <li>Anyone shopping for the cheapest possible hourly rate.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section class="block offers" id="offers">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="tag">Engagements</div>
+        <h2>Start small. Climb as it works.</h2>
+        <p>Every engagement begins with a fixed-scope, low-risk audit. From there, we go as deep as the results justify — from a single feature sprint to embedded product leadership.</p>
+      </div>
+      <div class="ladder">
+        <div class="offer featured">
+          <div class="step">STEP 1 · ON-RAMP</div>
+          <h3>AI Product Audit</h3>
+          <div class="price">$3,000 <span>flat</span></div>
+          <div class="meta">2 weeks · fixed scope</div>
+          <p class="desc">A clear-eyed review of your product and AI opportunities, ranked by ROI and effort, with a concrete roadmap you can act on immediately.</p>
+        </div>
+        <div class="offer">
+          <div class="step">STEP 2 · BUILD</div>
+          <h3>AI Product Sprint</h3>
+          <div class="price">$12k–$18k</div>
+          <div class="meta">4–6 weeks · hands-on</div>
+          <p class="desc">We take the audit's top opportunity and define, spec, and de-risk it with your team — to a shippable plan or working prototype.</p>
+        </div>
+        <div class="offer">
+          <div class="step">STEP 3 · RECURRING</div>
+          <h3>Advisory Retainer</h3>
+          <div class="price">$4k–$8k <span>/mo</span></div>
+          <div class="meta">ongoing · light-touch</div>
+          <p class="desc">Roadmap, prioritization, and product reviews — AI product judgment on call as you keep shipping.</p>
+        </div>
+        <div class="offer">
+          <div class="step">STEP 4 · EMBEDDED</div>
+          <h3>Fractional Head of AI Product</h3>
+          <div class="price">$12k–$20k <span>/mo</span></div>
+          <div class="meta">2–3 days/week</div>
+          <p class="desc">Senior product leadership owning your AI product strategy and execution end-to-end. Limited to a few clients at a time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="block" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="tag">How it works</div>
+        <h2>A senior operator, not a slide factory.</h2>
+        <p>Ownership transfer, not dependency. Your team is more capable when the engagement ends.</p>
+      </div>
+      <div class="steps">
+        <div class="step-item">
+          <div class="num">STEP 1</div>
+          <h3>Free teardown call</h3>
+          <p>30 minutes on your product and AI ambitions. You leave with at least one useful idea, whether or not we work together.</p>
+        </div>
+        <div class="step-item">
+          <div class="num">STEP 2</div>
+          <h3>The audit</h3>
+          <p>Two weeks to a ranked, ROI-weighted roadmap of AI opportunities — and a clear recommendation on the first thing to build.</p>
+        </div>
+        <div class="step-item">
+          <div class="num">STEP 3</div>
+          <h3>Ship something</h3>
+          <p>A focused sprint turns the top opportunity into a shippable feature plan or prototype your team can run with.</p>
+        </div>
+        <div class="step-item">
+          <div class="num">STEP 4</div>
+          <h3>Scale the partnership</h3>
+          <p>Stay on as advisor or embedded fractional product lead — as deep as the results justify, never more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="block" id="about">
+    <div class="wrap about">
+      <div>
+        <div class="section-head" style="margin-bottom:24px">
+          <div class="tag">About</div>
+          <img src="assets/headshot-studio.png" alt="Amanda Shelton, MBA" class="headshot" />
+          <h2>Hi, I'm Amanda Shelton, MBA.</h2>
+        </div>
+        <p style="color:var(--muted); font-size:17px;">
+          I've spent 7+ years in product management — including a Product Manager role at JPMorgan Chase and earlier work as a Data Analytics Consultant at a Tableau Partner. That mix of product judgment and data depth is exactly what teams need to make AI work: someone who can spot the right bet, scope it so it ships, and measure whether it actually moved the metric.
+        </p>
+        <p style="color:var(--muted); font-size:17px; margin-top:16px;">
+          No transformation theater. No 80-slide decks. Just sharp product decisions and features that ship.
+        </p>
+        <div class="creds">
+          <span class="chip">Ex-JPMorgan Chase product</span>
+          <span class="chip">7+ years in product management</span>
+          <span class="chip">Data + AI product strategy</span>
+        </div>
+      </div>
+      <div class="quote">
+        <p>"The companies winning with AI aren't the ones with the best models. They're the ones making the best product decisions about where to use them."</p>
+        <div class="by">— the operating thesis behind productconsulting.ai</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block offers" id="faq">
+    <div class="wrap" style="max-width:840px">
+      <div class="section-head">
+        <div class="tag">FAQ</div>
+        <h2>Questions, answered.</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>What exactly do I get from the $3,000 audit?</summary>
+          <p>A written, ranked roadmap of AI opportunities for your product — each scored by ROI and effort — plus a clear recommendation on the single highest-value thing to build first, and how to de-risk it. Delivered in two weeks, with a walkthrough call.</p>
+        </details>
+        <details>
+          <summary>Why start with an audit instead of just building?</summary>
+          <p>Because 95% of AI pilots fail on the wrong-bet and won't-ship problems — not the engineering. Two weeks of sharp product thinking up front saves months of building something nobody uses.</p>
+        </details>
+        <details>
+          <summary>Do you build the feature, or just advise?</summary>
+          <p>Both are available. The audit defines what's worth building; the Sprint engagement is hands-on to spec and de-risk it with your team; ongoing retainer or fractional leadership takes it further. You choose how deep to go.</p>
+        </details>
+        <details>
+          <summary>What stage and size of company is this for?</summary>
+          <p>Primarily seed to Series A teams with a live product and real users. If you're earlier or much larger, I'll tell you honestly and point you to a better fit.</p>
+        </details>
+        <details>
+          <summary>How do we start?</summary>
+          <p>Book a free 30-minute teardown call. We pressure-test your AI ideas live and you leave with at least one concrete next step — no obligation to go further.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="block" id="book">
+    <div class="wrap">
+      <div class="cta">
+        <h2>Find your highest-ROI AI feature.</h2>
+        <p>Book a free 30-minute teardown call. We'll pressure-test your AI ideas and you'll leave with a concrete next step — no pitch required.</p>
+        <a class="btn btn-primary" href="https://cal.com/amanda-shelton/teardown" target="_blank" rel="noopener">Book your teardown call →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap foot-inner">
+      <div class="logo"><span class="dot">pc</span> productconsulting<span style="color:var(--accent)">.ai</span></div>
+      <div>© <span id="year"></span> productconsulting.ai · Product thinking for AI products</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

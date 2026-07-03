@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leveraged ETF Hub — Frameworks, Evidence & Trade Scorecard</title>
+<style>
+  :root{
+    --bg:#0b0f17; --panel:#121826; --panel2:#0f1420; --ink:#e8edf6; --muted:#90a0b8;
+    --line:#1e2940; --accent:#4cc2ff; --good:#33d69f; --warn:#ffcb45; --bad:#ff5d6c;
+    --grad: linear-gradient(135deg,#4cc2ff,#7b8cff);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#16243f 0%,var(--bg) 55%);
+    color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 20px 80px}
+  header.hero{margin-bottom:8px}
+  .kicker{color:var(--accent);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+  h1{font-size:34px;line-height:1.1;margin:8px 0 6px;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--muted);max-width:760px}
+  .tag{display:inline-block;background:#1a2235;border:1px solid var(--line);color:var(--muted);
+    padding:3px 10px;border-radius:999px;font-size:12px;margin:10px 6px 0 0}
+  section{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:22px}
+  h2{font-size:21px;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+  h2 .n{font-size:13px;color:var(--bg);background:var(--accent);width:26px;height:26px;border-radius:8px;
+    display:grid;place-items:center;font-weight:800}
+  .lead{color:var(--muted);margin:0 0 18px}
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:760px){.g2,.g3{grid-template-columns:1fr}}
+  .card{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .card h3{margin:0 0 6px;font-size:15px}
+  .card p{margin:0;color:var(--muted);font-size:13.5px}
+  label{display:block;font-size:13px;color:var(--muted);margin:14px 0 6px}
+  input[type=range]{width:100%;accent-color:var(--accent)}
+  .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .val{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+  .chart-wrap{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:12px}
+  canvas{width:100%;height:auto;display:block}
+  .stat{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px}
+  .stat .b{flex:1;min-width:150px;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .stat .b .lab{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .stat .b .num{font-size:24px;font-weight:800;font-variant-numeric:tabular-nums;margin-top:4px}
+  .pos{color:var(--good)}.neg{color:var(--bad)}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13.5px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  /* scorecard */
+  .q{border-bottom:1px solid var(--line);padding:14px 0}
+  .q:last-child{border-bottom:0}
+  .q .qhead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+  .q .qt{font-weight:600}
+  .q .why{color:var(--muted);font-size:12.5px;margin-top:3px;max-width:640px}
+  .opts{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+  .opt{cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--muted);
+    padding:7px 12px;border-radius:9px;font-size:13px;transition:.15s;user-select:none}
+  .opt:hover{border-color:var(--accent)}
+  .opt.sel{background:var(--grad);color:#06101f;border-color:transparent;font-weight:700}
+  .gauge{display:flex;align-items:center;gap:20px;margin-top:8px;flex-wrap:wrap}
+  .scorebig{font-size:54px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+  .verdict{font-size:16px;font-weight:700}
+  .vmsg{color:var(--muted);font-size:13.5px;max-width:520px;margin-top:4px}
+  .bar{height:12px;border-radius:999px;background:#1a2235;overflow:hidden;flex:1;min-width:220px}
+  .bar > i{display:block;height:100%;width:0;border-radius:999px;transition:width .35s}
+  .pill{font-size:12px;padding:2px 9px;border-radius:999px;border:1px solid var(--line)}
+  .note{font-size:12.5px;color:var(--muted);background:#141b2b;border:1px dashed var(--line);
+    border-radius:10px;padding:12px 14px;margin-top:16px}
+  .disc{font-size:12px;color:var(--muted);text-align:center;margin-top:30px;line-height:1.7}
+  a{color:var(--accent)}
+  .ev{display:flex;gap:12px;align-items:flex-start}
+  .ev .dot{flex:none;width:8px;height:8px;border-radius:50%;margin-top:7px;background:var(--accent)}
+  footer{margin-top:26px}
+  /* My Trade panel */
+  .fields{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:760px){.fields{grid-template-columns:1fr 1fr}}
+  .field{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .field label{display:block;margin:0 0 6px;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .field input,.field select{width:100%;background:transparent;border:0;color:var(--ink);font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;outline:none;padding:0}
+  .field input::placeholder{color:#4a5876;font-weight:500}
+  .field select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 14px) 12px,calc(100% - 8px) 12px;background-size:6px 6px,6px 6px;background-repeat:no-repeat;cursor:pointer}
+  .field .meta{font-size:11.5px;color:var(--muted);margin-top:4px;min-height:14px}
+  .btnp{background:var(--grad);color:#06101f;font-weight:700;border:0;border-radius:10px;padding:11px 18px;cursor:pointer;font-size:14px}
+  .btnp:disabled{opacity:.5;cursor:not-allowed}
+  .regime{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+  @media(max-width:760px){.regime{grid-template-columns:1fr}}
+  .rcell{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px}
+  .rcell .rlab{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .rcell .rval{font-size:18px;font-weight:700;margin-top:4px;display:flex;align-items:center;gap:8px}
+  .rcell .rsub{font-size:12.5px;color:var(--muted);margin-top:6px}
+  .rdot{width:9px;height:9px;border-radius:50%;display:inline-block;background:var(--muted)}
+  .rdot.ok{background:var(--good)} .rdot.mid{background:var(--warn)} .rdot.bad{background:var(--bad)}
+  .rstatus{font-size:12.5px;color:var(--muted);min-height:18px;flex:1}
+  .dollar{font-size:13px;color:var(--muted);margin-top:4px;font-weight:600;font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">Investing Learning Hub</div>
+    <h1>Leveraged ETF Frameworks &amp; Trade Scorecard</h1>
+    <p class="sub">A learn-by-doing toolkit for 3x ETFs like <strong>SOXL</strong>. Feel the decay math,
+    grade your trade against evidence-based rules, and build the one skill that actually compounds:
+    disciplined process.</p>
+    <div>
+      <span class="tag">Daily-reset mechanics</span>
+      <span class="tag">Volatility decay</span>
+      <span class="tag">Risk &amp; position sizing</span>
+      <span class="tag">Regime filters</span>
+    </div>
+  </header>
+
+  <!-- 0. MY TRADE & LIVE REGIME -->
+  <section>
+    <h2><span class="n">0</span> My Trade &amp; Live Regime</h2>
+    <p class="lead">Tell the tool what you're trading. It auto-sets the simulator's leverage from the ticker, converts the simulator outputs to <em>your</em> dollars, runs a quick regime check on the underlying using real market data, and pre-fills the scorecard questions it can answer for you.</p>
+
+    <div class="fields">
+      <div class="field">
+        <label>Ticker</label>
+        <input id="myTicker" type="text" autocomplete="off" placeholder="SOXL" value="SOXL">
+        <div class="meta" id="metaTicker">—</div>
+      </div>
+      <div class="field">
+        <label>Position size ($)</label>
+        <input id="myPos" type="number" min="0" step="100" placeholder="5000" value="5000">
+        <div class="meta" id="metaPos">—</div>
+      </div>
+      <div class="field">
+        <label>Total portfolio ($)</label>
+        <input id="myPort" type="number" min="0" step="100" placeholder="50000" value="50000">
+        <div class="meta" id="metaPort">Used to compute % of portfolio</div>
+      </div>
+      <div class="field">
+        <label>Planned hold</label>
+        <select id="myHold">
+          <option value="days">Days / swing</option>
+          <option value="weeks">A few weeks</option>
+          <option value="months">Months+</option>
+        </select>
+        <div class="meta">Auto-fills scorecard Q5</div>
+      </div>
+      <div class="field">
+        <label>Stop loss (% below entry)</label>
+        <input id="myStop" type="number" min="0" max="100" step="1" placeholder="10">
+        <div class="meta">Optional</div>
+      </div>
+      <div class="field">
+        <label>Profit target (% above entry)</label>
+        <input id="myTarget" type="number" min="0" max="500" step="1" placeholder="20">
+        <div class="meta">Optional</div>
+      </div>
+    </div>
+
+    <div class="regime">
+      <div class="rcell">
+        <div class="rlab">Trend (underlying)</div>
+        <div class="rval"><span class="rdot" id="trendDot"></span><span id="trendVal">—</span></div>
+        <div class="rsub" id="trendSub">Run a check to see live data</div>
+      </div>
+      <div class="rcell">
+        <div class="rlab">Volatility regime</div>
+        <div class="rval"><span class="rdot" id="volDot"></span><span id="volVal">—</span></div>
+        <div class="rsub" id="volSub">20-day realized vol on the underlying</div>
+      </div>
+      <div class="rcell">
+        <div class="rlab">Setup verdict</div>
+        <div class="rval"><span class="rdot" id="setupDot"></span><span id="setupVal">—</span></div>
+        <div class="rsub" id="setupSub">Trend + vol combined</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:14px;align-items:center;margin-top:16px;flex-wrap:wrap">
+      <button id="checkRegime" class="btnp">Check live regime</button>
+      <div class="rstatus" id="regimeStatus">Data: Yahoo Finance via allorigins proxy — free, no API key. Educational use only — not financial advice.</div>
+    </div>
+
+    <div class="note">This is decision <em>support</em>, not advice. A "Favorable" verdict is not a buy signal — it means <em>if</em> you trade, the regime matches the rules in Section 3.</div>
+  </section>
+
+  <!-- 1. SIMULATOR -->
+  <section>
+    <h2><span class="n">1</span> Volatility-Decay Simulator</h2>
+    <p class="lead">SOXL targets <strong>3&times; the <em>daily</em></strong> return of the semiconductor index and rebalances every day.
+      Over multiple days your result is <strong>path-dependent</strong>. Play with the path below and watch a 3x ETF
+      lose money even when the index goes nowhere.</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="row"><label style="margin:0">Leverage</label><span class="val" id="vLev">3.0&times;</span></div>
+        <input id="lev" type="range" min="1" max="3" step="0.5" value="3">
+
+        <div class="row"><label style="margin:0">Index daily volatility (choppiness)</label><span class="val" id="vVol">3.0%</span></div>
+        <input id="vol" type="range" min="0" max="8" step="0.25" value="3">
+
+        <div class="row"><label style="margin:0">Index daily drift (trend)</label><span class="val" id="vDrift">0.00%</span></div>
+        <input id="drift" type="range" min="-0.5" max="0.5" step="0.05" value="0">
+
+        <div class="row"><label style="margin:0">Trading days</label><span class="val" id="vDays">120</span></div>
+        <input id="days" type="range" min="20" max="252" step="1" value="120">
+
+        <div class="row"><label style="margin:0">Annual expense + financing drag</label><span class="val" id="vFee">1.5%</span></div>
+        <input id="fee" type="range" min="0" max="4" step="0.25" value="1.5">
+
+        <button id="reroll" style="margin-top:16px;width:100%;cursor:pointer;background:var(--grad);
+          color:#06101f;font-weight:700;border:0;border-radius:10px;padding:11px">Re-roll the path 🎲</button>
+      </div>
+
+      <div class="card">
+        <div class="chart-wrap" style="margin-top:0">
+          <canvas id="chart" width="900" height="420"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="b"><div class="lab">Index total return</div><div class="num" id="oIndex">—</div></div>
+      <div class="b"><div class="lab">3x ETF return</div><div class="num" id="oEtf">—</div><div class="dollar" id="oEtfD"></div></div>
+      <div class="b"><div class="lab">"Naive" expectation (3&times; index)</div><div class="num" id="oNaive">—</div></div>
+      <div class="b"><div class="lab">Decay gap (ETF − naive)</div><div class="num" id="oDecay">—</div></div>
+    </div>
+    <div class="note" id="simNote">Set <strong>drift to 0</strong> and <strong>volatility high</strong> to see pure decay. Then raise drift
+      to see leverage compound <em>for</em> you in a smooth trend. That asymmetry is the whole strategy.</div>
+  </section>
+
+  <!-- 2. SCORECARD -->
+  <section>
+    <h2><span class="n">2</span> Trade Scorecard</h2>
+    <p class="lead">Grade a specific leveraged-ETF trade <em>before</em> you click buy. Each answer maps to an
+      evidence-based rule. This forces process over impulse — the actual edge.</p>
+
+    <div id="quiz"></div>
+
+    <div class="gauge" style="margin-top:18px">
+      <div>
+        <div class="scorebig" id="scoreNum">0</div>
+        <div style="font-size:12px;color:var(--muted)">/ 100</div>
+      </div>
+      <div style="flex:1;min-width:240px">
+        <div class="bar"><i id="scoreBar"></i></div>
+        <div class="verdict" id="verdict" style="margin-top:10px">Answer the questions above</div>
+        <div class="vmsg" id="vmsg"></div>
+      </div>
+    </div>
+    <div class="note">A high score isn't a buy signal — it means <em>if</em> you trade, you're doing it with discipline.
+      A low score means the trade is being driven by hope, not a plan.</div>
+  </section>
+
+  <!-- 3. EVIDENCE -->
+  <section>
+    <h2><span class="n">3</span> The Evidence &amp; Frameworks</h2>
+    <p class="lead">Five rules that survive contact with the data.</p>
+    <div class="grid g2">
+      <div class="card"><div class="ev"><span class="dot"></span><div>
+        <h3>Daily reset = path dependency</h3>
+        <p>Leveraged ETFs deliver a multiple of the <em>daily</em> return only. Over longer windows, returns depend
+        on the <em>path</em>, not just start-to-end. Smooth trend → leverage helps; chop → it bleeds.</p></div></div></div>
+      <div class="card"><div class="ev"><span class="dot"></span><div>
+        <h3>Volatility decay is structural</h3>
+        <p>A flat-but-choppy index produces a guaranteed loss in a 3x product (see Section 1). It's geometry, not fees.
+        This is why SOXL has run multiple <strong>reverse splits</strong> over its life.</p></div></div></div>
+      <div class="card"><div class="ev"><span class="dot"></span><div>
+        <h3>Designed for days, not years</h3>
+        <p>Direxion explicitly states these seek daily objectives and are for short holding periods with active monitoring.
+        Every extra day held is a fresh bet the trend stays smooth.</p></div></div></div>
+      <div class="card"><div class="ev"><span class="dot"></span><div>
+        <h3>Drawdowns are brutal &amp; asymmetric</h3>
+        <p>At 3x, a ~33% single-day index drop is near-total loss. SOXL fell ~80%+ peak-to-trough in 2022.
+        A 80% loss needs a 400% gain to recover. Survival &gt; maximizing any single trade.</p></div></div></div>
+      <div class="card"><div class="ev"><span class="dot"></span><div>
+        <h3>The behavior gap, amplified</h3>
+        <p>Investors chronically buy high / sell low, losing ~1–3%/yr to themselves (DALBAR, Morningstar "Mind the Gap").
+        Leverage multiplies that self-inflicted gap. A written plan is the antidote.</p></div></div></div>
+      <div class="card"><div class="ev"><span class="dot"></span><div>
+        <h3>Regime &amp; size are the real levers</h3>
+        <p>What you can control: <strong>when</strong> (trend up, vol contained), <strong>how much</strong> (risk capital, small %),
+        and <strong>your exit</strong> (defined in advance). You cannot control the market — only your exposure to it.</p></div></div></div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="disc">
+      <strong>Educational tool only — not financial advice.</strong> The simulator uses a randomized log-normal model to
+      illustrate compounding mechanics; it does not predict any security's price. Leveraged ETFs are high-risk and can lose
+      value rapidly, including in flat markets. Verify all figures (expense ratios, historical drawdowns) against primary
+      sources before acting, and consider consulting a licensed advisor.
+    </p>
+  </footer>
+
+</div>
+
+<script>
+// ---------- SIMULATOR ----------
+const $ = id => document.getElementById(id);
+const fmtPct = x => (x>=0?'+':'') + (x*100).toFixed(1) + '%';
+let baseSeed = 1234567;   // the path; only changes on Re-roll
+let seed = baseSeed;      // working cursor, reset before each simulate()
+// deterministic PRNG so the path is stable while you tweak sliders
+function rng(){ seed = (seed*1103515245 + 12345) & 0x7fffffff; return seed/0x7fffffff; }
+function gauss(){ // Box-Muller
+  let u=0,v=0; while(u===0)u=rng(); while(v===0)v=rng();
+  return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);
+}
+
+function simulate(){
+  const lev=+$('lev').value, vol=+$('vol').value/100, drift=+$('drift').value/100,
+        days=+$('days').value, fee=+$('fee').value/100;
+  const dailyFee = fee/252;
+  let idx=[100], etf=[100];
+  seed = baseSeed; // reset cursor so sliders re-use the SAME path; only Re-roll changes baseSeed
+  for(let d=0; d<days; d++){
+    const r = drift + vol*gauss();           // index daily return
+    idx.push(idx[idx.length-1]*(1+r));
+    etf.push(etf[etf.length-1]*(1+lev*r - dailyFee)); // leveraged daily, with drag
+  }
+  const idxRet = idx[idx.length-1]/100 - 1;
+  const etfRet = etf[etf.length-1]/100 - 1;
+  const naiveRet = lev*idxRet;               // what people wrongly expect
+  return {idx, etf, lev, idxRet, etfRet, naiveRet};
+}
+
+function draw(s){
+  const c=$('chart'), ctx=c.getContext('2d');
+  const W=c.width, H=c.height, pad=42;
+  ctx.clearRect(0,0,W,H);
+  const series=[s.idx, s.etf];
+  let lo=Infinity, hi=-Infinity;
+  series.forEach(a=>a.forEach(v=>{lo=Math.min(lo,v);hi=Math.max(hi,v)}));
+  lo=Math.min(lo,100); hi=Math.max(hi,100);
+  const pad2=(hi-lo)*0.08; lo-=pad2; hi+=pad2;
+  const x=i=>pad + i*(W-pad-12)/(s.idx.length-1);
+  const y=v=>H-pad - (v-lo)*(H-pad-14)/(hi-lo);
+  // grid + baseline at 100
+  ctx.strokeStyle='#1e2940'; ctx.lineWidth=1; ctx.fillStyle='#90a0b8'; ctx.font='11px sans-serif';
+  for(let g=0;g<=4;g++){ const val=lo+(hi-lo)*g/4, yy=y(val);
+    ctx.beginPath();ctx.moveTo(pad,yy);ctx.lineTo(W-12,yy);ctx.stroke();
+    ctx.fillText(val.toFixed(0), 6, yy+4); }
+  ctx.setLineDash([4,4]); ctx.strokeStyle='#39507a';
+  ctx.beginPath();ctx.moveTo(pad,y(100));ctx.lineTo(W-12,y(100));ctx.stroke(); ctx.setLineDash([]);
+  // lines
+  function line(a,color,w){ ctx.strokeStyle=color; ctx.lineWidth=w; ctx.beginPath();
+    a.forEach((v,i)=>{ i?ctx.lineTo(x(i),y(v)):ctx.moveTo(x(i),y(v)); }); ctx.stroke(); }
+  line(s.idx,'#90a0b8',2);
+  line(s.etf, s.etfRet>=0?'#33d69f':'#ff5d6c',2.6);
+  // legend
+  ctx.font='12px sans-serif';
+  ctx.fillStyle='#90a0b8'; ctx.fillText('Index (1x)', pad+4, 16);
+  ctx.fillStyle=s.etfRet>=0?'#33d69f':'#ff5d6c'; ctx.fillText(s.lev.toFixed(1)+'x ETF', pad+90, 16);
+}
+
+function refresh(){
+  $('vLev').textContent=(+$('lev').value).toFixed(1)+'×';
+  $('vVol').textContent=(+$('vol').value).toFixed(2)+'%';
+  $('vDrift').textContent=fmtPct(+$('drift').value/100);
+  $('vDays').textContent=$('days').value;
+  $('vFee').textContent=(+$('fee').value).toFixed(2)+'%';
+  const s=simulate();
+  draw(s);
+  $('oIndex').innerHTML=`<span class="${s.idxRet>=0?'pos':'neg'}">${fmtPct(s.idxRet)}</span>`;
+  $('oEtf').innerHTML=`<span class="${s.etfRet>=0?'pos':'neg'}">${fmtPct(s.etfRet)}</span>`;
+  $('oNaive').innerHTML=`<span class="${s.naiveRet>=0?'pos':'neg'}">${fmtPct(s.naiveRet)}</span>`;
+  const gap=s.etfRet-s.naiveRet;
+  $('oDecay').innerHTML=`<span class="${gap>=0?'pos':'neg'}">${fmtPct(gap)}</span>`;
+}
+['lev','vol','drift','days','fee'].forEach(id=>$(id).addEventListener('input',refresh));
+$('reroll').addEventListener('click',()=>{ baseSeed=(baseSeed*16807+1)&0x7fffffff; refresh(); });
+refresh();
+
+// ---------- SCORECARD ----------
+const Q=[
+ {q:"Is the underlying index in a confirmed uptrend (above its 50- & 200-day moving average)?",
+  why:"Leverage only compounds in your favor during sustained trends. Counter-trend leverage is the #1 way to get decayed.",
+  opts:[["Above both",2],["Above one",1],["Below / unsure",0]]},
+ {q:"What is the current volatility regime (e.g. VIX)?",
+  why:"High volatility = choppy path = maximum decay. Calm-to-moderate vol is when leverage behaves.",
+  opts:[["Low / calm",2],["Moderate",1],["High / spiking",0]]},
+ {q:"How large is this position vs. your total investable assets?",
+  why:"At 3x, position size IS your risk control. Survival lets you compound; ruin ends the game.",
+  opts:[["≤5% (risk capital)",2],["5–15%",1],[">15%",0]]},
+ {q:"Do you have a written exit plan (stop loss AND profit target) set before entry?",
+  why:"Leverage removes your time to think. The plan must exist before emotion arrives.",
+  opts:[["Both defined",2],["One defined",1],["None",0]]},
+ {q:"What's your intended holding period?",
+  why:"These products target a DAILY objective. Longer holds accumulate path risk and decay.",
+  opts:[["Days / swing",2],["A few weeks",1],["Months+ / 'forever'",0]]},
+ {q:"Could you lose this entire position without affecting your life or sleep?",
+  why:"3x can approach zero on a bad day. Only money you can fully lose belongs here.",
+  opts:[["Yes, fully",2],["Mostly",1],["No",0]]},
+ {q:"Is this trade a defined system signal, or a feeling / FOMO?",
+  why:"The behavior gap (buying highs, selling lows) is the dominant cause of investor losses — amplified by leverage.",
+  opts:[["Clear signal",2],["Mixed",1],["Mostly feeling",0]]},
+ {q:"If it drops 20% tomorrow, do you know exactly what you'll do?",
+  why:"Pre-deciding your reaction to pain is the difference between a trader and a bag-holder.",
+  opts:[["Yes, pre-decided",2],["Roughly",1],["I'd react in the moment",0]]},
+];
+const answers=new Array(Q.length).fill(null);
+const quiz=$('quiz');
+Q.forEach((item,qi)=>{
+  const d=document.createElement('div'); d.className='q';
+  d.innerHTML=`<div class="qhead"><div><div class="qt">${qi+1}. ${item.q}</div>
+    <div class="why">${item.why}</div></div></div>`;
+  const opts=document.createElement('div'); opts.className='opts';
+  item.opts.forEach(([label,pts],oi)=>{
+    const o=document.createElement('div'); o.className='opt'; o.textContent=label;
+    o.addEventListener('click',()=>{
+      answers[qi]=pts;
+      [...opts.children].forEach(c=>c.classList.remove('sel'));
+      o.classList.add('sel'); score();
+    });
+    opts.appendChild(o);
+  });
+  d.appendChild(opts); quiz.appendChild(d);
+});
+function score(){
+  const answered=answers.filter(a=>a!==null).length;
+  const max=Q.length*2;
+  const raw=answers.reduce((s,a)=>s+(a||0),0);
+  const pct=Math.round(raw/max*100);
+  $('scoreNum').textContent=pct;
+  const bar=$('scoreBar'); bar.style.width=pct+'%';
+  let col=pct>=75?'var(--good)':pct>=50?'var(--warn)':'var(--bad)';
+  bar.style.background=col;
+  $('scoreNum').style.color=col;
+  let v,m;
+  if(answered<Q.length){ v='Keep going…'; m=`${answered}/${Q.length} answered.`; col='var(--muted)'; }
+  else if(pct>=75){ v='Disciplined setup'; m='Process is sound. Leverage stays dangerous — size small and honor your exits.'; }
+  else if(pct>=50){ v='Mixed — tighten it up'; m='Fix the zero-scored items (usually exit plan, sizing, or regime) before risking capital.'; }
+  else { v='Hope, not a plan'; m='This trade is being driven by feeling. The math (Section 1) is working against you. Step back.'; }
+  $('verdict').textContent=v; $('verdict').style.color=col; $('vmsg').textContent=m;
+}
+score();
+
+// ---------- MY TRADE & LIVE REGIME ----------
+const TICKERS = {
+  SOXL:{lev: 3, under:'SOXX', desc:'3× semiconductors (underlying: SOXX)'},
+  SOXS:{lev:-3, under:'SOXX', desc:'−3× inverse semiconductors (underlying: SOXX)'},
+  TQQQ:{lev: 3, under:'QQQ',  desc:'3× Nasdaq-100 (underlying: QQQ)'},
+  SQQQ:{lev:-3, under:'QQQ',  desc:'−3× inverse Nasdaq-100 (underlying: QQQ)'},
+  UPRO:{lev: 3, under:'SPY',  desc:'3× S&P 500 (underlying: SPY)'},
+  SPXL:{lev: 3, under:'SPY',  desc:'3× S&P 500 (underlying: SPY)'},
+  SPXU:{lev:-3, under:'SPY',  desc:'−3× inverse S&P 500 (underlying: SPY)'},
+  SPXS:{lev:-3, under:'SPY',  desc:'−3× inverse S&P 500 (underlying: SPY)'},
+  TNA :{lev: 3, under:'IWM',  desc:'3× small caps (underlying: IWM)'},
+  TZA :{lev:-3, under:'IWM',  desc:'−3× inverse small caps (underlying: IWM)'},
+  FAS :{lev: 3, under:'XLF',  desc:'3× financials (underlying: XLF)'},
+  FAZ :{lev:-3, under:'XLF',  desc:'−3× inverse financials (underlying: XLF)'},
+  LABU:{lev: 3, under:'XBI',  desc:'3× biotech (underlying: XBI)'},
+  LABD:{lev:-3, under:'XBI',  desc:'−3× inverse biotech (underlying: XBI)'},
+  YINN:{lev: 3, under:'FXI',  desc:'3× China large caps (underlying: FXI)'},
+  TMF :{lev: 3, under:'TLT',  desc:'3× long Treasuries (underlying: TLT)'},
+  TMV :{lev:-3, under:'TLT',  desc:'−3× inverse long Treasuries (underlying: TLT)'},
+  CURE:{lev: 3, under:'XLV',  desc:'3× healthcare (underlying: XLV)'},
+  ERX :{lev: 3, under:'XLE',  desc:'3× energy (underlying: XLE)'},
+  NUGT:{lev: 2, under:'GDX',  desc:'2× gold miners (underlying: GDX)'},
+  JNUG:{lev: 2, under:'GDXJ', desc:'2× junior gold miners (underlying: GDXJ)'}
+};
+const tInfo = t => TICKERS[(t||'').trim().toUpperCase()] || null;
+
+const myT=$('myTicker'), myPos=$('myPos'), myPort=$('myPort'), myHold=$('myHold');
+
+function refreshTicker(){
+  const t=(myT.value||'').trim().toUpperCase();
+  const info=tInfo(t);
+  if(info){
+    $('metaTicker').textContent = info.desc + (info.lev<0?' · simulator shows leverage magnitude only':'');
+    $('lev').value = Math.min(3, Math.max(1, Math.abs(info.lev)));
+  } else if(t){
+    $('metaTicker').textContent = 'Not a known leveraged ETF — defaulting to 1× (no leverage).';
+    $('lev').value = 1;
+  } else {
+    $('metaTicker').textContent = '—';
+  }
+  refresh();
+  refreshDollar();
+  applyAutoFill();
+}
+
+function updatePosMeta(){
+  const pos=+myPos.value||0, port=+myPort.value||0;
+  $('metaPos').textContent = (pos>0 && port>0) ? `${((pos/port)*100).toFixed(1)}% of portfolio` : (pos>0?'Enter portfolio for %':'—');
+  refreshDollar();
+  applyAutoFill();
+}
+
+function refreshDollar(){
+  const pos=+myPos.value||0;
+  const txt=$('oEtf').textContent;
+  const m=txt.match(/-?\d+(\.\d+)?/);
+  if(!pos || !m){ $('oEtfD').textContent=''; return; }
+  const ret=parseFloat(m[0])/100;
+  const dollars=Math.round(pos*ret);
+  const sign=dollars>=0?'+':'−';
+  $('oEtfD').textContent = `${sign}$${Math.abs(dollars).toLocaleString()} on your $${pos.toLocaleString()} position`;
+}
+
+// ---- Regime check (Yahoo Finance via allorigins CORS proxy) ----
+const regimeCache={};
+async function fetchHistory(sym){
+  if(regimeCache[sym]) return regimeCache[sym];
+  const yurl=`https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}?range=1y&interval=1d`;
+  const url=`https://api.allorigins.win/raw?url=${encodeURIComponent(yurl)}`;
+  const r=await fetch(url,{cache:'no-store'});
+  if(!r.ok) throw new Error('HTTP '+r.status);
+  const j=await r.json();
+  const node=j && j.chart && j.chart.result && j.chart.result[0];
+  if(!node) throw new Error('No chart data returned for '+sym);
+  const closes=(node.indicators.quote[0].close||[]).filter(c=>c!=null);
+  if(closes.length<210) throw new Error('Only '+closes.length+' history points (need ~200 for the 200-day MA)');
+  regimeCache[sym]={closes, meta:node.meta};
+  return regimeCache[sym];
+}
+const sma=(a,n)=>a.length<n?null:a.slice(-n).reduce((s,x)=>s+x,0)/n;
+function realizedVol(a,n){
+  if(a.length<n+1) return null;
+  const rs=[]; for(let i=a.length-n;i<a.length;i++) rs.push(Math.log(a[i]/a[i-1]));
+  const m=rs.reduce((s,x)=>s+x,0)/rs.length;
+  return Math.sqrt(rs.reduce((s,x)=>s+(x-m)*(x-m),0)/(rs.length-1));
+}
+
+function setCell(which,val,sc,sub){
+  $({trend:'trendVal',vol:'volVal',setup:'setupVal'}[which]).textContent=val;
+  $({trend:'trendDot',vol:'volDot',setup:'setupDot'}[which]).className='rdot '+sc;
+  $({trend:'trendSub',vol:'volSub',setup:'setupSub'}[which]).textContent=sub;
+}
+
+async function checkRegime(){
+  const t=(myT.value||'').trim().toUpperCase();
+  const info=tInfo(t);
+  const sym=info?info.under:t;
+  const inverse=info && info.lev<0;
+  if(!sym){ $('regimeStatus').textContent='Enter a ticker first.'; return; }
+  $('checkRegime').disabled=true;
+  $('regimeStatus').textContent='Fetching '+sym+' from Yahoo Finance…';
+  try{
+    const {closes,meta}=await fetchHistory(sym);
+    const last=closes[closes.length-1], ma50=sma(closes,50), ma200=sma(closes,200);
+    const dv=realizedVol(closes,20)*100;
+
+    let trend;
+    if(last>ma50 && last>ma200 && ma50>ma200) trend='up';
+    else if(last>ma200) trend='mixed';
+    else trend='down';
+    const favorTrend = inverse
+      ? (trend==='down'?'ok':trend==='mixed'?'mid':'bad')
+      : (trend==='up'  ?'ok':trend==='mixed'?'mid':'bad');
+    setCell('trend',
+      (inverse?'Inverse · underlying ':'') + trend.charAt(0).toUpperCase()+trend.slice(1),
+      favorTrend,
+      `Last $${last.toFixed(2)} · 50d $${ma50.toFixed(2)} · 200d $${ma200.toFixed(2)}` + (inverse?' · you want underlying DOWN':''));
+
+    let volLab,vs;
+    if(dv<1.0){ volLab='Calm';vs='ok'; }
+    else if(dv<2.0){ volLab='Moderate';vs='mid'; }
+    else { volLab='High';vs='bad'; }
+    setCell('vol', `${volLab} (${dv.toFixed(2)}%/day)`, vs,
+      `20-day realized on ${sym} · annualized ≈ ${(dv*Math.sqrt(252)).toFixed(0)}%`);
+
+    let setup,ss,sub;
+    if(favorTrend==='ok' && vs!=='bad'){ setup='Favorable'; ss='ok'; sub='Trend + vol both pass the rules.'; }
+    else if(favorTrend==='bad' || vs==='bad'){ setup='Unfavorable'; ss='bad'; sub='Counter-trend leverage or high chop → max decay risk.'; }
+    else { setup='Borderline'; ss='mid'; sub='At least one factor fails. Tighten or pass.'; }
+    setCell('setup',setup,ss,sub);
+
+    $('vol').value = Math.min(8, Math.max(0, dv)).toFixed(2);
+    refresh(); refreshDollar();
+
+    setQ(0, favorTrend==='ok'?2 : favorTrend==='mid'?1 : 0);
+    setQ(1, vs==='ok'?2 : vs==='mid'?1 : 0);
+
+    const when = meta && meta.regularMarketTime ? new Date(meta.regularMarketTime*1000).toDateString() : '';
+    $('regimeStatus').textContent = `Live · ${sym} last close $${last.toFixed(2)}${when?(' · '+when):''} · scorecard Q1 & Q2 auto-filled`;
+  }catch(e){
+    $('regimeStatus').textContent='Could not fetch live data: '+e.message+'. The free proxy may be down — refresh in a minute, or answer Q1 & Q2 in the scorecard manually.';
+  }finally{
+    $('checkRegime').disabled=false;
+  }
+}
+
+// ---- Scorecard auto-fill bridge ----
+function setQ(qi,pts){
+  if(!quiz || !quiz.children[qi]) return;
+  answers[qi]=pts;
+  const opts=quiz.children[qi].querySelector('.opts'); if(!opts) return;
+  let target=-1;
+  Q[qi].opts.forEach(([,p],oi)=>{ if(p===pts && target===-1) target=oi; });
+  if(target<0) return;
+  [...opts.children].forEach(c=>c.classList.remove('sel'));
+  opts.children[target].classList.add('sel');
+  score();
+}
+function applyAutoFill(){
+  const pos=+myPos.value||0, port=+myPort.value||0;
+  if(pos>0 && port>0){
+    const pct=(pos/port)*100;
+    setQ(2, pct<=5?2 : pct<=15?1 : 0);
+  }
+  const h=myHold.value;
+  setQ(4, h==='days'?2 : h==='weeks'?1 : 0);
+}
+
+// ---- Wire up ----
+myT.addEventListener('input', refreshTicker);
+myT.addEventListener('change', refreshTicker);
+[myPos,myPort].forEach(el=>el.addEventListener('input', updatePosMeta));
+myHold.addEventListener('change', applyAutoFill);
+$('checkRegime').addEventListener('click', checkRegime);
+['lev','vol','drift','days','fee'].forEach(id=>$(id).addEventListener('input', refreshDollar));
+$('reroll').addEventListener('click', refreshDollar);
+
+// ---- Init ----
+refreshTicker();
+updatePosMeta();
+applyAutoFill();
+</script>
+</body>
+</html>

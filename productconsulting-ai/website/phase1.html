@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>productconsulting.ai — AI features that ship and get used</title>
+  <meta name="description" content="Product thinking for AI products. Score your AI idea in 30 seconds, then book a free teardown." />
+
+  <meta property="og:title" content="productconsulting.ai — Product thinking for AI products" />
+  <meta property="og:description" content="Score your AI idea in 30 seconds. Then book a free teardown." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236b5bff'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>pc</text></svg>" />
+
+  <style>
+    :root {
+      --bg:           #07070F;
+      --bg-2:         #0E0E1C;
+      --surface:      rgba(255,255,255,0.04);
+      --surface-2:    rgba(255,255,255,0.07);
+      --line:         rgba(255,255,255,0.10);
+      --ink:          #F4F5FB;
+      --ink-2:        #C9CCDE;
+      --muted:        #7C84A0;
+      --accent:       #6B5BFF;
+      --accent-2:     #B057FF;
+      --accent-3:     #4CC2FF;
+      --good:         #2DD4A4;
+      --warn:         #F5C84B;
+      --bad:          #FF5D6C;
+      --light-bg:     #FAFAFC;
+      --light-ink:    #0B1020;
+      --light-muted:  #545B73;
+      --light-line:   #E7E9F0;
+      --radius:       18px;
+      --maxw:         1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    h1,h2,h3 { line-height: 1.08; letter-spacing: -0.025em; margin: 0; font-weight: 800; }
+    p { margin: 0; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    /* ===== motion-on-scroll ===== */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-stagger > * { opacity: 0; transform: translateY(20px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+    .reveal-stagger.visible > * { opacity: 1; transform: none; }
+    .reveal-stagger.visible > *:nth-child(1){ transition-delay: .05s }
+    .reveal-stagger.visible > *:nth-child(2){ transition-delay: .15s }
+    .reveal-stagger.visible > *:nth-child(3){ transition-delay: .25s }
+    .reveal-stagger.visible > *:nth-child(4){ transition-delay: .35s }
+    .reveal-stagger.visible > *:nth-child(5){ transition-delay: .45s }
+
+    /* ===== buttons ===== */
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 26px; border-radius: 999px;
+      font-weight: 700; font-size: 15px; letter-spacing: -0.01em;
+      border: 1px solid transparent; cursor: pointer;
+      transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      box-shadow: 0 10px 40px rgba(107,91,255,.35), inset 0 1px 0 rgba(255,255,255,.18);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 50px rgba(107,91,255,.45); }
+    .btn-ghost-dark { background: var(--surface); border-color: var(--line); color: var(--ink); }
+    .btn-ghost-dark:hover { background: var(--surface-2); border-color: rgba(255,255,255,.22); }
+    .btn-ghost-light { background: #fff; border-color: var(--light-line); color: var(--light-ink); }
+    .btn-ghost-light:hover { border-color: #c9cde0; }
+
+    /* ===== nav ===== */
+    header.nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(7,7,15,0.72); backdrop-filter: saturate(180%) blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: -0.02em; font-size: 17px; color: var(--ink); }
+    .logo .dot {
+      width: 30px; height: 30px; border-radius: 9px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 800;
+      box-shadow: 0 6px 20px rgba(107,91,255,.4);
+    }
+    .nav-links { display: flex; align-items: center; gap: 30px; font-size: 15px; color: var(--muted); font-weight: 500; }
+    .nav-links a:hover { color: var(--ink); }
+    @media (max-width: 800px) { .nav-links { display: none; } }
+
+    /* ===== hero ===== */
+    .hero { position: relative; padding: 100px 0 80px; overflow: hidden; }
+    .hero-orb {
+      position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
+      width: 1200px; height: 1200px;
+      background:
+        radial-gradient(closest-side, rgba(107,91,255,.36), transparent 65%),
+        radial-gradient(closest-side at 70% 50%, rgba(176,87,255,.28), transparent 60%),
+        radial-gradient(closest-side at 30% 60%, rgba(76,194,255,.22), transparent 60%);
+      filter: blur(60px); pointer-events: none;
+      animation: orb-drift 14s ease-in-out infinite alternate;
+    }
+    @keyframes orb-drift {
+      0%   { transform: translateX(-52%) translateY(0)    scale(1); }
+      100% { transform: translateX(-48%) translateY(-20px) scale(1.05); }
+    }
+    .hero-grain {
+      position: absolute; inset: 0; pointer-events: none; opacity: .35; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.5'/></svg>");
+    }
+    .hero-inner { position: relative; z-index: 1; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 12.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--ink-2);
+      background: var(--surface); border: 1px solid var(--line); padding: 8px 14px; border-radius: 999px;
+    }
+    .eyebrow .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--good); box-shadow: 0 0 12px var(--good); animation: pulse 2.4s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.45} }
+    .hero h1 {
+      font-size: clamp(40px, 6.5vw, 78px);
+      margin-top: 26px; max-width: 18ch; font-weight: 800; letter-spacing: -0.035em;
+    }
+    .hero h1 .grad {
+      background: linear-gradient(135deg, var(--accent-3), var(--accent), var(--accent-2));
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p.sub { font-size: clamp(17px, 1.8vw, 21px); color: var(--ink-2); max-width: 58ch; margin-top: 26px; }
+    .hero-cta { display: flex; gap: 14px; margin-top: 38px; flex-wrap: wrap; }
+    .hero-trust {
+      margin-top: 28px; font-size: 14px; color: var(--muted); display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    }
+    .hero-trust .tick { color: var(--good); font-weight: 800; }
+    .hero-trust .dotsep { width: 4px; height: 4px; border-radius: 50%; background: var(--muted); opacity: .5; }
+
+    /* ===== score tool ===== */
+    .score-section { position: relative; padding: 40px 0 110px; }
+    .score-card {
+      position: relative;
+      background: linear-gradient(180deg, rgba(20,20,38,.85), rgba(14,14,28,.92));
+      border: 1px solid var(--line); border-radius: 28px;
+      padding: 44px; overflow: hidden;
+      box-shadow: 0 30px 120px rgba(0,0,0,.55);
+    }
+    .score-card::before {
+      content: ""; position: absolute; top: -1px; left: -1px; right: -1px; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(107,91,255,.7), rgba(176,87,255,.5), transparent);
+    }
+    .score-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 24px; }
+    .score-head h2 { font-size: clamp(24px, 3vw, 34px); }
+    .score-head .badge { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-3); background: rgba(76,194,255,.1); border: 1px solid rgba(76,194,255,.25); padding: 6px 12px; border-radius: 999px; }
+    .score-head p { color: var(--ink-2); font-size: 16px; margin-top: 10px; max-width: 64ch; }
+    .score-input-row { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+    .score-input {
+      flex: 1; min-width: 280px;
+      background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+      padding: 18px 22px; color: var(--ink); font-size: 17px; outline: none;
+      font-family: inherit;
+      transition: border-color .15s, background .15s;
+    }
+    .score-input:focus { border-color: rgba(107,91,255,.6); background: var(--surface-2); }
+    .score-input::placeholder { color: #4f566e; }
+    .score-btn { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; border: 0; border-radius: 14px; padding: 0 28px; font-size: 15px; font-weight: 700; cursor: pointer; min-height: 58px; box-shadow: 0 10px 40px rgba(107,91,255,.35); transition: transform .15s; }
+    .score-btn:hover { transform: translateY(-1px); }
+    .score-examples { margin-top: 14px; font-size: 13px; color: var(--muted); }
+    .score-examples b { color: var(--ink-2); font-weight: 600; cursor: pointer; border-bottom: 1px dotted rgba(255,255,255,.25); margin-right: 12px; }
+    .score-examples b:hover { color: var(--accent-3); border-color: var(--accent-3); }
+
+    .score-result { margin-top: 32px; display: none; }
+    .score-result.shown { display: block; animation: fadeUp .6s cubic-bezier(.2,.7,.2,1); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+    .score-verdict { display: flex; align-items: center; gap: 22px; padding: 22px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); margin-bottom: 22px; flex-wrap: wrap; }
+    .score-ring {
+      flex: none; width: 96px; height: 96px; border-radius: 50%;
+      display: grid; place-items: center; font-size: 26px; font-weight: 800; font-variant-numeric: tabular-nums;
+      background:
+        conic-gradient(var(--ring-color, var(--accent)) calc(var(--ring) * 1%), rgba(255,255,255,.08) 0);
+      position: relative;
+    }
+    .score-ring::before { content: ""; position: absolute; inset: 7px; border-radius: 50%; background: var(--bg-2); }
+    .score-ring span { position: relative; z-index: 1; }
+    .score-verdict .label-bit { font-size: 12.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 700; }
+    .score-verdict h3 { font-size: 22px; margin: 4px 0 2px; }
+    .score-verdict .vsub { color: var(--ink-2); font-size: 15px; }
+    .dims { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    @media (max-width: 760px) { .dims { grid-template-columns: repeat(2, 1fr); } }
+    .dim { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+    .dim .dlab { font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; font-weight: 700; }
+    .dim .dval { font-size: 22px; font-weight: 800; margin-top: 4px; font-variant-numeric: tabular-nums; }
+    .dim .dval .of { color: var(--muted); font-size: 13px; font-weight: 600; }
+    .dim .dbar { height: 5px; border-radius: 999px; background: rgba(255,255,255,.07); margin-top: 8px; overflow: hidden; }
+    .dim .dbar i { display: block; height: 100%; background: linear-gradient(90deg, var(--accent-3), var(--accent), var(--accent-2)); width: 0%; transition: width .9s cubic-bezier(.2,.7,.2,1); border-radius: 999px; }
+    .insights { margin-top: 22px; }
+    .insights .ihead { font-size: 12.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 700; margin-bottom: 10px; }
+    .insights ul { list-style: none; padding: 0; margin: 0; }
+    .insights li { padding: 12px 0 12px 26px; position: relative; color: var(--ink-2); font-size: 15.5px; border-top: 1px solid rgba(255,255,255,.05); }
+    .insights li:first-child { border-top: 0; padding-top: 4px; }
+    .insights li::before { content: ""; position: absolute; left: 0; top: 18px; width: 14px; height: 2px; background: linear-gradient(90deg, var(--accent-3), var(--accent-2)); border-radius: 2px; }
+    .insights li:first-child::before { top: 10px; }
+    .score-cta {
+      margin-top: 24px; padding: 22px; border-radius: 16px;
+      background: linear-gradient(135deg, rgba(107,91,255,.18), rgba(176,87,255,.12));
+      border: 1px solid rgba(107,91,255,.3);
+      display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+    }
+    .score-cta .ctext h4 { font-size: 18px; }
+    .score-cta .ctext p { color: var(--ink-2); font-size: 14.5px; margin-top: 4px; max-width: 50ch; }
+
+    /* ===== light section base ===== */
+    .light { background: var(--light-bg); color: var(--light-ink); }
+    .light p { color: var(--light-muted); }
+    .light .section-head { max-width: 60ch; margin-bottom: 56px; }
+    .light .section-head .tag { font-size: 12.5px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: .12em; }
+    .light .section-head h2 { font-size: clamp(30px, 4vw, 46px); margin-top: 14px; font-weight: 800; }
+    .light .section-head p { font-size: 18px; margin-top: 18px; color: var(--light-muted); }
+    section.block { padding: 110px 0; }
+
+    /* ===== stat band (dark, between hero+score and the light content) ===== */
+    .stat-band { padding: 24px 0 80px; position: relative; }
+    .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 760px) { .stat-grid { grid-template-columns: 1fr; } }
+    .stat-c {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 28px;
+      position: relative; overflow: hidden;
+    }
+    .stat-c::before { content: ""; position: absolute; top: -1px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent); }
+    .stat-c .n {
+      font-size: clamp(38px, 5vw, 56px); font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--accent-3), var(--accent-2));
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+      line-height: 1;
+    }
+    .stat-c .l { color: var(--ink-2); font-size: 15px; margin-top: 12px; }
+    .stat-c .src { color: var(--muted); font-size: 12px; margin-top: 8px; }
+
+    /* ===== problem cards (light) ===== */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
+    .card-l { background: #fff; border: 1px solid var(--light-line); border-radius: var(--radius); padding: 30px; transition: transform .2s ease, box-shadow .2s ease; }
+    .card-l:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(11,16,32,.08); }
+    .card-l h3 { font-size: 19px; margin-bottom: 10px; }
+    .card-l p { color: var(--light-muted); font-size: 15.5px; }
+    .card-l .ico { width: 46px; height: 46px; border-radius: 12px; background: linear-gradient(135deg, #eef0ff, #e8e1ff); display: grid; place-items: center; margin-bottom: 18px; font-size: 22px; }
+
+    /* ===== fit columns ===== */
+    .grid-2-fit { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    @media (max-width: 820px) { .grid-2-fit { grid-template-columns: 1fr; } }
+    .fit-col { border-radius: var(--radius); padding: 32px; border: 1px solid var(--light-line); background: #fff; }
+    .fit-yes { background: #f1fbf5; border-color: #cdeede; }
+    .fit-no  { background: #fafbfc; }
+    .fit-col h3 { font-size: 19px; display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .fit-mark { width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; font-size: 14px; font-weight: 800; color: #fff; }
+    .fit-yes .fit-mark { background: var(--good); }
+    .fit-no  .fit-mark { background: #9aa3b8; }
+    .fit-col ul { margin: 0; padding-left: 0; list-style: none; }
+    .fit-col li { padding: 10px 0 10px 28px; position: relative; font-size: 15.5px; color: #20283d; border-top: 1px solid rgba(0,0,0,.05); }
+    .fit-col li:first-child { border-top: none; }
+    .fit-col li::before { content: "—"; position: absolute; left: 0; color: var(--light-muted); }
+
+    /* ===== offer ladder ===== */
+    .ladder { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    @media (max-width: 1000px) { .ladder { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px)  { .ladder { grid-template-columns: 1fr; } }
+    .offer {
+      background: #fff; border: 1px solid var(--light-line); border-radius: var(--radius);
+      padding: 28px; display: flex; flex-direction: column;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .offer:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(11,16,32,.08); border-color: #d7daea; }
+    .offer.featured { border-color: var(--accent); box-shadow: 0 18px 44px rgba(107,91,255,.16); position: relative; }
+    .offer.featured::after { content: "Start here"; position: absolute; top: -12px; right: 18px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 999px; }
+    .offer .step { font-size: 12.5px; font-weight: 800; color: var(--accent); letter-spacing: .07em; }
+    .offer h3 { font-size: 20px; margin: 10px 0 4px; }
+    .offer .price { font-size: 24px; font-weight: 800; margin: 10px 0 4px; }
+    .offer .price span { font-size: 14px; font-weight: 600; color: var(--light-muted); }
+    .offer .meta { font-size: 13px; color: var(--light-muted); margin-bottom: 14px; }
+    .offer p.desc { font-size: 14.5px; color: var(--light-muted); flex: 1; }
+
+    /* ===== process ===== */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    @media (max-width: 900px) { .steps { grid-template-columns: 1fr; } }
+    .step-item { padding: 26px; border-left: 3px solid var(--accent); background: #fff; border-radius: 0 14px 14px 0; border: 1px solid var(--light-line); border-left: 3px solid var(--accent); }
+    .step-item .num { font-size: 12.5px; font-weight: 800; color: var(--accent); letter-spacing: .08em; }
+    .step-item h3 { font-size: 17px; margin: 8px 0; }
+    .step-item p { color: var(--light-muted); font-size: 14.5px; }
+
+    /* ===== about ===== */
+    .about { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: center; }
+    @media (max-width: 900px) { .about { grid-template-columns: 1fr; } }
+    .headshot { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; display: block; margin: 18px 0 8px; border: 4px solid #fff; box-shadow: 0 12px 30px rgba(11,16,32,.14); }
+    .creds { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    .chip { font-size: 13.5px; font-weight: 600; color: var(--accent); background: #eef0ff; border: 1px solid #e0e2ff; padding: 8px 14px; border-radius: 999px; }
+    .about .quote { background: var(--light-ink); color: #fff; border-radius: var(--radius); padding: 40px; }
+    .about .quote p { font-size: 20px; font-weight: 500; color: #fff; }
+    .about .quote .by { color: #aeb6cf; font-size: 14px; margin-top: 22px; }
+
+    /* ===== framework PDF capture ===== */
+    .lead-magnet {
+      background: linear-gradient(135deg, var(--bg-2), #14143A);
+      color: var(--ink); padding: 110px 0; position: relative; overflow: hidden;
+    }
+    .lead-magnet::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(800px 400px at 80% 10%, rgba(107,91,255,.25), transparent 60%);
+    }
+    .lm-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; position: relative; }
+    @media (max-width: 900px) { .lm-grid { grid-template-columns: 1fr; } }
+    .lm-tag { font-size: 12.5px; font-weight: 800; color: var(--accent-3); text-transform: uppercase; letter-spacing: .12em; }
+    .lm h2 { font-size: clamp(28px, 4vw, 42px); margin-top: 14px; }
+    .lm p { font-size: 17px; color: var(--ink-2); margin-top: 18px; max-width: 52ch; }
+    .lm ul { list-style: none; padding: 0; margin: 22px 0 0; }
+    .lm li { padding: 8px 0 8px 28px; position: relative; color: var(--ink-2); font-size: 15.5px; }
+    .lm li::before { content: "→"; position: absolute; left: 0; color: var(--accent-3); font-weight: 700; }
+    .lm-form { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 32px; }
+    .lm-form label { display: block; font-size: 12.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-weight: 700; margin-bottom: 6px; }
+    .lm-form input { width: 100%; background: rgba(0,0,0,.25); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; color: var(--ink); font-size: 15px; outline: none; font-family: inherit; margin-bottom: 14px; }
+    .lm-form input:focus { border-color: rgba(107,91,255,.6); }
+    .lm-form button { width: 100%; }
+    .lm-form .note { font-size: 12.5px; color: var(--muted); margin-top: 10px; text-align: center; }
+    .lm-success { display: none; padding: 32px; text-align: center; }
+    .lm-success.shown { display: block; }
+    .lm-success h3 { font-size: 22px; }
+    .lm-success p { color: var(--ink-2); margin-top: 8px; }
+
+    /* ===== FAQ ===== */
+    .faq details { border: 1px solid var(--light-line); border-radius: 14px; padding: 6px 24px; margin-bottom: 12px; background: #fff; }
+    .faq summary { cursor: pointer; font-weight: 700; font-size: 17px; padding: 20px 0; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; color: var(--accent); font-size: 24px; font-weight: 700; }
+    .faq details[open] summary::after { content: "–"; }
+    .faq details p { color: var(--light-muted); font-size: 16px; padding: 0 0 20px; }
+
+    /* ===== final CTA ===== */
+    .final-cta { padding: 100px 0 120px; position: relative; overflow: hidden; }
+    .final-cta::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(700px 380px at 50% 0%, rgba(107,91,255,.28), transparent 60%),
+        radial-gradient(700px 400px at 80% 100%, rgba(176,87,255,.20), transparent 60%);
+      pointer-events: none;
+    }
+    .final-cta-inner { position: relative; text-align: center; }
+    .final-cta h2 { font-size: clamp(36px, 5vw, 64px); }
+    .final-cta h2 .grad { background: linear-gradient(135deg, var(--accent-3), var(--accent-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .final-cta p { color: var(--ink-2); margin-top: 22px; font-size: 19px; max-width: 56ch; margin-left: auto; margin-right: auto; }
+    .final-cta .btn { margin-top: 36px; }
+
+    /* ===== footer ===== */
+    footer { border-top: 1px solid var(--line); padding: 42px 0; color: var(--muted); font-size: 14px; }
+    .foot-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#top">
+        <span class="dot">pc</span>
+        productconsulting<span style="color:var(--accent)">.ai</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#score">Score my idea</a>
+        <a href="#offers">Engagements</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-primary" href="https://cal.com/amanda-shelton/teardown" target="_blank" rel="noopener">Book a teardown →</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-orb"></div>
+    <div class="hero-grain"></div>
+    <div class="wrap hero-inner">
+      <div class="reveal-stagger">
+        <span class="eyebrow"><span class="pulse"></span> Product thinking for AI products</span>
+        <h1>AI features that <span class="grad">ship and get used</span> — not another strategy deck.</h1>
+        <p class="sub">
+          Most AI initiatives stall because they're led by engineers without product judgment, or consultants who aren't AI-native. I bring senior product leadership to the messy middle — so your team builds the right AI features and actually ships them.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#score">Score my AI idea in 30 seconds →</a>
+          <a class="btn btn-ghost-dark" href="https://cal.com/amanda-shelton/teardown" target="_blank" rel="noopener">Or book a teardown</a>
+        </div>
+        <div class="hero-trust">
+          <span><span class="tick">✓</span> Fixed-scope AI Product Audit from $3,000</span>
+          <span class="dotsep"></span>
+          <span>No open-ended retainers</span>
+          <span class="dotsep"></span>
+          <span>7+ years senior product · ex-JPMorgan</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCORE TOOL -->
+  <section class="score-section" id="score">
+    <div class="wrap">
+      <div class="score-card reveal">
+        <div class="score-head">
+          <div>
+            <span class="badge">▸ Free interactive teaser</span>
+            <h2 style="margin-top:12px">Score your AI idea in 30 seconds.</h2>
+            <p>Type your AI feature idea below. I'll grade it on the five dimensions I score in real client audits — and tell you the most common ways this kind of idea fails.</p>
+          </div>
+        </div>
+
+        <div class="score-input-row">
+          <input id="ideaInput" class="score-input" type="text" placeholder="e.g., AI summarization for legal contracts" autocomplete="off" />
+          <button id="ideaBtn" class="score-btn">Score it →</button>
+        </div>
+        <div class="score-examples">
+          Try:
+          <b data-example="AI customer support chatbot">support chatbot</b>
+          <b data-example="AI-powered recommendations for our e-commerce store">recommendations</b>
+          <b data-example="Predictive churn forecasting">predictive churn</b>
+          <b data-example="AI copilot for sales reps">sales copilot</b>
+        </div>
+
+        <div id="scoreResult" class="score-result">
+          <div class="score-verdict">
+            <div class="score-ring" id="ring" style="--ring: 0; --ring-color: var(--accent);"><span id="ringNum">0</span></div>
+            <div>
+              <div class="label-bit">Overall — your idea looks like a</div>
+              <h3 id="vTitle">—</h3>
+              <div class="vsub" id="vSub">—</div>
+            </div>
+          </div>
+
+          <div class="dims" id="dims">
+            <div class="dim"><div class="dlab">User value</div><div class="dval"><span id="dval-value">—</span><span class="of"> / 5</span></div><div class="dbar"><i id="dbar-value"></i></div></div>
+            <div class="dim"><div class="dlab">Business impact</div><div class="dval"><span id="dval-impact">—</span><span class="of"> / 5</span></div><div class="dbar"><i id="dbar-impact"></i></div></div>
+            <div class="dim"><div class="dlab">Feasibility</div><div class="dval"><span id="dval-feasibility">—</span><span class="of"> / 5</span></div><div class="dbar"><i id="dbar-feasibility"></i></div></div>
+            <div class="dim"><div class="dlab">Time to value</div><div class="dval"><span id="dval-ttv">—</span><span class="of"> / 5</span></div><div class="dbar"><i id="dbar-ttv"></i></div></div>
+            <div class="dim"><div class="dlab">Defensibility</div><div class="dval"><span id="dval-moat">—</span><span class="of"> / 5</span></div><div class="dbar"><i id="dbar-moat"></i></div></div>
+          </div>
+
+          <div class="insights">
+            <div class="ihead">What this kind of idea usually gets wrong</div>
+            <ul id="insightList"></ul>
+          </div>
+
+          <div class="score-cta">
+            <div class="ctext">
+              <h4>This was a 30-second teaser.</h4>
+              <p>The real <strong>AI Product Audit</strong> applies this scoring to <em>your</em> actual product, ranks every opportunity by ROI/effort, and gives you a concrete first-build recommendation. 2 weeks, $3,000.</p>
+            </div>
+            <a class="btn btn-primary" href="https://cal.com/amanda-shelton/teardown" target="_blank" rel="noopener">Book a free teardown →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAT BAND -->
+  <section class="stat-band">
+    <div class="wrap">
+      <div class="stat-grid reveal-stagger">
+        <div class="stat-c"><div class="n">95%</div><div class="l">of enterprise GenAI pilots deliver no measurable P&amp;L impact</div><div class="src">MIT, 2025</div></div>
+        <div class="stat-c"><div class="n">~67%</div><div class="l">of organizations know they need AI but have no product strategy for it</div><div class="src">Deloitte State of AI</div></div>
+        <div class="stat-c"><div class="n">2×</div><div class="l">higher success rate when AI is built with outside product help vs. internal-only</div><div class="src">MIT, 2025</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM (LIGHT) -->
+  <section class="block light" id="problem">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="tag">The problem</div>
+        <h2>The gap isn't the model. It's the product judgment around it.</h2>
+        <p>Teams can call an API. What they struggle with is deciding what's worth building, scoping it so it ships, and making sure people actually use it. That's a product problem — and it's where most AI work quietly fails.</p>
+      </div>
+      <div class="grid-3 reveal-stagger">
+        <div class="card-l"><div class="ico">🎯</div><h3>Wrong bets</h3><p>AI features chosen by hype or demo appeal, not by ROI and user value. Effort goes to things nobody needed.</p></div>
+        <div class="card-l"><div class="ico">🌀</div><h3>Scope that never ships</h3><p>Ambitious "AI everywhere" projects that balloon, lose momentum, and stall before reaching users.</p></div>
+        <div class="card-l"><div class="ico">📉</div><h3>Built but unused</h3><p>Features that launch to a press release and then flatline — no adoption, no measurable impact.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIT (LIGHT) -->
+  <section class="block light" id="fit" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="tag">Fit</div>
+        <h2>Who this is for — and who it isn't.</h2>
+        <p>Sharp focus is the point. If you're outside this, I'll happily refer you to someone better suited.</p>
+      </div>
+      <div class="grid-2-fit reveal-stagger">
+        <div class="fit-col fit-yes">
+          <h3><span class="fit-mark">✓</span> A great fit</h3>
+          <ul>
+            <li>Companies with a real product and real users adding AI features.</li>
+            <li>Founders/CEOs/product leaders who want AI to move a metric, not generate a headline.</li>
+            <li>Teams that can build but need product judgment on <em>what</em> to build.</li>
+            <li>You want a senior operator in the work, not a deck delivered from arm's length.</li>
+          </ul>
+        </div>
+        <div class="fit-col fit-no">
+          <h3><span class="fit-mark">✕</span> Not a fit (yet)</h3>
+          <ul>
+            <li>Enterprises wanting a 6-month org-wide "AI transformation" program.</li>
+            <li>Pre-product ideas looking for someone to build an app from scratch.</li>
+            <li>Pure research / model-training work with no product to ship into.</li>
+            <li>Anyone shopping for the cheapest possible hourly rate.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFERS (LIGHT) -->
+  <section class="block light" id="offers" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="tag">Engagements</div>
+        <h2>Start small. Climb as it works.</h2>
+        <p>Every engagement begins with a fixed-scope, low-risk audit. From there, we go as deep as the results justify — from a single feature sprint to embedded product leadership.</p>
+      </div>
+      <div class="ladder reveal-stagger">
+        <div class="offer featured">
+          <div class="step">STEP 1 · ON-RAMP</div>
+          <h3>AI Product Audit</h3>
+          <div class="price">$3,000 <span>flat</span></div>
+          <div class="meta">2 weeks · fixed scope</div>
+          <p class="desc">A clear-eyed review of your product and AI opportunities, ranked by ROI and effort, with a concrete roadmap you can act on immediately.</p>
+        </div>
+        <div class="offer">
+          <div class="step">STEP 2 · BUILD</div>
+          <h3>AI Product Sprint</h3>
+          <div class="price">$12k–$18k</div>
+          <div class="meta">4–6 weeks · hands-on</div>
+          <p class="desc">We take the audit's top opportunity and define, spec, and de-risk it with your team — to a shippable plan or working prototype.</p>
+        </div>
+        <div class="offer">
+          <div class="step">STEP 3 · RECURRING</div>
+          <h3>Advisory Retainer</h3>
+          <div class="price">$4k–$8k <span>/mo</span></div>
+          <div class="meta">ongoing · light-touch</div>
+          <p class="desc">Roadmap, prioritization, and product reviews — AI product judgment on call as you keep shipping.</p>
+        </div>
+        <div class="offer">
+          <div class="step">STEP 4 · EMBEDDED</div>
+          <h3>Fractional Head of AI Product</h3>
+          <div class="price">$12k–$20k <span>/mo</span></div>
+          <div class="meta">2–3 days/week</div>
+          <p class="desc">Senior product leadership owning your AI product strategy and execution end-to-end. Limited to a few clients at a time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS (LIGHT) -->
+  <section class="block light" id="process" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="tag">How it works</div>
+        <h2>A senior operator, not a slide factory.</h2>
+        <p>Ownership transfer, not dependency. Your team is more capable when the engagement ends.</p>
+      </div>
+      <div class="steps reveal-stagger">
+        <div class="step-item"><div class="num">STEP 1</div><h3>Free teardown call</h3><p>30 minutes on your product and AI ambitions. You leave with at least one useful idea, whether or not we work together.</p></div>
+        <div class="step-item"><div class="num">STEP 2</div><h3>The audit</h3><p>Two weeks to a ranked, ROI-weighted roadmap of AI opportunities — and a clear recommendation on the first thing to build.</p></div>
+        <div class="step-item"><div class="num">STEP 3</div><h3>Ship something</h3><p>A focused sprint turns the top opportunity into a shippable feature plan or prototype your team can run with.</p></div>
+        <div class="step-item"><div class="num">STEP 4</div><h3>Scale the partnership</h3><p>Stay on as advisor or embedded fractional product lead — as deep as the results justify, never more.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT (LIGHT) -->
+  <section class="block light" id="about" style="padding-top:0">
+    <div class="wrap about reveal">
+      <div>
+        <div class="section-head" style="margin-bottom:24px">
+          <div class="tag">About</div>
+          <img src="assets/headshot-studio.png" alt="Amanda Shelton, MBA" class="headshot" />
+          <h2>Hi, I'm Amanda Shelton, MBA.</h2>
+        </div>
+        <p style="font-size:17px;">
+          I've spent 7+ years in product management — including a Product Manager role at JPMorgan Chase and earlier work as a Data Analytics Consultant at a Tableau Partner. That mix of product judgment and data depth is exactly what teams need to make AI work: someone who can spot the right bet, scope it so it ships, and measure whether it actually moved the metric.
+        </p>
+        <p style="font-size:17px; margin-top:16px;">
+          No transformation theater. No 80-slide decks. Just sharp product decisions and features that ship.
+        </p>
+        <div class="creds">
+          <span class="chip">Ex-JPMorgan Chase product</span>
+          <span class="chip">7+ years in product management</span>
+          <span class="chip">Data + AI product strategy</span>
+        </div>
+      </div>
+      <div class="quote">
+        <p>"The companies winning with AI aren't the ones with the best models. They're the ones making the best product decisions about where to use them."</p>
+        <div class="by">— the operating thesis behind productconsulting.ai</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD MAGNET / FREE FRAMEWORK (DARK) -->
+  <section class="lead-magnet" id="framework">
+    <div class="wrap lm-grid">
+      <div class="lm reveal">
+        <span class="lm-tag">▸ Free download</span>
+        <h2>The AI Product Audit Scoring Framework</h2>
+        <p>The exact framework I use in paid client audits — distilled into a working PDF you can apply to your own product this week. Not a vague "AI strategy" eBook. A real, opinionated scoring model.</p>
+        <ul>
+          <li>The 5-dimension scoring rubric (you just used a teaser version above)</li>
+          <li>How to weight each dimension for your stage and industry</li>
+          <li>The "what to NOT build" checklist that's saved clients quarters of wasted work</li>
+          <li>A worked example showing a real prioritization in action</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <form id="leadForm" class="lm-form">
+          <label for="lmName">Your name</label>
+          <input id="lmName" type="text" required placeholder="Your full name" />
+          <label for="lmEmail">Work email</label>
+          <input id="lmEmail" type="email" required placeholder="you@company.com" />
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send me the framework →</button>
+          <div class="note">No spam. One framework, plus one short email a week if you opt in. Unsubscribe anytime.</div>
+        </form>
+        <div id="leadSuccess" class="lm-success">
+          <h3>✓ On its way.</h3>
+          <p>Check your inbox in the next minute. If you'd rather not wait, you can also <a href="https://cal.com/amanda-shelton/teardown" target="_blank" rel="noopener" style="color:var(--accent-3);text-decoration:underline">book a teardown directly</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (LIGHT) -->
+  <section class="block light" id="faq">
+    <div class="wrap" style="max-width:860px">
+      <div class="section-head reveal">
+        <div class="tag">FAQ</div>
+        <h2>Questions, answered.</h2>
+      </div>
+      <div class="faq reveal">
+        <details open>
+          <summary>What exactly do I get from the $3,000 audit?</summary>
+          <p>A written, ranked roadmap of AI opportunities for your product — each scored by ROI and effort — plus a clear recommendation on the single highest-value thing to build first, and how to de-risk it. Delivered in two weeks, with a walkthrough call.</p>
+        </details>
+        <details>
+          <summary>Why start with an audit instead of just building?</summary>
+          <p>Because 95% of AI pilots fail on the wrong-bet and won't-ship problems — not the engineering. Two weeks of sharp product thinking up front saves months of building something nobody uses.</p>
+        </details>
+        <details>
+          <summary>Do you build the feature, or just advise?</summary>
+          <p>Both are available. The audit defines what's worth building; the Sprint engagement is hands-on to spec and de-risk it with your team; ongoing retainer or fractional leadership takes it further. You choose how deep to go.</p>
+        </details>
+        <details>
+          <summary>What stage and size of company is this for?</summary>
+          <p>Teams with a real product and real users — from seed-stage startups to enterprise product orgs. If you're earlier or much larger, I'll tell you honestly and point you to a better fit.</p>
+        </details>
+        <details>
+          <summary>How do we start?</summary>
+          <p>Book a free 30-minute teardown call. We pressure-test your AI ideas live and you leave with at least one concrete next step — no obligation to go further.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA (DARK) -->
+  <section class="final-cta" id="book">
+    <div class="wrap final-cta-inner reveal">
+      <h2>Find your highest-ROI <span class="grad">AI feature</span>.</h2>
+      <p>Book a free 30-minute teardown. We pressure-test your AI ideas live, and you'll leave with a concrete next step — no pitch required.</p>
+      <a class="btn btn-primary" href="https://cal.com/amanda-shelton/teardown" target="_blank" rel="noopener">Book your teardown call →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot-inner">
+      <div class="logo"><span class="dot">pc</span> productconsulting<span style="color:var(--accent)">.ai</span></div>
+      <div>© <span id="year"></span> productconsulting.ai · Product thinking for AI products</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ===== motion on scroll =====
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+    // ===== score-my-ai-idea tool =====
+    const PATTERNS = [
+      {
+        keywords: ['chatbot','chat bot','support bot','helpdesk','help desk','customer support bot'],
+        scores: { value: 3, impact: 4, feasibility: 5, ttv: 4, moat: 2 },
+        insights: [
+          "Solved by dozens of vendors already. The build-vs-buy answer is almost always BUY. If you build, you need a clear reason it has to be in-product.",
+          "The metric that actually matters: deflection rate × CSAT. Anchor the project to those numbers — not chatbot output quality.",
+          "Hidden cost: keeping the knowledge base fresh. Plan for the maintenance loop or it goes stale in 3 months."
+        ]
+      },
+      {
+        keywords: ['summariz','summary','tl;dr','tldr'],
+        scores: { value: 4, impact: 3, feasibility: 5, ttv: 5, moat: 2 },
+        insights: [
+          "Trivially easy to ship — every LLM does this out of the box. The MVP is one weekend.",
+          "Where it shines: high-context professional use cases (legal, medical, finance). Users return weekly.",
+          "Where it fails: generic content. Nobody comes back for a 'TL;DR' button on blog posts."
+        ]
+      },
+      {
+        keywords: ['recommend','recommendation','suggest','personali'],
+        scores: { value: 4, impact: 4, feasibility: 3, ttv: 3, moat: 3 },
+        insights: [
+          "Massive impact when it's right, invisible when it's wrong. Tune for relevance, not novelty.",
+          "Data quality is the actual product. The model is the easy part.",
+          "Measure on lift over a non-AI baseline — not absolute click-through. The baseline is the trap."
+        ]
+      },
+      {
+        keywords: ['search','find','semantic','retriev'],
+        scores: { value: 5, impact: 4, feasibility: 4, ttv: 4, moat: 3 },
+        insights: [
+          "Huge value when the existing search is bad — quick-win territory.",
+          "Hybrid search (lexical + vector) outperforms vector-only in nearly every real app. Don't go vector-only.",
+          "Build a 50-query eval set with known good answers BEFORE you ship. Otherwise you can't tell if it regressed."
+        ]
+      },
+      {
+        keywords: ['copilot','assistant','agent','autopilot'],
+        scores: { value: 4, impact: 4, feasibility: 2, ttv: 2, moat: 3 },
+        insights: [
+          "Scope creep is the #1 killer here. Pick ONE workflow it owns end-to-end. 'General assistant' is a graveyard.",
+          "Adoption gap: users default to manual unless the copilot beats it 90%+ of the time. Trust is binary.",
+          "Cost note: per-user inference can wipe your margin. Model unit economics before shipping, not after."
+        ]
+      },
+      {
+        keywords: ['generate','content','writing','image','creative','copy '],
+        scores: { value: 3, impact: 3, feasibility: 5, ttv: 4, moat: 1 },
+        insights: [
+          "Low-barrier feature, low defensibility. Easy to ship, easy for a competitor to copy.",
+          "Brand-voice tuning is where the differentiation actually lives — the model isn't the moat.",
+          "Pair with a strong editing UX. Raw generation alone rarely retains users past month one."
+        ]
+      },
+      {
+        keywords: ['predict','forecast','churn','propensity'],
+        scores: { value: 4, impact: 5, feasibility: 2, ttv: 1, moat: 4 },
+        insights: [
+          "When it works, it's transformative — concrete dollar impact tied to a known outcome.",
+          "Where it fails: bad or thin data. Audit data quality before building, not during.",
+          "Adoption rule: predictions must come with confidence + a recommended action. 'Likely to churn' alone is useless."
+        ]
+      },
+      {
+        keywords: ['classify','classif','tag','categor','triag'],
+        scores: { value: 4, impact: 4, feasibility: 4, ttv: 4, moat: 3 },
+        insights: [
+          "High-ROI when it replaces manual labeling at scale — concrete time-savings story.",
+          "Cost-effective with smaller models; you rarely need a frontier LLM here. Don't overbuild.",
+          "Build a human-in-the-loop for edge cases — full automation is rarely safe day one."
+        ]
+      },
+      {
+        keywords: ['voice','speech','transcri','audio','call'],
+        scores: { value: 4, impact: 4, feasibility: 4, ttv: 3, moat: 2 },
+        insights: [
+          "Latency matters more than accuracy past ~95%. Users tolerate small errors; they don't tolerate lag.",
+          "Speaker diarization (who said what) is the hard part. Single-speaker transcription is easy.",
+          "Use-case clarity wins. 'Meeting notes' is a product; 'voice assistant' is a feature looking for a home."
+        ]
+      },
+      {
+        keywords: ['fraud','risk','anomal','detect','suspicious'],
+        scores: { value: 5, impact: 5, feasibility: 3, ttv: 2, moat: 4 },
+        insights: [
+          "ROI is concrete and measurable — losses prevented. Easy to justify the spend.",
+          "Class imbalance is the real challenge. Off-the-shelf models fail without rebalancing.",
+          "Explainability matters: ops teams need to know WHY something flagged. Black-box won't pass review."
+        ]
+      },
+      {
+        keywords: ['onboard','activation','signup','sign-up'],
+        scores: { value: 5, impact: 5, feasibility: 4, ttv: 4, moat: 3 },
+        insights: [
+          "One of the highest-leverage AI placements in any product. Activation drives every downstream metric.",
+          "AI-assisted onboarding works when it adapts to user inputs — not when it scripts a tour.",
+          "Measure on activation rate and time-to-value, not on AI usage. The AI is the means, not the goal."
+        ]
+      }
+    ];
+    const GENERIC = {
+      scores: { value: 3, impact: 3, feasibility: 3, ttv: 3, moat: 2 },
+      insights: [
+        "Your idea needs more specificity to score precisely. The clearer the user moment it improves, the higher the value.",
+        "Default rule: small scope + measurable metric beats ambitious scope + vague hope. Always.",
+        "Three sharpening questions: What user moment does it improve? What metric should move? What's the smallest version that proves it?"
+      ]
+    };
+
+    function findMatch(input) {
+      const lower = (input || '').toLowerCase();
+      if (!lower.trim()) return GENERIC;
+      for (const p of PATTERNS) {
+        for (const k of p.keywords) {
+          if (lower.includes(k)) return p;
+        }
+      }
+      return GENERIC;
+    }
+
+    function verdictFor(total) {
+      if (total >= 21) return { title: 'Strong bet, ship it carefully',  sub: 'Your idea scores well across the board. Tighten scope, define the success metric, and ship a small version fast.', color: 'var(--good)' };
+      if (total >= 17) return { title: 'Real opportunity with caveats',  sub: 'Scores show a defensible idea, but specific weaknesses below could sink it. Address those before committing.', color: 'var(--accent-3)' };
+      if (total >= 13) return { title: 'Mixed — needs sharpening',       sub: 'Could be valuable, but the current shape has serious tradeoffs. Rework one or two dimensions before you build.', color: 'var(--warn)' };
+      return                    { title: 'Risky — likely the wrong bet', sub: 'Multiple dimensions are working against you. Consider a sharper version, or a different opportunity entirely.', color: 'var(--bad)' };
+    }
+
+    function showResult(match) {
+      const s = match.scores;
+      const total = s.value + s.impact + s.feasibility + s.ttv + s.moat;
+      const pct = Math.round(total / 25 * 100);
+      const v = verdictFor(total);
+
+      const ring = document.getElementById('ring');
+      ring.style.setProperty('--ring', pct);
+      ring.style.setProperty('--ring-color', v.color);
+      document.getElementById('ringNum').textContent = pct;
+      document.getElementById('vTitle').textContent = v.title;
+      document.getElementById('vSub').textContent = v.sub;
+
+      const dims = [
+        ['value',       s.value],
+        ['impact',      s.impact],
+        ['feasibility', s.feasibility],
+        ['ttv',         s.ttv],
+        ['moat',        s.moat]
+      ];
+      dims.forEach(([k, val]) => {
+        document.getElementById('dval-' + k).textContent = val;
+        // animate after a tick so the transition fires
+        const bar = document.getElementById('dbar-' + k);
+        bar.style.width = '0%';
+        requestAnimationFrame(() => { bar.style.width = (val / 5 * 100) + '%'; });
+      });
+
+      const list = document.getElementById('insightList');
+      list.innerHTML = '';
+      match.insights.forEach(text => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        list.appendChild(li);
+      });
+
+      document.getElementById('scoreResult').classList.add('shown');
+      // scroll into view smoothly
+      setTimeout(() => document.getElementById('scoreResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 200);
+    }
+
+    document.getElementById('ideaBtn').addEventListener('click', () => {
+      const val = document.getElementById('ideaInput').value;
+      showResult(findMatch(val));
+    });
+    document.getElementById('ideaInput').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        showResult(findMatch(document.getElementById('ideaInput').value));
+      }
+    });
+    document.querySelectorAll('.score-examples b').forEach(el => {
+      el.addEventListener('click', () => {
+        const text = el.getAttribute('data-example');
+        document.getElementById('ideaInput').value = text;
+        showResult(findMatch(text));
+      });
+    });
+
+    // ===== lead-magnet form (mailto fallback until a real form/ESP is wired) =====
+    const leadForm = document.getElementById('leadForm');
+    leadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name  = document.getElementById('lmName').value.trim();
+      const email = document.getElementById('lmEmail').value.trim();
+      if (!name || !email) return;
+      // TODO: replace this with your real ESP (ConvertKit / Buttondown / Tally) endpoint.
+      // For now we open a mailto so the lead lands in Amanda's inbox with the request.
+      const subject = encodeURIComponent('AI Product Audit Framework — send it over');
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nPlease send the AI Product Audit Scoring Framework PDF.`);
+      window.location.href = `mailto:hello@productconsulting.ai?subject=${subject}&body=${body}`;
+      leadForm.style.display = 'none';
+      document.getElementById('leadSuccess').classList.add('shown');
+    });
+  </script>
+</body>
+</html>

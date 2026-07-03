@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Voices Hub</title>
+<style>
+  :root{
+    --bg:#0b0f17;--panel:#121826;--panel2:#0f1420;--ink:#e8edf6;--muted:#90a0b8;
+    --line:#1e2940;--accent:#4cc2ff;--good:#33d69f;--warn:#ffcb45;--bad:#ff5d6c;
+    --grad:linear-gradient(135deg,#4cc2ff,#7b8cff);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(1200px 600px at 80% -10%,#16243f 0%,var(--bg) 55%);
+    color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+    min-height:100vh}
+  .wrap{max-width:1140px;margin:0 auto;padding:32px 20px 80px}
+
+  /* HEADER */
+  .kicker{color:var(--accent);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px;margin-bottom:8px}
+  h1{font-size:32px;line-height:1.1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:6px}
+  .sub{color:var(--muted);font-size:14px;max-width:640px;margin-bottom:24px}
+
+  /* FILTERS */
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+  .filt{cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--muted);
+    padding:6px 14px;border-radius:999px;font-size:13px;transition:.15s;user-select:none}
+  .filt:hover{border-color:var(--accent);color:var(--ink)}
+  .filt.on{background:var(--grad);color:#06101f;border-color:transparent;font-weight:700}
+
+  /* GRID */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+
+  /* CARD */
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;
+    display:flex;flex-direction:column;gap:12px;transition:.2s;position:relative;overflow:hidden}
+  .card:hover{border-color:#2a3f60;box-shadow:0 4px 32px rgba(76,194,255,.08)}
+  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:16px 16px 0 0}
+  .card[data-cat="sector"]::before{background:linear-gradient(90deg,#4cc2ff,#7b8cff)}
+  .card[data-cat="macro"]::before{background:linear-gradient(90deg,#33d69f,#4cc2ff)}
+  .card[data-cat="policy"]::before{background:linear-gradient(90deg,#ff5d6c,#ffcb45)}
+  .card[data-cat="learning"]::before{background:linear-gradient(90deg,#ffcb45,#ff9f45)}
+
+  .card-head{display:flex;align-items:center;gap:14px}
+  .avatar{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
+    font-size:20px;font-weight:800;flex:none;letter-spacing:-.5px}
+  .av-sector{background:linear-gradient(135deg,#1a2f4a,#0f1e35);color:var(--accent)}
+  .av-macro{background:linear-gradient(135deg,#0f2e22,#0a1e17);color:var(--good)}
+  .av-policy{background:linear-gradient(135deg,#2e1a1a,#1e0f0f);color:var(--bad)}
+  .av-learning{background:linear-gradient(135deg,#2e2a1a,#1e1c0f);color:var(--warn)}
+
+  .card-title{flex:1}
+  .card-title h3{font-size:16px;font-weight:700;line-height:1.2}
+  .card-title .role{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .cat-badge{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:3px 9px;border-radius:999px;border:1px solid}
+  .badge-sector{color:var(--accent);border-color:rgba(76,194,255,.3);background:rgba(76,194,255,.08)}
+  .badge-macro{color:var(--good);border-color:rgba(51,214,159,.3);background:rgba(51,214,159,.08)}
+  .badge-policy{color:var(--bad);border-color:rgba(255,93,108,.3);background:rgba(255,93,108,.08)}
+  .badge-learning{color:var(--warn);border-color:rgba(255,203,69,.3);background:rgba(255,203,69,.08)}
+
+  /* SIGNAL */
+  .signal-row{display:flex;gap:8px;align-items:center}
+  .sig-dot{width:8px;height:8px;border-radius:50%;flex:none}
+  .sig-high{background:var(--good)}.sig-med{background:var(--warn)}.sig-low{background:var(--muted)}
+  .sig-label{font-size:12px;color:var(--muted)}
+  .sig-freq{font-size:12px;color:var(--muted);margin-left:auto;background:var(--panel2);
+    border:1px solid var(--line);padding:2px 8px;border-radius:999px}
+
+  /* WATCH */
+  .watch{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px}
+  .watch .wl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+
+  /* WARNING */
+  .warning{background:rgba(255,93,108,.07);border:1px solid rgba(255,93,108,.2);border-radius:10px;
+    padding:8px 12px;font-size:12.5px;color:#ff8a95;display:flex;gap:8px;align-items:flex-start}
+
+  /* LINKS */
+  .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+  .lnk{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:600;
+    padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--panel2);
+    color:var(--muted);text-decoration:none;transition:.15s}
+  .lnk:hover{border-color:var(--accent);color:var(--accent)}
+  .lnk svg{width:13px;height:13px;flex:none}
+
+  /* DAILY DIGEST PANEL */
+  .digest{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:24px}
+  .digest h2{font-size:18px;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:10px}
+  .digest .n{font-size:12px;color:var(--bg);background:var(--accent);width:24px;height:24px;
+    border-radius:7px;display:grid;place-items:center;font-weight:800}
+  .digest-lead{font-size:13.5px;color:var(--muted);margin-bottom:16px}
+  .digest-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  @media(max-width:700px){.digest-grid{grid-template-columns:1fr}}
+  .dcard{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px}
+  .dcard .dl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+  .dcard textarea{width:100%;background:transparent;border:0;color:var(--ink);font:14px/1.5 inherit;
+    resize:vertical;outline:none;min-height:70px}
+  .dcard textarea::placeholder{color:#3a4860}
+  .note{font-size:12.5px;color:var(--muted);background:#141b2b;border:1px dashed var(--line);
+    border-radius:10px;padding:12px 14px;margin-top:14px}
+
+  .disc{font-size:12px;color:var(--muted);text-align:center;margin-top:30px;line-height:1.7}
+  .hidden{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kicker">Market Voices Hub</div>
+  <h1>Your Daily Market Intelligence</h1>
+  <p class="sub">14 curated voices across sector, macro, policy, and learning. Know what each person is
+    good for — and what to ignore.</p>
+
+  <!-- DAILY DIGEST -->
+  <div class="digest">
+    <h2><span class="n">📋</span> Daily Notes</h2>
+    <p class="digest-lead">Paste today's notable quotes, calls, or observations here. Build your own digest.</p>
+    <div class="digest-grid">
+      <div class="dcard"><div class="dl">Sector / AI Signal</div>
+        <textarea placeholder="e.g. Dan Ives upgraded NVDA to $250 target…"></textarea></div>
+      <div class="dcard"><div class="dl">Macro / Regime</div>
+        <textarea placeholder="e.g. Druckenmiller on CNBC: cautious on rate cuts…"></textarea></div>
+      <div class="dcard"><div class="dl">Policy / Risk</div>
+        <textarea placeholder="e.g. Trump posted tariff warning on Taiwan chips…"></textarea></div>
+    </div>
+    <div class="note">Tip: open this file daily, jot what you heard, and it builds your pattern recognition over time.
+      Keep notes focused on <strong>what changed</strong> — not what you already knew.</div>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="filters">
+    <div class="filt on" data-f="all">All 14</div>
+    <div class="filt" data-f="sector">Sector / AI</div>
+    <div class="filt" data-f="macro">Macro / Market</div>
+    <div class="filt" data-f="policy">Policy / Risk</div>
+    <div class="filt" data-f="learning">Learning</div>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid" id="grid">
+
+    <!-- SECTOR / AI -->
+    <div class="card" data-cat="sector">
+      <div class="card-head">
+        <div class="avatar av-sector">DP</div>
+        <div class="card-title">
+          <h3>Dylan Patel</h3>
+          <div class="role">Founder, SemiAnalysis</div>
+        </div>
+        <span class="cat-badge badge-sector">Sector</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-high"></span>
+        <span class="sig-label">Very high signal — deepest public semiconductor research</span>
+        <span class="sig-freq">Weekly</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        Supply chain scoops, chip architecture breakdowns, who's winning/losing in AI silicon</div>
+      <div class="links">
+        <a class="lnk" href="https://x.com/dylan522p" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @dylan522p</a>
+        <a class="lnk" href="https://www.semianalysis.com" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          SemiAnalysis</a>
+      </div>
+    </div>
+
+    <div class="card" data-cat="sector">
+      <div class="card-head">
+        <div class="avatar av-sector">DI</div>
+        <div class="card-title">
+          <h3>Dan Ives</h3>
+          <div class="role">Senior Analyst, Wedbush Securities</div>
+        </div>
+        <span class="cat-badge badge-sector">Sector</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-high"></span>
+        <span class="sig-label">Market-moving — his upgrades/price targets move stocks same day</span>
+        <span class="sig-freq">Daily</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        AI infrastructure spend estimates, NVDA/AMD/TSMC price target changes, CNBC appearances</div>
+      <div class="links">
+        <a class="lnk" href="https://x.com/DanIvesWedbush" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @DanIvesWedbush</a>
+      </div>
+    </div>
+
+    <div class="card" data-cat="sector">
+      <div class="card-head">
+        <div class="avatar av-sector">JH</div>
+        <div class="card-title">
+          <h3>Jensen Huang</h3>
+          <div class="role">CEO, NVIDIA</div>
+        </div>
+        <span class="cat-badge badge-sector">Sector</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-high"></span>
+        <span class="sig-label">Rare but market-moving — every speech shifts semiconductor stocks</span>
+        <span class="sig-freq">Events only</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        Keynotes, earnings calls, GTC conference, any forward demand guidance on AI chips</div>
+      <div class="links">
+        <a class="lnk" href="https://x.com/jensenhuang" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @jensenhuang</a>
+        <a class="lnk" href="https://www.nvidia.com/en-us/events/" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          NVIDIA Events</a>
+      </div>
+    </div>
+
+    <!-- MACRO -->
+    <div class="card" data-cat="macro">
+      <div class="card-head">
+        <div class="avatar av-macro">SD</div>
+        <div class="card-title">
+          <h3>Stanley Druckenmiller</h3>
+          <div class="role">Founder, Duquesne Family Office</div>
+        </div>
+        <span class="cat-badge badge-macro">Macro</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-high"></span>
+        <span class="sig-label">Highest signal per appearance of anyone on this list</span>
+        <span class="sig-freq">Rare</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        Macro regime calls, liquidity warnings, recession signals — when he speaks, pay attention</div>
+      <div class="links">
+        <a class="lnk" href="https://x.com/search?q=druckenmiller" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Search X</a>
+        <a class="lnk" href="https://www.youtube.com/results?search_query=druckenmiller+interview+2026" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.5 12l-5.75 3.52z"/></svg>
+          YouTube</a>
+      </div>
+    </div>
+
+    <div class="card" data-cat="macro">
+      <div class="card-head">
+        <div class="avatar av-macro">TL</div>
+        <div class="card-title">
+          <h3>Tom Lee</h3>
+          <div class="role">Head of Research, Fundstrat</div>
+        </div>
+        <span class="cat-badge badge-macro">Macro</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-high"></span>
+        <span class="sig-label">Consistently bullish with data-backed S&P targets — good bull case anchor</span>
+        <span class="sig-freq">Daily</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        S&P / NASDAQ price targets, semiconductor cycle calls, AI spend estimates</div>
+      <div class="links">
+        <a class="lnk" href="https://x.com/fundstrat" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @fundstrat</a>
+        <a class="lnk" href="https://www.fundstrat.com" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          Fundstrat</a>
+      </div>
+    </div>
+
+    <div class="card" data-cat="macro">
+      <div class="card-head">
+        <div class="avatar av-macro">GK</div>
+        <div class="card-title">
+          <h3>Gary Kaltbaum</h3>
+          <div class="role">President, Kaltbaum Capital Management</div>
+        </div>
+        <span class="cat-badge badge-macro">Macro</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-high"></span>
+        <span class="sig-label">Underrated — excellent at calling regime shifts via market breadth</span>
+        <span class="sig-freq">Daily</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        Market breadth warnings, sector rotation calls, "the market is telling us" signals</div>
+      <div class="links">
+        <a class="lnk" href="https://x.com/GaryKaltbaum" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @GaryKaltbaum</a>
+        <a class="lnk" href="https://kaltbaum.com" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          kaltbaum.com</a>
+      </div>
+    </div>
+
+    <div class="card" data-cat="macro">
+      <div class="card-head">
+        <div class="avatar av-macro">MB</div>
+        <div class="card-title">
+          <h3>Michael Burry</h3>
+          <div class="role">Founder, Scion Asset Management</div>
+        </div>
+        <span class="cat-badge badge-macro">Macro</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-med"></span>
+        <span class="sig-label">High signal on risk, wrong on timing — read the bear case, not the date</span>
+        <span class="sig-freq">Occasional</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        Semiconductor bubble warnings, 13F filings (quarterly), contrarian short positions</div>
+      <div class="links">
+        <a class="lnk" href="https://x.com/michaeljburry" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @michaeljburry</a>
+        <a class="lnk" href="https://efts.sec.gov/LATEST/search-index?q=%22scion%22&dateRange=custom&startdt=2025-01-01&forms=13F-HR" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          SEC 13F Filings</a>
+      </div>
+    </div>
+
+    <div class="card" data-cat="macro">
+      <div class="card-head">
+        <div class="avatar av-macro">HM</div>
+        <div class="card-title">
+          <h3>Howard Marks</h3>
+          <div class="role">Co-Founder, Oaktree Capital</div>
+        </div>
+        <span class="cat-badge badge-macro">Macro</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-med"></span>
+        <span class="sig-label">Deep risk frameworks — read for how to think, not what to trade</span>
+        <span class="sig-freq">Monthly memos</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        Oaktree memos on market cycles, risk psychology, "sea change" macro shifts</div>
+      <div class="links">
+        <a class="lnk" href="https://x.com/HowardMarksBook" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @HowardMarksBook</a>
+        <a class="lnk" href="https://www.oaktreecapital.com/insights/memos" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          Oaktree Memos</a>
+      </div>
+    </div>
+
+    <div class="card" data-cat="macro">
+      <div class="card-head">
+        <div class="avatar av-macro">CP</div>
+        <div class="card-title">
+          <h3>Chamath Palihapitiya</h3>
+          <div class="role">CEO, Social Capital / All-In Podcast</div>
+        </div>
+        <span class="cat-badge badge-macro">Macro</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-med"></span>
+        <span class="sig-label">AI macro narrative + venture — opinionated, influential, occasionally wrong</span>
+        <span class="sig-freq">Weekly</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        AI infrastructure thesis, macro rate commentary, All-In Podcast weekly episodes</div>
+      <div class="links">
+        <a class="lnk" href="https://x.com/chamath" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @chamath</a>
+        <a class="lnk" href="https://www.youtube.com/@allinpodcast" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.5 12l-5.75 3.52z"/></svg>
+          All-In Podcast</a>
+      </div>
+    </div>
+
+    <!-- POLICY / RISK -->
+    <div class="card" data-cat="policy">
+      <div class="card-head">
+        <div class="avatar av-policy">DT</div>
+        <div class="card-title">
+          <h3>Donald Trump</h3>
+          <div class="role">U.S. President</div>
+        </div>
+        <span class="cat-badge badge-policy">Policy</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-high"></span>
+        <span class="sig-label">Policy = market risk — tariff posts move semiconductor stocks 5–10% same day</span>
+        <span class="sig-freq">Daily</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        Tariff announcements on Taiwan/China, export controls on chips, trade deal signals</div>
+      <div class="links">
+        <a class="lnk" href="https://truthsocial.com/@realDonaldTrump" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          Truth Social</a>
+        <a class="lnk" href="https://x.com/realDonaldTrump" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X</a>
+      </div>
+    </div>
+
+    <div class="card" data-cat="policy">
+      <div class="card-head">
+        <div class="avatar av-policy">MC</div>
+        <div class="card-title">
+          <h3>Mark Cuban</h3>
+          <div class="role">Entrepreneur / Investor</div>
+        </div>
+        <span class="cat-badge badge-policy">Policy</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-med"></span>
+        <span class="sig-label">Tech/AI perspective + contrarian takes — good for challenging your thesis</span>
+        <span class="sig-freq">Frequent</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        AI democratization views, healthcare tech disruption, regulatory/policy takes on tech</div>
+      <div class="links">
+        <a class="lnk" href="https://x.com/mcuban" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @mcuban</a>
+      </div>
+    </div>
+
+    <div class="card" data-cat="policy">
+      <div class="card-head">
+        <div class="avatar av-policy">KO</div>
+        <div class="card-title">
+          <h3>Kevin O'Leary</h3>
+          <div class="role">Chairman, O'Leary Ventures / Shark Tank</div>
+        </div>
+        <span class="cat-badge badge-policy">Policy</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-med"></span>
+        <span class="sig-label">Underrated discipline — good on position sizing, dividends, risk management</span>
+        <span class="sig-freq">Frequent</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        Position sizing rules, dividend strategy, SMB/private market takes, regulatory commentary</div>
+      <div class="links">
+        <a class="lnk" href="https://x.com/kevinolearytv" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @kevinolearytv</a>
+        <a class="lnk" href="https://www.youtube.com/@MrWonderful" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.5 12l-5.75 3.52z"/></svg>
+          YouTube</a>
+      </div>
+    </div>
+
+    <!-- LEARNING -->
+    <div class="card" data-cat="learning">
+      <div class="card-head">
+        <div class="avatar av-learning">WB</div>
+        <div class="card-title">
+          <h3>Warren Buffett</h3>
+          <div class="role">CEO, Berkshire Hathaway</div>
+        </div>
+        <span class="cat-badge badge-learning">Learning</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-high"></span>
+        <span class="sig-label">Best frameworks in the world — follow for HOW to think, not what to trade</span>
+        <span class="sig-freq">Annual letters</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        Annual shareholder letters, Berkshire meeting (May each year), interviews on fear vs greed</div>
+      <div class="links">
+        <a class="lnk" href="https://www.berkshirehathaway.com/letters/letters.html" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          Annual Letters</a>
+        <a class="lnk" href="https://www.youtube.com/results?search_query=warren+buffett+2026+interview" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.5 12l-5.75 3.52z"/></svg>
+          YouTube</a>
+      </div>
+    </div>
+
+    <div class="card" data-cat="learning">
+      <div class="card-head">
+        <div class="avatar av-learning">PB</div>
+        <div class="card-title">
+          <h3>Patrick Boyle</h3>
+          <div class="role">Former Hedge Fund Manager / Educator</div>
+        </div>
+        <span class="cat-badge badge-learning">Learning</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-high"></span>
+        <span class="sig-label">Best free finance education on YouTube — no hype, all signal</span>
+        <span class="sig-freq">Weekly</span>
+      </div>
+      <div class="watch"><div class="wl">Watch for</div>
+        Explainers on derivatives, leveraged products, how markets actually work, bubble history</div>
+      <div class="links">
+        <a class="lnk" href="https://www.youtube.com/@PBoyle" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.5 12l-5.75 3.52z"/></svg>
+          YouTube</a>
+        <a class="lnk" href="https://x.com/PatrickEBoyle" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @PatrickEBoyle</a>
+      </div>
+    </div>
+
+    <!-- JIM CRAMER - WARNING CARD -->
+    <div class="card" data-cat="macro">
+      <div class="card-head">
+        <div class="avatar" style="background:linear-gradient(135deg,#2e1a1a,#1e0f0f);color:#ff8a95">JC</div>
+        <div class="card-title">
+          <h3>Jim Cramer</h3>
+          <div class="role">Host, CNBC Mad Money</div>
+        </div>
+        <span class="cat-badge badge-policy">⚠️ Contrarian</span>
+      </div>
+      <div class="signal-row">
+        <span class="sig-dot sig-low"></span>
+        <span class="sig-label">Follow as a contrarian signal — not a buy signal</span>
+        <span class="sig-freq">Daily</span>
+      </div>
+      <div class="warning">⚠️ There is a real ETF called the <strong>Inverse Cramer ETF (SJIM)</strong> built on fading his picks. His enthusiasm for a stock is historically a mild sell signal. Follow to know the narrative — not to copy the trade.</div>
+      <div class="watch"><div class="wl">Watch for</div>
+        Mainstream narrative temperature — when Cramer screams buy on something, ask what the smart money is doing</div>
+      <div class="links">
+        <a class="lnk" href="https://x.com/jimcramer" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @jimcramer</a>
+      </div>
+    </div>
+
+  </div><!-- /grid -->
+
+  <p class="disc" style="margin-top:32px">
+    Educational tool — not financial advice. Links are provided for information only.
+    Always verify current handles and content before acting on any commentary.
+  </p>
+</div>
+
+<script>
+const filters = document.querySelectorAll('.filt');
+const cards = document.querySelectorAll('.card');
+filters.forEach(f => {
+  f.addEventListener('click', () => {
+    filters.forEach(x => x.classList.remove('on'));
+    f.classList.add('on');
+    const cat = f.dataset.f;
+    cards.forEach(c => {
+      c.classList.toggle('hidden', cat !== 'all' && c.dataset.cat !== cat);
+    });
+  });
+});
+</script>
+</body>
+</html>

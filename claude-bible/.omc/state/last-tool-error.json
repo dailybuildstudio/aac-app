@@ -1,7 +1,0 @@
-{
-  "tool_name": "Read",
-  "tool_input_preview": "{\"file_path\":\"/Users/amandashelton/Downloads/Abide Transcripts (2).pdf\",\"pages\":\"1-20\"}",
-  "error": "pdftoppm is not installed. Install poppler-utils (e.g. `brew install poppler` or `apt-get install poppler-utils`) to enable PDF page rendering.",
-  "timestamp": "2026-04-26T21:03:47.839Z",
-  "retry_count": 1
-}

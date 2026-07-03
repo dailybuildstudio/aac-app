@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Shelter Now + Eiren — Business Plan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .grad-blue { background: linear-gradient(135deg, #1e3a8a 0%, #0c4a6e 100%); }
+    .grad-emerald { background: linear-gradient(135deg, #064e3b 0%, #0f766e 100%); }
+    .grad-amber { background: linear-gradient(135deg, #78350f 0%, #b45309 100%); }
+    .pill { @apply inline-block px-3 py-1 rounded-full text-xs font-bold; }
+    .section-num { font-feature-settings: "tnum"; }
+    @media print {
+      .no-print { display: none; }
+      section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <!-- HERO -->
+  <section class="grad-blue text-white py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-xs font-bold tracking-widest text-blue-200 uppercase">Business Plan · v1 · May 2026</div>
+      <h1 class="text-5xl md:text-6xl font-extrabold mt-4 leading-tight">
+        Find Shelter Now <span class="text-blue-300">+</span> Eiren
+      </h1>
+      <p class="text-2xl text-blue-100 mt-6 max-w-3xl">
+        A free, anonymous, Spanish-first shelter directory for Florida — and the operator dashboard that keeps it accurate.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <span class="bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm">🌀 Hurricane mode</span>
+        <span class="bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm">🏠 Year-round directory</span>
+        <span class="bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm">📡 Offline-first PWA</span>
+        <span class="bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm">🔒 Zero PII</span>
+        <span class="bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm">🇪🇸 Spanish-first</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TL;DR -->
+  <section class="bg-white py-12 px-6 border-b border-slate-200">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-xs font-bold tracking-widest text-slate-500 uppercase section-num">01 · The one-pager</div>
+      <h2 class="text-3xl font-bold mt-2">In three sentences</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="border-l-4 border-blue-600 pl-4">
+          <div class="text-sm font-bold text-blue-700 uppercase tracking-wide">Problem</div>
+          <p class="mt-2 text-slate-700">Florida residents in a housing crisis or facing evacuation can't find shelters fast — FEMA's app is rated 1.3 stars, no Spanish-first option exists, and 44% of Katrina evacuation refusals cited pets.</p>
+        </div>
+        <div class="border-l-4 border-emerald-600 pl-4">
+          <div class="text-sm font-bold text-emerald-700 uppercase tracking-wide">Solution</div>
+          <p class="mt-2 text-slate-700">Find Shelter Now is a free, anonymous, offline-capable PWA showing real-time hurricane shelters and a year-round homeless directory. Eiren is the operator dashboard that keeps the data accurate in 10-second updates.</p>
+        </div>
+        <div class="border-l-4 border-amber-600 pl-4">
+          <div class="text-sm font-bold text-amber-700 uppercase tracking-wide">Wedge</div>
+          <p class="mt-2 text-slate-700">Spanish-first + hurricane-tuned + offline-first + Florida-specific + zero-PII. No competitor hits all five.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-xs font-bold tracking-widest text-slate-500 uppercase section-num">02 · Why this, why now</div>
+      <h2 class="text-3xl font-bold mt-2">The cost of bad shelter discovery</h2>
+
+      <div class="mt-8 grid md:grid-cols-4 gap-4">
+        <div class="bg-white rounded-2xl p-6 shadow border border-slate-200">
+          <div class="text-5xl font-extrabold text-red-600">1.3★</div>
+          <div class="text-sm text-slate-600 mt-2">FEMA mobile app rating with documented bugs</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow border border-slate-200">
+          <div class="text-5xl font-extrabold text-red-600">44%</div>
+          <div class="text-sm text-slate-600 mt-2">Katrina evacuation refusals citing pets as the reason</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow border border-slate-200">
+          <div class="text-5xl font-extrabold text-amber-600">21%</div>
+          <div class="text-sm text-slate-600 mt-2">Florida population that is Hispanic — Spanish-first matters most here</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow border border-slate-200">
+          <div class="text-5xl font-extrabold text-amber-600">27</div>
+          <div class="text-sm text-slate-600 mt-2">Continuums of Care across Florida — natural partners on the homeless side</div>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-amber-50 border-l-4 border-amber-500 rounded-r-2xl p-6">
+        <div class="font-bold text-amber-900">Why now</div>
+        <ul class="mt-2 text-amber-900 space-y-1 list-disc list-inside">
+          <li>"Worst Florida fire season in 30–40 years" (April 2026)</li>
+          <li>Severe drought across the Southeast intensifying hurricane setup</li>
+          <li>State data infrastructure is open and free — but the front door is bad</li>
+          <li>Spanish-language access is documented as a deadly gap by academic + journalistic sources</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO PRODUCTS -->
+  <section class="bg-slate-100 py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-xs font-bold tracking-widest text-slate-500 uppercase section-num">03 · The architecture</div>
+      <h2 class="text-3xl font-bold mt-2">One company. Two products. One shared backend.</h2>
+      <p class="text-slate-600 mt-2">The Aunt Bertha → findhelp model. The Yelp → biz.yelp.com model. The Resy → ResyOS model.</p>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+
+        <!-- Find Shelter Now card -->
+        <div class="bg-white rounded-2xl p-6 shadow-lg border-2 border-blue-200">
+          <div class="flex items-center justify-between">
+            <div class="text-3xl">🌀 🏠</div>
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold">PUBLIC · READ</span>
+          </div>
+          <h3 class="text-2xl font-bold mt-4">Find Shelter Now</h3>
+          <p class="text-slate-600 mt-1">For Florida residents in crisis</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li class="flex gap-2"><span class="text-blue-600">●</span> No auth, no signup, zero PII</li>
+            <li class="flex gap-2"><span class="text-blue-600">●</span> EN + ES (Haitian Creole next)</li>
+            <li class="flex gap-2"><span class="text-blue-600">●</span> Hurricane mode + year-round directory</li>
+            <li class="flex gap-2"><span class="text-blue-600">●</span> Offline-first PWA</li>
+            <li class="flex gap-2"><span class="text-blue-600">●</span> Quick-exit on every page</li>
+          </ul>
+          <div class="mt-4 bg-blue-50 rounded-lg p-3 text-xs text-blue-900">
+            <strong>Domain:</strong> findsheltern[ow].org
+          </div>
+        </div>
+
+        <!-- Eiren card -->
+        <div class="bg-white rounded-2xl p-6 shadow-lg border-2 border-teal-200">
+          <div class="flex items-center justify-between">
+            <div class="text-3xl">🛡️</div>
+            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-bold">OPERATOR · WRITE</span>
+          </div>
+          <h3 class="text-2xl font-bold mt-4">Eiren</h3>
+          <p class="text-slate-600 mt-1">For shelter staff and CoC coordinators</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li class="flex gap-2"><span class="text-teal-600">●</span> Auth required, multi-tenant orgs</li>
+            <li class="flex gap-2"><span class="text-teal-600">●</span> 10-second status updates</li>
+            <li class="flex gap-2"><span class="text-teal-600">●</span> Dashboard, Dispatch, Analytics</li>
+            <li class="flex gap-2"><span class="text-teal-600">●</span> Audit log on every change</li>
+            <li class="flex gap-2"><span class="text-teal-600">●</span> Offline-capable for shelters with bad WiFi</li>
+          </ul>
+          <div class="mt-4 bg-teal-50 rounded-lg p-3 text-xs text-teal-900">
+            <strong>Brand:</strong> Greek <em>Eirēnē</em> = "peace"
+          </div>
+        </div>
+      </div>
+
+      <!-- Architecture diagram -->
+      <div class="mt-10 bg-white rounded-2xl p-8 shadow border border-slate-200">
+        <h3 class="text-lg font-bold text-center text-slate-700 uppercase tracking-wide">Shared backend</h3>
+        <div class="mt-6 flex flex-col items-center">
+          <div class="bg-slate-900 text-white rounded-2xl p-6 w-full max-w-sm text-center shadow-xl">
+            <div class="text-3xl">⚙️</div>
+            <div class="font-bold text-lg mt-2">Cloudflare Workers + D1</div>
+            <div class="text-sm text-slate-300 mt-2">Database · API · Auth · Cache · Scraper</div>
+          </div>
+          <div class="flex gap-12 my-6 text-3xl text-slate-400">
+            <span>↗</span>
+            <span>↖</span>
+          </div>
+          <div class="grid grid-cols-2 gap-6 w-full">
+            <div class="bg-blue-700 text-white rounded-xl p-4 text-center">
+              <div class="font-bold">Find Shelter Now</div>
+              <div class="text-xs text-blue-200 mt-1">reads — public PWA</div>
+            </div>
+            <div class="bg-teal-700 text-white rounded-xl p-4 text-center">
+              <div class="font-bold">Eiren</div>
+              <div class="text-xs text-teal-200 mt-1">writes — operator dashboard</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPETITION -->
+  <section class="py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-xs font-bold tracking-widest text-slate-500 uppercase section-num">04 · The competitive landscape</div>
+      <h2 class="text-3xl font-bold mt-2">Crowded space. Empty wedge.</h2>
+      <p class="text-slate-600 mt-2">Five-plus players in the broader space. None hit our combination.</p>
+
+      <div class="mt-8 overflow-x-auto">
+        <table class="w-full bg-white rounded-2xl shadow border border-slate-200 text-sm">
+          <thead class="bg-slate-100 text-left">
+            <tr>
+              <th class="p-3 font-bold">Player</th>
+              <th class="p-3 font-bold text-center">Florida-deep</th>
+              <th class="p-3 font-bold text-center">Spanish-first</th>
+              <th class="p-3 font-bold text-center">Hurricane</th>
+              <th class="p-3 font-bold text-center">Offline</th>
+              <th class="p-3 font-bold text-center">Free + anonymous</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr><td class="p-3 font-bold">FindHelp / Aunt Bertha</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center text-emerald-600">✓</td></tr>
+            <tr><td class="p-3 font-bold">HC Shelter Tracking</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">authorized only</td></tr>
+            <tr><td class="p-3 font-bold">ShelterBridge</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center text-emerald-600">✓</td></tr>
+            <tr><td class="p-3 font-bold">Shelter App</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center text-emerald-600">✓</td></tr>
+            <tr><td class="p-3 font-bold">OurCalling</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center text-emerald-600">✓</td></tr>
+            <tr><td class="p-3 font-bold">Bitfocus Clarity (HMIS)</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center">operator-only</td></tr>
+            <tr><td class="p-3 font-bold">Red Cross Shelter Map</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center text-emerald-600">✓</td><td class="text-center">—</td><td class="text-center text-emerald-600">✓</td></tr>
+            <tr><td class="p-3 font-bold">FEMA NSS app</td><td class="text-center">—</td><td class="text-center">—</td><td class="text-center text-emerald-600">✓</td><td class="text-center">—</td><td class="text-center text-emerald-600">✓ (1.3★)</td></tr>
+            <tr class="bg-emerald-50">
+              <td class="p-3 font-extrabold">Find Shelter Now + Eiren</td>
+              <td class="text-center text-emerald-700 font-bold">✓</td>
+              <td class="text-center text-emerald-700 font-bold">✓</td>
+              <td class="text-center text-emerald-700 font-bold">✓</td>
+              <td class="text-center text-emerald-700 font-bold">✓</td>
+              <td class="text-center text-emerald-700 font-bold">✓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISASTER MODE -->
+  <section class="grad-amber text-white py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-xs font-bold tracking-widest text-amber-200 uppercase section-num">05 · The disaster wedge</div>
+      <h2 class="text-3xl font-bold mt-2">Designed for the moment the network is gone.</h2>
+      <p class="text-amber-100 mt-2 text-lg">Cell networks routinely saturate before landfall and stay down for hours-to-days after. This is where Find Shelter Now beats every competitor.</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-4">
+        <div class="bg-white/10 border border-white/20 rounded-xl p-5">
+          <div class="text-2xl">📡</div>
+          <div class="font-bold mt-2">Pre-storm priming</div>
+          <div class="text-sm text-amber-100 mt-1">"Save shelters for offline" CTA caches full county directory + map tiles before signal drops.</div>
+        </div>
+        <div class="bg-white/10 border border-white/20 rounded-xl p-5">
+          <div class="text-2xl">📞</div>
+          <div class="font-bold mt-2">tel: links work offline</div>
+          <div class="text-sm text-amber-100 mt-1">Phone numbers function with no data — only signal. Every shelter card is callable.</div>
+        </div>
+        <div class="bg-white/10 border border-white/20 rounded-xl p-5">
+          <div class="text-2xl">💾</div>
+          <div class="font-bold mt-2">IndexedDB + Service Worker</div>
+          <div class="text-sm text-amber-100 mt-1">Last-known FL shelter list cached on device. Opens with no signal. Refreshes when back online.</div>
+        </div>
+        <div class="bg-white/10 border border-white/20 rounded-xl p-5">
+          <div class="text-2xl">🔋</div>
+          <div class="font-bold mt-2">Battery-saver mode</div>
+          <div class="text-sm text-amber-100 mt-1">Dim theme, no animations, lightweight rendering — preserves dwindling battery during outages.</div>
+        </div>
+        <div class="bg-white/10 border border-white/20 rounded-xl p-5">
+          <div class="text-2xl">🔄</div>
+          <div class="font-bold mt-2">Background sync (Eiren)</div>
+          <div class="text-sm text-amber-100 mt-1">Operator updates queued offline, push when signal returns. Shelter staff with bad WiFi still publish.</div>
+        </div>
+        <div class="bg-white/10 border border-white/20 rounded-xl p-5">
+          <div class="text-2xl">🛟</div>
+          <div class="font-bold mt-2">Degraded fallback</div>
+          <div class="text-sm text-amber-100 mt-1">If FL state portal is down, public site auto-falls back to Eiren operator data. Defense in depth.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-xs font-bold tracking-widest text-slate-500 uppercase section-num">06 · Roadmap</div>
+      <h2 class="text-3xl font-bold mt-2">Three releases, two products.</h2>
+
+      <div class="mt-10 space-y-6">
+
+        <!-- v1 -->
+        <div class="bg-white rounded-2xl p-6 shadow border-l-8 border-blue-600">
+          <div class="flex items-baseline gap-3">
+            <div class="text-3xl font-extrabold text-blue-700">v1.0</div>
+            <div class="text-sm text-slate-500 uppercase font-bold tracking-wide">Public site, scraped data</div>
+            <span class="ml-auto bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold">Ship before next hurricane season</span>
+          </div>
+          <p class="text-slate-700 mt-3">Find Shelter Now (public) only. FloridaDisaster.org scraped via Cloudflare Worker. Static homeless directory. Spanish + English. Offline PWA. No backend yet, no auth, no Eiren.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <span class="bg-slate-100 px-2 py-1 rounded">Phase 0: Scaffolding</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">1: Skeleton + homepage</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">2: Hurricane mode</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">3: Year-round mode</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">4: Spanish</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">5: PWA + offline</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">6: A11y</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">7: SEO</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">8: Soft launch</span>
+          </div>
+        </div>
+
+        <!-- v1.5 -->
+        <div class="bg-white rounded-2xl p-6 shadow border-l-8 border-teal-600">
+          <div class="flex items-baseline gap-3">
+            <div class="text-3xl font-extrabold text-teal-700">v1.5</div>
+            <div class="text-sm text-slate-500 uppercase font-bold tracking-wide">Eiren launch</div>
+            <span class="ml-auto bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-bold">After v1 stable + 1 CoC partnership</span>
+          </div>
+          <p class="text-slate-700 mt-3">Eiren operator dashboard ships. D1 database, multi-tenant orgs, auth. Manual approval for first 100 facility claims. Eiren writes propagate to Find Shelter Now within cache TTL. "Verified by Eiren" badges appear on the public site.</p>
+        </div>
+
+        <!-- v2 -->
+        <div class="bg-white rounded-2xl p-6 shadow border-l-8 border-amber-600">
+          <div class="flex items-baseline gap-3">
+            <div class="text-3xl font-extrabold text-amber-700">v2.0</div>
+            <div class="text-sm text-slate-500 uppercase font-bold tracking-wide">Self-service + scale</div>
+            <span class="ml-auto bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-bold">After 100+ verified facilities</span>
+          </div>
+          <p class="text-slate-700 mt-3">Auto-verification against HUD CoC database + FL DEM registry. Push notifications (opt-in only). Haitian Creole + Vietnamese. State expansion to GA, TX, LA — same hurricane belt.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REVENUE -->
+  <section class="bg-slate-100 py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-xs font-bold tracking-widest text-slate-500 uppercase section-num">07 · Revenue</div>
+      <h2 class="text-3xl font-bold mt-2">Three viable paths.</h2>
+      <p class="text-slate-600 mt-2">Public side stays free forever. Eiren is where money can come from — when it makes sense.</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl p-6 shadow border border-slate-200">
+          <div class="text-xs font-bold text-slate-500 uppercase">Option A</div>
+          <h3 class="text-xl font-bold mt-1">Grant-funded nonprofit</h3>
+          <p class="text-slate-600 text-sm mt-3">Both products free. FEMA, HUD, foundation grants pay infra and salaries.</p>
+          <div class="mt-4 text-xs space-y-1">
+            <div class="text-emerald-700">✓ Mission-aligned</div>
+            <div class="text-emerald-700">✓ High public trust</div>
+            <div class="text-red-700">✗ Fundraising overhead</div>
+            <div class="text-red-700">✗ Precarious</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow border-2 border-emerald-300">
+          <div class="text-xs font-bold text-emerald-700 uppercase">Option B · Recommended</div>
+          <h3 class="text-xl font-bold mt-1">Freemium SaaS for Eiren</h3>
+          <p class="text-slate-600 text-sm mt-3">Find Shelter Now always free. Eiren free for ≤3 programs. Paid tier for orgs with multi-org, analytics, API access.</p>
+          <div class="mt-4 text-xs space-y-1">
+            <div class="text-emerald-700">✓ Predictable revenue</div>
+            <div class="text-emerald-700">✓ Public mission intact</div>
+            <div class="text-amber-700">~ Sales motion required</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow border border-slate-200">
+          <div class="text-xs font-bold text-slate-500 uppercase">Option C</div>
+          <h3 class="text-xl font-bold mt-1">B2G — government contracts</h3>
+          <p class="text-slate-600 text-sm mt-3">Sell unified system to county and state Emergency Management agencies as their official shelter platform.</p>
+          <div class="mt-4 text-xs space-y-1">
+            <div class="text-emerald-700">✓ High contract values</div>
+            <div class="text-emerald-700">✓ Aligns with their mandate</div>
+            <div class="text-red-700">✗ Slow procurement (12-24 mo)</div>
+            <div class="text-red-700">✗ Political dependencies</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-8 bg-emerald-50 border-l-4 border-emerald-500 rounded-r-xl p-5">
+        <div class="font-bold text-emerald-900">Recommended sequence</div>
+        <p class="text-sm text-emerald-900 mt-1">Launch v1 as nonprofit-style (grants pay public-side infra). When Eiren ships in v1.5, layer on freemium for multi-org accounts only — small shelters always free. B2G contracts become possible in year 2 once you have data showing impact.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET USERS -->
+  <section class="py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-xs font-bold tracking-widest text-slate-500 uppercase section-num">08 · Who this is for</div>
+      <h2 class="text-3xl font-bold mt-2">Two audiences. Two products. Same data.</h2>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow border border-slate-200">
+          <div class="text-3xl">👤</div>
+          <h3 class="text-xl font-bold mt-2">Find Shelter Now users</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-700">
+            <li><strong>Florida residents</strong> in active hurricane evacuation zones</li>
+            <li><strong>Spanish-speaking families</strong> who can't read English-only emergency portals</li>
+            <li><strong>People experiencing homelessness</strong> looking for tonight's options</li>
+            <li><strong>Pet owners</strong> who won't evacuate without their animals</li>
+            <li><strong>Undocumented residents</strong> who fear government data collection</li>
+            <li><strong>Social workers, navigators, 211 operators</strong> connecting people in crisis</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow border border-slate-200">
+          <div class="text-3xl">🏢</div>
+          <h3 class="text-xl font-bold mt-2">Eiren users</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-700">
+            <li><strong>Shelter intake staff</strong> — front desk, status updates between waves</li>
+            <li><strong>Shelter directors</strong> — analytics, multi-program oversight</li>
+            <li><strong>CoC coordinators</strong> — multi-org dispatching</li>
+            <li><strong>County Emergency Management</strong> — situational awareness during activations</li>
+            <li><strong>Faith-based shelter networks</strong> — small orgs running 2-3 programs</li>
+            <li><strong>State Department of Emergency Management</strong> — official data feed contributor</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RISKS -->
+  <section class="bg-slate-100 py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-xs font-bold tracking-widest text-slate-500 uppercase section-num">09 · Risks + mitigations</div>
+      <h2 class="text-3xl font-bold mt-2">What could break this.</h2>
+
+      <div class="mt-8 space-y-3">
+        <div class="bg-white rounded-xl p-4 shadow-sm flex flex-col md:flex-row gap-4 border border-slate-200">
+          <div class="md:w-1/3 font-bold text-red-700">Wrong shelter data costs trust</div>
+          <div class="md:w-2/3 text-sm text-slate-700">Disclaimer + 211 fallback on every result. "Last updated" timestamp visible. Conservative status interpretation.</div>
+        </div>
+        <div class="bg-white rounded-xl p-4 shadow-sm flex flex-col md:flex-row gap-4 border border-slate-200">
+          <div class="md:w-1/3 font-bold text-red-700">FL portal HTML changes break the scraper</div>
+          <div class="md:w-2/3 text-sm text-slate-700">Worker has try/catch + "data temporarily unavailable, call 211" fallback. Daily health-check ping. Eiren operator data as further fallback (v1.5+).</div>
+        </div>
+        <div class="bg-white rounded-xl p-4 shadow-sm flex flex-col md:flex-row gap-4 border border-slate-200">
+          <div class="md:w-1/3 font-bold text-red-700">Spanish translation tone is off</div>
+          <div class="md:w-2/3 text-sm text-slate-700">One bilingual reviewer pass before launch. Hispanic Access Foundation partnership is the cleanest source.</div>
+        </div>
+        <div class="bg-white rounded-xl p-4 shadow-sm flex flex-col md:flex-row gap-4 border border-slate-200">
+          <div class="md:w-1/3 font-bold text-red-700">Crowded space (Shelter App, ShelterBridge, FindHelp)</div>
+          <div class="md:w-2/3 text-sm text-slate-700">Win on the wedge: Spanish-first + hurricane-tuned + offline-first + Florida depth. Don't try to be national or generic.</div>
+        </div>
+        <div class="bg-white rounded-xl p-4 shadow-sm flex flex-col md:flex-row gap-4 border border-slate-200">
+          <div class="md:w-1/3 font-bold text-red-700">Eiren onboarding gets gamed (fake facility)</div>
+          <div class="md:w-2/3 text-sm text-slate-700">Multi-step verification: facility ID → org domain email → callback to listed phone → manual approval for first 100. Auto-verify against HUD CoC + FL DEM registries thereafter. Address-poisoning blocked: address field is read-only via self-service.</div>
+        </div>
+        <div class="bg-white rounded-xl p-4 shadow-sm flex flex-col md:flex-row gap-4 border border-slate-200">
+          <div class="md:w-1/3 font-bold text-red-700">Liability for publishing shelter info</div>
+          <div class="md:w-2/3 text-sm text-slate-700">Aggregating PUBLIC data with attribution; disclaimer + "verify via 211" is the standard of care. ToS disclaiming warranty before launch.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section class="grad-emerald text-white py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-xs font-bold tracking-widest text-emerald-200 uppercase section-num">10 · Success metrics</div>
+      <h2 class="text-3xl font-bold mt-2">How we'll know it's working.</h2>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="bg-white/10 border border-white/20 rounded-xl p-5">
+          <div class="text-emerald-200 text-sm font-bold uppercase">v1 success</div>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li>• 1,000+ unique sessions during a single FL hurricane activation</li>
+            <li>• 30%+ of sessions choose Spanish</li>
+            <li>• 20%+ of sessions install the PWA to home screen</li>
+            <li>• 1+ FL CoC partnership signed</li>
+            <li>• Lighthouse mobile: Performance ≥90, A11y = 100, PWA installable</li>
+            <li>• Zero PII collected. Verified by external audit.</li>
+          </ul>
+        </div>
+        <div class="bg-white/10 border border-white/20 rounded-xl p-5">
+          <div class="text-emerald-200 text-sm font-bold uppercase">v1.5 success (Eiren)</div>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li>• 25+ FL shelters actively updating via Eiren weekly</li>
+            <li>• Median time-to-update: ≤10 seconds</li>
+            <li>• Freshness SLA: 80% of programs updated within 24h</li>
+            <li>• 1+ paying multi-org customer (CoC, faith network, county EM)</li>
+            <li>• Zero address-poisoning incidents</li>
+            <li>• 100% of operator updates have audit trail</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / footer -->
+  <footer class="bg-slate-900 text-white py-12 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold">The next step</h2>
+      <p class="text-slate-400 mt-2">Ship Find Shelter Now v1 before the next hurricane season. Stand up Eiren when the public site has stable traffic and a partner CoC.</p>
+      <div class="mt-6 inline-flex gap-3 flex-wrap justify-center">
+        <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold">Find Shelter Now</span>
+        <span class="text-slate-500">+</span>
+        <span class="bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-bold">Eiren</span>
+      </div>
+      <p class="text-slate-500 text-xs mt-8">Business plan v1 · May 2026 · Florida</p>
+    </div>
+  </footer>
+
+</body>
+</html>
